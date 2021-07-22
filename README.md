@@ -13,7 +13,7 @@ sudo apt-get install build-essential jq
 
 # Compile instructions: install GoLang
 
-Install Go 1.15.x (there are some issues with SDK keyring and 1.16.x)
+Install Go 1.16.x 
 The official instructions can be found here: https://golang.org/doc/install
 
 First remove any existing old Go installation as root
@@ -23,7 +23,7 @@ sudo rm -rf /usr/local/go
 
 Download the software:
 ```
-curl https://dl.google.com/go/go1.15.11.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
+curl https://dl.google.com/go/go1.16.6.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
 ```
 Update environment variables to include go (copy everything and paste)
 ```
@@ -40,25 +40,26 @@ To verify that Go is installed:
 ``` 
 go version
 ```
-Should return go version go1.15.11 linux/amd64
+Should return go version go1.16.6 linux/amd64
 
 # Compile BCNAD source code by yourself
 ## Download source code and compile
 ```
 git clone https://github.com/BitCannaGlobal/testnet-bcna-cosmos.git
 cd testnet-bcna-cosmos
-git checkout v0.testnet7
+git checkout v0.1
 make build   #it build the binary in build/ folder
 ```
 To know the version:
 ```
 build/bcnad version
 ```
-The output must be `0.testnet7`
+The output must be `0.1`
 
 Is the versión match, now you have two options
 * Move the binary to the /usr/local/bin path with: `sudo mv build/bcnad /usr/local/bin/`
 * Compile and install the binary in the $GOPATH path:  `make install`
+* If you are using Cosmovisor you need to perform extra steps to move the binary to the proper Cosmovisor folder.
 
 # Cosmosvisor Quick Start
 Cosmovisor is a small process manager for Cosmos SDK binaries that monitors the governance module via stdout for incoming chain upgrade proposals. If it sees a proposal that gets approved, it can be run manually or automatically to download the new binary, stop the current binary, run the migration script, replace the old node binary with the new one, and finally restart the node with the new genesis file.
