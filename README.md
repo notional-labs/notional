@@ -46,7 +46,7 @@ Should return go version go1.16.6 linux/amd64
 ## Download source code and compile
 ```
 git clone https://github.com/BitCannaGlobal/bcna.git
-cd testnet-bcna-cosmos
+cd bcna
 git checkout v0.1-alpha
 make build   #it build the binary in build/ folder
 ```
