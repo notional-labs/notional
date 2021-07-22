@@ -1,0 +1,13 @@
+syntax = "proto3";
+package BitCannaGlobal.bcna.bcna;
+
+option go_package = "github.com/BitCannaGlobal/bcna/x/bcna/types";
+
+import "gogoproto/gogo.proto";
+
+message Bitcannaid {
+  string creator = 1;
+  uint64 id = 2;
+  string bcnaid = 3; 
+  string address = 4; 
+}
