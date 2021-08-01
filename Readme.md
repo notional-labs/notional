@@ -26,9 +26,9 @@ We hope to open source our hardware, as well.
 * Hardware between rpi and the omni configuration
 
 ### Every IBC chain
-8+ Core intel or amd cpu (I have 12, 16 and 32 core machines in production)
-64+ GB RAM
-8TB+ NVMe Storage with high write cycle capacity
+* 8+ Core intel or amd cpu (I have 12, 16 and 32 core machines in production)
+* 64+ GB RAM
+* 8TB+ NVMe Storage with high write cycle capacity
 
 
 ## Thanks

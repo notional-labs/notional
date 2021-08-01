@@ -1,0 +1,176 @@
+[global]
+strategy = 'packets'
+log_level = 'info'
+
+[telemetry]
+enabled = true
+host = '127.0.0.1'
+port = 3001
+
+[[chains]]
+id = 'osmosis-1'
+rpc_addr = 'http://127.0.0.1:33333'
+grpc_addr = 'http://127.0.0.1:9090'
+websocket_addr = 'ws://127.0.0.1:33333/websocket'
+rpc_timeout = '10s'
+account_prefix = 'osmo'
+key_name = 'osmosis'
+store_prefix = 'ibc'
+max_gas = 2000000
+gas_price = { price = 0.001, denom = 'uosmo' }
+gas_adjustment = 0.1
+clock_drift = '5s'
+trusting_period = '10days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[[chains]]
+id = 'akashnet-2'
+rpc_addr = 'http://127.0.0.1:26636'
+websocket_addr = 'ws://127.0.0.1:26636/websocket'
+grpc_addr = 'http://127.0.0.1:9999'
+rpc_timeout = '10s'
+account_prefix = 'akash'
+key_name = 'akash'
+store_prefix = 'ibc'
+max_gas = 2000000
+gas_price = { price = 0.001, denom = 'uakt' }
+gas_adjustment = 0.1
+clock_drift = '5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[[chains]]
+id = 'sentinelhub-2'
+rpc_addr = 'http://127.0.0.1:2647'
+grpc_addr = 'http://127.0.0.1:4090'
+websocket_addr = 'ws://127.0.0.1:2647/websocket'
+rpc_timeout = '10s'
+account_prefix = 'sent'
+key_name = 'sentinel'
+store_prefix = 'ibc'
+max_gas = 2000000
+gas_price = { price = 0.001, denom = 'udvpn' }
+gas_adjustment = 0.1
+clock_drift = '5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+
+[[chains]]
+id = 'irishub-1'
+rpc_addr = 'http://127.0.0.1:28857'
+grpc_addr = 'http://127.0.0.1:6090'
+websocket_addr = 'ws://127.0.0.1:28857/websocket'
+rpc_timeout = '10s'
+account_prefix = 'iaa'
+key_name = 'iris'
+store_prefix = 'ibc'
+max_gas = 2000000
+gas_price = { price = 0.001, denom = 'uiris' }
+gas_adjustment = 0.1
+clock_drift ='5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[[chains]]
+id = 'dig-testnet-1'
+rpc_addr = 'http://127.0.0.1:23394'
+grpc_addr = 'http://127.0.0.1:5473'
+websocket_addr = 'ws://127.0.0.1:23394/websocket'
+rpc_timeout = '10s'
+account_prefix = 'dig'
+key_name = 'dig'
+store_prefix = 'ibc'
+max_gas = 2000000
+gas_price = { price = 0.001, denom = 'dig' }
+gas_adjustment = 0.1
+clock_drift ='5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+
+[[chains]]
+id = 'regen-1'
+rpc_addr = 'http://127.0.0.1:7526'
+grpc_addr = 'http://127.0.0.1:5353'
+websocket_addr = 'ws://127.0.0.1:7526/websocket'
+rpc_timeout = '10s'
+account_prefix = 'regen'
+key_name = 'regen'
+store_prefix = 'ibc'
+max_gas = 2000000
+gas_price = { price = 0.001, denom = 'uregen' }
+gas_adjustment = 0.1
+clock_drift ='5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+
+
+[[chains]]
+id = 'cosmoshub-4'
+rpc_addr = 'http://127.0.0.1:2665'
+grpc_addr = 'http://127.0.0.1:2233'
+websocket_addr = 'ws://127.0.0.1:2665/websocket'
+rpc_timeout = '10s'
+account_prefix = 'cosmos'
+key_name = 'cosmos'
+store_prefix = 'ibc'
+max_gas = 2000000
+gas_price = { price = 0.002, denom = 'uatom' }
+gas_adjustment = 0.1
+clock_drift ='5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+
+[[chains]]
+id = 'iov-mainnet-ibc'
+rpc_addr = 'http://127.0.0.1:16657'
+grpc_addr = 'http://127.0.0.1:9393'
+websocket_addr = 'ws://127.0.0.1:16657/websocket'
+rpc_timeout = '10s'
+account_prefix = 'star'
+key_name = 'iov'
+store_prefix = 'ibc'
+max_gas = 30000000
+gas_price = { price = 2.0, denom = 'uiov' }
+gas_adjustment = 0.1
+clock_drift ='5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+
+
+[[chains]]
+id = 'core-1'
+rpc_addr = 'http://127.0.0.1:11117'
+grpc_addr = 'http://127.0.0.1:1990'
+websocket_addr = 'ws://127.0.0.1:11117/websocket'
+rpc_timeout = '10s'
+account_prefix = 'persistence'
+key_name = 'persistence'
+store_prefix = 'ibc'
+max_gas = 30000000
+gas_price = { price = 0.001, denom = 'uxprt' }
+gas_adjustment = 0.1
+clock_drift ='5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+
+[[chains]]
+id = 'crypto-org-chain-mainnet-1'
+rpc_addr = 'http://127.0.0.1:24457'
+grpc_addr = 'http://127.0.0.1:9696'
+websocket_addr = 'ws://127.0.0.1:24457/websocket'
+rpc_timeout = '10s'
+account_prefix = 'cro'
+key_name = 'crypto'
+store_prefix = 'ibc'
+max_gas = 30000000
+gas_price = { price = 0.05, denom = 'basecro' }
+gas_adjustment = 0.1
+clock_drift ='5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
