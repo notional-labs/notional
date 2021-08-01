@@ -1,4 +1,3 @@
- 
 [Unit]
 Description=Gaia
 
@@ -14,7 +13,7 @@ Environment=GAIAD_P2P_UNCONDITIONAL_PEERS="11bfced94d58357917fe9189fb34d3def790b
 Environment=GAIAD_P2P_MAX_NUM_INBOUND_PEERS=500
 Environment=GAIAD_SNAPSHOT_INTERVAL=1000
 Environment=GAIAD_P2P_MAX_NUM_OUTBOUND_PEERS=40
-
+Environment=HOME=/root/
 ExecStart=/usr/bin/gaiad start
 
 [Install]
