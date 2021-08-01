@@ -1,0 +1,8 @@
+{
+  "chain-id": "cosmoshub-4",
+  "rpc-addr": "http://127.0.0.1:2011",
+  "account-prefix": "cosmos",
+  "gas-adjustment": 1.5,
+  "gas-prices": "0.001uatom",
+  "trusting-period": "10m"
+}
