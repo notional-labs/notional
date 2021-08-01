@@ -1,0 +1,8 @@
+{
+  "chain-id": "akashnet-2",
+  "rpc-addr": "http://127.0.0.1:2001",
+  "account-prefix": "cosmos",
+  "gas-adjustment": 1.5,
+  "gas-prices": "0.001uakt",
+  "trusting-period": "10m"
+}
