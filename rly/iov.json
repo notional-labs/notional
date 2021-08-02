@@ -1,0 +1,8 @@
+{
+  "chain-id": "iov-mainnet-ibc",
+  "rpc-addr": "http://127.0.0.1:2071",
+  "account-prefix": "star",
+  "gas-adjustment": 1.5,
+  "gas-prices": "2uiov",
+  "trusting-period": "10m"
+}
