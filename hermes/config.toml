@@ -9,9 +9,9 @@ port = 3001
 
 [[chains]]
 id = 'osmosis-1'
-rpc_addr = 'http://127.0.0.1:33333'
-grpc_addr = 'http://127.0.0.1:9090'
-websocket_addr = 'ws://127.0.0.1:33333/websocket'
+rpc_addr = 'http://127.0.0.1:2001'
+grpc_addr = 'http://127.0.0.1:2002'
+websocket_addr = 'ws://127.0.0.1:2001/websocket'
 rpc_timeout = '10s'
 account_prefix = 'osmo'
 key_name = 'osmosis'
@@ -25,9 +25,9 @@ trust_threshold = { numerator = '1', denominator = '3' }
 
 [[chains]]
 id = 'akashnet-2'
-rpc_addr = 'http://127.0.0.1:26636'
-websocket_addr = 'ws://127.0.0.1:26636/websocket'
-grpc_addr = 'http://127.0.0.1:9999'
+rpc_addr = 'http://127.0.0.1:2021'
+websocket_addr = 'ws://127.0.0.1:2021/websocket'
+grpc_addr = 'http://127.0.0.1:2022'
 rpc_timeout = '10s'
 account_prefix = 'akash'
 key_name = 'akash'
@@ -41,10 +41,9 @@ trust_threshold = { numerator = '1', denominator = '3' }
 
 [[chains]]
 id = 'sentinelhub-2'
-rpc_addr = 'http://127.0.0.1:2647'
-grpc_addr = 'http://127.0.0.1:4090'
-websocket_addr = 'ws://127.0.0.1:2647/websocket'
-rpc_timeout = '10s'
+rpc_addr = 'http://127.0.0.1:2031'
+grpc_addr = 'http://127.0.0.1:2032'
+websocket_addr = 'ws://127.0.0.1:2031/websocket'
 account_prefix = 'sent'
 key_name = 'sentinel'
 store_prefix = 'ibc'
@@ -91,10 +90,9 @@ trust_threshold = { numerator = '1', denominator = '3' }
 
 [[chains]]
 id = 'regen-1'
-rpc_addr = 'http://127.0.0.1:7526'
-grpc_addr = 'http://127.0.0.1:5353'
-websocket_addr = 'ws://127.0.0.1:7526/websocket'
-rpc_timeout = '10s'
+rpc_addr = 'http://127.0.0.1:2061'
+grpc_addr = 'http://127.0.0.1:2062'
+websocket_addr = 'ws://127.0.0.1:2061/websocket'
 account_prefix = 'regen'
 key_name = 'regen'
 store_prefix = 'ibc'
@@ -109,9 +107,9 @@ trust_threshold = { numerator = '1', denominator = '3' }
 
 [[chains]]
 id = 'cosmoshub-4'
-rpc_addr = 'http://127.0.0.1:2665'
-grpc_addr = 'http://127.0.0.1:2233'
-websocket_addr = 'ws://127.0.0.1:2665/websocket'
+rpc_addr = 'http://127.0.0.1:2011'
+grpc_addr = 'http://127.0.0.1:2012'
+websocket_addr = 'ws://127.0.0.1:2011/websocket'
 rpc_timeout = '10s'
 account_prefix = 'cosmos'
 key_name = 'cosmos'
@@ -126,9 +124,9 @@ trust_threshold = { numerator = '1', denominator = '3' }
 
 [[chains]]
 id = 'iov-mainnet-ibc'
-rpc_addr = 'http://127.0.0.1:16657'
-grpc_addr = 'http://127.0.0.1:9393'
-websocket_addr = 'ws://127.0.0.1:16657/websocket'
+rpc_addr = 'http://127.0.0.1:2071'
+grpc_addr = 'http://127.0.0.1:2072'
+websocket_addr = 'ws://127.0.0.1:2071/websocket'
 rpc_timeout = '10s'
 account_prefix = 'star'
 key_name = 'iov'
@@ -144,9 +142,9 @@ trust_threshold = { numerator = '1', denominator = '3' }
 
 [[chains]]
 id = 'core-1'
-rpc_addr = 'http://127.0.0.1:11117'
-grpc_addr = 'http://127.0.0.1:1990'
-websocket_addr = 'ws://127.0.0.1:11117/websocket'
+rpc_addr = 'http://127.0.0.1:2081'
+grpc_addr = 'http://127.0.0.1:2082'
+websocket_addr = 'ws://127.0.0.1:2081/websocket'
 rpc_timeout = '10s'
 account_prefix = 'persistence'
 key_name = 'persistence'
@@ -161,9 +159,9 @@ trust_threshold = { numerator = '1', denominator = '3' }
 
 [[chains]]
 id = 'crypto-org-chain-mainnet-1'
-rpc_addr = 'http://127.0.0.1:24457'
-grpc_addr = 'http://127.0.0.1:9696'
-websocket_addr = 'ws://127.0.0.1:24457/websocket'
+rpc_addr = 'http://127.0.0.1:2041'
+grpc_addr = 'http://127.0.0.1:2042'
+websocket_addr = 'ws://127.0.0.1:2041/websocket'
 rpc_timeout = '10s'
 account_prefix = 'cro'
 key_name = 'crypto'
