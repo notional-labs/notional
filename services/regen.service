@@ -1,0 +1,20 @@
+
+[Unit]
+Description=Regen
+
+[Service]
+Environment=REGEN_P2P_LADDR=tcp://0.0.0.0:2060
+Environment=REGEN_RPC_LADDR=tcp://0.0.0.0:2061
+Environment=REGEN_GRPC_ADDRESS=127.0.0.1:2062
+Environment=REGEN_API_ADDRESS=tcp://127.0.0.1:2063
+Environment=REGEN_NODE=tcp://127.0.0.1:2061
+Environment=REGEN_P2P_PERSISTENT_PEERS="69975e7afdf731a165e40449fcffc75167a084fc@104.131.169.70:26656"
+Environment=REGEN_P2P_MAX_NUM_INBOUND_PEERS=500
+Environment=REGEN_SNAPSHOT_INTERVAL=1000
+
+Environment=REGEN_HOME=$HOME/.regen
+
+ExecStart=/usr/bin/regen start
+
+[Install]
+WantedBy=multi-user.target
