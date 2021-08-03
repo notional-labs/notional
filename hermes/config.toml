@@ -57,9 +57,9 @@ trust_threshold = { numerator = '1', denominator = '3' }
 
 [[chains]]
 id = 'irishub-1'
-rpc_addr = 'http://127.0.0.1:28857'
-grpc_addr = 'http://127.0.0.1:6090'
-websocket_addr = 'ws://127.0.0.1:28857/websocket'
+rpc_addr = 'http://127.0.0.1:2121'
+grpc_addr = 'http://127.0.0.1:2122'
+websocket_addr = 'ws://127.0.0.1:2121/websocket'
 rpc_timeout = '10s'
 account_prefix = 'iaa'
 key_name = 'iris'
@@ -168,6 +168,22 @@ key_name = 'crypto'
 store_prefix = 'ibc'
 max_gas = 30000000
 gas_price = { price = 0.05, denom = 'basecro' }
+gas_adjustment = 0.1
+clock_drift ='5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[[chains]]
+id = 'sifchain-1'
+rpc_addr = 'http://127.0.0.1:2111'
+grpc_addr = 'http://127.0.0.1:2112'
+websocket_addr = 'ws://127.0.0.1:2111/websocket'
+rpc_timeout = '10s'
+account_prefix = 'sif'
+key_name = 'sif'
+store_prefix = 'ibc'
+max_gas = 30000000
+gas_price = { price = 0.001, denom = 'rowan' }
 gas_adjustment = 0.1
 clock_drift ='5s'
 trusting_period = '14days'
