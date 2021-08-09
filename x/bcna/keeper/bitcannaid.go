@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-// GetBitcannaidCount get the total number of TypeName.LowerCamel
+// GetBitcannaidCount get the total number of bitcannaid
 func (k Keeper) GetBitcannaidCount(ctx sdk.Context) uint64 {
 	store := prefix.NewStore(ctx.KVStore(k.storeKey), types.KeyPrefix(types.BitcannaidCountKey))
 	byteKey := types.KeyPrefix(types.BitcannaidCountKey)

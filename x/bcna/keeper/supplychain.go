@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-// GetSupplychainCount get the total number of TypeName.LowerCamel
+// GetSupplychainCount get the total number of supplychain
 func (k Keeper) GetSupplychainCount(ctx sdk.Context) uint64 {
 	store := prefix.NewStore(ctx.KVStore(k.storeKey), types.KeyPrefix(types.SupplychainCountKey))
 	byteKey := types.KeyPrefix(types.SupplychainCountKey)
