@@ -12,8 +12,7 @@ Environment=OMNIFLIXHUBD_P2P_SEEDS="8dc1863d1d23cf9ad7cbea215c19bcbe8bf39702@p2p
 Environment=OMNIFLIXHUBD_P2P_MAX_NUM_INBOUND_PEERS=500
 Environment=OMNIFLIXHUBD_SNAPSHOT_INTERVAL=1000
 Environment=OMNIFLIXHUBD_P2P_MAX_NUM_OUTBOUND_PEERS=40
-
-Environment=CHAIN_MAIND_HOME=$HOME/.omniflixhubd
+Environment=HOME=/root
 
 ExecStart=/usr/bin/omniflixhubd start
 

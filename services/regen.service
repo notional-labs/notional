@@ -11,8 +11,7 @@ Environment=REGEN_NODE=tcp://127.0.0.1:2061
 Environment=REGEN_P2P_PERSISTENT_PEERS="69975e7afdf731a165e40449fcffc75167a084fc@104.131.169.70:26656"
 Environment=REGEN_P2P_MAX_NUM_INBOUND_PEERS=500
 Environment=REGEN_SNAPSHOT_INTERVAL=1000
-
-Environment=REGEN_HOME=$HOME/.regen
+Environment=HOME=/root
 
 ExecStart=/usr/bin/regen start
 
