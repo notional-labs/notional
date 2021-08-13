@@ -70,4 +70,4 @@ To install cosmovisor, run the following command (it takes some minutes):
 go get github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor
 ```
 * [more info about Cosmovisor](https://github.com/cosmos/cosmos-sdk/tree/master/cosmovisor#readme)
-* [how BitCanna implements Cosmovisor](https://github.com/BitCannaGlobal/testnet-bcna-cosmos/blob/main/instructions/stage4/task4.4.md)
+* [how BitCanna implements Cosmovisor](https://github.com/BitCannaGlobal/testnet-bcna-cosmos/blob/main/instructions/invitational-testnet/stage4/task4.4.md)
