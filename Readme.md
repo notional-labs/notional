@@ -38,12 +38,21 @@ All of Notional's products are 100% open source, though some do have unusal lice
 
 We have been working with https://pcbviet.com on open source hardware, and hope to run tradeberry on a Minimus PC sometime in 2021.
 
-# Team
+## Team
 * Jacob Gadikian - Blockchain and infrastructure engineer
-* Ricardo Ferreria - All things biz
+* Ricardo Ferreria - All things biz, testing of documentation written by Jacob and Khanh
 * Khanh Nguyen - Blockchain Engineer
 
 **Notional is hiring and training blockchain engineers.  Hours are ludicrous, and all team members earn a meaningful stake in all blockchains launched.  Notional Pays flat global wages.** 
+
+## Technical Partnerships with other validators / relayers
+* https://github.com/chandrastation
+
+Our technical partners agree to:
+* Mutual Aid Re: Uptime (eg: phone calls to one another)
+* Full commitment to open source, repeatable infrastructure (we only partner with validators who document their infrastructure)
+* Join a Signal chat, since it's not discord
+* Share information about chain launches
 
 
 # System Requirements
