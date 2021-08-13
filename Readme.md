@@ -38,6 +38,13 @@ All of Notional's products are 100% open source, though some do have unusal lice
 
 We have been working with https://pcbviet.com on open source hardware, and hope to run tradeberry on a Minimus PC sometime in 2021.
 
+# Team
+* Jacob Gadikian - Blockchain and infrastructure engineer
+* Ricardo Ferreria - All things biz
+* Khanh Nguyen - Blockchain Engineer
+
+**Notional is hiring and training blockchain engineers.  Hours are ludicrous, and all team members earn a meaningful stake in all blockchains launched.  Notional Pays flat global wages.** 
+
 
 # System Requirements
 
