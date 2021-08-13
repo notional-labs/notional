@@ -1,21 +1,43 @@
 # Notional
+This is the notional software repository. 
+
+Notional is an **active set** validator on:
+* [Osmosis](https://www.mintscan.io/osmosis/validators/osmovaloper1083svrca4t350mphfv9x45wq9asrs60c6rv0j5)
+* [Starname](https://www.mintscan.io/starname/validators/starvaloper1pdqlmncych8uzsfdnsptv7s0wpazc0rgv7zc6h)
 
 
-This is the notional software repository.  
+Notional is a validator, but currently inactive on:
+* [Gaia](https://www.mintscan.io/cosmos/validators/cosmosvaloper1083svrca4t350mphfv9x45wq9asrs60cdmrflj)
+* [Akash](https://www.mintscan.io/akash/validators/akashvaloper1083svrca4t350mphfv9x45wq9asrs60c0k5a63)
+* [Regen](https://regen.aneka.io/validators/regenvaloper1083svrca4t350mphfv9x45wq9asrs60ct2p9a5)
 
-On ARM, you should use SOS to use Notional
+Notional Operates an IBC Relayer using [Hermes](https://github.com/informal-systems/ibc-rs) on the following networks, using the following addresses:
 
-In Docker, you should use faddat/archlinux-docker to use Notional.
 
-On AMD64, you should use Arch Linux to use Notional.
+| Network      | Current Relayer Address | Former Relayer Address
+| ----------- | ----------- | ------------ | 
+| Regen      | regen1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx8s4x6u   | regen1083svrca4t350mphfv9x45wq9asrs60chduq99|
+| Osmosis   | osmo1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxsfd262     | osmo1083svrca4t350mphfv9x45wq9asrs60cq5yv9n |
+| Gaia      | cosmos1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxcj76vc  | cosmos1083svrca4t350mphfv9x45wq9asrs60cg0hunp |
+| Akash     | akash1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx4fna4z    | akash1083svrca4t350mphfv9x45wq9asrs60c956m2m |
+| Sentinel  |    |        |
+| Sifchain   |          |          |
+| Starname   |            |                                  |
 
-Over time, all of these will converge.  The .bash_profile here configures every major cosmos-sdk blockchain.  I encourage you to submit pull requests to add your own chain or fix seeds/peers.
 
-the .bash_profile breaks down into a set of systemD unit files.  We have chosen to run without containers and initially only with screen to avoid software complexity. So far, that has gone extremely well.
 
-At notional, we open source every piece of software that we use for validation and relaying.  If you want to get involved, just fork this repository and begin contributing.  This software has fairly steep system requirements which can be lowered by using State Sync. 
+# Products
+All of Notional's products are 100% open source, though some do have unusal licenses.
 
-We hope to open source our hardware, as well. 
+* [SOS](https://github.com/faddat/sos) Lightweight operating system based on Arch Linux
+* [Archlinux-Docker](https://github.com/faddat/archlinux-docker) Arm64/amd64 multiplatform docker image for Arch
+* [Validatron](https://whimsical.com/validatron-PbUypC8tVMU8DxCFNLdDFu) designs and equipment for edge validation
+* [ipfsync](https://github.com/faddat/ipfscync) IPFS collaborative cluster enabling syncs that saturate a 10gbps line
+* [tradeberry](https://github.com/faddat/tradeberry) Raspberry pi image that allows private usage of Osmosis
+
+
+We have been working with https://pcbviet.com on open source hardware, and hope to run tradeberry on a Minimus PC sometime in 2021.
+
 
 # System Requirements
 
