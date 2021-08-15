@@ -1,6 +1,8 @@
 # Notional
 This is the notional software repository. 
 
+
+## Validation
 Notional is an **active set** validator on:
 * [Osmosis](https://www.mintscan.io/osmosis/validators/osmovaloper1083svrca4t350mphfv9x45wq9asrs60c6rv0j5)
 * [Starname](https://www.mintscan.io/starname/validators/starvaloper1pdqlmncych8uzsfdnsptv7s0wpazc0rgv7zc6h)
@@ -10,6 +12,9 @@ Notional is an **active set** validator on:
 Notional is a validator, but currently inactive on:
 * [Gaia](https://www.mintscan.io/cosmos/validators/cosmosvaloper1083svrca4t350mphfv9x45wq9asrs60cdmrflj)
 * [Akash](https://www.mintscan.io/akash/validators/akashvaloper1083svrca4t350mphfv9x45wq9asrs60c0k5a63)
+
+
+## Relaying
 
 Notional Operates an IBC Relayer using [Hermes](https://github.com/informal-systems/ibc-rs) on the following networks, using the following addresses:
 
