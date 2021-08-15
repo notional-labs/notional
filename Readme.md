@@ -26,8 +26,8 @@ Notional Operates an IBC Relayer using [Hermes](https://github.com/informal-syst
 | Gaia      | cosmos1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxcj76vc | cosmos1083svrca4t350mphfv9x45wq9asrs60cg0hunp |
 | Akash     | akash1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx4fna4z  | akash1083svrca4t350mphfv9x45wq9asrs60c956m2m |
 | Sentinel  | sent1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxrfgrgh   |  sent1083svrca4t350mphfv9x45wq9asrs60cn5p9hw      |
-| Sifchain   | sif1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxa03vrn   | star1pdqlmncych8uzsfdnsptv7s0wpazc0rgf4xgk7         |
-| Starname   | star1t090jl87cnu9p3nlc6n20falgal2m8lujafd6u  | star1t090jl87cnu9p3nlc6n20falgal2m8lujafd6u |
+| Sifchain   | sif1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxa03vrn   | sif1083svrca4t350mphfv9x45wq9asrs60cdjc2u2  |
+| Starname   | star1t090jl87cnu9p3nlc6n20falgal2m8lujafd6u  | star1pdqlmncych8uzsfdnsptv7s0wpazc0rgf4xgk7 |
 
 
 
