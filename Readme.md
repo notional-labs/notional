@@ -39,6 +39,7 @@ All of Notional's products are 100% open source, though some do have unusal lice
 * [Validatron](https://whimsical.com/validatron-PbUypC8tVMU8DxCFNLdDFu) designs and equipment for edge validation
 * [ipfsync](https://github.com/faddat/ipfscync) IPFS collaborative cluster enabling syncs that saturate a 10gbps line
 * [tradeberry](https://github.com/faddat/tradeberry) Raspberry pi image that allows private usage of Osmosis
+* [dig](https://github.com/faddat/dig) Liquid Land
 
 
 We have been working with https://pcbviet.com on open source hardware, and hope to run tradeberry on a Minimus PC sometime in 2021.
