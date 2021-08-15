@@ -12,6 +12,8 @@ Environment=AKASH_P2P_PERSISTENT_PEERS="27eb432ccd5e895c5c659659120d68b393dd8c60
 Environment=AKASH_P2P_MAX_NUM_INBOUND_PEERS=500
 Environment=AKASH_SNAPSHOT_INTERVAL=1000
 Environment=HOME=/root/
+LimitNOFILE=500000
+
 
 ExecStart=/usr/bin/akash start
 

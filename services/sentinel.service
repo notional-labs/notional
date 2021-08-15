@@ -12,7 +12,7 @@ Environment=SENTINELHUB_P2P_PERSISTENT_PEERS="152bad169bfde238d24b8e2403d72c092a
 Environment=SENTINELHUB_P2P_MAX_NUM_INBOUND_PEERS=500
 Environment=SENTINELHUB_SNAPSHOT_INTERVAL=1000
 Environment=HOME=/root
-
+LimitNOFILE=500000
 ExecStart=/usr/bin/sentinelhub start
 
 [Install]
