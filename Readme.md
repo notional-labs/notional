@@ -1,5 +1,5 @@
 # Notional
-This is the notional software repository. 
+This is the notional software repository. Watch our [hypnotic Hermes in action](https://hermes.notional.ventures).
 
 
 ## Validation
@@ -16,7 +16,7 @@ Notional is a validator, but currently inactive on:
 
 ## Relaying
 
-Notional Operates an IBC Relayer using [Hermes](https://github.com/informal-systems/ibc-rs) on the following networks, using the following addresses:
+Notional Operates an IBC Relayer using [Hermes](https://github.com/informalsystems/ibc-rs) on the following networks, using the following addresses:
 
 
 | Network      | Current Relayer Address | Former Relayer Address
