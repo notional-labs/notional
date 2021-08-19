@@ -296,7 +296,9 @@ func New(
 		app.GetSubspace(crisistypes.ModuleName), invCheckPeriod, app.BankKeeper, authtypes.FeeCollectorName,
 	)
 	app.UpgradeKeeper = upgradekeeper.NewKeeper(skipUpgradeHeights, keys[upgradetypes.StoreKey], appCodec, homePath)
-
+		app.UpgradeKeeper.SetUpgradeHandler("indica", func(ctx sdk.Context, plan upgradetypes.Plan) {
+			// Nothing to-do, only the Tendermint v.0.34.12
+		})
 	// register the staking hooks
 	// NOTE: stakingKeeper above is passed by reference, so that it will contain these hooks
 	app.StakingKeeper = *stakingKeeper.SetHooks(
