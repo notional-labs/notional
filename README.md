@@ -47,14 +47,14 @@ Should return go version go1.16.6 linux/amd64
 ```
 git clone https://github.com/BitCannaGlobal/bcna.git
 cd bcna
-git checkout v0.2-beta
+git checkout v0.3-beta
 make build   #it build the binary in build/ folder
 ```
 To know the version:
 ```
 build/bcnad version
 ```
-The output must be `0.2-beta`
+The output must be `0.3-beta`
 
 Is the versión match, now you have two options
 * Move the binary to the /usr/local/bin path with: `sudo mv build/bcnad /usr/local/bin/`
