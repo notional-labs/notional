@@ -7,10 +7,16 @@ echo "root soft nofile 150000" >> /etc/security/limits.conf
 echo "* hard nofile  150000" >> /etc/security/limits.conf
 echo "* soft nofile 150000" >> /etc/security/limits.conf
 
-git clone https://github.com/faddat/notional
+
+# git clone https://github.com/faddat/notional
+# this will create a notional folder inside notional
 cd notional
-cp .bash_profile ~/
+#u can't just straight up delete their bash_profile and replace it with yours 
+#cp .bash_profile ~/
+cat .bash_profile >> ~/.bash_profile
 source ~/.bash_profile
+# this will create loop
+# bash standup.bash
 
 
 # Install Osmosis
