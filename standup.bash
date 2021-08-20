@@ -11,7 +11,6 @@ git clone https://github.com/faddat/notional
 cd notional
 cp .bash_profile ~/
 source ~/.bash_profile
-bash standup.bash
 
 
 # Install Osmosis
