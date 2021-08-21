@@ -8,9 +8,9 @@ echo "* hard nofile  150000" >> /etc/security/limits.conf
 echo "* soft nofile 150000" >> /etc/security/limits.conf
 
 cd ~
-#u can't just straight up delete their bash_profile and replace it with yours 
-#cp .bash_profile ~/
-cat ~/notional/.bash_profile >> ~/.bash_profile
+#u can't just straight up delete their bash_profile and replace it with yours -khanh
+# yes you can.  it is designed to run on a blank server that runs arch linux, and to produce a deterministic result -jacob
+cp .bash_profile ~/
 source ~/.bash_profile
 # this will create loop
 # bash standup.bash
