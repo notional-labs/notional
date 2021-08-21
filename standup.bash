@@ -7,7 +7,7 @@ echo "root soft nofile 150000" >> /etc/security/limits.conf
 echo "* hard nofile  150000" >> /etc/security/limits.conf
 echo "* soft nofile 150000" >> /etc/security/limits.conf
 
-
+cd ~
 #u can't just straight up delete their bash_profile and replace it with yours 
 #cp .bash_profile ~/
 cat ~/notional/.bash_profile >> ~/.bash_profile
@@ -23,9 +23,10 @@ git checkout v1.0.2
 make install
 osmosisd init notional
 wget -O ~/.osmosisd/config/genesis.json https://github.com/osmosis-labs/networks/raw/main/osmosis-1/genesis.json
-
+cd ~
 
 # Install sif
+
 wget https://github.com/Sifchain/sifnode/releases/download/mainnet-0.9.0/sifnoded-mainnet-0.9.0-linux-amd64.zip
 unzip sifnoded-mainnet-0.9.0-linux-amd64.zip
 mv sifnoded /usr/bin
@@ -43,6 +44,7 @@ cd ~/.akash/data
 aria2c -x5 http://135.181.60.250/akash/akashnet-2_2021-07-29.tar
 tar xf akashnet-2_2021-07-29.tar
 wget -O ~/.akash/config/genesis.json https://github.com/ovrclk/net/raw/master/mainnet/genesis.json
+cd ~
 
 # Install Sentinel
 git clone https://github.com/sentinel-official/hub
@@ -54,7 +56,7 @@ mv genesis.json ~/.sentinelhub/config/
 cd ~/.sentinelhub/data/
 aria2c -x5 http://135.181.60.250:8083/sentinel/sentinelhub-2_2021-08-01.tar
 tar xf sentinelhub-2_2021-08-01.tar
-
+cd ~
 
 # Install Regen
 git clone https://github.com/regen-network/regen-ledger
@@ -63,7 +65,7 @@ git checkout v1.0.0
 make install
 regen init notional --chain-id regen-1
 curl http://104.131.169.70:26657/genesis | jq .result.genesis > ~/.regen/config/genesis.json
-
+cd ~
 
 # Install Iris
 git clone https://github.com/irisnet/irishub
@@ -75,7 +77,7 @@ curl -o ~/.iris/config/config.toml https://raw.githubusercontent.com/irisnet/mai
 cd ~/.iris
 aria2c -x5 https://data.bitcat365.com/irisnet/data.tar.lz4
 lz4 -d  data.tar.lz4  | tar xzf -       
-
+cd ~
 
 
 
