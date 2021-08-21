@@ -14,71 +14,7 @@ cp .bash_profile ~/
 source ~/.bash_profile
 # this will create loop
 # bash standup.bash
-
-
-# Install Osmosis
-git clone https://github.com/osmosis-labs/osmosis
-cd osmosis
-git checkout v1.0.2
-make install
-osmosisd init notional
-wget -O ~/.osmosisd/config/genesis.json https://github.com/osmosis-labs/networks/raw/main/osmosis-1/genesis.json
-cd ~
-
-# Install sif
-
-wget https://github.com/Sifchain/sifnode/releases/download/mainnet-0.9.0/sifnoded-mainnet-0.9.0-linux-amd64.zip
-unzip sifnoded-mainnet-0.9.0-linux-amd64.zip
-mv sifnoded /usr/bin
-sifnoded init notional
-wget https://github.com/Sifchain/networks/raw/master/mainnet/sifchain-1/genesis.json.gz
-gunzip -k genesis.json.gz
-mv genesis.json ~/.sifnoded/config
-
-# Install Akash
-wget https://github.com/ovrclk/akash/releases/download/v0.12.1/akash_0.12.1_linux_amd64.zip
-unzip akash_0.12.1_linux_amd64.zip
-mv akash_0.12.1_linux_amd64/akash ~/go/bin
-akash init notional
-cd ~/.akash/data
-aria2c -x5 http://135.181.60.250/akash/akashnet-2_2021-07-29.tar
-tar xf akashnet-2_2021-07-29.tar
-wget -O ~/.akash/config/genesis.json https://github.com/ovrclk/net/raw/master/mainnet/genesis.json
-cd ~
-
-# Install Sentinel
-git clone https://github.com/sentinel-official/hub
-cd hub
-make install
-wget https://github.com/sentinel-official/networks/raw/main/sentinelhub-2/genesis.zip
-unzip genesis.zip
-mv genesis.json ~/.sentinelhub/config/
-cd ~/.sentinelhub/data/
-aria2c -x5 http://135.181.60.250:8083/sentinel/sentinelhub-2_2021-08-01.tar
-tar xf sentinelhub-2_2021-08-01.tar
-cd ~
-
-# Install Regen
-git clone https://github.com/regen-network/regen-ledger
-cd regen-ledger
-git checkout v1.0.0
-make install
-regen init notional --chain-id regen-1
-curl http://104.131.169.70:26657/genesis | jq .result.genesis > ~/.regen/config/genesis.json
-cd ~
-
-# Install Iris
-git clone https://github.com/irisnet/irishub
-cd irishub
-make install
-iris init notional
-curl -o ~/.iris/config/genesis.json https://raw.githubusercontent.com/irisnet/mainnet/master/config/genesis.json
-curl -o ~/.iris/config/config.toml https://raw.githubusercontent.com/irisnet/mainnet/master/config/config.toml
-cd ~/.iris
-aria2c -x5 https://data.bitcat365.com/irisnet/data.tar.lz4
-lz4 -d  data.tar.lz4  | tar xzf -       
-cd ~
-
+# great point about the loop though.  It happened to Josepha from Chandra.
 
 
 
