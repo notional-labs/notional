@@ -14,6 +14,7 @@ Environment=SENTINELHUB_SNAPSHOT_INTERVAL=1000
 Environment=HOME=/root
 LimitNOFILE=500000
 ExecStart=/usr/bin/sentinelhub start
+LogLevelMax=3
 
 [Install]
 WantedBy=multi-user.target

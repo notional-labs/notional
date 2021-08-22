@@ -14,6 +14,7 @@ Environment=DIGD_SNAPSHOT_INTERVAL=1000
 Environment=DIGD_P2P_MAX_NUM_OUTBOUND_PEERS=60
 Environment=HOME=/root
 LimitNOFILE=500000
+LogLevelMax=3
 
 
 ExecStart=/usr/bin/digd start

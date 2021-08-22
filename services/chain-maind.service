@@ -13,6 +13,7 @@ Environment=CHAIN_MAIND_P2P_MAX_NUM_INBOUND_PEERS=500
 Environment=CHAIN_MAIND_SNAPSHOT_INTERVAL=1000
 Environment=HOME=/root
 LimitNOFILE=500000
+LogLevelMax=3
 
 
 ExecStart=/usr/bin/chain-maind start

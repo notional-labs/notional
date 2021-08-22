@@ -14,6 +14,8 @@ Environment=JUNOD_P2P_MAX_NUM_OUTBOUND_PEERS=60
 LimitNOFILE=500000
 Environment=CHAIN_MAIND_HOME=$HOME/.junod
 ExecStart=/usr/bin/junod start
+LogLevelMax=3
+
 
 [Install]
 WantedBy=multi-user.target
