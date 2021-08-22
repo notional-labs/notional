@@ -36,6 +36,9 @@ Notional Operates an IBC Relayer using [Hermes](https://github.com/informalsyste
 
 ## Multi-chain Port Standard
 
+
+
+
 Each chain has 10 ports it can use.  WIP.
 
 
@@ -51,6 +54,13 @@ Each chain has 10 ports it can use.  WIP.
 | Iris       | iaa1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxds7twf   | 
 | Crypto.org | cro1qxd33n5ncsx4rdalmgy7hfufqpfcwysudqntax   | 
 | Persistence| persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt | 
+
+| Service      | Port  | 
+| ----------- | ----------- | 
+| p2p   | xxx0  |
+| rpc   | xxx1  |
+| grpc  | xxx2 |
+| api   | xxx3 |
 
 
 
