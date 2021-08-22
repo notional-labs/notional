@@ -13,7 +13,7 @@ Environment=REGEN_P2P_MAX_NUM_INBOUND_PEERS=500
 Environment=REGEN_SNAPSHOT_INTERVAL=1000
 Environment=HOME=/root
 LimitNOFILE=500000
-ExecStart=/usr/bin/regen start
+ExecStart=/usr/bin/regen start --pruning custom --pruning-keep-recent 362880 --pruning-keep-every 0 --pruning-interval 100
 LogLevelMax=3
 
 

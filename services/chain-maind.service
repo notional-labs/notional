@@ -16,7 +16,7 @@ LimitNOFILE=500000
 LogLevelMax=3
 
 
-ExecStart=/usr/bin/chain-maind start
+ExecStart=/usr/bin/chain-maind start --pruning custom --pruning-keep-recent 362880 --pruning-keep-every 0 --pruning-interval 100
 
 [Install]
 WantedBy=multi-user.target

@@ -14,7 +14,7 @@ Environment=PERSISTENCECORE_SNAPSHOT_INTERVAL=1000
 Environment=PERSISTENCECORE_P2P_MAX_NUM_OUTBOUND_PEERS=60
 Environment=HOME=/root
 LimitNOFILE=500000
-ExecStart=/usr/bin/persistencecore start
+ExecStart=/usr/bin/persistencecore start --pruning custom --pruning-keep-recent 362880 --pruning-keep-every 0 --pruning-interval 100
 LogLevelMax=3
 
 

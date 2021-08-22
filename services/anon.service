@@ -17,7 +17,7 @@ LogLevelMax=3
 LimitNOFILE=500000
 
 
-ExecStart=/usr/bin/anoned start
+ExecStart=/usr/bin/anoned start --pruning custom --pruning-keep-recent 362880 --pruning-keep-every 0 --pruning-interval 100
 
 [Install]
 WantedBy=multi-user.target
