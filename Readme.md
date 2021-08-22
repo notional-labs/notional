@@ -38,6 +38,9 @@ Notional Operates an IBC Relayer using [Hermes](https://github.com/informalsyste
 
 Each chain has 10 ports it can use.  WIP.
 
+
+| Network      | Port Range | 
+| ----------- | ----------- | 
 | Osmosis   | 2000-2009   | 
 | Gaia      | 2010-2019 | 
 | Akash     | akash1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx4fna4z  | 
