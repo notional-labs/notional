@@ -34,6 +34,22 @@ Notional Operates an IBC Relayer using [Hermes](https://github.com/informalsyste
 | Persistence| persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt | persistence1r50r8cx09ege6206k70509a3cgk7npn3plg7r8 |
 
 
+## Multi-chain Port Standard
+
+Each chain has 10 ports it can use.  WIP.
+
+| Osmosis   | 2000-2009   | 
+| Gaia      | 2010-2019 | 
+| Akash     | akash1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx4fna4z  | 
+| Regen      | regen1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx8s4x6u | 
+| Sentinel  | sent1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxrfgrgh   | 
+| Sifchain   | sif1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxa03vrn   | 
+| Starname   | star1t090jl87cnu9p3nlc6n20falgal2m8lujafd6u  | 
+| Iris       | iaa1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxds7twf   | 
+| Crypto.org | cro1qxd33n5ncsx4rdalmgy7hfufqpfcwysudqntax   | 
+| Persistence| persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt | 
+
+
 
 # Products
 All of Notional's products are 100% open source, though some do have unusal licenses.
