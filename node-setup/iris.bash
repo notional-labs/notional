@@ -1,4 +1,5 @@
 # Install Iris
+cd ~
 git clone https://github.com/irisnet/irishub
 cd irishub
 make install
