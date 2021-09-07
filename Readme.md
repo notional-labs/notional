@@ -14,6 +14,15 @@ Notional is an **active set** validator on:
 Notional is a validator, but currently inactive on:
 * [Gaia](https://www.mintscan.io/cosmos/validators/cosmosvaloper1083svrca4t350mphfv9x45wq9asrs60cdmrflj)
 
+## Archive Nodes
+Notional maintains archive nodes for BSC, Ethereum, Bitcoin, and every IBC-enabled Cosmos-SDK blockchain.  Documentation is kept in node-setup/archive and takes the approach that archive nodes are best setup slowly, even if that takes days or requires swapping out the binary during sync.  They're intended to be full, proper archives.  Time and expense are not spared in getting them into operation.  We run our archive nodes in three places:
+
+* Hetzner.de (rented hardware)
+* Jacob's laboratory (own hardware)
+* Videttel IDC (own hardware)
+
+Our archive nodes feed into our IPFS snapshot distribution system.
+
 
 ## Relaying
 
@@ -50,6 +59,11 @@ On many networks you'll need to use ipfs to get genesis state.  Here are CID's:
 | Iris       | iaa1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxds7twf   | iaa1083svrca4t350mphfv9x45wq9asrs60cadhd3s  |
 | Crypto.org | cro1qxd33n5ncsx4rdalmgy7hfufqpfcwysudqntax   | cro1mjdxgm2ndu9a4zmr9t3kq88fww30ms7q60e03h  |
 | Persistence| persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt | persistence1r50r8cx09ege6206k70509a3cgk7npn3plg7r8 |
+
+We distribute two snapshots for cosmos-sdk chains:
+
+* pruning=nothing
+* pruning=default
 
 
 ## Tenderseeds
