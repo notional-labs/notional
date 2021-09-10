@@ -21,4 +21,39 @@ Notional is currently using rly to relay:
 ## Setup
 As with hermes, we recommend that you create a single seed phrase, and use that to create all of the wallets that you'll need for relaying.  For rly, we just moved over our cosmos hub and osmosis wallets.
 
+PS: Notional urges the use of go 1.17 because it creates vastly clearer go.mod files and you can install it like:
+
+```bash
+wget -q -O - https://git.io/vQhTU | bash -s -- --version 1.17
+````
+
+
+**quickstart**
+
+You'll need a synced Osmosis Archive node and a synced Gaia Archive node.  You can use pruning settings, but archive nodes provide certainty.  You will almost certainly need to adjust the rpc endpoints found in the config.yaml file-- unless you're just on localhost.
+
+
+Setup for quickstart:
+```bash
+git clone https://github.com/strangelove-venutures/relayer
+make install
+rly init
+wget -O ~/.relayer/config/config.yaml https://raw.githubusercontent.com/notional-labs/notional/master/rly/config.yaml
+rly keys recover cosmoshub-4 cosmos "24 or 12 magic words invoked like a spell"
+rly keys recover osmosis-1 osmosis "24 or 12 magic words invoked like a spell"
+```
+
+relay hub to osmosis:
+```bash
+rly start hubosmo
+```
+
+
+relay osmosis to hub
+```bash
+rly start osmohub
+```
+
+
+
 
