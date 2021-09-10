@@ -15,7 +15,11 @@
 
 Notional is currently using rly to relay:
 
-* cosmos hub <-------> osmosis
+* osmosis-1 <-------> cosmoshub-4
+* sentinelhub-2 <--------> osmosis-1
+* sentinelhub-2 <--------> cosmoshub-4
+* akashnet-2 <---------> cosmoshub-4
+* akashnet-2 <---------> osmosis-1
 
 
 ## Setup
