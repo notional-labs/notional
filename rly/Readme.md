@@ -15,11 +15,32 @@
 
 Notional is currently using rly to relay:
 
+osmo, cosmos, akash, regen, dig, sentinel
+
+6x6=36
+36x2=72
+
+72 unidirectional channels is the goal, then.  We need a process monitor OR to run multiple channels with a single binary.
+
+We can expect this to expand exponentially.
+
+Notional has decided to for the time being only support the following HD Path: `m/44H/118H/0H/0/0`, and may add others later.
+
+
+
 * osmosis-1 <-------> cosmoshub-4
 * sentinelhub-2 <--------> osmosis-1
 * sentinelhub-2 <--------> cosmoshub-4
+* sentinelhub-2 <------> akashnet-2
+* sentinelhub-2 <------> regen-1
 * akashnet-2 <---------> cosmoshub-4
 * akashnet-2 <---------> osmosis-1
+* dig <--------> osmosis-1
+* dig <--------> cosmoshub-4
+* regen-1 <-----> cosmoshub-4
+* regen-1 <-----> osmosis-1
+* regen-1 <-----> akashnet-2
+* 
 
 
 ## Setup
