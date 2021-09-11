@@ -22,6 +22,11 @@ osmo, cosmos, akash, regen, dig, sentinel
 
 72 unidirectional channels is the goal, then.  We need a process monitor OR to run multiple channels with a single binary.
 
+- [ ] look into pm2
+- [ ] look into systemd
+- [ ] look into other process monitoring solutions
+
+
 We can expect this to expand exponentially.
 
 Notional has decided to for the time being only support the following HD Path: `m/44H/118H/0H/0/0`, and may add others later.
