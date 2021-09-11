@@ -72,6 +72,8 @@ rly keys recover dig-1 dig "24 or 12 magic words invoked like a spell"
 rly keys recover sentinelhub-2 sentinel "24 or 12 magic words invoked like a spell"
 rly keys recover regen-1 regen "24 or 12 magic words invoked like a spell"
 rly keys recover akashnet-2 akash "24 or 12 magic words invoked like a spell"
+rly keys recover iov-mainnet-ibc iov "24 or 12 magic words invoked like a spell"
+rly keys recover microtick-1 mtm "24 or 12 magic words invoked like a spell"
 ```
 
 relay hub to osmosis:
