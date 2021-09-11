@@ -15,7 +15,7 @@
 
 Notional is currently using rly to relay:
 
-osmo, cosmos, akash, regen, dig, sentinel
+osmo, cosmos, akash, regen, dig, sentinel, starname
 
 6x6=36
 36x2=72
@@ -27,10 +27,7 @@ osmo, cosmos, akash, regen, dig, sentinel
 - [ ] look into other process monitoring solutions
 
 
-We can expect this to expand exponentially.
-
-Notional has decided to for the time being only support the following HD Path: `m/44H/118H/0H/0/0`, and may add others later.
-
+We can expect this to expand exponentially, and believe that for the time being, the best pattern is all:all.
 
 
 * osmosis-1 <-------> cosmoshub-4
@@ -71,6 +68,10 @@ rly init
 wget -O ~/.relayer/config/config.yaml https://raw.githubusercontent.com/notional-labs/notional/master/rly/config.yaml
 rly keys recover cosmoshub-4 cosmos "24 or 12 magic words invoked like a spell"
 rly keys recover osmosis-1 osmosis "24 or 12 magic words invoked like a spell"
+rly keys recover dig-1 dig "24 or 12 magic words invoked like a spell"
+rly keys recover sentinelhub-2 sentinel "24 or 12 magic words invoked like a spell"
+rly keys recover regen-1 regen "24 or 12 magic words invoked like a spell"
+rly keys recover akashnet-2 akash "24 or 12 magic words invoked like a spell"
 ```
 
 relay hub to osmosis:
