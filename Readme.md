@@ -81,15 +81,18 @@ Each chain has 10 ports it can use.  WIP.
 | Network      | Port Range | 
 | ----------- | ----------- | 
 | Osmosis   | 2000-2009   | 
-| Gaia      | 2010-2019 | 
-| Akash     |   | 
-| Regen      |  | 
-| Sentinel  |    | 
-| Sifchain   |    | 
-| Starname   |   | 
-| Iris       |    | 
-| Crypto.org |    | 
-| Persistence|  | 
+| Gaia      | 2010-2019   | 
+| Akash     | 2020-2029   | 
+| Sentinel  | 2030-2039   | 
+| Crypto.org | 2040-2049  | 
+| Regen      | 2060-2069  | 
+| ~~Sifchain~~   | 2110-2119 | 
+| Omniflix  | 2070-2079 |
+| Juno       | 2050-2059 |
+| Starname   | 2130-2139   | 
+| Iris       | 2120-2129   | 
+| Persistence| 2080-2089  | 
+| dig        | 2090-2099 |
 
 | Service      | Port  | 
 | ----------- | ----------- | 
