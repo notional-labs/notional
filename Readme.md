@@ -1,5 +1,5 @@
 # Notional
-This is the notional software repository. Watch our [hypnotic Hermes in action](https://hermes.notional.ventures).
+This is the notional software repository, which details with as much precision as we can muster, the entire notional software + infrastructure stack used by notional in production for validation and relaying.
 
 
 ## Validation
