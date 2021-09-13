@@ -10,7 +10,14 @@ Notional is an **active set** validator on:
 * [Akash](https://www.mintscan.io/akash/validators/akashvaloper1083svrca4t350mphfv9x45wq9asrs60c0k5a63)
 * [Gaia](https://www.mintscan.io/cosmos/validators/cosmosvaloper1083svrca4t350mphfv9x45wq9asrs60cdmrflj)
 
+
+Notional has decided to maintain relayers for all chains -- and document processes -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on 50 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
+
+## Comission
 Notional charges above-average comissions and uses validator income to pursue research and development work that improves the state of sovereign blockchain technology.  We are happy to answer any questions that delegators have. 
+
+Currently we have various rates on various chains, and are standardizing across the board at 9.69%.
+
 
 ## Archive Nodes
 Notional maintains archive nodes for BSC, Ethereum, Bitcoin, and every IBC-enabled Cosmos-SDK blockchain.  Documentation is kept in node-setup/archive and takes the approach that archive nodes are best setup slowly, even if that takes days or requires swapping out the binary during sync.  They're intended to be full, proper archives.  Time and expense are not spared in getting them into operation.  We run our archive nodes in three places:
