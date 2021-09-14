@@ -1,5 +1,5 @@
 # Notional
-This is the notional software repository. Watch our [hypnotic Hermes in action](https://hermes.notional.ventures).
+This is the notional software repository, which details with as much precision as we can muster, the entire notional software + infrastructure stack used by notional in production for validation and relaying.
 
 
 ## Validation
@@ -8,11 +8,25 @@ Notional is an **active set** validator on:
 * [Starname](https://www.mintscan.io/starname/validators/starvaloper1pdqlmncych8uzsfdnsptv7s0wpazc0rgv7zc6h)
 * [Regen](https://regen.aneka.io/validators/regenvaloper1083svrca4t350mphfv9x45wq9asrs60ct2p9a5)
 * [Akash](https://www.mintscan.io/akash/validators/akashvaloper1083svrca4t350mphfv9x45wq9asrs60c0k5a63)
-
-
-
-Notional is a validator, but currently inactive on:
 * [Gaia](https://www.mintscan.io/cosmos/validators/cosmosvaloper1083svrca4t350mphfv9x45wq9asrs60cdmrflj)
+
+
+Notional has decided to maintain relayers for all chains -- and document processes -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on 50 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
+
+## Comission
+Notional charges above-average comissions and uses validator income to pursue research and development work that improves the state of sovereign blockchain technology.  We are happy to answer any questions that delegators have. 
+
+Currently we have various rates on various chains, and are standardizing across the board at 9.69%.
+
+
+## Archive Nodes
+Notional maintains archive nodes for BSC, Ethereum, Bitcoin, and every IBC-enabled Cosmos-SDK blockchain.  Documentation is kept in node-setup/archive and takes the approach that archive nodes are best setup slowly, even if that takes days or requires swapping out the binary during sync.  They're intended to be full, proper archives.  Time and expense are not spared in getting them into operation.  We run our archive nodes in three places:
+
+* Hetzner.de (rented hardware)
+* Jacob's laboratory (own hardware)
+* Videttel IDC (own hardware)
+
+Our archive nodes feed into our IPFS snapshot distribution system.
 
 
 ## Relaying
@@ -34,6 +48,33 @@ Notional Operates an IBC Relayer using [Hermes](https://github.com/informalsyste
 | Persistence| persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt | persistence1r50r8cx09ege6206k70509a3cgk7npn3plg7r8 |
 
 
+## Snapshots
+
+On many networks you'll need to use ipfs to get genesis state.  Here are CID's:
+
+| Network      | Archive | Pruned
+| ----------- | ----------- | ------------ | 
+| Regen      | regen1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx8s4x6u | |
+| Osmosis   | osmo1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxsfd262   |  |
+| Gaia      | cosmos1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxcj76vc |  |
+| Akash     | akash1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx4fna4z  |  |
+| Sentinel  | sent1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxrfgrgh   |       |
+| Sifchain   | sif1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxa03vrn   |   |
+| Starname   | star1t090jl87cnu9p3nlc6n20falgal2m8lujafd6u  | star1pdqlmncych8uzsfdnsptv7s0wpazc0rgf4xgk7 |
+| Iris       | iaa1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxds7twf   | iaa1083svrca4t350mphfv9x45wq9asrs60cadhd3s  |
+| Crypto.org | cro1qxd33n5ncsx4rdalmgy7hfufqpfcwysudqntax   | cro1mjdxgm2ndu9a4zmr9t3kq88fww30ms7q60e03h  |
+| Persistence| persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt | persistence1r50r8cx09ege6206k70509a3cgk7npn3plg7r8 |
+
+We distribute two snapshots for cosmos-sdk chains:
+
+* pruning=nothing
+* pruning=default
+
+
+## Tenderseeds
+
+
+
 ## Multi-chain Port Standard
 
 
@@ -45,15 +86,18 @@ Each chain has 10 ports it can use.  WIP.
 | Network      | Port Range | 
 | ----------- | ----------- | 
 | Osmosis   | 2000-2009   | 
-| Gaia      | 2010-2019 | 
-| Akash     | akash1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx4fna4z  | 
-| Regen      | regen1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx8s4x6u | 
-| Sentinel  | sent1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxrfgrgh   | 
-| Sifchain   | sif1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxa03vrn   | 
-| Starname   | star1t090jl87cnu9p3nlc6n20falgal2m8lujafd6u  | 
-| Iris       | iaa1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxds7twf   | 
-| Crypto.org | cro1qxd33n5ncsx4rdalmgy7hfufqpfcwysudqntax   | 
-| Persistence| persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt | 
+| Gaia      | 2010-2019   | 
+| Akash     | 2020-2029   | 
+| Sentinel  | 2030-2039   | 
+| Crypto.org | 2040-2049  | 
+| Regen      | 2060-2069  | 
+| ~~Sifchain~~   | 2110-2119 | 
+| Omniflix  | 2070-2079 |
+| Juno       | 2050-2059 |
+| Starname   | 2130-2139   | 
+| Iris       | 2120-2129   | 
+| Persistence| 2080-2089  | 
+| dig        | 2090-2099 |
 
 | Service      | Port  | 
 | ----------- | ----------- | 
@@ -67,12 +111,12 @@ Each chain has 10 ports it can use.  WIP.
 # Products
 All of Notional's products are 100% open source, though some do have unusal licenses.
 
-* [SOS](https://github.com/faddat/sos) Lightweight operating system based on Arch Linux
+* [SOS](https://github.com/notional-labs/sos) Lightweight operating system based on Arch Linux
 * [Archlinux-Docker](https://github.com/faddat/archlinux-docker) Arm64/amd64 multiplatform docker image for Arch
 * [Validatron](https://whimsical.com/validatron-PbUypC8tVMU8DxCFNLdDFu) designs and equipment for edge validation
-* [ipfsync](https://github.com/faddat/ipfscync) IPFS collaborative cluster enabling syncs that saturate a 10gbps line
-* [tradeberry](https://github.com/faddat/tradeberry) Raspberry pi image that allows private usage of Osmosis
-* [dig](https://github.com/faddat/dig) Liquid Land
+* [ipfsync](https://github.com/notional-labs/ipfscync) IPFS collaborative cluster enabling syncs that saturate a 10gbps line
+* [tradeberry](https://github.com/notional-labs/tradeberry) Raspberry pi image that allows private usage of Osmosis
+* [dig](https://github.com/notional-labs/dig) Liquid Land
 
 
 We have been working with https://pcbviet.com on open source hardware, and hope to run tradeberry on a Minimus PC sometime in 2021.
@@ -97,7 +141,7 @@ Our technical partners agree to:
 # System Requirements
 
 ### Single Node
-* A raspberry pi 4 with SOS should do.
+* A raspberry pi 4 will allow you to relay between two state synced chains.
 
 ### Somewhere between single and many
 * Hardware between rpi and the omni configuration

@@ -1,4 +1,5 @@
 # Install Akash
+cd ~
 wget https://github.com/ovrclk/akash/releases/download/v0.12.1/akash_0.12.1_linux_amd64.zip
 unzip akash_0.12.1_linux_amd64.zip
 mv akash_0.12.1_linux_amd64/akash ~/go/bin
