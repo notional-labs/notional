@@ -16,7 +16,7 @@ strategy = 'packets'
 #   is parametrized with (numerator = 1, denominator = 3), so that clients with
 #  thresholds different than this will be ignored.
 # If set to 'true', both of the above filters will be enabled.
-filter = false
+filter = true
 
 # Specify the verbosity for the relayer logging output. Default: 'info'
 # Valid options are 'error', 'warn', 'info', 'debug', 'trace'.
@@ -59,22 +59,22 @@ host = '127.0.0.1'
 # Specify the port over which the built-in HTTP server will serve the metrics gathered
 # by the telemetry service. Default: 3001
 port = 3001
-
-[[chains]]
-id = 'osmosis-1'
-rpc_addr = 'http://127.0.0.1:2001'
-grpc_addr = 'http://127.0.0.1:2002'
-websocket_addr = 'ws://127.0.0.1:2001/websocket'
-rpc_timeout = '10s'
-account_prefix = 'osmo'
-key_name = 'osmosis'
-store_prefix = 'ibc'
-max_gas = 2000000
-gas_price = { price = 0.001, denom = 'uosmo' }
-gas_adjustment = 0.1
-clock_drift = '5s'
-trusting_period = '10days'
-trust_threshold = { numerator = '1', denominator = '3' }
+ 
+#[[chains]]
+#id = 'osmosis-1'
+#rpc_addr = 'http://162.55.132.230:2001'
+#grpc_addr = 'http://162.55.132.230:2002'
+#websocket_addr = 'ws://162.55.132.230:2001/websocket'
+#rpc_timeout = '10s'
+#account_prefix = 'osmo'
+#key_name = 'osmosis'
+#store_prefix = 'ibc'
+#max_gas = 30000000
+#gas_price = { price = 0.000, denom = 'uosmo' }
+#gas_adjustment = 0.1
+#clock_drift = '5s'
+#trusting_period = '10days'
+#trust_threshold = { numerator = '1', denominator = '3' }
 
 [[chains]]
 id = 'akashnet-2'
@@ -118,27 +118,28 @@ account_prefix = 'iaa'
 key_name = 'iris'
 store_prefix = 'ibc'
 max_gas = 2000000
+max_tx_size = 1800000
 gas_price = { price = 0.001, denom = 'uiris' }
 gas_adjustment = 0.1
 clock_drift ='5s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
 
-[[chains]]
-id = 'dig-testnet-1'
-rpc_addr = 'http://127.0.0.1:23394'
-grpc_addr = 'http://127.0.0.1:5473'
-websocket_addr = 'ws://127.0.0.1:23394/websocket'
-rpc_timeout = '10s'
-account_prefix = 'dig'
-key_name = 'dig'
-store_prefix = 'ibc'
-max_gas = 2000000
-gas_price = { price = 0.001, denom = 'dig' }
-gas_adjustment = 0.1
-clock_drift ='5s'
-trusting_period = '14days'
-trust_threshold = { numerator = '1', denominator = '3' }
+#[[chains]]
+#id = 'dig-testnet-1'
+#rpc_addr = 'http://127.0.0.1:23394'
+#grpc_addr = 'http://127.0.0.1:5473'
+#websocket_addr = 'ws://127.0.0.1:23394/websocket'
+#rpc_timeout = '10s'
+#account_prefix = 'dig'
+#key_name = 'dig'
+#store_prefix = 'ibc'
+#max_gas = 2000000
+#gas_price = { price = 0.001, denom = 'dig' }
+#gas_adjustment = 0.1
+#clock_drift ='5s'
+#trusting_period = '14days'
+#trust_threshold = { numerator = '1', denominator = '3' }
 
 
 [[chains]]
@@ -150,6 +151,7 @@ account_prefix = 'regen'
 key_name = 'regen'
 store_prefix = 'ibc'
 max_gas = 2000000
+max_tx_size = 180000
 gas_price = { price = 0.001, denom = 'uregen' }
 gas_adjustment = 0.1
 clock_drift ='5s'
@@ -158,21 +160,22 @@ trust_threshold = { numerator = '1', denominator = '3' }
 
 
 
-[[chains]]
-id = 'cosmoshub-4'
-rpc_addr = 'http://127.0.0.1:2011'
-grpc_addr = 'http://127.0.0.1:2012'
-websocket_addr = 'ws://127.0.0.1:2011/websocket'
-rpc_timeout = '10s'
-account_prefix = 'cosmos'
-key_name = 'cosmos'
-store_prefix = 'ibc'
-max_gas = 2000000
-gas_price = { price = 0.002, denom = 'uatom' }
-gas_adjustment = 0.1
-clock_drift ='5s'
-trusting_period = '14days'
-trust_threshold = { numerator = '1', denominator = '3' }
+#[[chains]]
+#id = 'cosmoshub-4'
+#rpc_addr = 'http://127.0.0.1:2011'
+#grpc_addr = 'http://127.0.0.1:2012'
+#websocket_addr = 'ws://127.0.0.1:2011/websocket'
+#rpc_timeout = '10s'
+#account_prefix = 'cosmos'
+#key_name = 'cosmos'
+#store_prefix = 'ibc'
+#max_tx_size = 180000
+#max_gas = 3000000
+#gas_price = { price = 0.001, denom = 'uatom' }
+#gas_adjustment = 0.1
+#clock_drift ='5s'
+#trusting_period = '14days'
+#trust_threshold = { numerator = '1', denominator = '3' }
 
 
 [[chains]]
@@ -183,9 +186,10 @@ websocket_addr = 'ws://127.0.0.1:2071/websocket'
 rpc_timeout = '10s'
 account_prefix = 'star'
 key_name = 'iov'
+max_tx_size = 450000
 store_prefix = 'ibc'
-max_gas = 30000000
-gas_price = { price = 2.0, denom = 'uiov' }
+max_gas = 2000000
+gas_price = { price = 1.0, denom = 'uiov' }
 gas_adjustment = 0.1
 clock_drift ='5s'
 trusting_period = '14days'
@@ -202,7 +206,8 @@ rpc_timeout = '10s'
 account_prefix = 'persistence'
 key_name = 'persistence'
 store_prefix = 'ibc'
-max_gas = 30000000
+max_gas = 2000000
+max_tx_size = 180000
 gas_price = { price = 0.001, denom = 'uxprt' }
 gas_adjustment = 0.1
 clock_drift ='5s'
@@ -219,25 +224,26 @@ rpc_timeout = '10s'
 account_prefix = 'cro'
 key_name = 'crypto'
 store_prefix = 'ibc'
-max_gas = 30000000
+max_gas = 2000000
+max_tx_size = 450000
 gas_price = { price = 0.05, denom = 'basecro' }
 gas_adjustment = 0.1
 clock_drift ='5s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
 
-[[chains]]
-id = 'sifchain-1'
-rpc_addr = 'http://127.0.0.1:2111'
-grpc_addr = 'http://127.0.0.1:2112'
-websocket_addr = 'ws://127.0.0.1:2111/websocket'
-rpc_timeout = '10s'
-account_prefix = 'sif'
-key_name = 'sif'
-store_prefix = 'ibc'
-max_gas = 30000000
-gas_price = { price = 0.001, denom = 'rowan' }
-gas_adjustment = 0.1
-clock_drift ='5s'
-trusting_period = '14days'
-trust_threshold = { numerator = '1', denominator = '3' }
+#[[chains]]
+#id = 'sifchain-1'
+#rpc_addr = 'http://127.0.0.1:2111'
+#grpc_addr = 'http://127.0.0.1:2112'
+#websocket_addr = 'ws://127.0.0.1:2111/websocket'
+#rpc_timeout = '10s'
+#account_prefix = 'sif'
+#key_name = 'sif'
+#store_prefix = 'ibc'
+#max_gas = 2000000
+#gas_price = { price = 0.001, denom = 'rowan' }
+#gas_adjustment = 0.1
+#clock_drift ='5s'
+#trusting_period = '14days'
+#trust_threshold = { numerator = '1', denominator = '3' }
