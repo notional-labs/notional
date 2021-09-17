@@ -62,7 +62,7 @@ You'll need a synced Osmosis Archive node and a synced Gaia Archive node.  You c
 
 Setup for quickstart:
 ```bash
-git clone https://github.com/strangelove-venutures/relayer
+git clone https://github.com/strangelove-ventures/relayer
 make install
 rly init
 wget -O ~/.relayer/config/config.yaml https://raw.githubusercontent.com/notional-labs/notional/master/rly/config.yaml
