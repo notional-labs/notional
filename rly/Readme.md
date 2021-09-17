@@ -22,9 +22,11 @@ osmo, cosmos, akash, regen, dig, sentinel, starname
 
 72 unidirectional channels is the goal, then.  We need a process monitor OR to run multiple channels with a single binary.
 
-- [ ] look into pm2
-- [ ] look into systemd
-- [ ] look into other process monitoring solutions
+- [x] look into pm2
+- [x] look into systemd
+- [x] look into other process monitoring solutions
+
+Amusingly, the solution is at present bash loops that run in screen sessions. 
 
 
 We can expect this to expand exponentially, and believe that for the time being, the best pattern is all:all.
@@ -60,7 +62,7 @@ wget -q -O - https://git.io/vQhTU | bash -s -- --version 1.17
 You'll need a synced Osmosis Archive node and a synced Gaia Archive node.  You can use pruning settings, but archive nodes provide certainty.  You will almost certainly need to adjust the rpc endpoints found in the config.yaml file-- unless you're just on localhost.
 
 
-Setup for quickstart:
+**Setup for quickstart:**
 ```bash
 git clone https://github.com/strangelove-ventures/relayer
 make install
@@ -76,16 +78,23 @@ rly keys recover iov-mainnet-ibc iov "24 or 12 magic words invoked like a spell"
 rly keys recover microtick-1 mtm "24 or 12 magic words invoked like a spell"
 ```
 
-relay hub to osmosis:
+**relay hub to osmosis as a long-running daemon:**
 ```bash
 rly start hubosmo
 ```
 
-
-relay osmosis to hub
 ```bash
 rly start osmohub
 ```
+
+**relay osmo<->hub (0 and 141) in a crazy bash loop:**
+```bash
+bash osmoandhub.bash
+```
+
+
+
+
 
 
 
