@@ -1,0 +1,509 @@
+global:
+  api-listen-addr: :5183
+  timeout: 1200s
+  light-cache-size: 100
+
+
+
+
+chains:
+
+- key: cro
+  chain-id: crypto-org-chain-mainnet-1
+  rpc-addr: http://127.0.0.1:2041
+  account-prefix: cro
+  gas-adjustment: 2
+  gas-prices: 0.001ucro
+  trusting-period: 336h
+
+
+- key: cosmos
+  chain-id: cosmoshub-4
+  rpc-addr: http://127.0.0.1:2011
+  account-prefix: cosmos
+  gas-adjustment: 2
+  gas-prices: 0.001uatom
+  trusting-period: 336h
+
+
+- key: osmosis
+  chain-id: osmosis-1
+  rpc-addr: http://127.0.0.1:2001
+  account-prefix: osmo
+  gas-adjustment: 10
+  gas-prices: 0.000uosmo
+  trusting-period: 240h
+
+
+- key: sentinel
+  chain-id: sentinelhub-2
+  rpc-addr: http://127.0.0.1:2031
+  account-prefix: sent
+  gas-adjustment: 2
+  gas-prices: 0.001udvpn
+  trusting-period: 336h
+
+
+- key: akash
+  chain-id: akashnet-2
+  rpc-addr: http://127.0.0.1:2021
+  account-prefix: akash
+  gas-adjustment: 2
+  gas-prices: 0.001uakt
+  trusting-period: 336h
+
+- key: regen
+  chain-id: regen-1
+  rpc-addr: http://127.0.0.1:2061
+  account-prefix: regen
+  gas-adjustment: 2
+  gas-prices: 0.001uregen
+  trusting-period: 336h
+
+- key: iov
+  chain-id: iov-mainnet-ibc
+  rpc-addr: http://127.0.0.1:2071
+  account-prefix: star
+  gas-adjustment: 2
+  gas-prices: 0.001uiov
+  trusting-period: 336h
+  
+- key: iris
+  chain-id: irishub-1
+  rpc-addr: http://127.0.0.1:2121
+  account-prefix: iaa
+  gas-adjustment: 2
+  gas-price: 0.001uiris
+  trusting-period: 336h
+
+
+- key: persistence
+  chain-id: core-1
+  rpc-addr: http://127.0.0.1:2081
+  account-prefix: persistence
+  gas-adjustment: 2
+  gas-price: 0.001uxprt
+  trusting-period: 336h
+
+
+paths:
+  croosmo:
+    src:
+      chain-id: crypto-org-chain-mainnet-1
+      client-id: 07-tendermint-33
+      connection-id: connection-12
+      channel-id: channel-10
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-4
+      connection-id: connection-5
+      channel-id: channel-5
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  osmocro:
+    src:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-4
+      connection-id: connection-5
+      channel-id: channel-5
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: crypto-org-chain-mainnet-1
+      client-id: 07-tendermint-33
+      connection-id: connection-12
+      channel-id: channel-10
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+
+
+  crohub:
+    src:
+      chain-id: crypto-org-chain-mainnet-1
+      client-id: 07-tendermint-735
+      connection-id: connection-220
+      channel-id: channel-27
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-389
+      connection-id: connection-342
+      channel-id: channel-187
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  hubcro:
+    src:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-389
+      connection-id: connection-342
+      channel-id: channel-187
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: crypto-org-chain-mainnet-1
+      client-id: 07-tendermint-735
+      connection-id: connection-220
+      channel-id: channel-27
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  xprtosmo:
+    src:
+      chain-id: core-1
+      client-id: 07-tendermint-6
+      connection-id: connection-5
+      channel-id: channel-6
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-3
+      connection-id: connection-4
+      channel-id: channel-4
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  xprtosmo:
+    src:
+      chain-id: core-1
+      client-id: 07-tendermint-6
+      connection-id: connection-5
+      channel-id: channel-6
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-3
+      connection-id: connection-4
+      channel-id: channel-4
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  xprthub:
+    src:
+      chain-id: core-1
+      client-id: 07-tendermint-36
+      connection-id: connection-30
+      channel-id: channel-24
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-391
+      connection-id: connection-344
+      channel-id: channel-190
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  hubxprt:
+    src:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-391
+      connection-id: connection-344
+      channel-id: channel-190
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: core-1
+      client-id: 07-tendermint-36
+      connection-id: connection-30
+      channel-id: channel-24
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  osmoxprt:
+    src:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-3
+      connection-id: connection-4
+      channel-id: channel-4
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: core-1
+      client-id: 07-tendermint-6
+      connection-id: connection-5
+      channel-id: channel-6
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  irishub:
+    src:
+      chain-id: irishub-1
+      client-id: 07-tendermint-31
+      connection-id: connection-22
+      channel-id: channel-12
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-384
+      connection-id: connection-338
+      channel-id: channel-182
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  hubiris:
+    src:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-384
+      connection-id: connection-338
+      channel-id: channel-182
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: irishub-1
+      client-id: 07-tendermint-31
+      connection-id: connection-22
+      channel-id: channel-12
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  osmoiris:
+    src:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-5
+      connection-id: connection-6
+      channel-id: channel-6
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: irishub-1
+      client-id: 07-tendermint-5
+      connection-id: connection-4
+      channel-id: channel-3
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  iovosmo:
+    src:
+      chain-id: iov-mainnet-ibc
+      client-id: 07-tendermint-9
+      connection-id: connection-9
+      channel-id: channel-2
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-71
+      connection-id: connection-42
+      channel-id: channel-15
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive      
+  osmoiov:
+    src:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-71
+      connection-id: connection-42
+      channel-id: channel-15
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: iov-mainnet-ibc
+      client-id: 07-tendermint-9
+      connection-id: connection-9
+      channel-id: channel-2
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  aktosmo:
+    src:
+      chain-id: akashnet-2
+      client-id: 07-tendermint-18
+      connection-id: connection-11
+      channel-id: channel-9
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-0
+      connection-id: connection-2
+      channel-id: channel-1
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  osmoakt:
+    src:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-0
+      connection-id: connection-2
+      channel-id: channel-1
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: akashnet-2
+      client-id: 07-tendermint-18
+      connection-id: connection-11
+      channel-id: channel-9
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  akthub:
+    src:
+      chain-id: akashnet-2
+      client-id: 07-tendermint-53
+      connection-id: connection-29
+      channel-id: channel-17
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-385
+      connection-id: connection-339
+      channel-id: channel-184
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy: 
+      type: naive
+  hubakt:
+    src:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-385
+      connection-id: connection-339
+      channel-id: channel-184
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: akashnet-2
+      client-id: 07-tendermint-53
+      connection-id: connection-29
+      channel-id: channel-17
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  hubosmo:
+    src:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-259
+      connection-id: connection-257
+      channel-id: channel-141
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-1
+      connection-id: connection-1
+      channel-id: channel-0
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  dvpnosmo:
+    src:
+      chain-id: sentinelhub-2
+      client-id: 07-tendermint-0
+      connection-id: connection-0
+      channel-id: channel-0
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-2
+      connection-id: connection-3
+      channel-id: channel-2
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  osmodvpn:
+    src:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-2
+      connection-id: connection-3
+      channel-id: channel-2
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: sentinelhub-2
+      client-id: 07-tendermint-0
+      connection-id: connection-0
+      channel-id: channel-0
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  osmohub:
+    src:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-1
+      connection-id: connection-1
+      channel-id: channel-0
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-259
+      connection-id: connection-257
+      channel-id: channel-141
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
