@@ -105,6 +105,7 @@ Each chain has 10 ports it can use.  WIP.
 | rpc   | xxx1  |
 | grpc  | xxx2 |
 | api   | xxx3 |
+| load balanced rpc | xxx9 |
 
 
 
