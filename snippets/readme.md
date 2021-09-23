@@ -39,3 +39,14 @@ Get blocks per minute:
       echo "syncing $permin per minute $(echo "scale=0; ($blocks1/$permin)/1" | bc) min to tip"
       ;;
 ```
+
+## Contributed by cros-nest
+
+**get validator votes on a proposal**
+
+```bash
+vote=39
+./osmosisd query staking validators -o json --limit 1000 | jq -r '.validators[] | "\(.operator_address) \(.description.moniker)"' | while read addr moniker ; do echo -en "$moniker\t"; ./osmosisd q gov vote ${vote} $(./osmosisd debug addr $addr 2>&1 | awk '{ if (/Acc/) {print $3} }') -o json | jq -r '.option'; done 2>&1 | grep VOTE | sort -k 2 -t '      ' | column -t -n -s '   '
+```
+
+
