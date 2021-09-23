@@ -59,22 +59,47 @@ host = '127.0.0.1'
 # Specify the port over which the built-in HTTP server will serve the metrics gathered
 # by the telemetry service. Default: 3001
 port = 3001
+
+# This section specifies the filters for policy based relaying.
+# Default: no policy/ filters
+# The section is ignored if the global 'filter' option is set to 'false'.
+# If the global 'filter' option is set to 'true' and this section is missing then no filtering is performed for this chain.
+# Only packet filtering based on channel identifier can be specified.
+# A channel filter has two fields:
+# 1. `policy` - one of two types are supported:
+#       - 'allow': permit relaying _only on_ the port/channel id in the list below,
+#       - 'deny': permit relaying on any channel _except for_ the list below.
+# 2. `list` - the list of channels specified by the port and channel identifiers.
+#
+# Example configuration of a channel filter, denying packet relaying on channel with port ID 'transfer' and channel ID 'channel-0':
+#
+# [chains.packet_filter]
+# policy = 'deny'
+# list = [
+#   ['transfer', 'channel-0'],
+# ]
+
  
-#[[chains]]
-#id = 'osmosis-1'
-#rpc_addr = 'http://162.55.132.230:2001'
-#grpc_addr = 'http://162.55.132.230:2002'
-#websocket_addr = 'ws://162.55.132.230:2001/websocket'
-#rpc_timeout = '10s'
-#account_prefix = 'osmo'
-#key_name = 'osmosis'
-#store_prefix = 'ibc'
-#max_gas = 30000000
-#gas_price = { price = 0.000, denom = 'uosmo' }
-#gas_adjustment = 0.1
-#clock_drift = '5s'
-#trusting_period = '10days'
-#trust_threshold = { numerator = '1', denominator = '3' }
+[[chains]]
+id = 'osmosis-1'
+rpc_addr = 'http://localhost:2001'
+grpc_addr = 'http://localhost:2002'
+websocket_addr = 'ws://localhost:2001/websocket'
+rpc_timeout = '10s'
+account_prefix = 'osmo'
+key_name = 'osmosis'
+store_prefix = 'ibc'
+max_gas = 30000000
+gas_price = { price = 0.000, denom = 'uosmo' }
+gas_adjustment = 0.1
+clock_drift = '5s'
+trusting_period = '10days'
+trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-0'],['transfer', 'channel-1'],['transfer', 'channel-2'],['transfer', 'channel-3'],['transfer', 'channel-6'],['transfer', 'channel-15'],['transfer', 'channel-37']
+ ]
 
 [[chains]]
 id = 'akashnet-2'
@@ -91,6 +116,11 @@ gas_adjustment = 0.1
 clock_drift = '5s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-17'],['transfer', 'channel-11'],['transfer', 'channel-23'],['transfer', 'channel-22'],['transfer', 'channel-20'],['transfer', 'channel-9'],['transfer', 'channel-18']
+ ]
 
 [[chains]]
 id = 'sentinelhub-2'
@@ -106,6 +136,11 @@ gas_adjustment = 0.1
 clock_drift = '5s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-0'],['transfer', 'channel-12']
+ ]
 
 
 [[chains]]
@@ -124,6 +159,11 @@ gas_adjustment = 0.1
 clock_drift ='5s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-12'],['transfer', 'channel-3']
+ ]
 
 #[[chains]]
 #id = 'dig-testnet-1'
@@ -157,25 +197,59 @@ gas_adjustment = 0.1
 clock_drift ='5s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-12'],['transfer', 'channel-3']
+ ]
 
 
 
-#[[chains]]
-#id = 'cosmoshub-4'
-#rpc_addr = 'http://127.0.0.1:2011'
-#grpc_addr = 'http://127.0.0.1:2012'
-#websocket_addr = 'ws://127.0.0.1:2011/websocket'
-#rpc_timeout = '10s'
-#account_prefix = 'cosmos'
-#key_name = 'cosmos'
-#store_prefix = 'ibc'
-#max_tx_size = 180000
-#max_gas = 3000000
-#gas_price = { price = 0.001, denom = 'uatom' }
-#gas_adjustment = 0.1
-#clock_drift ='5s'
-#trusting_period = '14days'
-#trust_threshold = { numerator = '1', denominator = '3' }
+[[chains]]
+id = 'cosmoshub-4'
+rpc_addr = 'http://127.0.0.1:2011'
+grpc_addr = 'http://127.0.0.1:2012'
+websocket_addr = 'ws://127.0.0.1:2011/websocket'
+rpc_timeout = '10s'
+account_prefix = 'cosmos'
+key_name = 'cosmos'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 3000000
+gas_price = { price = 0.001, denom = 'uatom' }
+gas_adjustment = 0.1
+clock_drift ='5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-182'],['transfer', 'channel-141'],['transfer', 'channel-186'],['transfer', 'channel-190'],['transfer', 'channel-187'],['transfer', 'channel-202']
+ ]
+
+
+[[chains]]
+id = 'emoney-3'
+rpc_addr = 'http://127.0.0.1:2141'
+grpc_addr = 'http://127.0.0.1:2142'
+websocket_addr = 'ws://127.0.0.1:2141/websocket'
+rpc_timeout = '10s'
+account_prefix = 'cosmos'
+key_name = 'cosmos'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 3000000
+gas_price = { price = 0.001, denom = 'ungm' }
+gas_adjustment = 2
+clock_drift ='70s'
+trusting_period = '10days'
+trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-0'],['transfer', 'channel-1'],['transfer', 'channel-2']
+ ]
+
 
 
 [[chains]]
