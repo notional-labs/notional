@@ -1,5 +1,5 @@
 # Notional
-This is the notional software repository, which details with as much precision as we can muster, the entire notional software + infrastructure stack used by notional in production for validation and relaying.
+This is the notional software repository, which details with as much precision as we can muster, the entire Notional software + infrastructure stack that we use in production for validation and relaying.
 
 
 ## Validation
@@ -9,6 +9,17 @@ Notional is an **active set** validator on:
 * [Regen](https://regen.aneka.io/validators/regenvaloper1083svrca4t350mphfv9x45wq9asrs60ct2p9a5)
 * [Akash](https://www.mintscan.io/akash/validators/akashvaloper1083svrca4t350mphfv9x45wq9asrs60c0k5a63)
 * [Gaia](https://www.mintscan.io/cosmos/validators/cosmosvaloper1083svrca4t350mphfv9x45wq9asrs60cdmrflj)
+
+Notional is validating, or will validate soon:
+
+* Umee
+* Ixo
+* e-money
+* Starname
+* Irisnet
+* Kusuama
+* Persistence
+* Sentinel
 
 
 Notional has decided to maintain relayers for all chains -- and document processes -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on 50 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
