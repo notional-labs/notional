@@ -1,0 +1,75 @@
+syntax = "proto3";
+package BitCannaGlobal.bcna.bcna;
+
+import "bcna/bitcannaid.proto";
+import "bcna/supplychain.proto";
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "github.com/BitCannaGlobal/bcna/x/bcna/types";
+
+// Msg defines the Msg service.
+service Msg {
+    rpc CreateBitcannaid(MsgCreateBitcannaid) returns (MsgCreateBitcannaidResponse);
+  rpc UpdateBitcannaid(MsgUpdateBitcannaid) returns (MsgUpdateBitcannaidResponse);
+  rpc DeleteBitcannaid(MsgDeleteBitcannaid) returns (MsgDeleteBitcannaidResponse);
+rpc CreateSupplychain(MsgCreateSupplychain) returns (MsgCreateSupplychainResponse);
+  rpc UpdateSupplychain(MsgUpdateSupplychain) returns (MsgUpdateSupplychainResponse);
+  rpc DeleteSupplychain(MsgDeleteSupplychain) returns (MsgDeleteSupplychainResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgCreateBitcannaid {
+  string creator = 1;
+  string bcnaid = 2;
+  string address = 3;
+}
+
+message MsgCreateBitcannaidResponse {
+  uint64 id = 1;
+}
+
+message MsgUpdateBitcannaid {
+  string creator = 1;
+  uint64 id = 2;
+  string bcnaid = 3;
+  string address = 4;
+}
+
+message MsgUpdateBitcannaidResponse {}
+
+message MsgDeleteBitcannaid {
+  string creator = 1;
+  uint64 id = 2;
+}
+
+message MsgDeleteBitcannaidResponse {}
+
+message MsgCreateSupplychain {
+  string creator = 1;
+  string product = 2;
+  string info = 3;
+  string supplyinfo = 4;
+}
+
+message MsgCreateSupplychainResponse {
+  uint64 id = 1;
+}
+
+message MsgUpdateSupplychain {
+  string creator = 1;
+  uint64 id = 2;
+  string product = 3;
+  string info = 4;
+  string supplyinfo = 5;
+}
+
+message MsgUpdateSupplychainResponse {}
+
+message MsgDeleteSupplychain {
+  string creator = 1;
+  uint64 id = 2;
+}
+
+message MsgDeleteSupplychainResponse {}
+
+// this line is used by starport scaffolding # proto/tx/message

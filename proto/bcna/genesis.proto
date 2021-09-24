@@ -1,0 +1,18 @@
+syntax = "proto3";
+package BitCannaGlobal.bcna.bcna;
+
+import "bcna/bitcannaid.proto";
+import "bcna/supplychain.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/BitCannaGlobal/bcna/x/bcna/types";
+
+// GenesisState defines the bcna module's genesis state.
+message GenesisState {
+    repeated Bitcannaid bitcannaidList = 1 [(gogoproto.nullable) = false];
+  uint64 bitcannaidCount = 2;
+  repeated Supplychain supplychainList = 3 [(gogoproto.nullable) = false];
+  uint64 supplychainCount = 4;
+  // this line is used by starport scaffolding # genesis/proto/state
+}
