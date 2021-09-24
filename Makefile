@@ -91,7 +91,6 @@ include contrib/devtools/Makefile
 ###############################################################################
 ###                              Documentation                              ###
 ###############################################################################
-
 all: install lint test
 
 BUILD_TARGETS := build install
