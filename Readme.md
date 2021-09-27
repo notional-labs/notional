@@ -14,10 +14,11 @@ Notional is an **active set** validator on:
 
 
 Notional is validating, but not in the active set:
-* Persistence
 * Umee
 * Ixo
 * Irisnet
+
+Notional wishes to validate:
 * Kusuama
 
 
