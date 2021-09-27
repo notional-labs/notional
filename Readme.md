@@ -11,11 +11,11 @@ Notional is an **active set** validator on:
 5) [Gaia](https://www.mintscan.io/cosmos/validators/cosmosvaloper1083svrca4t350mphfv9x45wq9asrs60cdmrflj)
 6) [Sentinel](https://www.mintscan.io/sentinel/validators/sentvaloper1083svrca4t350mphfv9x45wq9asrs60cv37gc8)
 7) [E-Money](https://emoney.bigdipper.live/validators/emoneyvaloper16dc379m0qj64g4pr4nkl7ewak52qy2srpe6lxp)
+8) [Ixo](https://blockscan.ixo.world/validator/ixovaloper1083svrca4t350mphfv9x45wq9asrs60camel0h)
 
 
 Notional is validating, but not in the active set:
 * Umee
-* Ixo
 * Irisnet
 
 Notional wishes to validate:
