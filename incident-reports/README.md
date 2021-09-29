@@ -6,9 +6,10 @@
 ## September 2021
 September 28, 2021
 **Relayer Outage**
+
 Due to a lack of human and technical capacity, relayers have been taken offline for software and hardware upgrades.
 
-The realyers will be operational again ASAP, with dramatically improved performance.  We'll operate relay clusters in Europe, the United States, and Hanoi, Vietnam.  
+The realyers will be operational again ASAP, with dramatically improved performance.  We'll operate relay clusters in Europe, the United States, and Hanoi, Vietnam.  The re-launching of Notional relaying will bring with it significant improvements to automation, as well as the creation of services that distribute snapshots over IPFS.    
 
 
 
