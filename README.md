@@ -23,7 +23,7 @@ sudo rm -rf /usr/local/go
 
 Download the software:
 ```
-curl https://dl.google.com/go/go1.16.6.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
+curl https://dl.google.com/go/go1.16.8.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
 ```
 Update environment variables to include go (copy everything and paste)
 ```
@@ -40,21 +40,21 @@ To verify that Go is installed:
 ``` 
 go version
 ```
-Should return go version go1.16.6 linux/amd64
+Should return go version go1.16.8 linux/amd64
 
 # Compile BCNAD source code by yourself
 ## Download source code and compile
 ```
 git clone https://github.com/BitCannaGlobal/bcna.git
 cd bcna
-git checkout v0.4-beta
+git checkout v1.0
 make build   #it build the binary in build/ folder
 ```
 To know the version:
 ```
 build/bcnad version
 ```
-The output must be `0.4-beta`
+The output must be `1.0`
 
 Is the versión match, now you have two options
 * Move the binary to the /usr/local/bin path with: `sudo mv build/bcnad /usr/local/bin/`
