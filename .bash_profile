@@ -1,4 +1,3 @@
-# Bash profile for a node with seeds on it,where nodes are run in screen.  This will be broken down into systemd units later.
 # This has them take snapshots every 1000 blocks, and support 500 incoming peers.  They're not seed nodes so that this config can be used well as a sentry.
 # RPCs are currently fully exposed.  They'll be put behind caddy and rate limited soon (TM).
 # Each node is configured for state sync.  We will release documentation network-wide on how to launch nodes with state sync to push the use of this technology.  We will need some help from others -- failing that we can run sync1.notional.ventures and sync2.notional.ventures.
@@ -100,7 +99,7 @@ export JUNOD_RPC_LADDR=tcp://127.0.0.1:2071
 export JUNOD_GRPC_ADDRESS=127.0.0.1:2072
 export JUNOD_API_ADDRESS=tcp://127.0.0.1:2073
 export JUNOD_NODE=tcp://127.0.0.1:2071
-export JUNOD_P2P_SEEDS="8dc1863d1d23cf9ad7cbea215c19bcbe8bf39702@p2p.baaa7e56-cc71-4ae4-b4b3-c6a9d4a9596a.cryptodotorg.bison.run:26656,8a7922f3fb3fb4cfe8cb57281b9d159ca7fd29c6@p2p.aef59b2a-d77e-4922-817a-d1eea614aef4.cryptodotorg.bison.run:26656,494d860a2869b90c458b07d4da890539272785c9@p2p.fabc23d9-e0a1-4ced-8cd7-eb3efd6d9ef3.cryptodotorg.bison.run:26656,dc2540dabadb8302da988c95a3c872191061aed2@p2p.7d1b53c0-b86b-44c8-8c02-e3b0e88a4bf7.cryptodotorg.herd.run:26656,33b15c14f54f71a4a923ac264761eb3209784cf2@p2p.0d20d4b3-6890-4f00-b9f3-596ad3df6533.cryptodotorg.herd.run:26656,d2862ef8f86f9976daa0c6f59455b2b1452dc53b@p2p.a088961f-5dfd-4007-a15c-3a706d4be2c0.cryptodotorg.herd.run:26656,87c3adb7d8f649c51eebe0d3335d8f9e28c362f2@seed-0.crypto.org:26656,e1d7ff02b78044795371beb1cd5fb803f9389256@seed-1.crypto.org:26656,2c55809558a4e491e9995962e10c026eb9014655@seed-2.crypto.org:26656"
+export JUNOD_P2P_PERSISTENT_PEERS="b1f46f1a1955fc773d3b73180179b0e0a07adce1@162.55.244.250:39656,7f593757c0cde8972ce929381d8ac8e446837811@178.18.255.244:26656,7b22dfc605989d66b89d2dfe118d799ea5abc2f0@167.99.210.65:26656,4bd9cac019775047d27f9b9cea66b25270ab497d@137.184.7.164:26656,bd822a8057902fbc80fd9135e335f0dfefa32342@65.21.202.159:38656,15827c6c13f919e4d9c11bcca23dff4e3e79b1b8@51.38.52.210:38656,e665df28999b2b7b40cff2fe4030682c380bf294@188.40.106.109:38656,92804ce50c85ff4c7cf149d347dd880fc3735bf4@34.94.231.154:26656,795ed214b8354e8468f46d1bbbf6e128a88fe3bd@34.127.19.222:26656"
 export JUNOD_P2P_MAX_NUM_INBOUND_PEERS=500
 export JUNOD_SNAPSHOT_INTERVAL=1000
 export JUNOD_P2P_MAX_NUM_OUTBOUND_PEERS=60
