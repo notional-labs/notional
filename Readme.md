@@ -1,6 +1,9 @@
 # Notional
-This is the notional software repository, which details with as much precision as we can muster, the entire Notional software + infrastructure stack that we use in production for validation and [relaying](./relaying-guide).
+Notional is a decentralized Autonomous Organization that provides services in blockchain technology, including:
 
+* Validation
+* Relaying
+* Software Development
 
 ## Validation
 Notional is an **active set** validator on:
