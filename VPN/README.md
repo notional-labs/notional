@@ -17,3 +17,18 @@ We want a global, polycentric VPN that can help our growing team to coordinate g
 https://github.com/wenerme/wener/blob/76c45c3ba784a318cb5f0b1d348ecba2232e2f43/notes/service/network/vpn-awesome.md
 
 https://github.com/wenerme/wener/blob/master/notes/service/network/vpn-awesome.md
+
+
+## Deployment Phases
+
+1) Zerotier
+
+Join this network, and make an issue on this repository:
+
+sudo zerotier-cli join 9f77fc393e7dfae7
+
+
+2) A fully self hosted solution:
+
+
+https://github.com/wiretrustee/wiretrustee
