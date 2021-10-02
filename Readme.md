@@ -22,7 +22,7 @@ Notional wishes to validate:
 * Irisnet
 
 
-Notional has decided to maintain relayers for all chains -- and document processes -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on 50 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
+Notional has decided to maintain relayers for all chains -- and [document processes](./relaying-guide) -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on 50 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
 
 ## Comission
 Notional charges above-average comissions and uses validator income to pursue research and development work that improves the state of sovereign blockchain technology.  We are happy to answer any questions that delegators have. 
@@ -104,7 +104,6 @@ Each chain has 10 ports it can use.  WIP.
 | Sentinel  | 2030-2039   | 
 | Crypto.org | 2040-2049  | 
 | Regen      | 2060-2069  | 
-| ~~Sifchain~~   | 2110-2119 | 
 | Omniflix  | 2070-2079 |
 | Juno       | 2050-2059 |
 | Starname   | 2130-2139   | 
@@ -161,13 +160,22 @@ Our technical partners agree to:
 * Hardware between rpi and the omni configuration
 
 ### Every IBC chain
-* 8+ Core intel or amd cpu (I have 12, 16 and 32 core machines in production)
+* 8+ Core intel or amd cpu (we have 12, 16 and 32 core machines in production)
 * 64+ GB RAM
 * 8TB+ NVMe Storage with high write cycle capacity
+  * We currently recommend that for storage, you think like: 1 4x pcie 4.0 bus per NVMe disk.  No RAID, and no soft-raid. 
+  * 
 
 
 ## Thanks
+Notional would like to thank its delegagtes and the many teachers who have helped us learnhow to design all of this.
 
-Notional would like to thank its delegagtes, who feel that sustained R&D will lead to long-term higher profits in their cryptographic assets when compared to low-fee, no-fee or no-R&D validators.
+Special thanks go out to:
 
-Notional would like to thank PCBViet for then assistance navigating the challenging hardware design and manufacturing space. 
+* PCBViet
+* Chandra Station
+* DefiForYou
+* Osmosis Team & Community
+* Jae Kwon & Gno Community
+* Shakti Open Semiconductor Project
+* Jack Zampolin & Strangelove Ventures
