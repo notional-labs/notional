@@ -71,3 +71,6 @@ go get github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor
 ```
 * [more info about Cosmovisor](https://github.com/cosmos/cosmos-sdk/tree/master/cosmovisor#readme)
 * [how BitCanna implements Cosmovisor](https://github.com/BitCannaGlobal/testnet-bcna-cosmos/blob/main/instructions/invitational-testnet/stage4/task4.4.md)
+
+# Join our MainNet: `bitcanna-1`
+* [Instructions](https://github.com/BitCannaGlobal/bcna/blob/main/instructions.md)
