@@ -4,9 +4,9 @@ Notional is a decentralized Autonomous Organization that provides services in bl
 * Validation
 * Relaying
 * Software Development
- * Dig
- * Anone
- * CraftEconomy 
+   * Dig
+   * Anone
+   * CraftEconomy 
 
 ## Validation
 Notional is an **active set** validator on:
