@@ -1,5 +1,5 @@
 # Notional
-This is the notional software repository, which details with as much precision as we can muster, the entire Notional software + infrastructure stack that we use in production for validation and relaying.
+This is the notional software repository, which details with as much precision as we can muster, the entire Notional software + infrastructure stack that we use in production for validation and [relaying](./relaying-guide).
 
 
 ## Validation
