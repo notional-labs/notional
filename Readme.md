@@ -16,10 +16,10 @@ Notional is an **active set** validator on:
 
 Notional is validating, but not in the active set:
 * Umee
-* Irisnet
 
 Notional wishes to validate:
 * Kusuama
+* Irisnet
 
 
 Notional has decided to maintain relayers for all chains -- and document processes -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on 50 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
@@ -83,6 +83,8 @@ We distribute two snapshots for cosmos-sdk chains:
 
 
 ## Tenderseeds
+
+
 
 
 
