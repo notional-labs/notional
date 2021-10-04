@@ -3,7 +3,10 @@ module github.com/BitCannaGlobal/bcna
 go 1.16
 
 require (
-	github.com/cosmos/cosmos-sdk v0.44.0
+	github.com/99designs/keyring v1.1.6 // indirect
+	github.com/cosmos/cosmos-sdk v0.44.1
+	github.com/cosmos/go-bip39 v1.0.0 // indirect
+	github.com/cosmos/iavl v0.17.1 // indirect
 	github.com/cosmos/ibc-go v1.2.0
 	github.com/gogo/protobuf v1.3.3
 	github.com/golang/protobuf v1.5.2
@@ -11,7 +14,7 @@ require (
 	github.com/gorilla/mux v1.8.0
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/spf13/cast v1.3.1
-	github.com/spf13/cobra v1.1.3
+	github.com/spf13/cobra v1.2.1
 	github.com/stretchr/testify v1.7.0
 	github.com/tendermint/spm v0.1.5
 	github.com/tendermint/tendermint v0.34.13
