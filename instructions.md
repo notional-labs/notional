@@ -209,7 +209,7 @@ wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.1/bcnad
 chmod +x bcnad
 
 sha256sum bcnad 
-  <output> ----  bcnad
+  <output> c0ee3044e7517066eb2180ad1e40673a16d8fdf56dfb91ca7c88a2f48103723e  bcnad
 
 rm -rf .bcna/cosmovisor/upgrades/indica/
 ln -s -f  -T ${HOME}/.bcna/cosmovisor/genesis ${HOME}/.bcna/cosmovisor/current
@@ -233,7 +233,10 @@ wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.1/bcnad
 chmod +x bcnad
 sudo mv ./bcnad $(which bcnad)
 bcnad version
-   <output> 1.0
+   <output> 1.1
+
+sha256sum bcnad 
+  <output> c0ee3044e7517066eb2180ad1e40673a16d8fdf56dfb91ca7c88a2f48103723e  bcnad
 ```
 
 Anyway  Review your config.toml file and ensure that `persistent_peers` is empty by now, and `seeds` have the following value: 
