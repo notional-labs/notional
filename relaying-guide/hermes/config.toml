@@ -26,7 +26,7 @@ log_level = 'info'
 # Interval (in number of blocks) at which pending packets
 # should be eagerly cleared. A value of '0' will disable
 # periodic packet clearing. Default: 100
-clear_packets_interval = 10
+clear_packets_interval = 50
 
 
 # The REST section defines parameters for Hermes' built-in RESTful API.
