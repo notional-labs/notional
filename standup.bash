@@ -1,21 +1,48 @@
 #!/bin/bash
 
-pacman -Syyu aria2 atop autoconf automake base binutils bison bmon btrfs-progs clang cronie cryptsetup docker dstat fakeroot flex gcc git go gptfdisk groff grub haveged htop iftop iptraf-ng jq llvm lvm2 m4 make mdadm neovim net-tools nethogs openssh patch pkgconf python rsync rustup screen sudo texinfo unzip vi vim vnstat wget which xfsprogs hddtemp python-setuptools npm python-bottle python-docker python-matplotlib python-netifaces python-zeroconf python-pystache time nload nmon glances gtop bwm-ng bpytop
+# Keys for arch packages
+pacman -Syyu archlinux-keyring
 
+
+# Utilities needed for smooth nodes
+pacman -Syyu aria2 atop autoconf automake base binutils bison bmon btrfs-progs clang cronie cryptsetup docker dstat fakeroot flex gcc git go gptfdisk groff grub haveged htop iftop iptraf-ng jq llvm lvm2 m4 make mdadm neovim net-tools nethogs openssh patch pkgconf python rsync rustup screen sudo texinfo unzip vi vim vnstat wget which xfsprogs hddtemp python-setuptools npm python-bottle python-docker python-matplotlib python-netifaces python-zeroconf python-pystache time nload nmon glances gtop bwm-ng bpytop duf go-ipfs fish pigz zerotier-one sysstat github-cli pm2
+
+
+
+# IPFS cluster tooling
+# pigz -r --fast data  #pigz parallel compression
+# IPFS only needs to use the server profile at hetzner.
+ipfs init -p badgerds,server
+git clone https://github.com/ipfs/ipfs-cluster.git
+cd ipfs-cluster
+go install ./...
+sysctl -w net.core.rmem_max=2500000
+pm2 start "ipfs daemon"
+
+
+
+# SystemD Units
+systemctl enable systemd-resolved
+systemctl start systemd-resolved
+systemctl enable systemd-timesyncd
+systemctl start systemd-timesyncd
+systemctl enable vnstat
+systemctl start vnstat
+systemctl enable zerotier-one
+systemctl start zerotier-one
+
+
+# Join Zerotier: Only for rpc nodes without keys
+zerotier-cli join 9f77fc393e7dfae7
+
+
+
+
+# Open File Limits
 echo "root hard nofile 150000" >> /etc/security/limits.conf
 echo "root soft nofile 150000" >> /etc/security/limits.conf
 echo "* hard nofile  150000" >> /etc/security/limits.conf
 echo "* soft nofile 150000" >> /etc/security/limits.conf
-
-# cd ~
-#u can't just straight up delete their bash_profile and replace it with yours -khanh
-# yes you can.  it is designed to run on a blank server that runs arch linux, and to produce a deterministic result -jacob
-# cp .bash_profile ~/
-# source ~/.bash_profile
-# this will create loop
-# bash standup.bash
-# great point about the loop though.  It happened to Josepha from Chandra.
-
 
 
 
