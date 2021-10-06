@@ -4,10 +4,7 @@ At Notional, we've focused on the operational aspects of relaying, while also ma
 
 
 ## Recommended Hardware & OS Configuration
-This recommendation will put you in a good position to relay on all IBC networks, with some room to grow.  We've noticed that it is disk IO bandwidth, more than anything, which determines the performance of IBC relaying systems.  Additionally, we've noticed that relaying does not tolerate latency well.  Over 50ms will cause missed packets, so in our production systems we've entirely eliminated latency by running all of the blockchain nodes on the same large server.  Crucial to this design is a ZFS RAID 0 (or gigabyte NVME RAID card) setup that ensures that chains do not fall behind when RPC queries are being made by relayers. 
-
-### The system
-This can be built yourself, or rented as the Hetzner.de AX101-NVMe or Hetzner.de 
+You will want a 16 core or greater CPU if you are attempting to relay the #ibcgang.  For larger chains, the chain itself should map to 4 PCIe lanes on the CPU.  The best disks for running relayers are Intel Optane P5800x and Western Digital Black 850/950.
 
 
 **Hetzner**
@@ -20,10 +17,10 @@ This can be built yourself, or rented as the Hetzner.de AX101-NVMe or Hetzner.de
 
 **DIY**
 * High single thread performance cpu
-   * Intel 11000k
-   * AMD 5950x
+   * Intel 11000k or Xeon if whole ibcgang
+   * AMD 5950x or Threadripper / Epyc if whole ibcgang
 * 128gb RAM
-* Raid 0 Nvme setup of some kind OR Intel Optane.  Will publish benchmarks soon.  
+* Intel Optane or WD Black 850/950
 
 
 ### Software
