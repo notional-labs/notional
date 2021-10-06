@@ -40,7 +40,7 @@ By downloading the binary we avoid compiling the source code.
 The updated instructions are always in our GitHub Readme page, click on this [link](https://github.com/BitCannaGlobal/bcna) to go there. 
 
 ## Step 1 - Setting up the connection
-Instructions for setting up the connection with the BitCanna Public Testnet Blockchain
+Instructions for setting up the connection with the BitCanna MainNet Blockchain
 1. **Set the chain-id parameter** 
 ```
     bcnad config chain-id bitcanna-1
@@ -186,6 +186,22 @@ bcnad tx staking create-validator \
     --gas-adjustment 1.5 \
     --gas-prices 0.001ubcna
 ```
+
+You can check the list of validators (also in [Explorer](https://cosmos-explorer.bitcanna.io/validators)):
+
+```
+    bcnad query staking validators --output json| jq
+```
+
+3. Another **IMPORTANT** but **optional** action is backup your Validator_priv_key:
+
+    ```
+    tar -czvf validator_key.tar.gz .bcna/config/*_key.json 
+    gpg -o validator_key.tar.gz.gpg -ca validator_key.tar.gz
+    rm validator_key.tar.gz
+    ```
+    This will create a GPG encrypted file with both key files.
+
 # Instructions for users who participated in previous BitCanna testnets.
 ## 1. Stop your validator (if is running).
 1. If you are running `cosmovisor` service: 
@@ -198,7 +214,7 @@ sudo service bcnad stop
 ```
 
 ## 2. Update the software.
-New versions (bcnad & cosmovisor) for the Public Testnet are here (you can check the sha256sum there):
+New versions (bcnad & cosmovisor) for the MainNet are here (you can check the sha256sum there):
 https://github.com/BitCannaGlobal/bcna/releases/tag/v1.1
 > Perform only A or B of step 1 depending on your service type (cosmovisor or bcnad directly)
 1. **A**  Update for Cosmovisor users
