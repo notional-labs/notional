@@ -1,7 +1,7 @@
 by Ricardo Ferreira | Notional
 
 <center>
-![](https://i.imgur.com/oMuPKRf.jpg)
+![image](https://user-images.githubusercontent.com/22358264/136323289-4a27e11c-5325-4773-aa86-12bc814887ef.png)
 </center>
 
 ## Overview
@@ -38,7 +38,7 @@ Tendermint Proof-of-Stake consensus is extremely resource-efficient, with some c
 In contrast, [Ethereum energy consumption](https://digiconomist.net/ethereum-energy-consumption/) is currently rated at around 76 TWh per Year, emitting 36.18 Mt of CO2 globally, which is comparable to the entire carbon footprint of New Zealand.
 
 <center>
-![](https://i.imgur.com/mFWtoIA.png)
+![image](https://i.imgur.com/mFWtoIA.png)
 [Source](![](https://i.imgur.com/GOzeYsA.png))
 </center>
 
@@ -57,7 +57,7 @@ The Ethereum Proof-of-Work (PoW) is suffering from high fee costs, which is a hi
 A single Ethereum transaction can spend as much as 182 kWh, emitting 86.5 kgCO2 which does not lend itself to sustainable investing Environmental, Social, and Corporate Governance ESG guidelines.
 
 <center>
-![](https://i.imgur.com/RbN99vG.png)
+![image](https://i.imgur.com/RbN99vG.png)
 [Source](https://digiconomist.net/ethereum-energy-consumption/)
 </center>
 
