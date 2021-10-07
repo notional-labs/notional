@@ -35,10 +35,8 @@ Tendermint Proof-of-Stake consensus is extremely resource-efficient, with some c
 
 In contrast, [Ethereum energy consumption](https://digiconomist.net/ethereum-energy-consumption/) is currently rated at around 76 TWh per Year, emitting 36.18 Mt of CO2 globally, which is comparable to the entire carbon footprint of New Zealand.
 
-<center>
 ![image](https://i.imgur.com/mFWtoIA.png)
 [Source](![](https://i.imgur.com/GOzeYsA.png))
-</center>
 
 ##  Network of Blockchains
 The Cosmos SDK is more pervasive than most may realise; large-cap Binance Smart Chain (BSC) with its native BNB token and the Terra blockchain with LUNA and USDT and other token currencies are both based on the Cosmos SDK and both sporting top 20 market cap ranking.
@@ -49,15 +47,13 @@ In addition to synergies of Cosmos sibling chains, the IBC facilitates communica
 
 It is now possible to launch genesis by injecting existing Ethereum and BSC address public and private keys; making it possible to airdrop on these massive capital markets with relative ease. Bespoke attestation address capture mechanisms can also be employed to airdrop onto existing addresses on non-compatible chains such as the Blurt Graphene blockchain to receive an airdrop by Notional launch partner https://digchain.org. 
 
-## Low Fees
+## Low Transaction Fees
 The Ethereum Proof-of-Work (PoW) is suffering from high fee costs, which is a hindrance to the cognitive user experience, especially in NFT marketplaces which experience congestion and high fees, not uncommon in the hundreds of dollars for minting a single NFT, essentially doubling the acquisition cost of the item! 
 
 A single Ethereum transaction can spend as much as 182 kWh, emitting 86.5 kgCO2 which does not lend itself to sustainable investing Environmental, Social, and Corporate Governance ESG guidelines.
 
-<center>
 ![image](https://i.imgur.com/RbN99vG.png)
 [Source](https://digiconomist.net/ethereum-energy-consumption/)
-</center>
 
 Conversely, Cosmos SDK chains benefit from low customisable fees and minimal emissions, which more than satisfy ESG requirements. 
 
