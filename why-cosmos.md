@@ -1,8 +1,6 @@
 by Ricardo Ferreira | Notional
 
-<center>
 ![image](https://user-images.githubusercontent.com/22358264/136323289-4a27e11c-5325-4773-aa86-12bc814887ef.png)
-</center>
 
 ## Overview
 Cosmos is a decentralized network of independent parallel blockchains, each customisable, secure and scalable, powered by BFT (Byzantine Fault Tolerant) consensus algorithms.
