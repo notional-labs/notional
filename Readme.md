@@ -19,6 +19,7 @@ Notional is an **active set** validator on:
 7) [E-Money](https://emoney.bigdipper.live/validators/emoneyvaloper16dc379m0qj64g4pr4nkl7ewak52qy2srpe6lxp)
 8) [Ixo](https://blockscan.ixo.world/validator/ixovaloper1083svrca4t350mphfv9x45wq9asrs60camel0h)
 9) [Juno](https://juno.aneka.io/validators/junovaloper1083svrca4t350mphfv9x45wq9asrs60cpqzg0y)
+10) [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1083svrca4t350mphfv9x45wq9asrs60cyssqu6)
 
 
 Notional is validating, but not in the active set:
