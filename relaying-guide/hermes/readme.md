@@ -19,10 +19,9 @@ hermes keys restore akashnet-2 -m "12 or 24 magic words"
 hermes keys restore regen-1 -m "12 or 24 magic words"
 hermes keys restore osmosis-1 -m "12 or 24 magic words"
 hermes keys restore irishub-1 -m "12 or 24 magic words"
-hermes keys restore crypto-org-chain-mainnet-1 -m "12 or 24 magic words" -p "44'/394'/0'/0/0"
+hermes keys restore crypto-org-chain-mainnet-1 -m "12 or 24 magic words" -p "m/44'/394'/0'/0/0"
 ```
 
-xprt, 
 
 
 ## Operating Guidelines
