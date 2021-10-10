@@ -21,16 +21,14 @@ hermes keys restore cosmoshub-4 -m "12 or 24 magic words"
 hermes keys restore akashnet-2 -m "12 or 24 magic words"
 hermes keys restore regen-1 -m "12 or 24 magic words"
 hermes keys restore osmosis-1 -m "12 or 24 magic words"
+hermes keys restore microtick-1 -m "12 or 24 magic words"
+hermes keys restore bitcanna-1 -m "12 or 24 magic words"
 hermes keys restore sentinelhub-2 -m "12 or 24 magic words"
 hermes keys restore irishub-1 -m "12 or 24 magic words"
 hermes keys restore crypto-org-chain-mainnet-1 -m "12 or 24 magic words" -p "m/44'/394'/0'/0/0"
 hermes keys restore core-1 -m "12 or 24 magic words" -p "m/44'/750'/0'/0/0"
+hermes keys restore impacthub-3 -m "12 or 24 magic words"
 ``` 
-
-
-
-
-
 
 
 
