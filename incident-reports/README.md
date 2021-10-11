@@ -21,7 +21,7 @@ September 26, 2021
 
 
 Early Sept, 2021
-* Sifchain created thousands of connections to foriegn chains for no apparent reason causing issues operating hermes.  We have resolved this by disconnecting from Sifchain and filtering all Sif channels.  
+* Sifchain created thousands of connections to foreign chains for no apparent reason causing issues operating hermes.  We have resolved this by disconnecting from Sifchain and filtering all Sif channels.  
   * Symptom: Hermes fails to relay.
   * Resolution Status: Sifchain engineers confirm. Sifchain management denies.  Unlikely to ever be resolved.  Recommend unplugging sif.  
 
