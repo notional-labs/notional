@@ -4,6 +4,7 @@
 
 October 12, 2021
 * We missed at least several hours worth of blocks during a sifchain upgrade.  
+* Due to the same sifchain upgrade, our Sif relay system went down for at least several hours, too. 
 - [ ] Ensure that we have a process in place to monitor Sifchain and other upgrades via governance. 
 
 
