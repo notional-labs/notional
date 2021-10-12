@@ -1,6 +1,16 @@
 # Notional Incident Reports
 
+## October 2021
 
+October 12, 2021
+* We missed at least several hours worth of blocks during a sifchain upgrade.  
+- [ ] Ensure that we have a process in place to monitor Sifchain and other upgrades via governance. 
+
+
+October 11, 2021
+* The heremes relayer was rebooted.  Because services and volume mounts on it were not made permanent yet, it took several hours to get back up and running.  
+- [ ] Make volume mounts permanent for the relayer machine using /etc/fstab
+- [ ] Make archive node services on the relayer machine come up automatically using systemd units
 
 
 ## September 2021
@@ -26,5 +36,4 @@ Early Sept, 2021
   * Resolution Status: Sifchain engineers confirm. Sifchain management denies.  Unlikely to ever be resolved.  Recommend unplugging sif.  
 
 
-October 11, 2021
-* We accidentally rebooted the system.
+
