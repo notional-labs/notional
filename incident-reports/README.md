@@ -2,14 +2,22 @@
 
 ## October 2021
 
+October 9-12, 2021
+* Crypto.org relaying is down due to a lengthy sync process. 
+- [ ] Complete a sync for crypto.org chain
+- [ ] Create a distribution process for the full archive node state of crypto.org chain
+
 October 12, 2021
 * We missed at least several hours worth of blocks during a sifchain upgrade.  
 * Due to the same sifchain upgrade, our Sif relay system went down for at least several hours, too. 
+- [x] Sif relay service restored
+- [x] Sif validator service restored 
 - [ ] Ensure that we have a process in place to monitor Sifchain and other upgrades via governance. 
 
 
 October 11, 2021
 * The heremes relayer was rebooted.  Because services and volume mounts on it were not made permanent yet, it took several hours to get back up and running.  
+- [x] Relayer service restored on all 16 IBC-based blockchains 
 - [ ] Make volume mounts permanent for the relayer machine using /etc/fstab
 - [ ] Make archive node services on the relayer machine come up automatically using systemd units
 
