@@ -159,25 +159,10 @@ Our technical partners agree to:
 * Share information about chain launches
 
 
-# System Requirements
-
-### Single Node
-* A raspberry pi 4 will allow you to relay between two state synced chains.
-
-### Somewhere between single and many
-* Hardware between rpi and the omni configuration
-
-### Every IBC chain
-* 8+ Core intel or amd cpu (we have 12, 16 and 32 core machines in production)
-* 64+ GB RAM
-* 8TB+ NVMe Storage with high write cycle capacity
-  * We currently recommend that for storage, you think like: 1 4x pcie 4.0 bus per NVMe disk.  No RAID, and no soft-raid. 
-  * Currently the best disk you can use for a relayer is an Intel Optane P5800x.
-  * The best price/performance disk is a Western Digital Black 950
 
 
 ## Thanks
-Notional would like to thank its delegagtes and the many teachers who have helped us learnhow to design all of this.
+Notional would like to thank its delegagtes and the many teachers who have helped us learn how to design and implement all of this.
 
 Special thanks go out to:
 
