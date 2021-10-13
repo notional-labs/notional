@@ -1,7 +1,7 @@
 # MAINNET: Setup up your validator and join *bitcanna-1*
 > IMPORTANT NOTE: If you participated in the previous BitCanna Testnets, you must go to the end of the document to find specific instructions to join.
 
-**bcnad** is a blockchain application built using Cosmos SDK v.0.44.1 and Tendermint v.0.34.13.
+**bcnad** is a blockchain application built using Cosmos SDK v.0.44.2 and Tendermint v.0.34.13.
 
 
 You can run the validator software using the binary or compiling it by yourself, you can choose between _Step 0a_ or _Step 0b_ and continue at _Step 1_.
@@ -22,17 +22,17 @@ If we don't raise this value, nodes will crash once the network grows large enou
 
 ## Step 0A - Run a fullnode / validator using the binaries
 By downloading the binary we avoid compiling the source code.
-* Download the latest version (v1.1) from Github:
+* Download the latest version (v1.2) from Github:
     ```
     cd $HOME
-    wget https://github.com/BitCannaGlobal/bcna/releases/download/v1.1/bcnad
+    wget https://github.com/BitCannaGlobal/bcna/releases/download/v1.2/bcnad
     chmod +x bcnad
     sudo mv bcnad /usr/local/bin/
     ```
-* Check for the right version (1.1): 
+* Check for the right version (1.2): 
     ```
     bcnad version
-       >>> response: 1.1
+       >>> response: 1.2
     ```
 **NOTE:** If you have downloaded the binary avoid _Step 0B_ and go to _Step_ 1
 ## Step 0B - Run a fullnode / validator by compiling source code (not recommended for new users)
@@ -215,13 +215,13 @@ sudo service bcnad stop
 
 ## 2. Update the software.
 New versions (bcnad & cosmovisor) for the MainNet are here (you can check the sha256sum there):
-https://github.com/BitCannaGlobal/bcna/releases/tag/v1.1
+https://github.com/BitCannaGlobal/bcna/releases/tag/v1.2
 > Perform only A or B of step 1 depending on your service type (cosmovisor or bcnad directly)
 1. **A**  Update for Cosmovisor users
 ```
 cd $HOME
 rm -f bcnad  #deletes if exist
-wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.1/bcnad
+wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.2/bcnad
 chmod +x bcnad
 
 sha256sum bcnad 
@@ -232,7 +232,7 @@ ln -s -f  -T ${HOME}/.bcna/cosmovisor/genesis ${HOME}/.bcna/cosmovisor/current
 mv ./bcnad $HOME/.bcna/cosmovisor/current/bin/
 
 rm -f cosmovisor  #deletes if exist
-wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.1/cosmovisor
+wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.2/cosmovisor
 chmod +x cosmovisor
 
 sha256sum cosmovisor 
@@ -245,11 +245,11 @@ If you are running the validator without Cosmovisor:
 ```
 cd $HOME
 rm -f bcnad #deletes if exist
-wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.1/bcnad
+wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.2/bcnad
 chmod +x bcnad
 sudo mv ./bcnad $(which bcnad)
 bcnad version
-   <output> 1.1
+   <output> 1.2
 
 sha256sum bcnad 
   <output> c0ee3044e7517066eb2180ad1e40673a16d8fdf56dfb91ca7c88a2f48103723e  bcnad
