@@ -1,5 +1,5 @@
 # Notional
-Notional is a decentralized Autonomous Organization that provides services in blockchain technology, including:
+Notional provides services in blockchain technology, including:
 
 * Validation
 * Relaying
