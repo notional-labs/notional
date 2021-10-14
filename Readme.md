@@ -103,29 +103,6 @@ Notional has retired some relayer addresses:
 
 
 
-## Snapshots
-
-On many networks you'll need to use ipfs to get genesis state.  Actual CID's coming soon!
-
-| Network      | Archive | Pruned
-| ----------- | ----------- | ------------ | 
-| Regen      | cid | cid |
-| Osmosis   | cid   | cid |
-| Gaia      | cid | cid |
-| Akash     | cid  | cid |
-| Sentinel  | cid   |   cid    |
-| Sifchain   | cid   | cid  |
-| Starname   | cid  | cid |
-| Iris       | cid   | cid  |
-| Crypto.org | cid   | cid  |
-| Persistence| cid | cid |
-
-We distribute two snapshots for cosmos-sdk chains:
-
-* pruning=nothing
-* pruning=default
-
-
 ## Tenderseeds
 
 We operate Tenderseed instances for every #ibcgang blockchain on Akash.
