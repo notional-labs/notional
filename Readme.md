@@ -7,6 +7,7 @@ Notional provides services in blockchain technology, including:
    * Dig
    * Anone
    * CraftEconomy 
+* Consulting and strategy
 
 ## Validation
 Notional is an **active set** validator on:
