@@ -42,13 +42,30 @@ Currently we have various rates on various chains, and are standardizing across 
 Notional maintains archive nodes for BSC, Ethereum, Bitcoin, and every IBC-enabled Cosmos-SDK blockchain.  Documentation is kept in node-setup/archive and takes the approach that archive nodes are best setup slowly, even if that takes days or requires swapping out the binary during sync.  They're intended to be full, proper archives.  Time and expense are not spared in getting them into operation.  We run our archive nodes in three places:
 
 * Hetzner.de (rented hardware)
-* Jacob's laboratory (own hardware)
-* Videttel IDC (own hardware)
+* Notional HQ (own hardware)
 
 Our archive nodes feed into our IPFS snapshot distribution system.
 
 
 ## Relaying
+
+Notional Operates an omni-network [Go Relayer] On-Premesis in Hanoi.  Addresses are:
+
+| Network      | Current Relayer Address | Former Relayer Address
+| ----------- | ----------- | ------------ | 
+| Regen      | regen1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx8s4x6u | regen1083svrca4t350mphfv9x45wq9asrs60chduq99|
+| Osmosis   | osmo1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxsfd262   | osmo1083svrca4t350mphfv9x45wq9asrs60cq5yv9n |
+| Gaia      | cosmos1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxcj76vc | cosmos1083svrca4t350mphfv9x45wq9asrs60cg0hunp |
+| Akash     | akash1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx4fna4z  | akash1083svrca4t350mphfv9x45wq9asrs60c956m2m |
+| Sentinel  | sent1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxrfgrgh   | sent1083svrca4t350mphfv9x45wq9asrs60cn5p9hw      |
+| Sifchain   | sif1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxa03vrn   | sif1083svrca4t350mphfv9x45wq9asrs60cdjc2u2  |
+| Starname   | star1t090jl87cnu9p3nlc6n20falgal2m8lujafd6u  | star1pdqlmncych8uzsfdnsptv7s0wpazc0rgf4xgk7 |
+| Iris       | iaa1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxds7twf   | iaa1083svrca4t350mphfv9x45wq9asrs60cadhd3s  |
+| Crypto.org | cro1qxd33n5ncsx4rdalmgy7hfufqpfcwysudqntax   | cro1mjdxgm2ndu9a4zmr9t3kq88fww30ms7q60e03h  |
+| Persistence| persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt | persistence1r50r8cx09ege6206k70509a3cgk7npn3plg7r8 |
+
+
+
 
 Notional Operates an IBC Relayer using [Hermes](https://github.com/informalsystems/ibc-rs) on the following networks, using the following addresses:
 
@@ -67,22 +84,40 @@ Notional Operates an IBC Relayer using [Hermes](https://github.com/informalsyste
 | Persistence| persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt | persistence1r50r8cx09ege6206k70509a3cgk7npn3plg7r8 |
 
 
+
+Notional has retired some relayer addresses:
+
+| Network      |  Retired Relayer Address                         |
+| ----------- | -----------                                       |
+| Regen      | regen1083svrca4t350mphfv9x45wq9asrs60chduq99       |
+| Osmosis   |  osmo1083svrca4t350mphfv9x45wq9asrs60cq5yv9n        |
+| Gaia      | cosmos1083svrca4t350mphfv9x45wq9asrs60cg0hunp       |
+| Akash     | akash1083svrca4t350mphfv9x45wq9asrs60c956m2m        |
+| Sentinel  | sent1083svrca4t350mphfv9x45wq9asrs60cn5p9hw         |
+| Sifchain   | sif1083svrca4t350mphfv9x45wq9asrs60cdjc2u2         |
+| Starname   | star1pdqlmncych8uzsfdnsptv7s0wpazc0rgf4xgk7        |
+| Iris       | iaa1083svrca4t350mphfv9x45wq9asrs60cadhd3s         |
+| Crypto.org | cro1mjdxgm2ndu9a4zmr9t3kq88fww30ms7q60e03h         |
+| Persistence| persistence1r50r8cx09ege6206k70509a3cgk7npn3plg7r8 |
+
+
+
 ## Snapshots
 
-On many networks you'll need to use ipfs to get genesis state.  Here are CID's:
+On many networks you'll need to use ipfs to get genesis state.  Actual CID's coming soon!
 
 | Network      | Archive | Pruned
 | ----------- | ----------- | ------------ | 
-| Regen      | regen1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx8s4x6u | |
-| Osmosis   | osmo1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxsfd262   |  |
-| Gaia      | cosmos1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxcj76vc |  |
-| Akash     | akash1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx4fna4z  |  |
-| Sentinel  | sent1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxrfgrgh   |       |
-| Sifchain   | sif1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxa03vrn   |   |
-| Starname   | star1t090jl87cnu9p3nlc6n20falgal2m8lujafd6u  | star1pdqlmncych8uzsfdnsptv7s0wpazc0rgf4xgk7 |
-| Iris       | iaa1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxds7twf   | iaa1083svrca4t350mphfv9x45wq9asrs60cadhd3s  |
-| Crypto.org | cro1qxd33n5ncsx4rdalmgy7hfufqpfcwysudqntax   | cro1mjdxgm2ndu9a4zmr9t3kq88fww30ms7q60e03h  |
-| Persistence| persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt | persistence1r50r8cx09ege6206k70509a3cgk7npn3plg7r8 |
+| Regen      | cid | cid |
+| Osmosis   | cid   | cid |
+| Gaia      | cid | cid |
+| Akash     | cid  | cid |
+| Sentinel  | cid   |   cid    |
+| Sifchain   | cid   | cid  |
+| Starname   | cid  | cid |
+| Iris       | cid   | cid  |
+| Crypto.org | cid   | cid  |
+| Persistence| cid | cid |
 
 We distribute two snapshots for cosmos-sdk chains:
 
@@ -91,6 +126,12 @@ We distribute two snapshots for cosmos-sdk chains:
 
 
 ## Tenderseeds
+
+We operate Tenderseed instances for every #ibcgang blockchain on Akash.
+
+You can connect to them here:
+
+
 
 
 
