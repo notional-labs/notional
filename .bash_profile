@@ -3,13 +3,9 @@
 # Each node is configured for state sync.  We will release documentation network-wide on how to launch nodes with state sync to push the use of this technology.  We will need some help from others -- failing that we can run sync1.notional.ventures and sync2.notional.ventures.
 
 
-
-alias ls='ls --color=auto'
-alias ll='ls -l'
-alias l='ls -A'
-HISTCONTROL=ignoreboth
-HISTFILESIZE=-1
-HISTSIZE=-1
+export HISTCONTROL=ignoreboth
+export HISTFILESIZE=-1
+export HISTSIZE=-1
 
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:~/go/bin
@@ -235,3 +231,13 @@ export BCNAD_SNAPSHOT_INTERVAL=1000
 export BCNAD_P2P_MAX_NUM_OUTBOUND_PEERS=100
 export BCNAD_P2P_UPNP=true
 export BCNAD_P2P_MAX_NUM_INBOUND_PEERS=500
+
+
+export PYLONSD_RPC_LADDR=tcp://127.0.0.0:2201
+export PYLONSD_GRPC_ADDRESS=127.0.0.1:2202
+export PYLONSD_API_ADDRESS=tcp://127.0.0.1:2203
+export PYLONSD_GRPC_WEB_ADDRESS=127.0.0.1:2204
+export PYLONSD_NODE=tcp://127.0.0.1:2201
+export PYLONSD_P2P_MAX_NUM_OUTBOUND_PEERS=100
+export PYLONSD_P2P_MAX_NUM_INBOUND_PEERS=500
+export PYLONSD_P2P_SEEDS=0a8b420620d19ed3b1ac3c7ea55be34dc0396fbd@34.73.221.157:32237,ec6e6522b0b1e57b6a5fb524238523e51dbe1087@34.74.106.29:30464
