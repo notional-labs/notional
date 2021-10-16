@@ -27,16 +27,13 @@ Notional is validating, but not in the active set:
 * Umee
 
 Notional wishes to validate:
-* Kusuama
-* Irisnet
+* Every IBC-enabled blockchain
 
 
 Notional has decided to maintain relayers for all chains -- and [document processes](./relaying-guide) -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on 50 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
 
 ## Comission
-Notional charges above-average comissions and uses validator income to pursue research and development work that improves the state of sovereign blockchain technology.  We are happy to answer any questions that delegators have. 
-
-Currently we have various rates on various chains, and are standardizing across the board at 9.69%.
+Notional charges a commission of 9.69% across all blockchains.
 
 
 ## Archive Nodes
