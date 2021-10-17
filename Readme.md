@@ -163,6 +163,7 @@ We have been working with https://pcbviet.com on open source hardware, and hope 
 * Jacob Gadikian - Blockchain and infrastructure engineer
 * Ricardo Ferreria - All things biz, testing of documentation written by Jacob and Khanh
 * Khanh Nguyen - Blockchain Engineer
+* Minh Vu Le Nhat - Hermes Operator 
 
 **Notional is hiring and training blockchain engineers.  Hours are ludicrous, and all team members earn a meaningful stake in all blockchains launched.  Notional Pays flat global wages.** 
 
