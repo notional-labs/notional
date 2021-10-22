@@ -51,16 +51,16 @@ Notional Operates an omni-network [Go Relayer] On-Premesis in Hanoi.  Addresses 
 
 | Network      | Current Relayer Address | Former Relayer Address
 | ----------- | ----------- | ------------ | 
-| Regen      | regen1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx8s4x6u | regen1083svrca4t350mphfv9x45wq9asrs60chduq99|
-| Osmosis   | osmo1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxsfd262   | osmo1083svrca4t350mphfv9x45wq9asrs60cq5yv9n |
-| Gaia      | cosmos1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxcj76vc | cosmos1083svrca4t350mphfv9x45wq9asrs60cg0hunp |
-| Akash     | akash1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx4fna4z  | akash1083svrca4t350mphfv9x45wq9asrs60c956m2m |
-| Sentinel  | sent1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxrfgrgh   | sent1083svrca4t350mphfv9x45wq9asrs60cn5p9hw      |
-| Sifchain   | sif1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxa03vrn   | sif1083svrca4t350mphfv9x45wq9asrs60cdjc2u2  |
-| Starname   | star1t090jl87cnu9p3nlc6n20falgal2m8lujafd6u  | star1pdqlmncych8uzsfdnsptv7s0wpazc0rgf4xgk7 |
-| Iris       | iaa1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxds7twf   | iaa1083svrca4t350mphfv9x45wq9asrs60cadhd3s  |
-| Crypto.org | cro1qxd33n5ncsx4rdalmgy7hfufqpfcwysudqntax   | cro1mjdxgm2ndu9a4zmr9t3kq88fww30ms7q60e03h  |
-| Persistence| persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt | persistence1r50r8cx09ege6206k70509a3cgk7npn3plg7r8 |
+| Regen      | [Regen](https://www.mintscan.io/regen/account/regen1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx8s4x6u) | regen1083svrca4t350mphfv9x45wq9asrs60chduq99|
+| Osmosis   | [Osmosis](https://www.mintscan.io/osmosis/account/osmo1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxsfd262)   | osmo1083svrca4t350mphfv9x45wq9asrs60cq5yv9n |
+| Gaia      | [Gaia](https://www.mintscan.io/cosmos/account/cosmos1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxcj76vc) | cosmos1083svrca4t350mphfv9x45wq9asrs60cg0hunp |
+| Akash     | [Akash](https://www.mintscan.io/akash/account/akash1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugx4fna4z)  | akash1083svrca4t350mphfv9x45wq9asrs60c956m2m |
+| Sentinel  |  [Sentinel](https://www.mintscan.io/sentinel/account/sent1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxrfgrgh)  | sent1083svrca4t350mphfv9x45wq9asrs60cn5p9hw      |
+| Sifchain   | [Sifchain](https://www.mintscan.io/sifchain/account/sif1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxa03vrn)   | sif1083svrca4t350mphfv9x45wq9asrs60cdjc2u2  |
+| Starname   |  [Starname](https://www.mintscan.io/starname/account/star1t090jl87cnu9p3nlc6n20falgal2m8lujafd6u) | star1pdqlmncych8uzsfdnsptv7s0wpazc0rgf4xgk7 |
+| Iris       | [Iris](https://www.mintscan.io/iris/account/iaa1yeac5tgm4mqwl4fyrqp34s0gq5fy8ugxds7twf)   | iaa1083svrca4t350mphfv9x45wq9asrs60cadhd3s  |
+| Crypto.org | [Crypto.org](https://www.mintscan.io/crypto-org/account/cro1qxd33n5ncsx4rdalmgy7hfufqpfcwysudqntax)   | cro1mjdxgm2ndu9a4zmr9t3kq88fww30ms7q60e03h  |
+| Persistence| [Persistence](https://www.mintscan.io/persistence/account/persistence1xht3mqp946k7vm2j50yxywfg86pauhm9c2tmgt) | persistence1r50r8cx09ege6206k70509a3cgk7npn3plg7r8 |
 
 
 
