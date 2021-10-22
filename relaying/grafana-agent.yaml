@@ -1,0 +1,58 @@
+integrations:
+  node_exporter:
+    enabled: true
+  prometheus_remote_write:
+  - basic_auth:
+      password: YOUR PASSWORD
+      username: YOUR USERNAME
+    url: https://prometheus-blocks-prod-us-central1.grafana.net/api/prom/push
+loki:
+  configs:
+  - clients:
+    - basic_auth:
+        password: YOUR PASSWORD
+        username: YOUR USERNAME
+      url: https://logs-prod-us-central1.grafana.net/api/prom/push
+    name: integrations
+    positions:
+      filename: /tmp/positions.yaml
+    target_config:
+      sync_period: 10s
+prometheus:
+  configs:
+  - name: integrations
+    scrape_configs:
+      - job_name: relayer
+        static_configs:
+          - targets: ['localhost:3001']
+            labels:
+              network: local
+              instance: RELAYER
+      - job_name: relayer-osmosis
+        static_configs:
+          - targets: ['localhost:26661']
+            labels:
+              network: osmosis-1
+              instance: RELAYER
+      - job_name: relayer-emoney
+        static_configs:
+          - targets: ['localhost:26662']
+            labels:
+              network: emoney-3
+              instance: RELAYER
+      - job_name: relayer-juno
+        static_configs:
+          - targets: ['localhost:26663']
+            labels:
+              network: juno-1
+              instance: RELAYER
+    remote_write:
+    - basic_auth:
+        password: YOUR PASSWORD
+        username: YOUR USERNAME
+      url: https://prometheus-blocks-prod-us-central1.grafana.net/api/prom/push
+  global:
+    scrape_interval: 15s
+  wal_directory: /tmp/grafana-agent-wal
+server:
+  http_listen_port: 12345
