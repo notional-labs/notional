@@ -1,5 +1,17 @@
 # Infrastructure
 
+## Products
+All of Notional's products are 100% open source, though some do have unusal licenses.
+
+* [SOS](https://github.com/notional-labs/sos) Lightweight operating system based on Arch Linux
+* [Archlinux-Docker](https://github.com/faddat/archlinux-docker) Arm64/amd64 multiplatform docker image for Arch
+* [Validatron](https://whimsical.com/validatron-PbUypC8tVMU8DxCFNLdDFu) designs and equipment for edge validation
+* [ipfsync](https://github.com/notional-labs/ipfscync) IPFS collaborative cluster enabling syncs that saturate a 10gbps line
+* [tradeberry](https://github.com/notional-labs/tradeberry) Raspberry pi image that allows private usage of Osmosis
+
+
+We have been working with https://pcbviet.com on open source hardware, and hope to run tradeberry on a Minimus PC sometime in 2021.
+
 
 ## Tenderseeds
 

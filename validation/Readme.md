@@ -18,6 +18,8 @@ Notional is an **active set** validator on:
 We think that validators should be actively involved in supporting the communities that they serve.  As we scaled, it became increasingly obvious to Jacob that he could not personally manage every piece of adequately serving all 18 IBCGang blockchain communities.  
 
 
+
+## Where we want to validate
 Notional is validating, but not in the active set:
 * Umee
 
@@ -27,5 +29,15 @@ Notional wishes to validate:
 
 Notional has decided to maintain relayers for all chains -- and [document processes](./relaying-guide) -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on 50 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
 
+
+## Partnerships with other validators / relayers
+* https://github.com/chandrastation
+* NullMames
+
+Our technical partners agree to:
+* Mutual Aid Re: Uptime (eg: phone calls to one another)
+* Full commitment to open source, repeatable infrastructure (we only partner with validators who document their infrastructure)
+* Join a Signal chat, since it's not discord
+* Share information about chain launches
 
 
