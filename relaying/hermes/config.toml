@@ -115,7 +115,7 @@ rpc_timeout = '15s'
 account_prefix = 'osmo'
 key_name = 'osmosis'
 store_prefix = 'ibc'
-max_gas = 60000000
+max_gas = 6000000
 max_msg_num = 30
 gas_price = { price = 0.000, denom = 'uosmo' }
 gas_adjustment = 1
