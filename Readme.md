@@ -9,6 +9,18 @@ Notional provides services in blockchain technology, including:
    * [CraftEconomy](https://github.com/notional-labs/craft) 
 * Consulting and strategy
 
+## Usage
+On a freshly installed [Anarchy Linux](https://anarchyinstaller.gitlab.io/) 
+
+Becore root: `sudo su` then:
+
+```bash
+pacman -Syyu git
+git clone https://github.com/notional-labs/notional
+cd notional
+bash infrastructure/standup.bash
+```
+
 
 ## Team
 * Jacob Gadikian - Blockchain and infrastructure engineer
