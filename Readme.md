@@ -15,7 +15,7 @@ Notional provides services in blockchain technology, including:
 * Ricardo Ferreria - All things biz, testing of documentation written by Jacob and Khanh
 * Khanh Nguyen - Blockchain Engineer
 * Minh Vu Le Nhat - Hermes Operator 
-* Long - Validator Operations and training
+* Long Mai Gia - Validator Operations and Training
 
 **Notional is hiring and training blockchain engineers.  Hours are ludicrous, and all team members earn a meaningful stake in all blockchains launched.  Notional Pays flat global wages, and accepts any consistent code contributor as an intern** 
 
