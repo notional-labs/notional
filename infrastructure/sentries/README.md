@@ -27,9 +27,9 @@ Long:
   * get datacenter quotes for leasing and hosting and put them directly into this file. 
 
 
-Details:
+# Details:
 * hosting cost is cheaper but requires lots of deposit.
-##lanit.com.vb - Hanoi
+## lanit.com.vb - Hanoi
 
 Option:
 * 8-core e5-2670:.**5m/mo**
@@ -37,18 +37,18 @@ Option:
 
 
 
-##viettelidc - Hanoi
+## viettelidc - Hanoi
 Only Leasting available
 
 setting up, call back later
 
 
-##vnpt
+## vnpt
 setting up, call back later
 
 
 
 
-##fpt
+## fpt
 
 setting up, call back later
