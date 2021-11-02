@@ -46,6 +46,8 @@ Support number: 0945 96 95 94
 
 ## viettelidc - Hanoi
 Hosting options:
+* COLO4: **2,480,000vnd/mo**
+* COLO5: **4,640,000vnd/mo**
 
 Leasting options:
 
