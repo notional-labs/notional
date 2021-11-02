@@ -37,6 +37,7 @@ Hosting options:
 * Platinum: **4,500,000vnd/mo**
   * Domestic: **1000mbps**
   * International: **20mbps**
+ 
 Leasting options:
 * 8-core e5-2670:.**4,500,000vnd/mo**
 * 12-core e5- 2678v3: **6,000,000/mo**
