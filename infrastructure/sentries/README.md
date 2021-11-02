@@ -28,27 +28,43 @@ Long:
 
 
 # Details:
-* hosting cost is cheaper but requires lots of deposit.
+
 ## lanit.com.vb - Hanoi
+Hosting options:
+* Gold: **2,300,000vnd/mo**
+  * Domestic: **700mbps**
+  * International: **15mbps**
+* Platinum: **4,500,000vnd/mo**
+  * Domestic: **1000mbps**
+  * International: **20mbps**
+Leasting options:
+* 8-core e5-2670:.**4,500,000vnd/mo**
+* 12-core e5- 2678v3: **6,000,000/mo**
 
-Option:
-* 8-core e5-2670:.**5m/mo**
-* 12-core e5- 2678v3: **12m/mo**
-
-
+Support number: 0945 96 95 94
 
 ## viettelidc - Hanoi
-Only Leasting available
+Hosting options:
 
-setting up, call back later
+Leasting options:
+
+* setting up, call back later
+
+Support number: 1800 8088
 
 
 ## vnpt
 setting up, call back later
 
 
+Support number: 1800 1260
 
 
-## fpt
+
+
+## fpt-fti
 
 setting up, call back later
+
+
+Support number: 
