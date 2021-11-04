@@ -22,6 +22,7 @@ We think that validators should be actively involved in supporting the communiti
 ## Where we want to validate
 Notional is validating, but not in the active set:
 * Umee
+* [Terra](https://ping.pub/terra-luna/account/terra1cn2qhqs4g0fzxn8j2lhr3vwffc86s0k65cqclp)
 
 Notional wishes to validate:
 * Every IBC-enabled blockchain
