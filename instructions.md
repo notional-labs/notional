@@ -160,7 +160,12 @@ To become a validator you need to perform additional steps.
 Your node must be fully synced in order to send the TX of validator creation and start to validate the network. You can check if your node has fully synced by comparing your logs and the latest block in the explorer (https://cosmos-explorer.bitcanna.io/)
 
 1. **You will need coins:**
-Send coins to your new address, you will need roughly 2 BCNA to run the validator (1 BCNA for self-delegation and a bit more for transactions). Reach out in Discord to receive the 2 BCNA if you don't have any.
+Send coins to your new address, you will need roughly 2 BCNA to run the validator (1 BCNA for self-delegation and a bit more for transactions).
+* https://app.osmosis.zone/
+* https://app.rango.exchange/
+* https://coindeal.com/
+* https://coinmerce.io/
+
 
 2. **Send the _Create validator_ TX:**
 
