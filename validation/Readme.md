@@ -13,6 +13,7 @@ Notional is an **active set** validator on:
 9) [Juno](https://juno.aneka.io/validators/junovaloper1083svrca4t350mphfv9x45wq9asrs60cpqzg0y)
 10) [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1083svrca4t350mphfv9x45wq9asrs60cyssqu6)
 11) [Likecoin](https://likecoin.bigdipper.live/validators/cosmosvaloper16dc379m0qj64g4pr4nkl7ewak52qy2srvwj2rz)
+12) [Ki](https://blockchain.ki/validator/kivaloper1lmkzaxztjpesh0mf7qy76l5npqwc7fk3l2k57g)
 
 ## The role of a validator
 
