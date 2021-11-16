@@ -13,10 +13,16 @@ Notional is an **active set** validator on:
 9) [Juno](https://juno.aneka.io/validators/junovaloper1083svrca4t350mphfv9x45wq9asrs60cpqzg0y)
 10) [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1083svrca4t350mphfv9x45wq9asrs60cyssqu6)
 11) [Likecoin](https://likecoin.bigdipper.live/validators/cosmosvaloper16dc379m0qj64g4pr4nkl7ewak52qy2srvwj2rz)
+12) [Ki](https://blockchain.ki/validator/kivaloper1lmkzaxztjpesh0mf7qy76l5npqwc7fk3l2k57g)
+13) [Cyber](https://cyb.ai/network/bostrom/hero/bostromvaloper1g65rmjkeuy5rywx04s4fvwfylmlz98vq4gzln5)
 
 ## The role of a validator
 
-We think that validators should be actively involved in supporting the communities that they serve.  As we scaled, it became increasingly obvious to Jacob that he could not personally manage every piece of adequately serving all 18 IBCGang blockchain communities.  
+We think that validators should be actively involved in supporting the communities that they serve.  As we scaled, it became increasingly obvious to Jacob that he could not personally manage every piece of adequately serving all 20 IBCGang blockchain communities, so we're moving to a model where larger vote weight %age validators have an individual rep to the community, and smaller vote weight chains have shared representatives. 
+
+We are in it for the long-haul.
+
+We manage our organization by git issues, and if your community needs help, they can make an issue here.  
 
 
 
@@ -29,7 +35,7 @@ Notional wishes to validate:
 * Every IBC-enabled blockchain
 
 
-Notional has decided to maintain relayers for all chains -- and [document processes](./relaying-guide) -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on 50 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
+Notional has decided to maintain relayers for all chains -- and [document processes](./relaying-guide) -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on up to 20 * 20 = 400x2 = 800 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
 
 
 ## Partnerships with other validators / relayers
