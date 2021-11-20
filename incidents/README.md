@@ -1,5 +1,12 @@
 # Notional Incident Reports
 
+## November 2021
+
+From Nov 18-21, we had sporadic outages across our validator network due to the disassembly of a RAID setup which was very poorly designed by Jacob. 
+
+
+Ongoing: Our sentinel validator shouldbe considered unreliable (though we believe that it is one of the most reliable in Sentinel's validator set) due to uncontrolled bandwidth consumption in the Sentinel blockchain network, and is being operated on a best effort basis.  This will soon include severing Sentinel's current full 500mbps fiber line.
+
 ## October 2021
 October 19, 2021
 - Injective is unstable, keeps crashing with panic errors.
