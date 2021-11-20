@@ -6,11 +6,11 @@ Hermes is a long-running process that reads all channels by default over each no
 In order for this to work effectively, you're going to need an archive node for every member of the IBC Gang per [Map Of Zones](https://mapofzones.com). You will also need funds on all relevant chains.  
 
 ```bash
+mkdir ~/.hermes
+cp config.toml ~/.hermes
 git clone https://github.com/informalsystems/ibc-rs
 cd ibc-rs/relayer-cli
 cargo install --path .
-mkdir ~/.hermes
-cp config.toml ~/.hermes
 ```
 
 **In config.toml, make sure that you comment out any chain that you do not wish to relay, or "deny" its channels.**
@@ -35,8 +35,6 @@ hermes keys restore impacthub-3 -m "12 or 24 magic words"
 
 
 ### Snippets
-
-
 ```bash
 hermes query packet commitments osmosis-1 transfer channel-0
 hermes tx raw packet-recv cosmoshub-4 osmosis-1 transfer channel-0
