@@ -2,7 +2,7 @@
 
 It's become evident that a global VPN system will smooth operations at Notional.  
 
-There seem to be three top candidates:
+There were three top candidates:
 
 * Tailscale
 * Zerotier
@@ -19,16 +19,6 @@ https://github.com/wenerme/wener/blob/76c45c3ba784a318cb5f0b1d348ecba2232e2f43/n
 https://github.com/wenerme/wener/blob/master/notes/service/network/vpn-awesome.md
 
 
-## Deployment Phases
+## Deployment
 
-1) Zerotier
-
-Join this network, and make an issue on this repository:
-
-sudo zerotier-cli join 9f77fc393e7dfae7
-
-
-2) A fully self hosted solution:
-
-
-https://github.com/wiretrustee/wiretrustee
+We will use Slack's nebula and we'll dedicate a device to being its root of trust.  Individuals will join the system from there.  
