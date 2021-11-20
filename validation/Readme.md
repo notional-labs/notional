@@ -15,8 +15,8 @@ Notional is an **active set** validator on:
 11) [Likecoin](https://likecoin.bigdipper.live/validators/cosmosvaloper16dc379m0qj64g4pr4nkl7ewak52qy2srvwj2rz)
 12) [Ki](https://blockchain.ki/validator/kivaloper1lmkzaxztjpesh0mf7qy76l5npqwc7fk3l2k57g)
 13) [Cyber](https://cyb.ai/network/bostrom/hero/bostromvaloper1g65rmjkeuy5rywx04s4fvwfylmlz98vq4gzln5)
-14) [Cheqd]
-15) [Stargaze]
+14) [Cheqd](https://cheqd.didx.co.za/validator/cheqdvaloper1gyjqlfkrggd0uyd748fw9y5kq9xzmjqqh8848x)
+15) [Stargaze](https://www.mintscan.io/stargaze/validators/starsvaloper1v8yp5x5kfex4wep2pfuuyw68cn2lst3ksl0gss)
 
 ## The role of a validator
 
