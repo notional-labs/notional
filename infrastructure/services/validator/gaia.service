@@ -1,5 +1,5 @@
 [Unit]
-Description=Gaia
+Description=Gaia Validator
 
 [Service]
 Environment=GAIAD_P2P_LADDR=tcp://0.0.0.0:2010
@@ -14,7 +14,6 @@ Environment=GAIAD_PRUNING=custom
 Environment=GAIAD_PRUNING_KEEP_RECENT=100
 Environment=GAIAD_PRUNING_KEEP_EVERY=0
 Environment=GAIAD_PRUNING_INTERVAL=10
-Environment=GAIAD_MONIKER=SpacePussy
 Environment=GAIAD_CONSENSUS_DOUBLE_SIGN_CHECK_HEIGHT=10
 Environment=GAIAD_TX_INDEX_INDEXER=null
 Environment=HOME=/home/cyber
