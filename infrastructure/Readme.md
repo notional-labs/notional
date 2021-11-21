@@ -39,7 +39,6 @@ Each chain has 10 ports it can use.  WIP.
 -----------------|------------|-------------
  Bitcanna        | 420 -429    | bitcanna-1
  Osmosis         | 2000-2009  | osmosis-1
-
  Ixo             | 2130-2139  | impacthub-3
  Gaia            | 2010-2019  | cosmoshub-4
  Iris            | 2120-2129  | irishub-1
