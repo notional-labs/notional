@@ -1,0 +1,29 @@
+[Unit]
+Description=Cyber Validator
+
+[Service]
+Environment=CYBER_P2P_LADDR=tcp://0.0.0.0:2370
+Environment=CYBER_RPC_LADDR=tcp://127.0.0.1:2371
+Environment=CYBER_API_ADDRESS=tcp://127.0.0.1:2372
+Environment=CYBER_GRPC_ADDRESS=127.0.0.1:2373
+Environment=CYBER_GRPC_WEB_ADDRESS=127.0.0.1:2374
+Environment=CYBER_P2P_SEED_NODES="a54a9d04a8b42a0bd495a93f18efcf2a272277e0@162.55.132.230:26656,d0518ce9881a4b0c5872e5e9b7c4ea8d760dad3f@85.10.207.173:26656"
+Environment=CYBER_P2P_MAX_NUM_INBOUND_PEERS=500
+Environment=CYBER_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=CYBER_PRUNING=custom
+Environment=CYBER_PRUNING_KEEP_RECENT=100
+Environment=CYBER_PRUNING_KEEP_EVERY=0
+Environment=CYBER_PRUNING_INTERVAL=10
+Environment=CYBER_MONIKER=SpacePussy
+Environment=CYBER_CONSENSUS_DOUBLE_SIGN_CHECK_HEIGHT=10
+Environment=CYBER_TX_INDEX_INDEXER=null
+Environment=HOME=/home/cyber
+User=cyber
+Restart=always
+RestartSec=30
+LimitNOFILE=500000
+ExecStart=/home/cyber/go/bin/cyber start
+
+
+[Install]
+WantedBy=multi-user.target
