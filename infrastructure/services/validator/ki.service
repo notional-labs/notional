@@ -1,0 +1,29 @@
+[Unit]
+Description=Ki Validator
+
+[Service]
+Environment=KID_P2P_LADDR=tcp://0.0.0.0:2440
+Environment=KID_RPC_LADDR=tcp://127.0.0.1:2441
+Environment=KID_API_ADDRESS=tcp://127.0.0.1:2442
+Environment=KID_GRPC_ADDRESS=127.0.0.1:2443
+Environment=KID_GRPC_WEB_ADDRESS=127.0.0.1:2444
+Environment=KID_P2P_SEED_NODES="24cbccfa8813accd0ebdb09e7cdb54cff2e8fcd9@51.89.166.197:26656,81396d4703a2e3cbd136c7324e4df5686fd48218@35.180.8.214:26656,c597db55d9a609b8b77c3d37ecf1fa9a67117cc0@144.217.82.4:26656,50af457247b59aa558a26a14bd7ac4bf86eeae70@195.201.164.223:26656"
+Environment=KID_P2P_MAX_NUM_INBOUND_PEERS=500
+Environment=KID_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=KID_PRUNING=custom
+Environment=KID_PRUNING_KEEP_RECENT=100
+Environment=KID_PRUNING_KEEP_EVERY=0
+Environment=KID_PRUNING_INTERVAL=10
+Environment=KID_MONIKER=SpacePussy
+Environment=KID_CONSENSUS_DOUBLE_SIGN_CHECK_HEIGHT=10
+Environment=KID_TX_INDEX_INDEXER=null
+Environment=HOME=/home/cyber
+User=cyber
+Restart=always
+RestartSec=30
+LimitNOFILE=500000
+ExecStart=/home/cyber/go/bin/kid start
+
+
+[Install]
+WantedBy=multi-user.target
