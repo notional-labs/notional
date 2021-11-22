@@ -17,7 +17,7 @@ Environment=STARSD_PRUNING_KEEP_EVERY=0
 Environment=STARSD_PRUNING_INTERVAL=100
 Environment=STARSD_CONSENSUS_DOUBLE_SIGN_CHECK_HEIGHT=10
 Environment=STARSD_TX_INDEX_INDEXER=null
-Environment=STARSD_HOME=/spin/stargaze/.starsd
+Environment=STARSD_HOME=/chains/.starsd
 User=cyber
 Restart=always
 RestartSec=30
