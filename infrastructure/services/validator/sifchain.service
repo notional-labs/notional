@@ -16,7 +16,7 @@ Environment=SIFNODED_PRUNING_KEEP_EVERY=0
 Environment=SIFNODED_PRUNING_INTERVAL=100
 Environment=SIFNODED_CONSENSUS_DOUBLE_SIGN_CHECK_HEIGHT=10
 Environment=SIFNODED_TX_INDEX_INDEXER=null
-Environment=SIFNODED_HOME=/spin/sifchain
+Environment=SIFNODED_HOME=/chains/sifchain
 User=cyber
 Restart=always
 RestartSec=30
