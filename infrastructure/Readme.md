@@ -37,7 +37,7 @@ Each chain has 10 ports it can use.  WIP.
 
    Chain         | Port Range | Network
 -----------------|------------|-------------
- Bitcanna        | 420-429   | bitcanna-1
+ Bitcanna        | 420-429    | bitcanna-1
  Osmosis         | 2000-2009  | osmosis-1
  Gaia            | 2010-2019  | cosmoshub-4
  Akash           | 2020-2029  | akashnet-2
