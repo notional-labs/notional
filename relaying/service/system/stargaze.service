@@ -1,0 +1,20 @@
+[Unit]
+Description=Stargaze Full Node
+
+[Service]
+Environment=STARSD_P2P_LADDR=tcp://0.0.0.0:2190
+Environment=STARSD_RPC_LADDR=tcp://0.0.0.0:2191
+Environment=STARSD_NODE=tcp://127.0.0.0:2191
+Environment=STARSD_GRPC_ADDRESS=0.0.0.0:2192
+Environment=STARSD_API_ADDRESS=tcp://127.0.0.0:2193
+Environment=STARSD_GRPC_WEB_ADDRESS=127.0.0.0:2194
+Environment=STARSD_P2P_MAX_NUM_INBOUND_PEERS=500
+Environment=STARSD_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=STARSD_PRUNING=nothing
+User=root
+Restart=always
+RestartSec=30
+ExecStart=/root/go/bin/starsd start
+
+[Install]
+WantedBy=multi-user.target

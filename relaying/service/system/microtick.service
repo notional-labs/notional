@@ -1,0 +1,21 @@
+[Unit]
+Description=Microtick Full Node
+
+[Service]
+Environment=MTM_P2P_LADDR=tcp://0.0.0.0:2150
+Environment=MTM_RPC_LADDR=tcp://0.0.0.0:2151
+Environment=MTM_NODE=tcp://127.0.0.1:2151
+Environment=MTM_GRPC_ADDRESS=0.0.0.0:2152
+Environment=MTM_API_ADDRESS=tcp://127.0.0.1:2153
+Environment=MTM_GRPC_WEB_ADDRESS=127.0.0.1:2154
+Environment=MTM_P2P_PERSISTENT_PEERS=7f6c1ab8a186cef7145d74e781812906c0adac22@135.181.118.39:26656,885cc6b8bcc36d9fd0489f4bfa2d845c9b60f354@5.189.132.164:26656,a613bf021d77045187b3f919e4a24c719bb862f4@45.77.62.126:26656,afc91b43fcf5b1def927dc102b061607f131ad28@167.172.38.41:26656,cde69328bf16cc96f14ac9925a1960d3b21e4f8b@66.206.17.178:26656
+Environment=MTM_P2P_MAX_NUM_INBOUND_PEERS=500
+Environment=MTM_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=MTM_PRUNING=nothing
+User=root
+Restart=always
+RestartSec=30
+ExecStart=/root/go/bin/mtm start
+
+[Install]
+WantedBy=multi-user.target

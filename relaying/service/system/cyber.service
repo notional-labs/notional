@@ -1,0 +1,22 @@
+[Unit]
+Description=Cyber Full Node
+
+[Service]
+Environment=CYBER_P2P_LADDR=tcp://0.0.0.0:2050
+Environment=CYBER_RPC_LADDR=tcp://0.0.0.0:2051
+Environment=CYBER_NODE=tcp://127.0.0.0:2051
+Environment=CYBER_GRPC_ADDRESS=0.0.0.0:2052
+Environment=CYBER_API_ADDRESS=tcp://127.0.0.0:2053
+Environment=CYBER_GRPC_WEB_ADDRESS=127.0.0.0:2054
+Environment=CYBER_P2P_MAX_NUM_INBOUND_PEERS=500
+Environment=CYBER_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=CYBER_COMPUTE_GPU=false
+Environment=CYBER_PRUNING=nothing
+Environment=CYBER_HOME=/gaia1/cyber
+User=root
+Restart=always
+RestartSec=30
+ExecStart=/root/go/bin/cyber start
+
+[Install]
+WantedBy=multi-user.target
