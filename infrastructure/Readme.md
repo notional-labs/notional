@@ -37,7 +37,7 @@ Each chain has 10 ports it can use.  WIP.
 
    Chain         | Port Range | Network
 -----------------|------------|-------------
- Bitcanna        | 420-429   | bitcanna-1
+ Bitcanna        | 420-429    | bitcanna-1
  Osmosis         | 2000-2009  | osmosis-1
  Gaia            | 2010-2019  | cosmoshub-4
  Akash           | 2020-2029  | akashnet-2
@@ -48,6 +48,7 @@ Each chain has 10 ports it can use.  WIP.
  Juno            | 2070-2079  | juno-1
  PersistenceCore | 2080-2089  | core-1
  Desmos          | 2090-2099  | desmos-mainnet
+ Kichain         | 2100-2109  | kichain-2
  Sifchain        | 2110-2119  | sifchain-1
  Iris            | 2120-2129  | irishub-1
  Ixo             | 2130-2139  | impacthub-3
@@ -55,9 +56,8 @@ Each chain has 10 ports it can use.  WIP.
  Microtick       | 2150-2159  | microtick-1
  Terra           | 2160-2169  | columbus-5
  Starname        | 2170-2179  | iov-mainnet-ibc
- Kichain         | 3000-3009  | kichain-2
- Likecoin        | 3100-3109  | likecoin-mainnet-2
- Stargaze        | 4000-4009  | stargaze-1
+ Likecoin        | 2180-2189  | likecoin-mainnet-2
+ Stargaze        | 2190-2199  | stargaze-1
 
    Service         | Port  
 -------------------|------ 
