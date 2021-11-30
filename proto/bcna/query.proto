@@ -1,23 +1,18 @@
 syntax = "proto3";
 package BitCannaGlobal.bcna.bcna;
 
-import "gogoproto/gogo.proto";
 import "google/api/annotations.proto";
 import "cosmos/base/query/v1beta1/pagination.proto";
-import "bcna/params.proto";
 import "bcna/bitcannaid.proto";
 import "bcna/supplychain.proto";
 // this line is used by starport scaffolding # 1
+import "gogoproto/gogo.proto";
 
 option go_package = "github.com/BitCannaGlobal/bcna/x/bcna/types";
 
 // Query defines the gRPC querier service.
 service Query {
-  // Parameters queries the parameters of the module.
-  rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
-    option (google.api.http).get = "/BitCannaGlobal/bcna/bcna/params";
-  }
-  // Queries a bitcannaid by id.
+    // Queries a bitcannaid by id.
 	rpc Bitcannaid(QueryGetBitcannaidRequest) returns (QueryGetBitcannaidResponse) {
 		option (google.api.http).get = "/BitCannaGlobal/bcna/bcna/bitcannaid/{id}";
 	}
@@ -38,15 +33,6 @@ service Query {
 	}
 
 // this line is used by starport scaffolding # 2
-}
-
-// QueryParamsRequest is request type for the Query/Params RPC method.
-message QueryParamsRequest {}
-
-// QueryParamsResponse is response type for the Query/Params RPC method.
-message QueryParamsResponse {
-  // params holds all the parameters of this module.
-  Params params = 1 [(gogoproto.nullable) = false];
 }
 
 message QueryGetBitcannaidRequest {

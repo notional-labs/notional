@@ -5,12 +5,6 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 )
 
-const (
-	TypeMsgCreateBitcannaid = "create_bitcannaid"
-	TypeMsgUpdateBitcannaid = "update_bitcannaid"
-	TypeMsgDeleteBitcannaid = "delete_bitcannaid"
-)
-
 var _ sdk.Msg = &MsgCreateBitcannaid{}
 
 func NewMsgCreateBitcannaid(creator string, bcnaid string, address string) *MsgCreateBitcannaid {
@@ -26,7 +20,7 @@ func (msg *MsgCreateBitcannaid) Route() string {
 }
 
 func (msg *MsgCreateBitcannaid) Type() string {
-	return TypeMsgCreateBitcannaid
+	return "CreateBitcannaid"
 }
 
 func (msg *MsgCreateBitcannaid) GetSigners() []sdk.AccAddress {
@@ -66,7 +60,7 @@ func (msg *MsgUpdateBitcannaid) Route() string {
 }
 
 func (msg *MsgUpdateBitcannaid) Type() string {
-	return TypeMsgUpdateBitcannaid
+	return "UpdateBitcannaid"
 }
 
 func (msg *MsgUpdateBitcannaid) GetSigners() []sdk.AccAddress {
@@ -103,7 +97,7 @@ func (msg *MsgDeleteBitcannaid) Route() string {
 }
 
 func (msg *MsgDeleteBitcannaid) Type() string {
-	return TypeMsgDeleteBitcannaid
+	return "DeleteBitcannaid"
 }
 
 func (msg *MsgDeleteBitcannaid) GetSigners() []sdk.AccAddress {
