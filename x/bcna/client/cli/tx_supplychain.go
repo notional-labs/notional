@@ -3,12 +3,11 @@ package cli
 import (
 	"strconv"
 
-	"github.com/spf13/cobra"
-
 	"github.com/BitCannaGlobal/bcna/x/bcna/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/client/tx"
+	"github.com/spf13/cobra"
 )
 
 func CmdCreateSupplychain() *cobra.Command {

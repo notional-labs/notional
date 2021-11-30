@@ -3,9 +3,6 @@ package BitCannaGlobal.bcna.bcna;
 
 option go_package = "github.com/BitCannaGlobal/bcna/x/bcna/types";
 
-import "gogoproto/gogo.proto";
-
-
 message Bitcannaid {
   uint64 id = 1;
   string bcnaid = 2; 
