@@ -12,6 +12,7 @@ import (
 	"google.golang.org/grpc/status"
 
 	"github.com/BitCannaGlobal/bcna/testutil/network"
+	"github.com/BitCannaGlobal/bcna/testutil/nullify"
 	"github.com/BitCannaGlobal/bcna/x/bcna/client/cli"
 	"github.com/BitCannaGlobal/bcna/x/bcna/types"
 )
@@ -23,9 +24,11 @@ func networkWithBitcannaidObjects(t *testing.T, n int) (*network.Network, []type
 	require.NoError(t, cfg.Codec.UnmarshalJSON(cfg.GenesisState[types.ModuleName], &state))
 
 	for i := 0; i < n; i++ {
-		state.BitcannaidList = append(state.BitcannaidList, types.Bitcannaid{
+		bitcannaid := types.Bitcannaid{
 			Id: uint64(i),
-		})
+		}
+		nullify.Fill(&bitcannaid)
+		state.BitcannaidList = append(state.BitcannaidList, bitcannaid)
 	}
 	buf, err := cfg.Codec.MarshalJSON(&state)
 	require.NoError(t, err)
@@ -74,7 +77,10 @@ func TestShowBitcannaid(t *testing.T) {
 				var resp types.QueryGetBitcannaidResponse
 				require.NoError(t, net.Config.Codec.UnmarshalJSON(out.Bytes(), &resp))
 				require.NotNil(t, resp.Bitcannaid)
-				require.Equal(t, tc.obj, resp.Bitcannaid)
+				require.Equal(t,
+					nullify.Fill(&tc.obj),
+					nullify.Fill(&resp.Bitcannaid),
+				)
 			}
 		})
 	}
@@ -108,7 +114,10 @@ func TestListBitcannaid(t *testing.T) {
 			var resp types.QueryAllBitcannaidResponse
 			require.NoError(t, net.Config.Codec.UnmarshalJSON(out.Bytes(), &resp))
 			require.LessOrEqual(t, len(resp.Bitcannaid), step)
-			require.Subset(t, objs, resp.Bitcannaid)
+			require.Subset(t,
+				nullify.Fill(objs),
+				nullify.Fill(resp.Bitcannaid),
+			)
 		}
 	})
 	t.Run("ByKey", func(t *testing.T) {
@@ -121,7 +130,10 @@ func TestListBitcannaid(t *testing.T) {
 			var resp types.QueryAllBitcannaidResponse
 			require.NoError(t, net.Config.Codec.UnmarshalJSON(out.Bytes(), &resp))
 			require.LessOrEqual(t, len(resp.Bitcannaid), step)
-			require.Subset(t, objs, resp.Bitcannaid)
+			require.Subset(t,
+				nullify.Fill(objs),
+				nullify.Fill(resp.Bitcannaid),
+			)
 			next = resp.Pagination.NextKey
 		}
 	})
@@ -133,6 +145,9 @@ func TestListBitcannaid(t *testing.T) {
 		require.NoError(t, net.Config.Codec.UnmarshalJSON(out.Bytes(), &resp))
 		require.NoError(t, err)
 		require.Equal(t, len(objs), int(resp.Pagination.Total))
-		require.Equal(t, objs, resp.Bitcannaid)
+		require.ElementsMatch(t,
+			nullify.Fill(objs),
+			nullify.Fill(resp.Bitcannaid),
+		)
 	})
 }
