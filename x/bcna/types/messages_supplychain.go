@@ -5,6 +5,12 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 )
 
+const (
+	TypeMsgCreateSupplychain = "create_supplychain"
+	TypeMsgUpdateSupplychain = "update_supplychain"
+	TypeMsgDeleteSupplychain = "delete_supplychain"
+)
+
 var _ sdk.Msg = &MsgCreateSupplychain{}
 
 func NewMsgCreateSupplychain(creator string, product string, info string, supplyinfo string) *MsgCreateSupplychain {
@@ -21,7 +27,7 @@ func (msg *MsgCreateSupplychain) Route() string {
 }
 
 func (msg *MsgCreateSupplychain) Type() string {
-	return "CreateSupplychain"
+	return TypeMsgCreateSupplychain
 }
 
 func (msg *MsgCreateSupplychain) GetSigners() []sdk.AccAddress {
@@ -62,7 +68,7 @@ func (msg *MsgUpdateSupplychain) Route() string {
 }
 
 func (msg *MsgUpdateSupplychain) Type() string {
-	return "UpdateSupplychain"
+	return TypeMsgUpdateSupplychain
 }
 
 func (msg *MsgUpdateSupplychain) GetSigners() []sdk.AccAddress {
@@ -99,7 +105,7 @@ func (msg *MsgDeleteSupplychain) Route() string {
 }
 
 func (msg *MsgDeleteSupplychain) Type() string {
-	return "DeleteSupplychain"
+	return TypeMsgDeleteSupplychain
 }
 
 func (msg *MsgDeleteSupplychain) GetSigners() []sdk.AccAddress {

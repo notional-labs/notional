@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	keepertest "github.com/BitCannaGlobal/bcna/testutil/keeper"
+	"github.com/BitCannaGlobal/bcna/testutil/nullify"
 	"github.com/BitCannaGlobal/bcna/x/bcna/keeper"
 	"github.com/BitCannaGlobal/bcna/x/bcna/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -24,7 +25,10 @@ func TestBitcannaidGet(t *testing.T) {
 	for _, item := range items {
 		got, found := keeper.GetBitcannaid(ctx, item.Id)
 		require.True(t, found)
-		require.Equal(t, item, got)
+		require.Equal(t,
+			nullify.Fill(&item),
+			nullify.Fill(&got),
+		)
 	}
 }
 
@@ -41,7 +45,10 @@ func TestBitcannaidRemove(t *testing.T) {
 func TestBitcannaidGetAll(t *testing.T) {
 	keeper, ctx := keepertest.BcnaKeeper(t)
 	items := createNBitcannaid(keeper, ctx, 10)
-	require.ElementsMatch(t, items, keeper.GetAllBitcannaid(ctx))
+	require.ElementsMatch(t,
+		nullify.Fill(items),
+		nullify.Fill(keeper.GetAllBitcannaid(ctx)),
+	)
 }
 
 func TestBitcannaidCount(t *testing.T) {

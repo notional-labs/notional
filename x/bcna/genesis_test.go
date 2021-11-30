@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	keepertest "github.com/BitCannaGlobal/bcna/testutil/keeper"
+	"github.com/BitCannaGlobal/bcna/testutil/nullify"
 	"github.com/BitCannaGlobal/bcna/x/bcna"
 	"github.com/BitCannaGlobal/bcna/x/bcna/types"
 	"github.com/stretchr/testify/require"
@@ -11,6 +12,8 @@ import (
 
 func TestGenesis(t *testing.T) {
 	genesisState := types.GenesisState{
+		Params: types.DefaultParams(),
+
 		BitcannaidList: []types.Bitcannaid{
 			{
 				Id: 0,
@@ -37,11 +40,12 @@ func TestGenesis(t *testing.T) {
 	got := bcna.ExportGenesis(ctx, *k)
 	require.NotNil(t, got)
 
-	require.Len(t, got.BitcannaidList, len(genesisState.BitcannaidList))
-	require.Subset(t, genesisState.BitcannaidList, got.BitcannaidList)
+	nullify.Fill(&genesisState)
+	nullify.Fill(got)
+
+	require.ElementsMatch(t, genesisState.BitcannaidList, got.BitcannaidList)
 	require.Equal(t, genesisState.BitcannaidCount, got.BitcannaidCount)
-	require.Len(t, got.SupplychainList, len(genesisState.SupplychainList))
-	require.Subset(t, genesisState.SupplychainList, got.SupplychainList)
+	require.ElementsMatch(t, genesisState.SupplychainList, got.SupplychainList)
 	require.Equal(t, genesisState.SupplychainCount, got.SupplychainCount)
 	// this line is used by starport scaffolding # genesis/test/assert
 }
