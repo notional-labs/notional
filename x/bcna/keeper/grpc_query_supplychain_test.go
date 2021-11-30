@@ -11,7 +11,6 @@ import (
 	"google.golang.org/grpc/status"
 
 	keepertest "github.com/BitCannaGlobal/bcna/testutil/keeper"
-	"github.com/BitCannaGlobal/bcna/testutil/nullify"
 	"github.com/BitCannaGlobal/bcna/x/bcna/types"
 )
 
@@ -51,10 +50,7 @@ func TestSupplychainQuerySingle(t *testing.T) {
 				require.ErrorIs(t, err, tc.err)
 			} else {
 				require.NoError(t, err)
-				require.Equal(t,
-					nullify.Fill(tc.response),
-					nullify.Fill(response),
-				)
+				require.Equal(t, tc.response, response)
 			}
 		})
 	}
@@ -81,10 +77,7 @@ func TestSupplychainQueryPaginated(t *testing.T) {
 			resp, err := keeper.SupplychainAll(wctx, request(nil, uint64(i), uint64(step), false))
 			require.NoError(t, err)
 			require.LessOrEqual(t, len(resp.Supplychain), step)
-			require.Subset(t,
-				nullify.Fill(msgs),
-				nullify.Fill(resp.Supplychain),
-			)
+			require.Subset(t, msgs, resp.Supplychain)
 		}
 	})
 	t.Run("ByKey", func(t *testing.T) {
@@ -94,10 +87,7 @@ func TestSupplychainQueryPaginated(t *testing.T) {
 			resp, err := keeper.SupplychainAll(wctx, request(next, 0, uint64(step), false))
 			require.NoError(t, err)
 			require.LessOrEqual(t, len(resp.Supplychain), step)
-			require.Subset(t,
-				nullify.Fill(msgs),
-				nullify.Fill(resp.Supplychain),
-			)
+			require.Subset(t, msgs, resp.Supplychain)
 			next = resp.Pagination.NextKey
 		}
 	})
@@ -105,10 +95,6 @@ func TestSupplychainQueryPaginated(t *testing.T) {
 		resp, err := keeper.SupplychainAll(wctx, request(nil, 0, 0, true))
 		require.NoError(t, err)
 		require.Equal(t, len(msgs), int(resp.Pagination.Total))
-		require.ElementsMatch(t,
-			nullify.Fill(msgs),
-			nullify.Fill(resp.Supplychain),
-		)
 	})
 	t.Run("InvalidRequest", func(t *testing.T) {
 		_, err := keeper.SupplychainAll(wctx, nil)

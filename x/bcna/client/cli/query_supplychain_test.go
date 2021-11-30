@@ -12,7 +12,6 @@ import (
 	"google.golang.org/grpc/status"
 
 	"github.com/BitCannaGlobal/bcna/testutil/network"
-	"github.com/BitCannaGlobal/bcna/testutil/nullify"
 	"github.com/BitCannaGlobal/bcna/x/bcna/client/cli"
 	"github.com/BitCannaGlobal/bcna/x/bcna/types"
 )
@@ -24,11 +23,9 @@ func networkWithSupplychainObjects(t *testing.T, n int) (*network.Network, []typ
 	require.NoError(t, cfg.Codec.UnmarshalJSON(cfg.GenesisState[types.ModuleName], &state))
 
 	for i := 0; i < n; i++ {
-		supplychain := types.Supplychain{
+		state.SupplychainList = append(state.SupplychainList, types.Supplychain{
 			Id: uint64(i),
-		}
-		nullify.Fill(&supplychain)
-		state.SupplychainList = append(state.SupplychainList, supplychain)
+		})
 	}
 	buf, err := cfg.Codec.MarshalJSON(&state)
 	require.NoError(t, err)
@@ -77,10 +74,7 @@ func TestShowSupplychain(t *testing.T) {
 				var resp types.QueryGetSupplychainResponse
 				require.NoError(t, net.Config.Codec.UnmarshalJSON(out.Bytes(), &resp))
 				require.NotNil(t, resp.Supplychain)
-				require.Equal(t,
-					nullify.Fill(&tc.obj),
-					nullify.Fill(&resp.Supplychain),
-				)
+				require.Equal(t, tc.obj, resp.Supplychain)
 			}
 		})
 	}
@@ -114,10 +108,7 @@ func TestListSupplychain(t *testing.T) {
 			var resp types.QueryAllSupplychainResponse
 			require.NoError(t, net.Config.Codec.UnmarshalJSON(out.Bytes(), &resp))
 			require.LessOrEqual(t, len(resp.Supplychain), step)
-			require.Subset(t,
-				nullify.Fill(objs),
-				nullify.Fill(resp.Supplychain),
-			)
+			require.Subset(t, objs, resp.Supplychain)
 		}
 	})
 	t.Run("ByKey", func(t *testing.T) {
@@ -130,10 +121,7 @@ func TestListSupplychain(t *testing.T) {
 			var resp types.QueryAllSupplychainResponse
 			require.NoError(t, net.Config.Codec.UnmarshalJSON(out.Bytes(), &resp))
 			require.LessOrEqual(t, len(resp.Supplychain), step)
-			require.Subset(t,
-				nullify.Fill(objs),
-				nullify.Fill(resp.Supplychain),
-			)
+			require.Subset(t, objs, resp.Supplychain)
 			next = resp.Pagination.NextKey
 		}
 	})
@@ -145,9 +133,6 @@ func TestListSupplychain(t *testing.T) {
 		require.NoError(t, net.Config.Codec.UnmarshalJSON(out.Bytes(), &resp))
 		require.NoError(t, err)
 		require.Equal(t, len(objs), int(resp.Pagination.Total))
-		require.ElementsMatch(t,
-			nullify.Fill(objs),
-			nullify.Fill(resp.Supplychain),
-		)
+		require.Equal(t, objs, resp.Supplychain)
 	})
 }
