@@ -2,12 +2,7 @@ global:
   api-listen-addr: :5183
   timeout: 1200s
   light-cache-size: 100
-
-
-
-
 chains:
-
 - key: cro
   chain-id: crypto-org-chain-mainnet-1
   rpc-addr: http://localhost:2041
@@ -15,8 +10,6 @@ chains:
   gas-adjustment: 2
   gas-prices: 0.001ucro
   trusting-period: 336h
-
-
 - key: emoney
   chain-id: emoney-3
   rpc-addr: http://localhost:2141
@@ -24,8 +17,6 @@ chains:
   gas-adjustment: 2
   gas-prices: 0.001ungm
   trusting-period: 240h
-
-
 - key: cosmos
   chain-id: cosmoshub-4
   rpc-addr: http://localhost:2019
@@ -33,8 +24,6 @@ chains:
   gas-adjustment: 3
   gas-prices: 0.002uatom
   trusting-period: 336h
-
-
 - key: osmosis
   chain-id: osmosis-1
   rpc-addr: http://localhost:2009
@@ -42,8 +31,6 @@ chains:
   gas-adjustment: 10
   gas-prices: 0.000uosmo
   trusting-period: 240h
-
-
 - key: sentinel
   chain-id: sentinelhub-2
   rpc-addr: https://sentinelhub-2.technofractal.com:443
@@ -51,8 +38,6 @@ chains:
   gas-adjustment: 2
   gas-prices: 0.001udvpn
   trusting-period: 336h
-
-
 - key: akash
   chain-id: akashnet-2
   rpc-addr: https://akashnet-2.technofractal.com:443
@@ -60,7 +45,6 @@ chains:
   gas-adjustment: 2
   gas-prices: 0.001uakt
   trusting-period: 336h
-
 - key: regen
   chain-id: regen-1
   rpc-addr: https://regen-1.technofractal.com:443
@@ -68,7 +52,6 @@ chains:
   gas-adjustment: 2
   gas-prices: 0.001uregen
   trusting-period: 336h
-
 - key: iov
   chain-id: iov-mainnet-ibc
   rpc-addr: http://localhost:2071
@@ -76,7 +59,6 @@ chains:
   gas-adjustment: 2
   gas-prices: 0.001uiov
   trusting-period: 336h
-  
 - key: iris
   chain-id: irishub-1
   rpc-addr: http://localhost:2121
@@ -84,8 +66,6 @@ chains:
   gas-adjustment: 2
   gas-price: 0.001uiris
   trusting-period: 336h
-
-
 - key: persistence
   chain-id: core-1
   rpc-addr: http://localhost:2081
@@ -93,8 +73,6 @@ chains:
   gas-adjustment: 2
   gas-price: 0.001uxprt
   trusting-period: 336h
-
-
 paths:
   emosmo:
     src:
@@ -324,8 +302,6 @@ paths:
       version: ics20-1
     strategy:
       type: naive
-
-
   crohub:
     src:
       chain-id: crypto-org-chain-mainnet-1
@@ -758,6 +734,44 @@ paths:
       client-id: 07-tendermint-12
       connection-id: connection-11
       channel-id: channel-1
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  lunahub:
+    src:
+      chain-id: columbus-5
+      client-id: 07-tendermint-13
+      connection-id: connection-13
+      channel-id: channel-2
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-469
+      connection-id: connection-387
+      channel-id: channel-219
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  hubluna:
+    src:
+      chain-id: cosmoshub-4
+      client-id: 07-tendermint-469
+      connection-id: connection-387
+      channel-id: channel-219
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: columbus-5
+      client-id: 07-tendermint-13
+      connection-id: connection-13
+      channel-id: channel-2
       port-id: transfer
       order: UNORDERED
       version: ics20-1
