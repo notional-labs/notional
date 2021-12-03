@@ -725,3 +725,41 @@ paths:
       version: ics20-1
     strategy:
       type: naive
+  lunaosmo:
+    src:
+      chain-id: columbus-5
+      client-id: 07-tendermint-12
+      connection-id: connection-11
+      channel-id: channel-1
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-1549
+      connection-id: connection-1215
+      channel-id: channel-72
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
+  osmoluna:
+    src:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-1549
+      connection-id: connection-1215
+      channel-id: channel-72
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: columbus-5
+      client-id: 07-tendermint-12
+      connection-id: connection-11
+      channel-id: channel-1
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
