@@ -434,7 +434,7 @@ account_prefix = 'sif'
 key_name = 'sif'
 store_prefix = 'ibc'
 max_gas = 1000000000000000
-gas_price = { price = 2000000000000, denom = 'rowan' }
+gas_price = { price = 20000, denom = 'rowan' }
 gas_adjustment = 0.1
 clock_drift ='15s'
 trusting_period = '14days'
