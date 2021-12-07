@@ -58,6 +58,7 @@ Each chain has 10 ports it can use.  WIP.
  Starname        | 2170-2179  | iov-mainnet-ibc
  Likecoin        | 2180-2189  | likecoin-mainnet-2
  Stargaze        | 2190-2199  | stargaze-1
+ Kava            | 2200-2209  | kava-8
 
    Service         | Port  
 -------------------|------ 
@@ -94,3 +95,4 @@ terra        | e999fc20aa5b87c1acef8677cf495ad85061cfb9@seed.terra.delightlabs.i
 kichain      | 81396d4703a2e3cbd136c7324e4df5686fd48218@35.180.8.214:26656,c597db55d9a609b8b77c3d37ecf1fa9a67117cc0@144.217.82.4:26656,50af457247b59aa558a26a14bd7ac4bf86eeae70@195.201.164.223:26656
 likecoin     | 94e7f7e4b879becd0b9718a2c7d7a715b095f524@65.21.202.37:3100
 stargaze     | a54a9d04a8b42a0bd495a93f18efcf2a272277e0@162.55.132.230:4000
+kava         | 2c11fb480bb842e2fc181ab57c11baba0131dca3@44.196.226.19:26656
