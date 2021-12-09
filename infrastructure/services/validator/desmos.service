@@ -1,0 +1,28 @@
+[Unit]
+Description=Desmos Validator
+
+[Service]
+Environment=DESMOS_P2P_LADDR=tcp://0.0.0.0:2450
+Environment=DESMOS_RPC_LADDR=tcp://127.0.0.1:2451
+Environment=DESMOS_API_ADDRESS=tcp://127.0.0.1:2452
+Environment=DESMOS_GRPC_ADDRESS=127.0.0.1:2453
+Environment=DESMOS_GRPC_WEB_ADDRESS=127.0.0.1:2454
+Environment=DESMOS_P2P_SEED_NODES="9bde6ab4e0e00f721cc3f5b4b35f3a0e8979fab5@seed-1.mainnet.desmos.network:26656,5c86915026093f9a2f81e5910107cf14676b48fc@seed-2.mainnet.desmos.network:26656,45105c7241068904bdf5a32c86ee45979794637f@seed-3.mainnet.desmos.network:26656"
+Environment=DESMOS_P2P_MAX_NUM_INBOUND_PEERS=500
+Environment=DESMOS_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=DESMOS_PRUNING=custom
+Environment=DESMOs_PRUNING_KEEP_RECENT=100
+Environment=DESMOS_PRUNING_KEEP_EVERY=0
+Environment=DESMOS_PRUNING_INTERVAL=10
+Environment=DESMOS_CONSENSUS_DOUBLE_SIGN_CHECK_HEIGHT=10
+Environment=DESMOS_TX_INDEX_INDEXER=null
+Environment=HOME=/home/cyber
+User=cyber
+Restart=always
+RestartSec=30
+LimitNOFILE=500000
+ExecStart=/home/cyber/go/bin/desmos start
+
+
+[Install]
+WantedBy=multi-user.target

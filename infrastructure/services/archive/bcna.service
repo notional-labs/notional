@@ -1,0 +1,22 @@
+[Unit]
+Description=Bitcanna Full Node
+
+[Service]
+Environment=BCNAD_P2P_LADDR=tcp://0.0.0.0:420
+Environment=BCNAD_RPC_LADDR=tcp://0.0.0.0:421
+Environment=BCNAD_NODE=tcp://127.0.0.1:421
+Environment=BCNAD_GRPC_ADDRESS=0.0.0.0:422
+Environment=BCNAD_API_ADDRESS=tcp://127.0.0.1:423
+Environment=BCNAD_GRPC_WEB_ADDRESS=127.0.0.1:424
+Environment=BCNAD_P2P_SEEDS_NODE=d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656,23671067d0fd40aec523290585c7d8e91034a771@seed2.bitcanna.io:26656
+Environment=BCNAD_P2P_MAX_NUM_INBOUND_PEERS=500
+Environment=BCNAD_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=BCNAD_PRUNING=nothing
+LimitNOFILE=500000
+User=root
+Restart=always
+RestartSec=30
+ExecStart=/root/go/bin/bcnad start
+
+[Install]
+WantedBy=multi-user.target

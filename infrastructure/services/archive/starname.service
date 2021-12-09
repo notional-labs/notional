@@ -1,23 +1,21 @@
-
 [Unit]
-Description=Starname
+Description=Starname Full Node
 
 [Service]
-Environment=STARNAMED_P2P_LADDR=tcp://0.0.0.0:2070
-Environment=STARNAMED_RPC_LADDR=tcp://0.0.0.0:2071
-Environment=STARNAMED_GRPC_ADDRESS=127.0.0.1:2072
-Environment=STARNAMED_API_ADDRESS=tcp://127.0.0.1:2073
-Environment=STARNAMED_NODE=tcp://127.0.0.1:2071
-Environment=STARNAMED_P2P_SEEDS="8dc1863d1d23cf9ad7cbea215c19bcbe8bf39702@p2p.baaa7e56-cc71-4ae4-b4b3-c6a9d4a9596a.cryptodotorg.bison.run:26656,8a7922f3fb3fb4cfe8cb57281b9d159ca7fd29c6@p2p.aef59b2a-d77e-4922-817a-d1eea614aef4.cryptodotorg.bison.run:26656,494d860a2869b90c458b07d4da890539272785c9@p2p.fabc23d9-e0a1-4ced-8cd7-eb3efd6d9ef3.cryptodotorg.bison.run:26656,dc2540dabadb8302da988c95a3c872191061aed2@p2p.7d1b53c0-b86b-44c8-8c02-e3b0e88a4bf7.cryptodotorg.herd.run:26656,33b15c14f54f71a4a923ac264761eb3209784cf2@p2p.0d20d4b3-6890-4f00-b9f3-596ad3df6533.cryptodotorg.herd.run:26656,d2862ef8f86f9976daa0c6f59455b2b1452dc53b@p2p.a088961f-5dfd-4007-a15c-3a706d4be2c0.cryptodotorg.herd.run:26656,87c3adb7d8f649c51eebe0d3335d8f9e28c362f2@seed-0.crypto.org:26656,e1d7ff02b78044795371beb1cd5fb803f9389256@seed-1.crypto.org:26656,2c55809558a4e491e9995962e10c026eb9014655@seed-2.crypto.org:26656"
+Environment=STARNAMED_P2P_LADDR=tcp://0.0.0.0:2170
+Environment=STARNAMED_RPC_LADDR=tcp://0.0.0.0:2171
+Environment=STARNAMED_NODE=tcp://127.0.0.0:2171
+Environment=STARNAMED_GRPC_ADDRESS=0.0.0.0:2172
+Environment=STARNAMED_API_ADDRESS=tcp://127.0.0.0:2173
+Environment=STARNAMED_GRPC_WEB_ADDRESS=127.0.0.0:2174
+Environment=STARNAMED_P2P_PERSISTENT_PEERS=ca133187b37b59d2454812cfcf31b6211395adec@167.99.194.126:16656,1c7e014b65f7a3ea2cf48bffce78f5cbcad2a0b7@13.37.85.253:26656,8c64a2127cc07d4570756b61f83af60d34258398@13.37.61.32:26656,9aabe0ac122f3104d8fc098e19c66714c6f1ace9@3.37.140.5:26656,faedef1969911d24bf72c56fc01326eb891fa3b7@63.250.53.45:16656,94ac1c02b4e2ca3fb2706c91a68b8030ed3615a1@35.247.175.128:16656,be2235996b1c785a9f57eed25fd673ca111f0bae@52.52.89.64:26656,f63d15ab7ed55dc75f332d0b0d2b01d529d5cbcd@212.71.247.11:26656,f5597a7ed33bc99eb6ba7253eb8ac76af27b4c6d@138.201.20.147:26656
 Environment=STARNAMED_P2P_MAX_NUM_INBOUND_PEERS=500
-Environment=STARNAMED_STATE_SYNC_SNAPSHOT_INTERVAL=1000
-Environment=STARNAMED_P2P_MAX_NUM_OUTBOUND_PEERS=60
-Environment=HOME=/root
-LimitNOFILE=500000
-ExecStart=/usr/bin/starnamed start --pruning nothing
-LogLevelMax=3
-
-
+Environment=STARNAMED_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=STARNAMED_PRUNING=nothing
+User=root
+Restart=always
+RestartSec=30
+ExecStart=/root/go/bin/starnamed start
 
 [Install]
 WantedBy=multi-user.target

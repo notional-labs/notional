@@ -1,0 +1,23 @@
+[Unit]
+Description=Sif Full Node
+
+[Service]
+Environment=SIFNODED_P2P_LADDR=tcp://0.0.0.0:2110
+Environment=SIFNODED_RPC_LADDR=tcp://0.0.0.0:2111
+Environment=SIFNODED_NODE=tcp://127.0.0.0:2111
+Environment=SIFNODED_GRPC_ADDRESS=0.0.0.0:2112
+Environment=SIFNODED_API_ADDRESS=tcp://127.0.0.0:2113
+Environment=SIFNODED_GRPC_WEB_ADDRESS=127.0.0.0:2114
+Environment=SIFNODED_P2P_PERSISTENT_PEERS=663dec65b754aceef5fcccb864048305208e7eb2@34.248.110.88:26656,ecefab27ef1954f5a14b38bb29d437c8a1b54107@34.247.118.201:26656
+Environment=SIFNODED_P2P_MAX_NUM_INBOUND_PEERS=500
+Environment=SIFNODED_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=SIFNODED_HOME=/osmo2/sif
+Environment=SIFNODED_PRUNING=nothing
+LimitNOFILE=500000
+User=root
+Restart=always
+RestartSec=30
+ExecStart=/root/go/bin/sifnoded start
+
+[Install]
+WantedBy=multi-user.target

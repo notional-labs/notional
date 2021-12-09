@@ -1,0 +1,29 @@
+
+[Unit]
+Description=Cheqd Validator
+
+[Service]
+Environment=CHEQD_NODED_P2P_LADDR=tcp://0.0.0.0:2400
+Environment=CHEQD_NODED_RPC_LADDR=tcp://127.0.0.1:2401
+Environment=CHEQD_NODED_API_ADDRESS=tcp://127.0.0.1:2402
+Environment=CHEQD_NODED_GRPC_ADDRESS=127.0.0.1:2403
+Environment=CHEQD_NODED_GRPC_WEB_ADDRESS=127.0.0.1:2404
+Environment=CHEQD_NODED_P2P_SEED_NODES="debcb3fa7d40e681d98bcc7d22278fd58a34b73a@144.76.183.180:1234,258a9bfb822637bfca87daaab6181c10e7fd0910@seed1.eu.cheqd.net:26656,f565ff792b20977face9817df6acb268d41d4092@seed2.eu.cheqd.net:26656"
+Environment=CHEQD_NODED_P2P_MAX_NUM_INBOUND_PEERS=500
+Environment=CHEQD_NODED_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=CHEQD_NODED_PRUNING=custom
+Environment=CHEQD_NODED_PRUNING_KEEP_RECENT=100
+Environment=CHEQD_NODED_PRUNING_KEEP_EVERY=0
+Environment=CHEQD_NODED_PRUNING_INTERVAL=10
+Environment=CHEQD_NODED_CONSENSUS_DOUBLE_SIGN_CHECK_HEIGHT=1 
+Environment=CHEQD_NODED_TX_INDEX_INDEXER=null
+Environment=HOME=/home/cyber
+User=cyber
+Restart=always
+RestartSec=30
+LimitNOFILE=500000
+ExecStart=/home/cyber/go/bin/cheqd-noded start
+
+
+[Install]
+WantedBy=multi-user.target

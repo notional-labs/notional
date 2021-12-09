@@ -13,11 +13,11 @@ Environment=ANONED_P2P_MAX_NUM_INBOUND_PEERS=500
 Environment=ANONED_STATE_SYNC_SNAPSHOT_INTERVAL=1000
 Environment=ANONED_P2P_MAX_NUM_OUTBOUND_PEERS=60
 Environment=HOME=/root
-LogLevelMax=3
+RestartSec=30
 LimitNOFILE=500000
 
 
-ExecStart=/usr/bin/anoned start --pruning custom --pruning-keep-recent 362880 --pruning-keep-every 0 --pruning-interval 100
+ExecStart=/usr/bin/anoned start
 
 [Install]
 WantedBy=multi-user.target

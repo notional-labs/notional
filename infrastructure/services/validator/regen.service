@@ -1,21 +1,28 @@
-
 [Unit]
-Description=Regen
+Description=Regen Validator
 
 [Service]
 Environment=REGEN_P2P_LADDR=tcp://0.0.0.0:2060
 Environment=REGEN_RPC_LADDR=tcp://0.0.0.0:2061
 Environment=REGEN_GRPC_ADDRESS=127.0.0.1:2062
 Environment=REGEN_API_ADDRESS=tcp://127.0.0.1:2063
-Environment=REGEN_NODE=tcp://127.0.0.1:2061
+Environment=REGEN_NODE=tcp://127.0.0.1:2064
 Environment=REGEN_P2P_PERSISTENT_PEERS="69975e7afdf731a165e40449fcffc75167a084fc@104.131.169.70:26656"
 Environment=REGEN_P2P_MAX_NUM_INBOUND_PEERS=500
 Environment=REGEN_STATE_SYNC_SNAPSHOT_INTERVAL=1000
-Environment=HOME=/root
+Environment=REGEN_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=REGEN_PRUNING=custom
+Environment=REGEN_PRUNING_KEEP_RECENT=100
+Environment=REGEN_PRUNING_KEEP_EVERY=0
+Environment=REGEN_PRUNING_INTERVAL=100
+Environment=REGEN_CONSENSUS_DOUBLE_SIGN_CHECK_HEIGHT=10
+Environment=REGEN_TX_INDEX_INDEXER=null
+Environment=REGEN_HOME=/chains/regen-ss-validator
+User=cyber
+Restart=always
+RestartSec=30
 LimitNOFILE=500000
-ExecStart=/usr/bin/regen start --pruning custom --pruning-keep-recent 362880 --pruning-keep-every 0 --pruning-interval 100
-LogLevelMax=3
-
+ExecStart=/home/cyber/go/bin/regen start
 
 [Install]
 WantedBy=multi-user.target

@@ -1,0 +1,189 @@
+# The telemetry section defines parameters for Hermes' built-in telemetry capabilities. Global section has parameters that apply globally to the relayer operation.
+[global]
+
+# Specify the verbosity for the relayer logging output. Default: 'info'
+# Valid options are 'error', 'warn', 'info', 'debug', 'trace'.
+log_level = 'debug'
+
+
+# Specify the mode to be used by the relayer. [Required]
+[mode]
+
+# Specify the client mode.
+[mode.clients]
+# Whether or not to enable the client workers. [Required]
+enabled = false
+# Whether or not to enable periodic refresh of clients. [Default: false]
+refresh = false
+# Whether or not to enable misbehaviour detection for clients. [Default: false]
+misbehaviour = false
+
+# Specify the connections mode.
+[mode.connections]
+# Whether or not to enable the connection workers. [Required]
+enabled = false
+
+# Specify the channels mode.
+[mode.channels]
+# Whether or not to enable the channel workers. [Required]
+enabled = false
+
+# Specify the packets mode.
+[mode.packets]
+# Whether or not to enable the packet workers. [Required]
+enabled = true
+# Parametrize the periodic packet clearing feature.
+# Interval (in number of blocks) at which pending packets
+# should be eagerly cleared. A value of '0' will disable
+# periodic packet clearing. [Default: 100]
+clear_interval = 100
+# Whether or not to clear packets on start. [Default: false]
+clear_on_start = true
+# Enable or disable the filtering mechanism.
+# Valid options are 'true', 'false'.
+# Currently Hermes supports two filters:
+# 1. Packet filtering on a per-chain basis; see the chain-specific
+#   filter specification below in [chains.packet_filter].
+# 2. Filter for all activities based on client state trust threshold; this filter
+#   is parametrized with (numerator = 1, denominator = 3), so that clients with
+#   thresholds different than this will be ignored.
+# If set to 'true', both of the above filters will be enabled.
+# [Default: false]
+filter = true
+# Toggle the transaction confirmation mechanism.
+# The tx confirmation mechanism periodically queries the `/tx_search` RPC
+# endpoint to check that previously-submitted transactions
+# (to any chain in this config file) have delivered successfully.
+# Experimental feature. Affects telemetry if set to false.
+# [Default: true]
+tx_confirmation = false
+
+# The REST section defines parameters for Hermes' built-in RESTful API.
+# https://hermes.informal.systems/rest.html
+[rest]
+
+# Whether or not to enable the REST service. Default: false
+enabled = true
+
+# Specify the IPv4/6 host over which the built-in HTTP server will serve the RESTful
+# API requests. Default: 127.0.0.1
+host = '127.0.0.1'
+
+# Specify the port over which the built-in HTTP server will serve the restful API
+# requests. Default: 3000
+port = 6969
+
+
+# The telemetry section defines parameters for Hermes' built-in telemetry capabilities.
+# https://hermes.informal.systems/telemetry.html
+[telemetry]
+
+# Whether or not to enable the telemetry service. Default: false
+enabled = true
+
+# Specify the IPv4/6 host over which the built-in HTTP server will serve the metrics
+# gathered by the telemetry service. Default: 127.0.0.1
+host = '127.0.0.1'
+
+# Specify the port over which the built-in HTTP server will serve the metrics gathered
+# by the telemetry service. Default: 3001
+port = 9696
+
+
+# This section specifies the filters for policy based relaying.
+# Default: no policy/ filters
+# The section is ignored if the global 'filter' option is set to 'false'.
+# If the global 'filter' option is set to 'true' and this section is missing then no filtering is performed for this chain.
+# Only packet filtering based on channel identifier can be specified.
+# A channel filter has two fields:
+# 1. `policy` - one of two types are supported:
+#       - 'allow': permit relaying _only on_ the port/channel id in the list below,
+#       - 'deny': permit relaying on any channel _except for_ the list below.
+# 2. `list` - the list of channels specified by the port and channel identifiers.
+#
+# Example configuration of a channel filter, denying packet relaying on channel with port ID 'transfer' and channel ID 'channel-0':
+#
+# [chains.packet_filter]
+# policy = 'deny'
+# list = [
+#   ['transfer', 'channel-0'],
+# ]
+
+
+
+[[chains]]
+id = 'osmosis-1'
+rpc_addr = 'http://localhost:2001'
+websocket_addr = 'ws://localhost:2001/websocket'
+grpc_addr = 'http://localhost:2002'
+rpc_timeout = '15s'
+account_prefix = 'osmo'
+key_name = 'osmosis'
+store_prefix = 'ibc'
+max_gas = 10000000
+max_msg_num = 10
+gas_price = { price = 0.001, denom = 'uosmo' }
+gas_adjustment = 1
+clock_drift = '15s'
+trusting_period = '9days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Relayed on Prem in Hanoi by Notional'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-0'],['transfer', 'channel-8']
+ ]
+
+
+
+[[chains]]
+id = 'regen-1'
+rpc_addr = 'http://127.0.0.1:2061'
+grpc_addr = 'http://127.0.0.1:2062'
+websocket_addr = 'ws://127.0.0.1:2061/websocket'
+account_prefix = 'regen'
+rpc_timeout = '15s'
+key_name = 'regen'
+store_prefix = 'ibc'
+max_msg_num = 30
+max_gas = 2000000
+max_tx_size = 180000
+gas_price = { price = 0.001, denom = 'uregen' }
+gas_adjustment = 0.1
+clock_drift ='15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Relayed on Prem in Hanoi by Notional'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-0'],['transfer', 'channel-11']
+ ]
+
+
+[[chains]]
+id = 'cosmoshub-4'
+rpc_addr = 'http://127.0.0.1:2011'
+grpc_addr = 'http://127.0.0.1:2012'
+websocket_addr = 'ws://127.0.0.1:2011/websocket'
+rpc_timeout = '15s'
+account_prefix = 'cosmos'
+key_name = 'cosmos'
+store_prefix = 'ibc'
+max_gas = 2000000
+max_tx_size = 180000
+max_msg_num = 20
+gas_price = { price = 0.0025, denom = 'uatom' }
+gas_adjustment = 0.1
+clock_drift ='15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Relayed On Prem In Hanoi by Notional'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-141'],['transfer', 'channel-185']
+ ]
+
+
+
