@@ -12,7 +12,9 @@ Notional provides services in blockchain technology, including:
 ## Usage
 On a freshly installed [Anarchy Linux](https://anarchyinstaller.gitlab.io/) 
 
-Becore root: `sudo su` then:
+Become root: 
+
+`sudo su` then:
 
 ```bash
 pacman -Syyu git
