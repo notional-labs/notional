@@ -59,6 +59,7 @@ Each chain has 10 ports it can use.  WIP.
  Likecoin        | 2180-2189  | likecoin-mainnet-2
  Stargaze        | 2190-2199  | stargaze-1
  Kava            | 2200-2209  | kava-8
+ Band            | 2210-2219  | laozi-mainnet
 
    Service         | Port  
 -------------------|------ 
@@ -96,3 +97,4 @@ kichain      | 81396d4703a2e3cbd136c7324e4df5686fd48218@35.180.8.214:26656,c597d
 likecoin     | 94e7f7e4b879becd0b9718a2c7d7a715b095f524@65.21.202.37:3100
 stargaze     | a54a9d04a8b42a0bd495a93f18efcf2a272277e0@162.55.132.230:4000
 kava         | 2c11fb480bb842e2fc181ab57c11baba0131dca3@44.196.226.19:26656
+band         | 8d42bdcb6cced03e0b67fa3957e4e9c8fd89015a@34.87.86.195:26656,543e0cab9c3016a0e99775443a17bcf163038912@34.150.156.78:26656
