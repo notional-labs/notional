@@ -626,3 +626,27 @@ memo_prefix = 'Delegate Notional Pls <3'
 #trusting_period = '300000seconds'
 #trust_threshold = { numerator = '1', denominator = '3' }
 #memo_prefix = 'Dyson Spheres and Space Pussy <3'
+
+[[chains]]
+id = 'laozi-mainnet'
+rpc_addr = 'http://127.0.0.1:2211'
+grpc_addr = 'http://127.0.0.1:2212'
+websocket_addr = 'ws://127.0.0.1:2211/websocket'
+rpc_timeout = '15s'
+account_prefix = 'band'
+key_name = 'band'
+store_prefix = 'ibc'
+max_gas = 2000000
+gas_price = { price = 0.001, denom = 'uband' }
+gas_adjustment = 1
+clock_drift = '15s'
+trusting_period = '7days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional Pls <3'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-6']
+]
+
+
