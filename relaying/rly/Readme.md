@@ -29,40 +29,89 @@ Notional Operates an omni-network [Go Relayer] On-Premesis in Hanoi.  Addresses 
 * It is still too early to make comparisons on fee calculations or tx latency
 
 
-## Status
+## Making Channels
 
-Notional is currently using rly to relay:
+You can use rly tx link, so first in config.yaml you want like: (the paths you want, without the channels, and connections defined)
 
-osmo, cosmos, akash, regen, dig, sentinel, starname
+```yaml
 
-6x6=36
-36x2=72
+osmocheqd:
+    src:
+      chain-id: osmosis-1
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: cheqd-mainnet-1
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
 
-72 unidirectional channels is the goal, then.  We need a process monitor OR to run multiple channels with a single binary.
+cheqdosmo:
+    src:
+      chain-id: cheqd-mainnet-1
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+   dst:
+      chain-id: osmosis-1
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive 
+      
+```
 
-- [x] look into pm2
-- [x] look into systemd
-- [x] look into other process monitoring solutions
+then if you `rly tx link cheqdosmo` it will fill in the client, connection, and channel for you, after making them.  Make your osmo fees high.
 
-Amusingly, the solution is at present bash loops that run in screen sessions. 
+```yaml
+osmocheqd:
+    src:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-1615
+      connection-id: connection-1268
+      channel-id: channel-108
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    dst:
+      chain-id: cheqd-mainnet-1
+      client-id: 07-tendermint-0
+      connection-id: connection-0
+      channel-id: channel-0
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive
 
 
-We can expect this to expand exponentially, and believe that for the time being, the best pattern is all:all.
+cheqdosmo:
+    src:
+      chain-id: cheqd-mainnet-1
+      client-id: 07-tendermint-0
+      connection-id: connection-0
+      channel-id: channel-0
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+   dst:
+      chain-id: osmosis-1
+      client-id: 07-tendermint-1615
+      connection-id: connection-1268
+      channel-id: channel-108
+      port-id: transfer
+      order: UNORDERED
+      version: ics20-1
+    strategy:
+      type: naive 
+      
+```
 
 
-* osmosis-1 <-------> cosmoshub-4
-* sentinelhub-2 <--------> osmosis-1
-* sentinelhub-2 <--------> cosmoshub-4
-* sentinelhub-2 <------> akashnet-2
-* sentinelhub-2 <------> regen-1
-* akashnet-2 <---------> cosmoshub-4
-* akashnet-2 <---------> osmosis-1
-* dig <--------> osmosis-1
-* dig <--------> cosmoshub-4
-* regen-1 <-----> cosmoshub-4
-* regen-1 <-----> osmosis-1
-* regen-1 <-----> akashnet-2
-* 
 
 
 ## Setup
