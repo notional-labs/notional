@@ -31,7 +31,7 @@ Notional Operates an omni-network [Go Relayer] On-Premesis in Hanoi.  Addresses 
 
 ## Making Channels
 
-You can use rly tx link, so first in config.yaml you want like: (the paths you want, without the channels, and connections defined)
+You can use rly tx link, so first in config.yaml you want like: (the paths you want, without the clients, channels, and connections defined)
 
 ```yaml
 
