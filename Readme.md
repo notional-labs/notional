@@ -25,11 +25,14 @@ bash infrastructure/standup.bash
 
 
 ## Team
-* Jacob Gadikian - Blockchain and infrastructure engineer
+* Jacob Gadikian - Blockchain and Infrastructure Engineer
 * Ricardo Ferreria - All things biz, testing of documentation written by Jacob and Khanh
-* Khanh Nguyen - Blockchain Engineer
-* Minh Vu Le Nhat - Hermes Operator 
-* Long Mai Gia - Validator Operations and Training
+* Khanh Nguyen - Lead Engineer
+* Long Mai Gia - Lead Infrastructure
+* Vinh Nguyen - Project Manager + Blockchain Engineer
+* Vuong Nguyen - Blockchain Engineer
+* Son Trinh - Blockchain Engineer
+* Minh Vu Le Nhat - Customer Engineer
 
 
 
