@@ -1,7 +1,7 @@
 # Proposal 01: Developer team emergency fund
-__1. Proposer:__ Vinh Nguyen The
-__2. Date:__ 29/12/2021
-__3. Location:__ Hanoi, Viet Nam
+1. __Proposer:__ Vinh Nguyen The
+2. __Date:__ 29/12/2021
+3. __Location:__ Hanoi, Viet Nam
 
 # Context
 From real experience working at Notional, I have faced many situations that need quick money to solve. 
