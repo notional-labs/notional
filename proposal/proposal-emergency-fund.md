@@ -11,7 +11,7 @@ But, for every single funds, no matter how small, developer team has to go throu
 In pressing moments when customers are crying for solutions, 1 - 2 days are too long.
 
 # Solution
-A __small__ emergency fund that developer team can use at will at any given moment is needed to combat the problem above.
+A __small__ emergency fund that developer team can use __at will__ and __at any given moment__ is needed to combat the problem above.
 
 The fund will be accounted so that people will know what emergency situation has risen and how much is spent on that situation.
 
