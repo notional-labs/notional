@@ -27,3 +27,14 @@ As there seems to be no end to the imagination of fraudsters, this is not an exh
 Other notes: Notional will not comment publicly beyond documenting the evidence it has discovered with any required explanations.
 
 ## Software Security Vulnerability <a name="vulnerability"></a>
+
+Software security vulnerabilities include issues with Tendermint or other layer-1 chain software, issues with IBC, issues with smart contracts, or possible attack vectors such as DOS.
+
+If Notional Labs discovers a potential security vulnerability, we will take the following actions.
+
+1. Test and validate that the security vulnerability exists, along with sample code.
+2. Pass the findings, complete with sample code, to top project stakeholders.
+3. Wait a minimum of 1 week before publishing findings, in cooperation with project stakeholders. This waiting period will be waived if we feel that the security vulnerability is part of an attempted scam/fraud (see above).
+4. Once the vulnerability has been patched, publish our methods and code the community to help others look for and fix similar vulnerabilities in the future.
+
+
