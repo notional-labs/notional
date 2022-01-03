@@ -18,6 +18,7 @@ Notional is an **active set** validator on:
 14) [Cheqd](https://cheqd.didx.co.za/validator/cheqdvaloper1gyjqlfkrggd0uyd748fw9y5kq9xzmjqqh8848x)
 15) [Stargaze](https://www.mintscan.io/stargaze/validators/starsvaloper1v8yp5x5kfex4wep2pfuuyw68cn2lst3ksl0gss)
 16) [Band](https://ping.pub/band-protocol/staking/bandvaloper19huytqr8srz9wcdhvas5cvxddg8dtqcv6tce0s)
+17) [Chihuahua](https://ping.pub/chihuahua/staking/chihuahuavaloper1h6vcu4r2hx70x5f0l3du3ey2g98u9ut2tafnnv)
 
 ## The role of a validator
 
