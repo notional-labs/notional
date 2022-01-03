@@ -3,7 +3,7 @@
 # Incidence types
 1. [Fraud or scam detected](#fraudsandscams)
 2. [Security Vulnerability Discovered](#vulnerability)
-3. [Critical Personnel Incapacitated](#criticalpersonnel)
+3. [Critical Personnel Incapacitated](#personnel)
 4. [Physical Security Threats](#physicalsecurity)
 
 #Incident Processes
@@ -38,3 +38,4 @@ If Notional Labs discovers a potential security vulnerability, we will take the 
 4. Once the vulnerability has been patched, publish our methods and code the community to help others look for and fix similar vulnerabilities in the future.
 
 
+## Critical Personnel Issues <a name="personnel"></a>
