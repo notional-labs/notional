@@ -64,6 +64,7 @@ Each chain has 10 ports it can use.  WIP.
  Evmos TN2       | 2230-2239  | evmos_9000-2
  Chihuahua       | 2240-2249  | chihuahua-1
  Cheqd           | 2250-2259  | cheqd-mainnet-1
+ Axelar          | 2260-2269  | axelar-dojo-1
 
    Service         | Port  
 -------------------|------ 
@@ -106,3 +107,4 @@ dig          | 33f4788e1c6a378b929c66f31e8d253b9fd47c47@194.163.154.251:26656,64
 evmos TN2    | 6f0bbcf559a3eab1c5594062d587ccec4b4bade2@evmos-seed.artifact-staking.io:26656,faa31510d9280e74e7f2e767a62023bd5c896c27@evmos-testnet.mercury-nodes.net:29447
 chihuahua    | 4936e377b4d4f17048f8961838a5035a4d21240c@chihuahua-seed-01.mercury-nodes.net:29540
 cheqd        | debcb3fa7d40e681d98bcc7d22278fd58a34b73a@144.76.183.180:1234,258a9bfb822637bfca87daaab6181c10e7fd0910@seed1.eu.cheqd.net:26656,f565ff792b20977face9817df6acb268d41d4092@seed2.eu.cheqd.net:26656
+Axelar       | 3d67d0646cddcc203b41434aceea64ade22ba6fc@k8s-mainnet-axelarco-79b464ee93-f03cb16c57cf7cb2.elb.us-east-2.amazonaws.com:26656
