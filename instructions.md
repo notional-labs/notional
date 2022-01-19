@@ -1,5 +1,6 @@
 # MAINNET: Setup up your validator and join *bitcanna-1*
-> IMPORTANT NOTE: If you participated in the previous BitCanna Testnets, you must go to the end of the document to find specific instructions to join.
+> IMPORTANT NOTE: You can sync a node almost instantly and automatically using our [StateSync script](https://github.com/BitCannaCommunity/cosmos-statesync_client)
+
 
 **bcnad** is a blockchain application built using Cosmos SDK v.0.44.2 and Tendermint v.0.34.13.
 
@@ -206,88 +207,3 @@ You can check the list of validators (also in [Explorer](https://cosmos-explorer
     rm validator_key.tar.gz
     ```
     This will create a GPG encrypted file with both key files.
-
-# Instructions for users who participated in previous BitCanna testnets.
-## 1. Stop your validator (if is running).
-1. If you are running `cosmovisor` service: 
-```
-sudo service cosmovisor stop
-```
-2. If you are running `bcnad` service without `cosmovisor`:
-```
-sudo service bcnad stop
-```
-
-## 2. Update the software.
-New versions (bcnad & cosmovisor) for the MainNet are here (you can check the sha256sum there):
-https://github.com/BitCannaGlobal/bcna/releases/tag/v1.2
-> Perform only A or B of step 1 depending on your service type (cosmovisor or bcnad directly)
-1. **A**  Update for Cosmovisor users
-```
-cd $HOME
-rm -f bcnad  #deletes if exist
-wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.2/bcnad
-chmod +x bcnad
-
-sha256sum bcnad 
-  <output> 1a06f246aa398eba89bb72d9a11a91b3a3c990892e9ce0d4f2c1601cf6d4c820  bcnad
-
-rm -rf .bcna/cosmovisor/upgrades/indica/
-ln -s -f  -T ${HOME}/.bcna/cosmovisor/genesis ${HOME}/.bcna/cosmovisor/current
-mv ./bcnad $HOME/.bcna/cosmovisor/current/bin/
-
-rm -f cosmovisor  #deletes if exist
-wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.2/cosmovisor
-chmod +x cosmovisor
-
-sha256sum cosmovisor 
-  <output> 12926c85156056d033a8bb94aa4359afd9c7009ba337e98f8c472d34c3556aac  cosmovisor
-
-sudo mv ./cosmovisor $(which cosmovisor) #overwrite the current
-```
-1. **B** Update for BCNAD service (not Cosmovisor)
-If you are running the validator without Cosmovisor:
-```
-cd $HOME
-rm -f bcnad #deletes if exist
-wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.2/bcnad
-chmod +x bcnad
-sudo mv ./bcnad $(which bcnad)
-bcnad version
-   <output> 1.2
-
-sha256sum bcnad 
-  <output> 1a06f246aa398eba89bb72d9a11a91b3a3c990892e9ce0d4f2c1601cf6d4c820  bcnad
-```
-
-Anyway  Review your config.toml file and ensure that `persistent_peers` is empty by now, and `seeds` have the following value: 
-```
-seeds = "d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656,23671067d0fd40aec523290585c7d8e91034a771@seed2.bitcanna.io:26656"
-```
-## 3. Fetch new genesis.json into bcna’s config directory, it will automatically overwrite the previous if exist.
-```
-cd $HOME
-curl -s https://raw.githubusercontent.com/BitCannaGlobal/bcna/main/genesis.json > ~/.bcna/config/genesis.json
-```
-Ensure you have the correct file. Run the SHA256SUM test:
-```
-sha256sum $HOME/.bcna/config/genesis.json
-   <output> cd7449a199e71c400778f894abb00874badda572ac5443b7ec48bb0aad052f29
-```
-## 4. Reset the state and sync the new chain.
- 
-```
-bcnad unsafe-reset-all
-bcnad config chain-id bitcanna-1
-```
-Start the service, you must run `cosmovisor` or `bcnad` service:
-```
-sudo service cosmovisor start
-```
-or
-```
-sudo service bcnad start
-```
-
-## 5. Create your validator
-Back above to Step 2: Become a validator ;)
