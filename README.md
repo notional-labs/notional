@@ -11,6 +11,10 @@ Install deps
 sudo apt-get install build-essential jq
 ```
 
+# Looking for easy instructions on how to deploy a node/validator?
+https://github.com/BitCannaGlobal/bcna/blob/main/instructions.md
+
+
 # Compile instructions: install GoLang
 
 Install Go 1.16.x 
