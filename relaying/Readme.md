@@ -4,6 +4,11 @@ At Notional, we've focused on the operational aspects of relaying, while also ma
 
 
 ## Recommended Hardware & OS Configuration
+We're documenting our exact configuration.  For the relayer software, we run that on small, light computers and in the case of hetzner, that means virtual machines:
+
+https://madflex.de/install-archlinux-on-hetzner-cloud/
+
+We always use arch linux. 
 
 You will want a 16 core or greater CPU if you are attempting to relay the #ibcgang.  For larger chains, the chain itself should map to 4 PCIe lanes on the CPU.
 
@@ -22,6 +27,7 @@ We've found over and over that Hetzner is the best option for hosting bare metal
 * CPU with high single thread performance and **many** PCIe lanes-- threadripper 32 core CPUs have 88 lanes and Threadripper Pro provides 128.
 * 128gb RAM
 * PCIe Gen4x4 lanes storage (No RAID!)
+  * [Teamgroup a440](https://www.guru3d.com/articles-pages/teamgroup-a440-pro-ps5-4tb-pcie-4-m-2-nvme-review,2.html)
   * Samsung 980 Pro <- recommended for reliablity
   * WD SN850 Black <- Very fast
   * Optane <- fastest and most expensive
