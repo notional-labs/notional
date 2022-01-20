@@ -61,6 +61,10 @@ Each chain has 10 ports it can use.  WIP.
  Kava            | 2200-2209  | kava-8
  Band            | 2210-2219  | laozi-mainnet
  Dig             | 2220-2229  | dig-1
+ Evmos TN2       | 2230-2239  | evmos_9000-2
+ Chihuahua       | 2240-2249  | chihuahua-1
+ Cheqd           | 2250-2259  | cheqd-mainnet-1
+ Axelar          | 2260-2269  | axelar-dojo-1
 
    Service         | Port  
 -------------------|------ 
@@ -100,3 +104,7 @@ stargaze     | a54a9d04a8b42a0bd495a93f18efcf2a272277e0@162.55.132.230:4000
 kava         | 2c11fb480bb842e2fc181ab57c11baba0131dca3@44.196.226.19:26656
 band         | 8d42bdcb6cced03e0b67fa3957e4e9c8fd89015a@34.87.86.195:26656,543e0cab9c3016a0e99775443a17bcf163038912@34.150.156.78:26656
 dig          | 33f4788e1c6a378b929c66f31e8d253b9fd47c47@194.163.154.251:26656,64eccffdc60a206227032d3a021fbf9dfc686a17@194.163.156.84:26656,be7598b2d56fb42a27821259ad14aff24c40f3d2@172.16.152.118:26656,f446e37e47297ce9f8951957d17a2ae9a16db0b8@137.184.67.162:26656,ab2fa2789f481e2856a5d83a2c3028c5b215421d@144.91.117.49:26656,e9e89250b40b4512237c77bd04dc76c06a3f8560@185.214.135.205:26656,1539976f4ee196f172369e6f348d60a6e3ec9e93@159.69.147.189:26656,85316823bee88f7b05d0cfc671bee861c0237154@95.217.198.243:26656,eb55b70c9fd8fc0d5530d0662336377668aab3f9@185.194.219.128:26656
+evmos TN2    | 6f0bbcf559a3eab1c5594062d587ccec4b4bade2@evmos-seed.artifact-staking.io:26656,faa31510d9280e74e7f2e767a62023bd5c896c27@evmos-testnet.mercury-nodes.net:29447
+chihuahua    | 4936e377b4d4f17048f8961838a5035a4d21240c@chihuahua-seed-01.mercury-nodes.net:29540
+cheqd        | debcb3fa7d40e681d98bcc7d22278fd58a34b73a@144.76.183.180:1234,258a9bfb822637bfca87daaab6181c10e7fd0910@seed1.eu.cheqd.net:26656,f565ff792b20977face9817df6acb268d41d4092@seed2.eu.cheqd.net:26656
+Axelar       | 3d67d0646cddcc203b41434aceea64ade22ba6fc@k8s-mainnet-axelarco-79b464ee93-f03cb16c57cf7cb2.elb.us-east-2.amazonaws.com:26656
