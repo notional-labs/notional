@@ -28,6 +28,7 @@ hermes keys restore irishub-1 -m "12 or 24 magic words"
 hermes keys restore iov-mainnet-ibc -m" 12 or 24 magic words" -p "m/44'/234'/0'/0/0"
 hermes keys restore crypto-org-chain-mainnet-1 -m "12 or 24 magic words" -p "m/44'/394'/0'/0/0"
 hermes keys restore core-1 -m "12 or 24 magic words" -p "m/44'/750'/0'/0/0"
+hermes keys restore columbus-5 -m "12 or 24 magic words" -p "m/44'/330'/0'/0/0"
 hermes keys restore impacthub-3 -m "12 or 24 magic words"
 ``` 
 
