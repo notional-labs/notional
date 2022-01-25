@@ -17,22 +17,22 @@ service Query {
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
     option (google.api.http).get = "/BitCannaGlobal/bcna/bcna/params";
   }
-  // Queries a bitcannaid by id.
+  // Queries a Bitcannaid by id.
 	rpc Bitcannaid(QueryGetBitcannaidRequest) returns (QueryGetBitcannaidResponse) {
 		option (google.api.http).get = "/BitCannaGlobal/bcna/bcna/bitcannaid/{id}";
 	}
 
-	// Queries a list of bitcannaid items.
+	// Queries a list of Bitcannaid items.
 	rpc BitcannaidAll(QueryAllBitcannaidRequest) returns (QueryAllBitcannaidResponse) {
 		option (google.api.http).get = "/BitCannaGlobal/bcna/bcna/bitcannaid";
 	}
 
-// Queries a supplychain by id.
+// Queries a Supplychain by id.
 	rpc Supplychain(QueryGetSupplychainRequest) returns (QueryGetSupplychainResponse) {
 		option (google.api.http).get = "/BitCannaGlobal/bcna/bcna/supplychain/{id}";
 	}
 
-	// Queries a list of supplychain items.
+	// Queries a list of Supplychain items.
 	rpc SupplychainAll(QueryAllSupplychainRequest) returns (QueryAllSupplychainResponse) {
 		option (google.api.http).get = "/BitCannaGlobal/bcna/bcna/supplychain";
 	}

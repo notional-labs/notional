@@ -553,13 +553,13 @@ const _ = grpc.SupportPackageIsVersion4
 type QueryClient interface {
 	// Parameters queries the parameters of the module.
 	Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error)
-	// Queries a bitcannaid by id.
+	// Queries a Bitcannaid by id.
 	Bitcannaid(ctx context.Context, in *QueryGetBitcannaidRequest, opts ...grpc.CallOption) (*QueryGetBitcannaidResponse, error)
-	// Queries a list of bitcannaid items.
+	// Queries a list of Bitcannaid items.
 	BitcannaidAll(ctx context.Context, in *QueryAllBitcannaidRequest, opts ...grpc.CallOption) (*QueryAllBitcannaidResponse, error)
-	// Queries a supplychain by id.
+	// Queries a Supplychain by id.
 	Supplychain(ctx context.Context, in *QueryGetSupplychainRequest, opts ...grpc.CallOption) (*QueryGetSupplychainResponse, error)
-	// Queries a list of supplychain items.
+	// Queries a list of Supplychain items.
 	SupplychainAll(ctx context.Context, in *QueryAllSupplychainRequest, opts ...grpc.CallOption) (*QueryAllSupplychainResponse, error)
 }
 
@@ -620,13 +620,13 @@ func (c *queryClient) SupplychainAll(ctx context.Context, in *QueryAllSupplychai
 type QueryServer interface {
 	// Parameters queries the parameters of the module.
 	Params(context.Context, *QueryParamsRequest) (*QueryParamsResponse, error)
-	// Queries a bitcannaid by id.
+	// Queries a Bitcannaid by id.
 	Bitcannaid(context.Context, *QueryGetBitcannaidRequest) (*QueryGetBitcannaidResponse, error)
-	// Queries a list of bitcannaid items.
+	// Queries a list of Bitcannaid items.
 	BitcannaidAll(context.Context, *QueryAllBitcannaidRequest) (*QueryAllBitcannaidResponse, error)
-	// Queries a supplychain by id.
+	// Queries a Supplychain by id.
 	Supplychain(context.Context, *QueryGetSupplychainRequest) (*QueryGetSupplychainResponse, error)
-	// Queries a list of supplychain items.
+	// Queries a list of Supplychain items.
 	SupplychainAll(context.Context, *QueryAllSupplychainRequest) (*QueryAllSupplychainResponse, error)
 }
 
