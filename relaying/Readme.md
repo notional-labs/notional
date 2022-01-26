@@ -4,7 +4,9 @@ At Notional, we've focused on the operational aspects of relaying, while also ma
 
 
 ## IBC Expressways
-NB: The design consideration behind IBC expressways is rpc pressure on node software that uses the cosmos-sdk and tendermint, resulting in subpar IBC performance. NB: need better grapsh 
+NB: The design consideration behind IBC expressways is rpc pressure on node software that uses the cosmos-sdk and tendermint, resulting in subpar IBC performance. 
+
+NB: need better graphs
 
 **0-141 Bypass**
 
