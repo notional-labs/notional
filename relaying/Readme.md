@@ -44,15 +44,23 @@ We always use arch linux.
 
 
 
-**Hetzner**
+### Hetzner
 
 We've found over and over that Hetzner is the best option for hosting bare metal servers, and if you're relaying, you're really going to want to run on metal. 
 
+**We started with big machines:**
 * Intel or AMD 16 core CPU
 * 128GB or more RAM
 * 6x SAMSUNG MZQL23T8HCLS-00A07 drives
 * Arch Linux
   * You can use whichever distribution you'd like but our scripts and systems assume arch linux.  
+
+**But now we are building bypasses on smaller ones
+* AX61-nvme
+* AX51-nvme
+* AX41-nvme
+
+
 
 **DIY**
 * CPU with high single thread performance and **many** PCIe lanes-- threadripper 32 core CPUs have 88 lanes and Threadripper Pro provides 128.
