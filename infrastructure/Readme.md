@@ -71,8 +71,8 @@ Each chain has 10 ports it can use.  WIP.
  p2p               | xxx0 
  rpc               | xxx1 
  grpc              | xxx2 
- api               | xxx3 
- grpc-web          | xxx4 
+ grpc-web          | xxx3 
+ api               | xxx4 
  TinySeed          | xxx5
  load balanced rpc | xxx9 
 
