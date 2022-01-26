@@ -3,6 +3,38 @@
 At Notional, we've focused on the operational aspects of relaying, while also making a few contributions to the go relayer and hermes.  We are also working on [shared security](https://github.com/notional-labs/interchain-security). 
 
 
+## IBC Expressways
+NB: The design consideration behind IBC expressways is rpc pressure on node software that uses the cosmos-sdk and tendermint, resulting in subpar IBC performance. NB: need better grapsh 
+
+**0-141 Bypass**
+
+![untitled](https://user-images.githubusercontent.com/7142025/151144908-7f1239d8-85b6-47ed-9104-bbdfa4d2ce02.png)
+
+We relay osmosis-1 channel-0 to cosmoshub-4 channel-141 using both hermes and the go relayer.  For each, the setup is configured so that Osmosis and Gaia have their own NVMe hard drive.   Hermes and the go relayer run locally. This ensures that our other deployments don't need to deal with this one high traffic channel.
+
+**Cosmos Inner Loop**
+
+![Screen Shot 2022-01-26 at 5 24 02 PM](https://user-images.githubusercontent.com/7142025/151146290-c17340bd-8119-4711-8f96-9f4836beecd2.png)
+
+* Juno
+* Terra
+* Cosmoshub
+* Osmosis
+* Sif
+
+Other than 0-141 there's an emerging high traffic pattern between Juno, Gaia, Osmosis, Sif and Terra.  This system handles all of the traffic between these five chains, and excludes traffic on 0-141.
+
+**Cosmos Outer Loop**
+
+The cosmos outer loop attempts to service all IBC traffic other than what is described above.  
+
+
+
+
+
+
+
+
 ## Recommended Hardware & OS Configuration
 We're documenting our exact configuration.  For the relayer software, we run that on small, light computers and in the case of hetzner, that means virtual machines:
 
@@ -10,7 +42,6 @@ https://madflex.de/install-archlinux-on-hetzner-cloud/
 
 We always use arch linux. 
 
-You will want a 16 core or greater CPU if you are attempting to relay the #ibcgang.  For larger chains, the chain itself should map to 4 PCIe lanes on the CPU.
 
 
 **Hetzner**
