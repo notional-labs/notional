@@ -14,6 +14,8 @@ NB: need better graphs
 
 We relay osmosis-1 channel-0 to cosmoshub-4 channel-141 using both hermes and the go relayer.  For each, the setup is configured so that Osmosis and Gaia have their own NVMe hard drive.   Hermes and the go relayer run locally. This ensures that our other deployments don't need to deal with this one high traffic channel.
 
+Both setups use state sync, so the go relayer does not perform as well. 
+
 **Cosmos Inner Loop**
 
 ![Screen Shot 2022-01-26 at 5 24 02 PM](https://user-images.githubusercontent.com/7142025/151146290-c17340bd-8119-4711-8f96-9f4836beecd2.png)
