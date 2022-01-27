@@ -58,7 +58,7 @@ Each chain has 10 ports it can use.  WIP.
  Starname        | 2170-2179  | iov-mainnet-ibc
  Likecoin        | 2180-2189  | likecoin-mainnet-2
  Stargaze        | 2190-2199  | stargaze-1
- Kava            | 2200-2209  | kava-8
+ Kava            | 2200-2209  | kava-9
  Band            | 2210-2219  | laozi-mainnet
  Dig             | 2220-2229  | dig-1
  Evmos TN2       | 2230-2239  | evmos_9000-2
