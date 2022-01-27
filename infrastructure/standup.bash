@@ -1,11 +1,18 @@
 #!/bin/bash
 
+# make sure go is on path cause we will compile some go
 export GOPATH=~/go
 export PATH=$PATH:~/go/bin
 
+# Add go and rust stuff to bash profile
 echo 'GOPATH=~/go' >> ~/.bash_profile
 echo 'PATH=$PATH:~/go/bin' >> ~/.bash_profile
 echo 'PATH=$PATH:~/.cargo/bin' >> ~/.bash_profile
+
+# scroll up when using screen
+echo 'termcapinfo xterm* ti@:te@' > ~/.screenrc
+
+
 
 # Keys for arch packages
 pacman -Syyu archlinux-keyring
@@ -35,12 +42,6 @@ systemctl enable systemd-timesyncd
 systemctl start systemd-timesyncd
 systemctl enable vnstat
 systemctl start vnstat
-systemctl enable zerotier-one
-systemctl start zerotier-one
-
-
-
-
 
 
 # Open File Limits
@@ -49,10 +50,6 @@ echo "root soft nofile 150000" >> /etc/security/limits.conf
 echo "* hard nofile  150000" >> /etc/security/limits.conf
 echo "* soft nofile 150000" >> /etc/security/limits.conf
 
-
-# Scroll up in screen
-# Enable scrolling
-echo "termcapinfo xterm* ti@:te@" >> ~/.screenrc
 
 
 
