@@ -1,34 +1,4 @@
 Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@faddat 
-notional-labs
-/
-notional
-Public
-Code
-Issues
-2
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-More
-notional/relaying/hermes/config-akt-juno-sif-gaia-osmo-chihuahua.toml
-@faddat
-faddat Update config-akt-juno-sif-gaia-osmo-chihuahua.toml
-…
-Latest commit 818c83f 13 hours ago
- History
- 1 contributor
-212 lines (190 sloc)  5.27 KB
-   
 [global]
 log_level = 'debug'
 
@@ -81,6 +51,11 @@ clock_drift ='5s'
 trusting_period = '14days'
 memo_prefix = 'Delegate Notional: build interchain expressway'
 trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-24']
+]
 
 
 [[chains]]
