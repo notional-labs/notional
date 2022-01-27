@@ -10,6 +10,9 @@ NB: need better graphs
 
 **0-141 Bypass**
 
+* [Hermes](hwy0141-hermes.notional.ventures)
+* [Rly](hwy0141-rly.notional.ventures)
+
 ![untitled](https://user-images.githubusercontent.com/7142025/151144908-7f1239d8-85b6-47ed-9104-bbdfa4d2ce02.png)
 
 We relay osmosis-1 channel-0 to cosmoshub-4 channel-141 using both hermes and the go relayer.  For each, the setup is configured so that Osmosis and Gaia have their own NVMe hard drive.   Hermes and the go relayer run locally. This ensures that our other deployments don't need to deal with this one high traffic channel.
