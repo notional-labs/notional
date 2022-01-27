@@ -2,6 +2,8 @@
 
 Hermes is a long-running process that reads all channels by default over each node's websocket.  
 
+Channels can and should be filtered, so that hermes can start more quickly. 
+
 ## Omni-chain Hermes Quickstart
 In order for this to work effectively, you're going to need an archive node for every member of the IBC Gang per [Map Of Zones](https://mapofzones.com). You will also need funds on all relevant chains.  
 
