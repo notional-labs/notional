@@ -111,9 +111,9 @@ port = 9696
 
 [[chains]]
 id = 'columbus-5'
-rpc_addr = 'http://65.21.202.37:2161'
-grpc_addr = 'http://65.21.202.37:2162'
-websocket_addr = 'ws://65.21.202.37:2161/websocket'
+rpc_addr = 'http://127.0.0.1:2161'
+grpc_addr = 'http://127.0.0.1:2162'
+websocket_addr = 'ws://127.0.0.1:2161/websocket'
 rpc_timeout = '30s'
 account_prefix = 'terra'
 key_name = 'terra'
@@ -255,34 +255,34 @@ trusting_period = '14days'
 #clock_drift = '15s'
 #trusting_period = '14days'
 
-#[[chains]]
-#id = 'akashnet-2'
-#rpc_addr = 'http://127.0.0.1:2021'
-#websocket_addr = 'ws://127.0.0.1:2021/websocket'
-#grpc_addr = 'http://127.0.0.1:2022'
-#rpc_timeout = '15s'
-#account_prefix = 'akash'
-#key_name = 'akash'
-#store_prefix = 'ibc'
-#max_gas = 2000000
-#max_msg_num = 30
-#gas_price = { price = 0.001, denom = 'uakt' }
-#gas_adjustment = 0.1
-#clock_drift = '10s'
-#trusting_period = '14days'
-#trust_threshold = { numerator = '1', denominator = '3' }
-#memo_prefix = 'Delegate Notional Pls <3'
-#[chains.packet_filter]
-#policy = 'allow'
-#list = [
-#   ['transfer', 'channel-17'],['transfer', 'channel-11'],['transfer', 'channel-23'],['transfer', 'channel-22'],['transfer', 'channel-20'],['transfer', 'channel-9'],['transfer', 'channel-18']
-# ]
+[[chains]]
+id = 'akashnet-2'
+rpc_addr = 'http://127.0.0.1:2021'
+websocket_addr = 'ws://127.0.0.1:2021/websocket'
+grpc_addr = 'http://127.0.0.1:2022'
+rpc_timeout = '15s'
+account_prefix = 'akash'
+key_name = 'akash'
+store_prefix = 'ibc'
+max_gas = 2000000
+max_msg_num = 30
+gas_price = { price = 0.001, denom = 'uakt' }
+gas_adjustment = 0.1
+clock_drift = '10s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional Pls <3'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-17'],['transfer', 'channel-11'],['transfer', 'channel-23'],['transfer', 'channel-22'],['transfer', 'channel-20'],['transfer', 'channel-9'],['transfer', 'channel-18']
+ ]
 
 [[chains]]
 id = 'sentinelhub-2'
-rpc_addr = 'http://95.217.196.54:26657'
-grpc_addr = 'http://95.217.196.54:9090'
-websocket_addr = 'ws://95.217.196.54:26657/websocket'
+rpc_addr = 'http://127.0.0.1:26657'
+grpc_addr = 'http://127.0.0.1:9090'
+websocket_addr = 'ws://127.0.0.1:26657/websocket'
 account_prefix = 'sent'
 rpc_timeout = '30s'
 key_name = 'sentinel'
