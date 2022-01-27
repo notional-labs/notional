@@ -57,12 +57,12 @@ We've found over and over that Hetzner is the best option for hosting bare metal
 * Arch Linux
   * You can use whichever distribution you'd like but our scripts and systems assume arch linux.  
 
-**But now we are building bypasses on smaller ones
+**But now we are building bypasses on smaller ones**
 * AX61-nvme
 * AX51-nvme
 * AX41-nvme
 
-
+In any event, it is a very good idea to make sure that you're using NVMe drives, and specifically pcie 4.0x4 NVMe 1.4 drives.  
 
 **DIY**
 * CPU with high single thread performance and **many** PCIe lanes-- threadripper 32 core CPUs have 88 lanes and Threadripper Pro provides 128.
