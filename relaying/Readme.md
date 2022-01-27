@@ -16,7 +16,20 @@ We relay osmosis-1 channel-0 to cosmoshub-4 channel-141 using both hermes and th
 
 Both setups use state sync, so the go relayer does not perform as well. 
 
-**Cosmos Inner Loop**
+
+**[Kava Expressway](kava-hwy.notional.ventures)**
+
+* Kava
+* Terra
+* Sif
+* Osmosis
+* Cro
+* Microtick
+* E-money
+* 
+
+
+**[Cosmos Inner Loop](loop-1.notional.ventures)**
 
 ![Screen Shot 2022-01-26 at 5 24 02 PM](https://user-images.githubusercontent.com/7142025/151146290-c17340bd-8119-4711-8f96-9f4836beecd2.png)
 
