@@ -1,0 +1,108 @@
+[global]
+log_level = 'debug'
+
+[mode]
+
+[mode.clients]
+enabled = false
+refresh = false
+misbehaviour = false
+
+[mode.connections]
+enabled = false
+
+[mode.channels]
+enabled = false
+
+[mode.packets]
+enabled = true
+clear_interval = 100
+clear_on_start = true
+filter = true
+tx_confirmation = false
+
+[rest]
+enabled = true
+host = '127.0.0.1'
+port = 3000
+
+[telemetry]
+enabled = false
+host = '127.0.0.1'
+port = 3001
+
+
+
+[[chains]]
+id = 'sentinelhub-2'
+rpc_addr = 'http://95.217.196.54:6969'
+grpc_addr = 'http://95.217.196.54:4040'
+websocket_addr = 'ws://95.217.196.54:6969/websocket'
+account_prefix = 'sent'
+rpc_timeout = '30s'
+key_name = 'sentinel'
+store_prefix = 'ibc'
+max_gas = 2000000
+max_msg_num = 30
+gas_price = { price = 0.11, denom = 'udvpn' }
+gas_adjustment = 0.1
+clock_drift = '15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'NOTIONAL 0-2 HIGHWAY'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-0']
+ ]
+
+
+
+
+
+[[chains]]
+id = 'osmosis-1'
+rpc_addr = 'http://127.0.0.1:2001'
+websocket_addr = 'ws://127.0.0.1:2001/websocket'
+grpc_addr = 'http://127.0.0.1:2002'
+rpc_timeout = '30s'
+account_prefix = 'osmo'
+key_name = 'osmosis'
+store_prefix = 'ibc'
+max_gas = 15000000
+max_msg_num = 10
+gas_price = { price = 0.0001, denom = 'uosmo' }
+gas_adjustment = 1
+clock_drift = '15s'
+trusting_period = '9days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Notional: 0-141 expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'],['transfer', 'channel-2']
+]
+
+
+[[chains]]
+id = 'cosmoshub-4'
+rpc_addr = 'http://127.0.0.1:2011'
+grpc_addr = 'http://127.0.0.1:2012'
+websocket_addr = 'ws://127.0.0.1:2011/websocket'
+rpc_timeout = '30s'
+account_prefix = 'cosmos'
+key_name = 'cosmos'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 2000000
+gas_price = { price = 0.001, denom = 'uatom' }
+gas_adjustment = 0.1
+clock_drift = '5s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Notional: 0-141 expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-141']
+  ]
