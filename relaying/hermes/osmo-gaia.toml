@@ -34,33 +34,6 @@ port = 3001
 
 
 [[chains]]
-id = 'sentinelhub-2'
-rpc_addr = 'http://95.217.196.54:6969'
-grpc_addr = 'http://95.217.196.54:4040'
-websocket_addr = 'ws://95.217.196.54:6969/websocket'
-account_prefix = 'sent'
-rpc_timeout = '30s'
-key_name = 'sentinel'
-store_prefix = 'ibc'
-max_gas = 2000000
-max_msg_num = 30
-gas_price = { price = 0.11, denom = 'udvpn' }
-gas_adjustment = 0.1
-clock_drift = '15s'
-trusting_period = '14days'
-trust_threshold = { numerator = '1', denominator = '3' }
-memo_prefix = 'NOTIONAL 0-2 HIGHWAY'
-[chains.packet_filter]
-policy = 'allow'
-list = [
-   ['transfer', 'channel-0']
- ]
-
-
-
-
-
-[[chains]]
 id = 'osmosis-1'
 rpc_addr = 'http://127.0.0.1:2001'
 websocket_addr = 'ws://127.0.0.1:2001/websocket'
