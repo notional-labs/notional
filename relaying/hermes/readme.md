@@ -20,6 +20,7 @@ cargo install --path .
 
 ```bash
 hermes keys restore cosmoshub-4 -m "12 or 24 magic words"
+hermes keys restore emoney-3 -m "12 or 24 magic words"
 hermes keys restore akashnet-2 -m "12 or 24 magic words"
 hermes keys restore regen-1 -m "12 or 24 magic words"
 hermes keys restore osmosis-1 -m "12 or 24 magic words"
