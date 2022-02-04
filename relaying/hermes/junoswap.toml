@@ -1,0 +1,233 @@
+[global]
+
+log_level = 'info'
+
+[mode]
+
+[mode.clients]
+
+enabled = true
+
+refresh = true
+
+misbehaviour = true
+
+[mode.connections]
+
+enabled = false
+
+[mode.channels]
+
+enabled = false
+
+[mode.packets]
+
+enabled = true
+
+
+clear_on_start = true
+
+tx_confirmation = true
+
+[rest]
+
+enabled = true
+
+host = '127.0.0.1'
+
+port = 3000
+
+[telemetry]
+
+enabled = true
+
+host = '127.0.0.1'
+
+port = 3001
+
+[[chains]]
+id = 'columbus-5'
+rpc_addr = 'http://127.0.0.1:2161'
+grpc_addr = 'http://127.0.0.1:2162'
+websocket_addr = 'ws://127.0.0.1:2161/websocket'
+rpc_timeout = '30s'
+account_prefix = 'terra'
+key_name = 'terra'
+max_tx_size = 650000
+store_prefix = 'ibc'
+max_gas = 700000
+gas_price = { price = 170, denom = 'ukrw' }
+gas_adjustment = 0.1
+clock_drift ='5s'
+trusting_period = '14days'
+memo_prefix = 'Delegate Notional: build interchain expressway'
+trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-3']
+]
+
+[[chains]]
+id = 'osmosis-1'
+rpc_addr = 'http://127.0.0.1:2001'
+websocket_addr = 'ws://127.0.0.1:2001/websocket'
+grpc_addr = 'http://127.0.0.1:2002'
+rpc_timeout = '30s'
+account_prefix = 'osmo'
+key_name = 'osmosis'
+store_prefix = 'ibc'
+max_gas = 15000000
+max_msg_num = 10
+gas_price = { price = 0.0001, denom = 'uosmo' }
+gas_adjustment = 1
+clock_drift = '15s'
+trusting_period = '9days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-42']
+]
+
+
+[[chains]]
+id = 'cosmoshub-4'
+rpc_addr = 'http://127.0.0.1:2011'
+grpc_addr = 'http://127.0.0.1:2012'
+websocket_addr = 'ws://127.0.0.1:2011/websocket'
+rpc_timeout = '30s'
+account_prefix = 'cosmos'
+key_name = 'cosmos'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 2000000
+gas_price = { price = 0.001, denom = 'uatom' }
+gas_adjustment = 0.1
+clock_drift = '15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-207']
+]
+
+
+[[chains]]
+id = 'juno-1'
+rpc_addr = 'http://127.0.0.1:2171'
+grpc_addr = 'http://127.0.0.1:2172'
+websocket_addr = 'ws://127.0.0.1:2171/websocket'
+rpc_timeout = '30s'
+account_prefix = 'juno'
+key_name = 'juno'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 2000000
+gas_price = { price = 0.0025, denom = 'ujuno' }
+gas_adjustment = 0.1
+clock_drift = '15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'],['transfer', 'channel-1'],['transfer', 'channel-5'],['transfer', 'channel-29'],['transfer', 'channel-27'],['transfer', 'channel-15'],['transfer', 'channel-35'],['transfer', 'channel-34']
+]
+
+[[chains]]
+id = 'chihuahua-1'
+rpc_addr = 'http://127.0.0.1:2241'
+grpc_addr = 'http://127.0.0.1:2242'
+websocket_addr = 'ws://127.0.0.1:2241/websocket'
+rpc_timeout = '15s'
+account_prefix = 'chihuahua'
+key_name = 'chihuahua'
+store_prefix = 'ibc'
+max_tx_size = 450000
+max_gas = 1000000
+max_msg_num = 30
+gas_price = { price = 0.1, denom = 'uhuahua' }
+gas_adjustment = 1
+clock_drift ='15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+	['transfer', 'channel-11']
+ ]
+
+
+[[chains]]
+id = 'sifchain-1'
+rpc_addr = 'http://127.0.0.1:2111'
+grpc_addr = 'http://127.0.0.1:2112'
+websocket_addr = 'ws://127.0.0.1:2111/websocket'
+rpc_timeout = '30s'
+account_prefix = 'sif'
+key_name = 'sif'
+store_prefix = 'ibc'
+max_gas = 1000000000000000
+gas_price = { price = 20000, denom = 'rowan' }
+gas_adjustment = 0.1
+clock_drift ='15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+	['transfer', 'channel-14']
+ ]
+
+[[chains]]
+id = 'akashnet-2'
+rpc_addr = 'http://127.0.0.1:2021'
+websocket_addr = 'ws://127.0.0.1:2021/websocket'
+grpc_addr = 'http://127.0.0.1:2022'
+rpc_timeout = '15s'
+account_prefix = 'akash'
+key_name = 'akash'
+store_prefix = 'ibc'
+max_gas = 2000000
+max_msg_num = 30
+gas_price = { price = 0.001, denom = 'uakt' }
+gas_adjustment = 0.1
+clock_drift = '15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-35']
+ ]
+
+
+[[chains]]
+id = 'stargaze-1'
+rpc_addr = 'http://127.0.0.1:5001'
+grpc_addr = 'http://127.0.0.1:5002'
+websocket_addr = 'ws://127.0.0.1:5001/websocket'
+rpc_timeout = '10s'
+account_prefix = 'stars'
+key_name = 'relayer'
+store_prefix = 'ibc'
+max_gas = 2000000
+gas_price = { price = 0.025, denom = 'ustars' }
+gas_adjustment = 0.1
+clock_drift = '300s'
+trusting_period = '10days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-5']                                                                                
+ ]
