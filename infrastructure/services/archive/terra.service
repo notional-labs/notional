@@ -11,14 +11,13 @@ Environment=TERRAD_GRPC_WEB_ADDRESS=127.0.0.1:2164
 Environment=TERRAD_P2P_SEED_NODES=e999fc20aa5b87c1acef8677cf495ad85061cfb9@seed.terra.delightlabs.io:26656,6d8e943c049a80c161a889cb5fcf3d184215023e@public-seed2.terra.dev:26656,87048bf71526fb92d73733ba3ddb79b7a83ca11e@public-seed.terra.dev:26656
 Environment=TERRAD_P2P_MAX_NUM_INBOUND_PEERS=500
 Environment=TERRAD_P2P_MAX_NUM_OUTBOUND_PEERS=100
-Environment=TERRAD_PRUNING=default
-Environment=TERRAD_HOME=/others/terra
+Environment=TERRAD_HOME=/storage/terra
 LimitNOFILE=500000
 Restart=always
 RuntimeMaxSec=7200
 User=root
 RestartSec=30
-ExecStart=/root/go/bin/terrad start
+ExecStart=/root/go/bin/terrad start --pruning custom --pruning-keep-recent 362880 --pruning-keep-every 0 --pruning-interval 100
 
 [Install]
 WantedBy=multi-user.target
