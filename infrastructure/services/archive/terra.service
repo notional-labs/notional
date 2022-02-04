@@ -3,11 +3,11 @@ Description=Terra Full Node
 
 [Service]
 Environment=TERRAD_P2P_LADDR=tcp://0.0.0.0:2160
-Environment=TERRAD_RPC_LADDR=tcp://0.0.0.0:2161
+Environment=TERRAD_RPC_LADDR=tcp://127.0.0.1:2161
 Environment=TERRAD_NODE=tcp://127.0.0.1:2161
-Environment=TERRAD_GRPC_ADDRESS=0.0.0.0:2162
-Environment=TERRAD_API_ADDRESS=tcp://127.0.0.1:2163
-Environment=TERRAD_GRPC_WEB_ADDRESS=127.0.0.1:2164
+Environment=TERRAD_GRPC_ADDRESS=127.0.0.1:2162
+Environment=TERRAD_GRPC_WEB_ADDRESS=127.0.0.1:2163
+Environment=TERRAD_API_ADDRESS=tcp://127.0.0.1:2164
 Environment=TERRAD_P2P_SEED_NODES=e999fc20aa5b87c1acef8677cf495ad85061cfb9@seed.terra.delightlabs.io:26656,6d8e943c049a80c161a889cb5fcf3d184215023e@public-seed2.terra.dev:26656,87048bf71526fb92d73733ba3ddb79b7a83ca11e@public-seed.terra.dev:26656
 Environment=TERRAD_P2P_MAX_NUM_INBOUND_PEERS=500
 Environment=TERRAD_P2P_MAX_NUM_OUTBOUND_PEERS=100
