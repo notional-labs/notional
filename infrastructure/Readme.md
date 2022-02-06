@@ -66,6 +66,7 @@ Each chain has 10 ports it can use.  WIP.
  Cheqd           | 2250-2259  | cheqd-mainnet-1
  Axelar          | 2260-2269  | axelar-dojo-1
  Comdex          | 2270-2279  | comdex-1
+ Anone           | 2280-2289  | anone-testnet-1
 
    Service         | Port  
 -------------------|------ 
