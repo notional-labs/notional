@@ -3,7 +3,7 @@ Here are the minimal hardware configs required for running a validator/sentry no
 
 * 8GB RAM
 * 4vCPUs
-* 200GB Disk space
+* 200GB - 300GB Disk space per year
 
 # Software Requirements
 Install deps
