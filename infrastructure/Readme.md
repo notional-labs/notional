@@ -67,6 +67,7 @@ Each chain has 10 ports it can use.  WIP.
  Axelar          | 2260-2269  | axelar-dojo-1
  Comdex          | 2270-2279  | comdex-1
  Anone           | 2280-2289  | anone-testnet-1
+ Konstellation   | 2290-2299  | darchub
 
    Service         | Port  
 -------------------|------ 
