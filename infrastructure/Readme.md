@@ -68,6 +68,7 @@ Each chain has 10 ports it can use.  WIP.
  Comdex          | 2270-2279  | comdex-1
  Anone           | 2280-2289  | anone-testnet-1
  Konstellation   | 2290-2299  | darchub
+ Omniflix        | 2300-2309  | flixnet-4
 
    Service         | Port  
 -------------------|------ 
@@ -112,3 +113,4 @@ chihuahua    | 4936e377b4d4f17048f8961838a5035a4d21240c@chihuahua-seed-01.mercur
 cheqd        | debcb3fa7d40e681d98bcc7d22278fd58a34b73a@144.76.183.180:1234,258a9bfb822637bfca87daaab6181c10e7fd0910@seed1.eu.cheqd.net:26656,f565ff792b20977face9817df6acb268d41d4092@seed2.eu.cheqd.net:26656
 Axelar       | 3d67d0646cddcc203b41434aceea64ade22ba6fc@k8s-mainnet-axelarco-79b464ee93-f03cb16c57cf7cb2.elb.us-east-2.amazonaws.com:26656
 Comdex       | 08ab4552a74dd7e211fc79432918d35818a67189@52.69.58.231:26656,449a0f1b7dafc142cf23a1f6166bbbf035edfb10@13.232.85.66:26656,5b27a6d4cf33909c0e5b217789e7455e261941d1@15.222.29.207:26656 
+Omniflix     | abcfa48de44e6cb3813c3391101890b5a3ab82f3@142.132.157.73:26656
