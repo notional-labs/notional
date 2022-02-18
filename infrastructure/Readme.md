@@ -19,7 +19,20 @@ We operate Tenderseed instances for every #ibcgang blockchain on Akash.
 
 Go to [Node](#Nodes) section to get the seed of chains.
 
-
+## State Sync Note
+To enable state sync on some chains like Osmosis, Gaia, ... follow these instructions (Osmosis Example):
+```bash
+cd /$HOME/.osmosid/config
+# Enable State Sync
+sed -i 's/enable = false/enable = true/' config.toml
+# Add RPC
+sed -i 's/rpc_servers = ""/rpc_servers = "https:\/\/osmosis.validator.network:443,https:\/\/osmosis-1.technofractal.com:443,https:\/\/rpc-osmosis.blockapsis.com:443"/' config.toml
+# Get latest trusted height and trusted hash
+curl -s https://osmosis.validator.network/commit | jq "{height: .result.signed_header.header.height, hash: .result.signed_header.commit.block_id.hash}"
+# Add trusted height and trusted hash
+sed -i 's/trust_height = 0/trust_height = <BLOCK_HEIGHT>/' config.toml
+sed -i 's/trust_hash = ""/trust_hash = "<BLOCK_HASH>"/' config.toml
+```
 
 ## Archive Nodes
 Notional maintains archive nodes for BSC, Ethereum, Bitcoin, and every IBC-enabled Cosmos-SDK blockchain.  Documentation is kept in node-setup/archive and takes the approach that archive nodes are best setup slowly, even if that takes days or requires swapping out the binary during sync.  They're intended to be full, proper archives.  Time and expense are not spared in getting them into operation.  We run our archive nodes in three places:
