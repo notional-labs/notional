@@ -134,7 +134,7 @@ source .profile
 ```
 3) Now let's try Cosmovisor.
 
-* Show Cosmovisor version: `cosmovisor run version`  Will be v1.3 after the upgrade
+* Show Cosmovisor version: `cosmovisor run version`  Will be v1.3.1 after the upgrade
 ```
  cosmovisor run version
 12:14PM INF running app args=["version"] module=cosmovisor path=/home/testnet/.bcna/cosmovisor/genesis/bin/bcnad
