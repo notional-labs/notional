@@ -65,13 +65,21 @@ Is the versión match, now you have two options
 * Compile and install the binary in the $GOPATH path:  `make install`
 * If you are using Cosmovisor you need to perform extra steps to move the binary to the proper Cosmovisor folder.
 
-# Cosmosvisor Quick Start
-Cosmovisor is a small process manager for Cosmos SDK binaries that monitors the governance module via stdout for incoming chain upgrade proposals. If it sees a proposal that gets approved, it can be run manually or automatically to download the new binary, stop the current binary, run the migration script, replace the old node binary with the new one, and finally restart the node with the new genesis file.
+# Upgrade proposal: RUDERALIS upgrade.
+## Upgrade software to v1.3.1 on Feb 24th around 15:00h UTC.  **Halt-height: xxxxxxx**
 
-## Installation
-Cosmovisor is a small process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If it sees a proposal that gets approved, it stops the current binary, switch from the old binary to the new one, and finally restarts the node with the new binary.
+If BitCanna Community agrees with the governance proposal to approve an upgrade of the `bcnad` software from version `v.1.2` to `v.1.3.1` on 02/24/2022 at block **height: xxxxxxx** (~15:00 UTC) chain will be halted and the new binary will replace the old.
 
-* [prepare BitCanna to run Cosmovisor](https://github.com/BitCannaGlobal/bcna/blob/main/cosmovisor_config.md)
+This upgrade, called "Ruderalis" will bump:
+- Cosmos SDK from `v.0.44.2` to `v.0.45.1`
+- Tendermint from `v.0.34.13` to `v.0.34.15` 
+- ibc/go from `v.1.2.0` to `v.2.0.3`
 
-# Join our MainNet: `bitcanna-1`
-* [Instructions](https://github.com/BitCannaGlobal/bcna/blob/main/instructions.md)
+This includes the latest features and security patches. See the full changelog [here](https://github.com/BitCannaGlobal/bcna/releases/tag/v.1.3.1)
+
+### There are two methods to upgrade to the newest software version.
+
+You can upgrade manually by stopping the current `bcnad`service and replace it with the new version when the approved halt-height is reached and the chain stops, or you can automate it with Cosmovisor. 
+* Detailed instructions for a **manual update** can be found in [this guide](https://github.com/BitCannaGlobal/bcna/blob/main/manual_update.md)
+
+* Detailed instructions for setting up **Cosmovisor** can be found in [this guide](https://github.com/BitCannaGlobal/bcna/blob/main/cosmovisor_config.md)
