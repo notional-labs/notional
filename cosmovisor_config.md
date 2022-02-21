@@ -150,7 +150,7 @@ sudo rm /usr/local/bin/bcnad  #or wherever you have it
 ```
 
 ## Step 4. Prepare for a future chain update
-This guide shows how to download the binary. If you want to build the binary from the source, detailed instructions can be found in the [README](https://github.com/BitCannaGlobal/bcna/blob/v.1.3.1.pre1/README.md) of our GitHub.
+This guide shows how to download the binary. If you want to build the binary from the source, detailed instructions can be found in the [README](https://github.com/BitCannaGlobal/bcna/blob/main/README.md) of our GitHub.
 
 1) Download the binary.
 ```
@@ -162,7 +162,7 @@ wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v.1.3.1/bcnad
 ```
 sha256sum ./bcnad
 ```
-It must return: `xxxxxxxxxxxxxxxxxxxxxxx`
+It must return: `ad6784e945135454efc436d22a7661db36bc6a396e7d9cdb7572c4d8d5ccef3f`
 
 3) Verify that the version is:`.1.3.1`
 ```
