@@ -15,7 +15,7 @@ wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v.1.3.1/bcnad
 ```
 sha256sum ./bcnad
 ```
-It must return: `xxxxxxxxxxxxxxxxxxx`
+It must return: `ad6784e945135454efc436d22a7661db36bc6a396e7d9cdb7572c4d8d5ccef3f`
 
 4) Verify that the version is `.1.3.1`
 ```
