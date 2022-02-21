@@ -68,7 +68,7 @@ Is the versión match, now you have two options
 # Upgrade proposal: RUDERALIS upgrade.
 ## Upgrade software to v1.3.1 on Feb 24th around 16:00h CET.  **Halt-height: 2092453**
 
-If BitCanna Community agrees with the governance proposal to approve an upgrade of the `bcnad` software from version `v.1.2` to `v.1.3.1` on 02/24/2022 at block **height: xxxxxxx** (~16:00 CET) chain will be halted and the new binary will replace the old.
+If BitCanna Community agrees with the governance proposal to approve an upgrade of the `bcnad` software from version `v.1.2` to `v.1.3.1` on 02/24/2022 at block **height: 2092453** (~16:00 CET) chain will be halted and the new binary will replace the old.
 
 This upgrade, called "Ruderalis" will bump:
 - Cosmos SDK from `v.0.44.2` to `v.0.45.1`
