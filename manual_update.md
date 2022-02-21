@@ -2,7 +2,7 @@
  
 This guide shows how to perform a manual update of the binaries after a governance proposal has been approved for a chain update. If you want to build the binary from the source, detailed instructions can be found in the [README](https://github.com/BitCannaGlobal/bcna/blob/v.1.3.1.pre1/README.md) of our GitHub.
 
-1) Stop your bcnad service **after you see this** in your logs `ERR UPGRADE "ruderalis" NEEDED at height: xxxxxxxxx`
+1) Stop your bcnad service **after you see this** in your logs `ERR UPGRADE "ruderalis" NEEDED at height: 2092453`
 
 ```
 sudo service bcnad stop
