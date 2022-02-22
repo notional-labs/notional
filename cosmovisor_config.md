@@ -83,6 +83,7 @@ User=${USER}
 Environment=DAEMON_NAME=bcnad
 Environment=DAEMON_RESTART_AFTER_UPGRADE=true
 Environment=DAEMON_HOME=${HOME}/.bcna
+# Optional: Environment=UNSAFE_SKIP_BACKUP=true
 ExecStart=$(which cosmovisor) run start
 Restart=always
 RestartSec=3
