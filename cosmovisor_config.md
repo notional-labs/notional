@@ -138,6 +138,8 @@ source .profile
 * Show Cosmovisor version: `cosmovisor run version`  Will be v.1.3.1 after the upgrade
 ```
  cosmovisor run version
+ ```
+ ```
 12:14PM INF running app args=["version"] module=cosmovisor path=/home/testnet/.bcna/cosmovisor/genesis/bin/bcnad
 12:14PM ERR failed to read error="lstat /home/testnet/.bcna/cosmovisor/current/upgrade-info.json: no such file or directory" filename=/home/testnet/.bcna/cosmovisor/current/upgrade-info.json module=cosmovisor
 1.2
