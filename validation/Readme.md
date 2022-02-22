@@ -21,6 +21,8 @@ Notional is an **active set** validator on:
 17) [Chihuahua](https://www.mintscan.io/chihuahua/validators/chihuahuavaloper1h6vcu4r2hx70x5f0l3du3ey2g98u9ut2tafnnv)
 18) [Kava](https://www.mintscan.io/kava/validators/kavavaloper13jyqfhak8mu4c7pydjm3eu4qla7g06a9u6xf8g)
 19) [BitCanna](https://www.mintscan.io/bitcanna/validators/bcnavaloper1dl7w3myyfmnarh0t5uxmy7qe6szagz3kyhzq07)
+20) [Konstellation](https://www.mintscan.io/konstellation/validators/darcvaloper1fndgrsqmmq68ppl42wjkxh32nwpuj7vqtgep38)
+21) [Omniflix](omniflixvaloper15wshq6lmxmcn9vxky2mxf8zhstpn9ywmfc5ke5)
 
 ## The role of a validator
 
