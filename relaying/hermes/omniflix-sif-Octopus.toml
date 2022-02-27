@@ -60,6 +60,32 @@ list = [
 ]
 
 [[chains]]
+id = 'sifchain-1'
+rpc_addr = 'http://127.0.0.1:2111'
+grpc_addr = 'http://127.0.0.1:2112'
+websocket_addr = 'ws://127.0.0.1:2111/websocket'
+rpc_timeout = '30s'
+account_prefix = 'sif'
+key_name = 'sif'
+store_prefix = 'ibc'
+max_gas = 1000000000000000
+gas_price = { price = 20000, denom = 'rowan' }
+gas_adjustment = 0.1
+clock_drift ='15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Relayed by Notional!'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-44'], ['transfer', 'channel-0'],
+['transfer', 'channel-17'], ['transfer', 'channel-14'],
+['transfer', 'channel-2'],# ['transfer', 'channel-41'],
+['transfer', 'channel-38'],# ['transfer', 'channel-40'],
+['transfer', 'channel-35'], ['transfer', 'channel-9']
+]
+
+[[chains]]
 id = 'cosmoshub-4'
 rpc_addr = 'http://127.0.0.1:2011'
 grpc_addr = 'http://127.0.0.1:2012'
@@ -202,32 +228,6 @@ memo_prefix = 'Relayed by Notional!'
 policy = 'allow'
 list = [
 ['transfer', 'channel-17'], ['transfer', 'channel-8']
-]
-
-[[chains]]
-id = 'sifchain-1'
-rpc_addr = 'http://127.0.0.1:2111'
-grpc_addr = 'http://127.0.0.1:2112'
-websocket_addr = 'ws://127.0.0.1:2111/websocket'
-rpc_timeout = '30s'
-account_prefix = 'sif'
-key_name = 'sif'
-store_prefix = 'ibc'
-max_gas = 1000000000000000
-gas_price = { price = 20000, denom = 'rowan' }
-gas_adjustment = 0.1
-clock_drift ='15s'
-trusting_period = '14days'
-trust_threshold = { numerator = '1', denominator = '3' }
-memo_prefix = 'Relayed by Notional!'
-[chains.packet_filter]
-policy = 'allow'
-list = [
-['transfer', 'channel-44'], ['transfer', 'channel-0'],
-['transfer', 'channel-17'], ['transfer', 'channel-14'],
-['transfer', 'channel-2'],# ['transfer', 'channel-41'],
-['transfer', 'channel-38'],# ['transfer', 'channel-40'],
-['transfer', 'channel-35'], ['transfer', 'channel-9']
 ]
 
 [[chains]]
