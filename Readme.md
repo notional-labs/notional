@@ -34,6 +34,7 @@ bash infrastructure/standup.bash
 * Vuong Nguyen - Blockchain Engineer
 * Son Trinh - Blockchain Engineer
 * Minh Vu Le Nhat - Server Technician
+* Du Nguyen - Infrastructure Engineer
 
 ## Thanks
 Notional would like to thank its delegagtes and the many teachers who have helped us learn how to design and implement all of this.
