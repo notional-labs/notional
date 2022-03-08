@@ -82,6 +82,7 @@ Each chain has 10 ports it can use.  WIP.
  Anone           | 2280-2289  | anone-testnet-1
  Konstellation   | 2290-2299  | darchub
  Omniflix        | 2300-2309  | omniflixhub-1
+ SecretNetwork   | 2310-2319  | secret-4
 
    Service         | Port  
 -------------------|------ 
