@@ -44,7 +44,7 @@ Notional wishes to validate:
 * Every IBC-enabled blockchain
 
 
-Notional has decided to maintain relayers for all chains -- and [document processes](./relaying-guide) -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on up to 20 * 20 = 400x2 = 800 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
+Notional has decided to maintain relayers for all chains -- and [document processes](../relaying) -- on all chains where we are in the active validator set.  Presently, that means that we will maintain relayers on up to 20 * 20 = 400x2 = 800 channels.  If you are a community member or team that wants to see notional relay for your community, please put an issue on this repository and we will set up a relayer.  
 
 
 ## How we validate
