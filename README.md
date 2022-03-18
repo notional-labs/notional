@@ -4,7 +4,7 @@ BitCanna provides a decentralized payment network, supply chain and trust networ
 
 Last version (v.1.3.1 Ruderalis) of our development uses Cosmos SDK v.0.45.1 & Tendermint v.0.34.15
 
-These docs at Github are chain-related. For more information about our coin, partners and roadmap visit:
+These docs at Github are chain related. For more information about our coin, partners and roadmap visit:
 * Our website: https://www.bitcanna.io
 * Our docs platform: https://docs.bitcanna.io
 
@@ -12,19 +12,19 @@ These docs at Github are chain-related. For more information about our coin, par
 Here are the minimal hardware configs required for running a validator/sentry node:
 
 * 8GB RAM 
-* 4vCPUs (8vCPUs is recommened)
+* 4vCPUs (8vCPUs is recommended)
 * 200GB - 300GB SSD Disk space per year (NVMe disks are recommended)
-* 400 Mbit/s bandwith
+* 400 Mbit/s bandwidth
 
-> Please avoid cheap VPS providers as main validator (we suggest to use it as a cheap backup). We advise to use a shared dedicated server or a high-end NVMe VPS.
+> Please avoid cheap VPS providers as a main validator (we suggest using it as a cheap backup). We advise to use a shared dedicated server or a high-end NVMe VPS.
 
 # How to join `bitcanna-1` chain
-> Tip: At the end of this doc you will find links with important info
+> Tip: At the end of this doc, you will find links with important info
 
 The necessary steps to join to `bitcanna-1` chain are:
 
 ## 1. Install / Compile last binary
-Check this [link](https://github.com/BitCannaGlobal/bcna/blob/main/1.install-compile.md) to find instructions to install or compile our lastest release.
+Check this [link](https://github.com/BitCannaGlobal/bcna/blob/main/1.install-compile.md) to find instructions to install or compile our latest release.
 
 ##   2. Sync the chain
 You can sync the chain in your server to run a validator or a simple node/peer.
@@ -32,7 +32,7 @@ You can sync the chain in your server to run a validator or a simple node/peer.
 ###   2.1. Sync using a StateSync snapshot server.
 This is the recommended option for new nodes/validators.
 
-By downloading the statesync script, you will sync the last blocks of the chain from two BitCanna StateSync servers. 
+By downloading the StateSync script, you will sync the last blocks of the chain from two BitCanna StateSync servers. 
 
 The script will setup your folder and config if you start a fresh install. If your node/validator exist will make a backup, syncing and restoring the backup at the end of the script. Choose the best that fits you!
 * https://github.com/BitCannaGlobal/bcna/blob/main/2.1.statesync.md
@@ -41,7 +41,7 @@ The script will setup your folder and config if you start a fresh install. If yo
 This is an alternative way to get synced without having to download the entire chain block by block. Recommended for advanced users in Cosmos chains.
 * https://github.com/BitCannaGlobal/bcna/blob/main/2.2.snapshot.md
 ###   2.3. Sync the whole chain using cosmovisor
-Start to sync from block 1. Automate the upgrades with Cosmovisor by putting the right binaries in the appriorate folder.
+Start to sync from block 1. Automate the upgrades with Cosmovisor by putting the right binaries in the appropriate folder.
 * https://github.com/BitCannaGlobal/bcna/blob/main/2.3.cosmovisor.md
 
 
