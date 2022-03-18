@@ -1,5 +1,6 @@
+# Archived guide 
 # MAINNET: Setup up your validator and join *bitcanna-1*
-> IMPORTANT NOTE: You can sync a node almost instantly and automatically using our [StateSync script](https://github.com/BitCannaCommunity/cosmos-statesync_client)
+> IMPORTANT NOTE: You can sync a node almost instantly and automatically using our [StateSync script](https://github.com/BitCannaGlobal/cosmos-statesync_client)
 
 
 **bcnad** is a blockchain application built using Cosmos SDK v.0.44.2 and Tendermint v.0.34.13.
