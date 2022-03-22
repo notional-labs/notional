@@ -86,6 +86,7 @@ Each chain has 10 ports it can use.  WIP.
  Gravity-Bridge  | 2320-2329  | gravity-bridge-3
  Bitsong         | 2330-2339  | bitsong-2b
  Vidulum         | 2340-2349  | vidulum-1
+ Provenance      | 2350-2359  | pio-mainnet-1
 
    Service         | Port  
 -------------------|------ 
@@ -134,3 +135,4 @@ Omniflix     | 9d75a06ebd3732a041df459849c21b87b2c55cde@35.187.240.195:26656,19f
 Gravity      | 2b089bfb4c7366efb402b48376a7209632380c9c@65.19.136.133:26656,63e662f5e048d4902c7c7126291cf1fc17687e3c@95.211.103.175:26656
 Bitsong      | ffa27441ca78a5d41a36f6d505b67a145fd54d8a@95.217.156.228:26656,efd52c1e56b460b1f37d73c8d2bd5f860b41d2ba@65.21.62.83:26656
 Vidulum      | 883ec7d5af7222c206674c20c997ccc5c242b38b@ec2-3-82-120-39.compute-1.amazonaws.com:26656,eed11fff15b1eca8016c6a0194d86e4a60a65f9b@apollo.erialos.me:26656
+Provenance   | 4bd2fb0ae5a123f1db325960836004f980ee09b4@seed-0.provenance.io:26656,048b991204d7aac7209229cbe457f622eed96e5d@seed-1.provenance.io:26656
