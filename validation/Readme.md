@@ -39,6 +39,7 @@ We manage our organization by git issues, and if your community needs help, they
 Notional is validating, but not in the active set:
 * Umee
 * [Terra](https://ping.pub/terra-luna/account/terra1cn2qhqs4g0fzxn8j2lhr3vwffc86s0k65cqclp)
+* [Secret-Network](https://www.mintscan.io/secret/validators/secret18rchk5exp2vzcwrwuret5sjwpxhf4sq2m9hgq2)
 
 Notional wishes to validate:
 * Every IBC-enabled blockchain
