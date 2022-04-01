@@ -4,17 +4,9 @@ set -uxe
 export GOPATH=~/go
 export PATH=$PATH:~/go/bin
 
-
-# Install Gaia
-#go install -tags rocksdb ./...
-
-
 # MAKE HOME FOLDER AND GET GENESIS
 sifnoded init test
-wget -O ~/.sifnoded/config/genesis.json.gz https://cloudflare-ipfs.com/ipfs/QmeotEhwc67AnkHSYE53421DJAb1odHAsKLDUc7qBpXErA
-cd ~/.sifnoded/config
-gunzip -f genesis.json.gz
-cd -
+wget -O ~/.sifnoded/config/genesis.json https://github.com/Sifchain/networks/blob/master/betanet/sifchain-1/genesis.json?raw=true
 
 INTERVAL=1000
 
