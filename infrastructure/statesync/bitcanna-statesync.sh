@@ -15,9 +15,9 @@ INTERVAL=1000
 
 # GET TRUST HASH AND TRUST HEIGHT
 
-LATEST_HEIGHT=$(curl -s http://95.217.121.243:421/block | jq -r .result.block.header.height);
+LATEST_HEIGHT=$(curl -s https://rpc.bitcanna.io:443/block | jq -r .result.block.header.height);
 BLOCK_HEIGHT=$(($LATEST_HEIGHT-$INTERVAL)) 
-TRUST_HASH=$(curl -s "http://95.217.121.243:421/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+TRUST_HASH=$(curl -s "https://rpc.bitcanna.io:443/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 
 
 # TELL USER WHAT WE ARE DOING
@@ -28,7 +28,7 @@ echo "TRUST HASH: $TRUST_HASH"
 # export state sync vars
 export BCNAD_STATESYNC_ENABLE=true
 export BCNAD_P2P_MAX_NUM_OUTBOUND_PEERS=200
-export BCNAD_STATESYNC_RPC_SERVERS="http://95.217.121.243:421,https://rpc.bitcanna.io:443"
+export BCNAD_STATESYNC_RPC_SERVERS="https://rpc.bitcanna.io:443,https://rpc.bitcanna.io:443"
 export BCNAD_STATESYNC_TRUST_HEIGHT=$BLOCK_HEIGHT
 export BCNAD_STATESYNC_TRUST_HASH=$TRUST_HASH
 export BCNAD_P2P_SEEDS="d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656,23671067d0fd40aec523290585c7d8e91034a771@seed2.bitcanna.io:26656"
