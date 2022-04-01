@@ -86,7 +86,7 @@ It is the only way to recover your account if you ever forget/lose your password
 
 3. **Send the _Create validator_ TX:**
 
-> We recommend to read the [FAQ Chain's guide](https://github.com/BitCannaGlobal/bcna/blob/main/faq_chain.md) to understand all parameters:
+> We recommend you read the [FAQ Chain's guide](https://github.com/BitCannaGlobal/bcna/blob/main/faq_chain.md) to understand all parameters - be aware that some values are permanent and cannot be changed at a later date.
 
 When you have your node synced and your wallet funded with coins, send the TX to become _validator_ (change _wallet_name_ and _moniker_):
 > You can use quotes to include spaces and more than two words
