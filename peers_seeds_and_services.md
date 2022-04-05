@@ -3,7 +3,6 @@ For the **Chain Registry** from Cosmos [GitHub](https://github.com/cosmos/chain-
 
 We'd like to ask you to provide us your ***endpoints*** and/or ***persistent_peers*** that we can use. It is greatly appreciated!
 
-
 # Persistent_peers
 
 ## EZStaking
@@ -28,9 +27,9 @@ ddb620e7c7a6b5a8a53352037cde927681012ab4@65.21.229.209:37656
 be87c9abf1c54e1cc2f37e68d21fcd61679abb4c@65.21.196.90:46656 
 
 ## BitCanna
-ecf729b2fb3c1038c55bd099b35c5d5b1d158c2b@178.62.236.228:26656 
-dcdc83e240eb046faabef62e4daf1cfcecfa93a2@159.65.198.245:26656
 7c00beb4956bc40cd33ced6e2c2ffe07d4fa32e7@95.216.242.82:36656
+21484408a7bcf0134689ddf52a7d9c8299cb65b5@65.108.103.215:36656
+a4c1e46441164c350f721cf142d52c136215e05c@135.181.176.55:36656
 
 ## Paranormal Brothers
 df99de6cec9152c517990317b340b8b9a307493c@193.34.144.156:26656
@@ -50,7 +49,13 @@ add5f91ecb28b785e8c6b51b0a4b17974196a035@rpc2.nodejumper.io:27656
 d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
 23671067d0fd40aec523290585c7d8e91034a771@seed2.bitcanna.io:26656
 
-# Info, doc and other services from BitCanna validators & partners
+# StateSync Servers and instructions:
+## BitCanna oficial:
+  * https://github.com/BitCannaGlobal/bcna/blob/main/2.1.statesync.md
+## Polkachu
+  * https://polkachu.com/state_sync/bitcanna
+
+# Info, doc and other services from BitCanna validators & partners (feel free to make a PR)
 ### BitCanna Docs
 * https://docs.bitcanna.io
 
@@ -68,6 +73,8 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
 
 ### DappLocker: Stats service
 * https://dapplooker.com/dapp/bitcanna-mainnet-120038
+
+
 
 # RPCs, LCD, GRPC and other endpoints/services 
 ```
