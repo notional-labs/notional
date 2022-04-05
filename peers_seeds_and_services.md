@@ -103,6 +103,16 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
         "provider": "EZStaking.io"
       },
       {
+        "id": "21484408a7bcf0134689ddf52a7d9c8299cb65b5",
+        "address": "65.108.103.215:36656",
+        "provider": "BitCanna"
+      },
+      {
+        "id": "a4c1e46441164c350f721cf142d52c136215e05c",
+        "address": "135.181.176.55:36656",
+        "provider": "BitCanna"
+      },
+      {
         "id": "7b2d10d188926ea25eb209f037fe4e67e16e06b6",
         "address": "92.222.25.18:26656",
         "provider": "StakeLab"
