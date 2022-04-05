@@ -10,9 +10,8 @@ bee230fb347722d7f87d22414f57bf9cbe37a410@95.217.226.95:26039
 90ee680b1738344354c48c23ba1e1fd68e071d80@65.108.128.241:26696
 
 ## StakeLab
-7b2d10d188926ea25eb209f037fe4e67e16e06b6@92.222.25.18:26656 
 5eb75c20a77ccf960df396b187b86d6324b40123@51.68.226.61:26656
-6bd989f063b89be680fb3c55c4cf1720a892b12c@161.97.96.253:26656 
+11612d58955e5f073a6e70ce83129d63b8f5c654@65.108.139.109:26666
 
 
 ## Stakely
@@ -117,18 +116,13 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
         "provider": "BitCanna"
       },
       {
-        "id": "7b2d10d188926ea25eb209f037fe4e67e16e06b6",
-        "address": "92.222.25.18:26656",
-        "provider": "StakeLab"
-      },
-      {
         "id": "5eb75c20a77ccf960df396b187b86d6324b40123",
         "address": "51.68.226.61:26656",
         "provider": "StakeLab"
       },
       {
-        "id": "6bd989f063b89be680fb3c55c4cf1720a892b12c",
-        "address": "161.97.96.253:26656",
+        "id": "11612d58955e5f073a6e70ce83129d63b8f5c654",
+        "address": "65.108.139.109:26666",
         "provider": "StakeLab"
       },
       {
