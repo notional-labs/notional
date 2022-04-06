@@ -55,8 +55,12 @@ list = [
 ['transfer', 'channel-2'], ['transfer', 'channel-3'], 
 ['transfer', 'channel-4'], ['transfer', 'channel-5'], 
 ['transfer', 'channel-6'], ['transfer', 'channel-7'], 
-['transfer', 'channel-8'],# ['transfer', 'channel-9'],
-['transfer', 'channel-10'], ['transfer', 'channel-11']
+['transfer', 'channel-8'], ['transfer', 'channel-9'],
+['transfer', 'channel-10'], ['transfer', 'channel-11'],
+['transfer', 'channel-12'], ['transfer', 'channel-13'],
+['transfer', 'channel-14'], ['transfer', 'channel-15'],
+['transfer', 'channel-16'], ['transfer', 'channel-17'],
+['transfer', 'channel-18'], ['transfer', 'channel-19'],
 ]
 
 [[chains]]
@@ -80,9 +84,10 @@ policy = 'allow'
 list = [
 ['transfer', 'channel-44'], ['transfer', 'channel-0'],
 ['transfer', 'channel-17'], ['transfer', 'channel-14'],
-['transfer', 'channel-2'],# ['transfer', 'channel-41'],
-['transfer', 'channel-38'],# ['transfer', 'channel-40'],
-['transfer', 'channel-35'], ['transfer', 'channel-9']
+['transfer', 'channel-2'], ['transfer', 'channel-41'],
+['transfer', 'channel-38'], ['transfer', 'channel-40'],
+['transfer', 'channel-35'], ['transfer', 'channel-9'],
+['transfer', 'channel-7'], ['transfer', 'channel-49']
 ]
 
 [[chains]]
