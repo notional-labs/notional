@@ -29,7 +29,6 @@ bash infrastructure/standup.bash
 * Ricardo Ferreria - All things biz, testing of documentation written by Jacob and Khanh
 * Khanh Nguyen - Lead Engineer
 * Long Mai Gia - Lead Infrastructure
-* Kyle Kesterson - Chief Creative
 * Vinh Nguyen - Project Manager and Blockchain Engineer
 * Vuong Nguyen - Blockchain Engineer
 * Son Trinh - Blockchain Engineer
