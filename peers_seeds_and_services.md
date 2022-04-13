@@ -57,6 +57,8 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
   * https://github.com/BitCannaGlobal/bcna/blob/main/2.1.statesync.md
 ## Polkachu
   * https://polkachu.com/state_sync/bitcanna
+## 3Tekos StateSync Server
+  * https://bcna-rpc.3tekos.fr:443
 
 # Info, doc and other services from BitCanna validators & partners (feel free to make a PR)
 ### BitCanna Docs
@@ -161,6 +163,10 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
         "address": "https://rpc.bitcanna.ezstaking.io/",
         "provider": "ezstaking.io"
       },
+      {
+        "address": "https://bcna-rpc.3tekos.fr:443/",
+        "provider": "3Tekos"
+      },      
       {
         "address": "https://rpc-bitcanna.itastakers.com/",
         "provider": "itastakers"
