@@ -6,8 +6,8 @@ We'd like to ask you to provide us your ***endpoints*** and/or ***persistent_pee
 # Persistent_peers
 
 ## EZStaking
-bee230fb347722d7f87d22414f57bf9cbe37a410@95.217.226.95:26039
-90ee680b1738344354c48c23ba1e1fd68e071d80@65.108.128.241:26696
+bee230fb347722d7f87d22414f57bf9cbe37a410@sentry-1.bcna.ezstaking.io:26039
+90ee680b1738344354c48c23ba1e1fd68e071d80@sentry-2.bcna.ezstaking.io:26696
 
 ## StakeLab
 5eb75c20a77ccf960df396b187b86d6324b40123@51.68.226.61:26656
@@ -97,12 +97,12 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
     "persistent_peers": [
       {
         "id": "bee230fb347722d7f87d22414f57bf9cbe37a410",
-        "address": "95.217.226.95:26039",
+        "address": "sentry-1.bcna.ezstaking.io:26039",
         "provider": "EZStaking.io"
       },
       {
         "id": "90ee680b1738344354c48c23ba1e1fd68e071d80",
-        "address": "65.108.128.241:26696",
+        "address": "sentry-2.bcna.ezstaking.io:26696",
         "provider": "EZStaking.io"
       },
       {
