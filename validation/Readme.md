@@ -25,6 +25,7 @@ Notional is an **active set** validator on:
 21) [Omniflix](https://www.skynetexplorers.com/omniflix/staking/omniflixvaloper15wshq6lmxmcn9vxky2mxf8zhstpn9ywmfc5ke5)
 22) [Evmos](https://www.mintscan.io/evmos/validators/evmosvaloper1rv94jqhlhx6makfwl6qs390e4shg32m6w6dxzy)
 23) [Vidulum](https://ping.pub/vidulum/staking/vdlvaloper16pu0t4yauhduaxvu3k29w539da5d2mfxqjdmjj)
+24) [Provenance](https://www.mintscan.io/provenance/validators/pbvaloper10ap9fj9uq50cardmlzdj367kqg5x3ghjdp2v6p)
 
 ## The role of a validator
 
