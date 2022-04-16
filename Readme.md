@@ -7,6 +7,7 @@ Notional provides services in blockchain technology, including:
    * [Dig](https://github.com/notional-labs/dig)
    * [Anone](https://github.com/notional-labs/an1)
    * [CraftEconomy](https://github.com/notional-labs/craft) 
+* [Snapshots providing](https://snapshot.notional.ventures/)
 * Consulting and strategy
 
 ## Usage
