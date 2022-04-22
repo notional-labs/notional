@@ -74,4 +74,3 @@ policy = 'allow'
 list = [
 ['transfer', 'channel-141']
 ]
-a
