@@ -3,6 +3,7 @@
 # make sure go is on path cause we will compile some go
 export GOPATH=~/go
 export PATH=$PATH:~/go/bin
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Add go and rust stuff to bash profile
 echo 'GOPATH=~/go' >> ~/.bash_profile
