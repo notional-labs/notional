@@ -2,7 +2,7 @@ name: 🗓 Notional Weekly Meeting Report
 description: a weekly meeting report on what all notional employees are doing
 assignees: 
   - nghuyenthevinh2000
-title: "[Weekly]: "
+title: "[Weekly]: Write monday of the week here"
 labels: ["🗓 Weekly Meeting"]
 body:
   - type: markdown
