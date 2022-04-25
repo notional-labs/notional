@@ -1,0 +1,40 @@
+name: 🗓 Notional Weekly Meeting Report
+description: a weekly meeting report on what all notional employees are doing
+assignees: 
+  - nghuyenthevinh2000
+title: "[Weekly]: "
+labels: ["🗓 Weekly Meeting"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form helps:
+          1. Keeping track of what people is doing
+          2. Resolving matters of someone due to insufficient help or resource
+  - type: input
+    attributes:
+      label: Valid start and end of this week
+      value: "dd/mm/yyyy - dd/mm/yyyy"
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: People that have engaged in weekly meeting
+      options:
+        - label: chinhnotional
+        - label: Hieu Vu
+        - label: Master Pi
+        - label: sontrinh16
+        - label: Huy Nguyen
+  - type: textarea
+    attributes:
+      label: Brief summary of what people is doing
+      value: |
+        # Name 1
+        * What the person is doing?
+        * Link to issues?
+        # Name 2
+        * What the person is doing?
+        * Link to issues?
+    validations:
+      required: true
