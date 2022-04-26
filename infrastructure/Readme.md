@@ -89,6 +89,7 @@ Each chain has 10 ports it can use.  WIP.
  Provenance      | 2350-2359  | pio-mainnet-1
  Cerberus        | 2360-2369  | cerberus-chain-1
  AssetMantle     | 2370-2379  | mantle-1
+ fetchai         | 2380-2389  | fetchhub-4
 
    Service         | Port  
 -------------------|------ 
