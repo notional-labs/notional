@@ -26,6 +26,7 @@ Notional is an **active set** validator on:
 22) [Evmos](https://www.mintscan.io/evmos/validators/evmosvaloper1rv94jqhlhx6makfwl6qs390e4shg32m6w6dxzy)
 23) [Vidulum](https://ping.pub/vidulum/staking/vdlvaloper16pu0t4yauhduaxvu3k29w539da5d2mfxqjdmjj)
 24) [Provenance](https://www.mintscan.io/provenance/validators/pbvaloper10ap9fj9uq50cardmlzdj367kqg5x3ghjdp2v6p)
+25) [Secret-Network](https://www.mintscan.io/secret/validators/secret18rchk5exp2vzcwrwuret5sjwpxhf4sq2m9hgq2)
 
 ## The role of a validator
 
@@ -41,7 +42,6 @@ We manage our organization by git issues, and if your community needs help, they
 Notional is validating, but not in the active set:
 * Umee
 * [Terra](https://ping.pub/terra-luna/account/terra1cn2qhqs4g0fzxn8j2lhr3vwffc86s0k65cqclp)
-* [Secret-Network](https://www.mintscan.io/secret/validators/secret18rchk5exp2vzcwrwuret5sjwpxhf4sq2m9hgq2)
 
 Notional wishes to validate:
 * Every IBC-enabled blockchain
