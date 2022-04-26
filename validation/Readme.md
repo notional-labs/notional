@@ -62,8 +62,6 @@ We aren't most validators.  We're operating under the assumption that **notional
 
 
 ### Things we politely decline
-* ~~We do not validate chains requiring Intel's SGX technology~~ 
-  * We are going to put a validator on SCRT, and try it.  We will also be vocal about how it goes and we're building a special-purpose machine for this. 
 * We do not validate chains whose development teams do not prioritize user well-being
 
 
