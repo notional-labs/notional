@@ -609,8 +609,8 @@ list = []
 
 [[chains]]
 id = 'comdex-1'
-rpc_addr= 'http:///comdex/‘
-grpc_addr = 'http://:9027’
+rpc_addr= 'http:///comdex/'
+grpc_addr = 'http://:9027'
 websocket_addr = 'ws:///comdex/websocket'
 rpc_timeout = '15s'
 account_prefix = 'comdex'
