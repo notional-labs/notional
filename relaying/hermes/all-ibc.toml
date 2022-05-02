@@ -608,13 +608,13 @@ policy = 'allow'
 list = []
 
 [[chains]]
-id = ‘comdex-1’
-rpc_addr= 'http://65.108.136.206/comdex/‘
-grpc_addr = 'http://65.108.136.206:9027’
-websocket_addr = 'ws://65.108.136.206/comdex/websocket'
+id = 'comdex-1'
+rpc_addr= 'http:///comdex/‘
+grpc_addr = 'http://:9027’
+websocket_addr = 'ws:///comdex/websocket'
 rpc_timeout = '15s'
-account_prefix = ‘comdex’
-key_name = ‘comdex’
+account_prefix = 'comdex'
+key_name = 'comdex'
 store_prefix = 'ibc'
 max_tx_size = 180000
 max_gas = 200000
@@ -629,17 +629,17 @@ policy = 'allow'
 list = []
 
 [[chains]]
-id = ‘biting-2b’
-rpc_addr= 'http:///bitsong/‘
+id = 'bitsong-2b'
+rpc_addr= 'http:///bitsong/'
 grpc_addr = 'http://:9029’
 websocket_addr = 'ws:///bitsong/websocket'
 rpc_timeout = '15s'
-account_prefix = ‘bitsong’
-key_name = ‘bitsong’
+account_prefix = 'bitsong'
+key_name = 'bitsong'
 store_prefix = 'ibc'
 max_tx_size = 180000
 max_gas = 200000
-gas_price = { price = 0.0025, denom = ‘ubtsg’ }
+gas_price = { price = 0.0025, denom = 'ubtsg' }
 gas_adjustment = 1
 clock_drift ='1000s'
 trusting_period = '14days'
@@ -650,17 +650,17 @@ policy = 'allow'
 list = []
 
 [[chains]]
-id = ‘cerberus-chain-1’
-rpc_addr= 'http:///cerberus/‘
-grpc_addr = 'http://:9028’
+id = 'cerberus-chain-1'
+rpc_addr= 'http:///cerberus/'
+grpc_addr = 'http://:9028'
 websocket_addr = 'ws:///cerberus/websocket'
 rpc_timeout = '15s'
-account_prefix = ‘cerberus’
-key_name = ‘cerberus’
+account_prefix = 'cerberus'
+key_name = 'cerberus'
 store_prefix = 'ibc'
 max_tx_size = 180000
 max_gas = 200000
-gas_price = { price = 0.0025, denom = ‘ucrbrus’ }
+gas_price = { price = 0.0025, denom = 'ucrbrus' }
 gas_adjustment = 1
 clock_drift ='1000s'
 trusting_period = '14days'
@@ -669,10 +669,3 @@ memo_prefix = 'Delegate Notional: build interchain expressway'
 [chains.packet_filter]
 policy = 'allow'
 list = []
-
-
-
-
-
-
-            
