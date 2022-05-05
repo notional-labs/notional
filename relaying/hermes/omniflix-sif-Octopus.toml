@@ -83,12 +83,17 @@ memo_prefix = 'Relayed by Notional!'
 [chains.packet_filter]
 policy = 'allow'
 list = [
-['transfer', 'channel-44'], ['transfer', 'channel-0'],
+['transfer', 'channel-54'], ['transfer', 'channel-65'],
+['transfer', 'channel-0'], ['transfer', 'channel-19'],
 ['transfer', 'channel-17'], ['transfer', 'channel-14'],
-['transfer', 'channel-2'], ['transfer', 'channel-41'],
+['transfer', 'channel-2'], ['transfer', 'channel-18'],
 ['transfer', 'channel-38'], ['transfer', 'channel-40'],
 ['transfer', 'channel-35'], ['transfer', 'channel-9'],
-['transfer', 'channel-7'], ['transfer', 'channel-49']
+['transfer', 'channel-7'], ['transfer', 'channel-49'],
+['transfer', 'channel-55'], ['transfer', 'channel-56'],
+['transfer', 'channel-57'], ['transfer', 'channel-58'],
+['transfer', 'channel-59'], ['transfer', 'channel-62'],
+['transfer', 'channel-63'], ['transfer', 'channel-64']
 ]
 
 [[chains]]
