@@ -4,9 +4,9 @@ log_level = 'debug'
 [mode]
 
 [mode.clients]
-enabled = true
+enabled = false
 refresh = true
-misbehaviour = false
+misbehaviour = true
 
 [mode.connections]
 enabled = false
@@ -667,5 +667,26 @@ trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
 memo_prefix = 'Delegate Notional: build interchain expressway'
 [chains.packet_filter]
+policy = 'allow'
+list = []
+
+[[chains]]
+id = 'secret-4'
+rpc_addr= ''
+grpc_addr = ''
+websocket_addr = ''
+rpc_timeout = '45s'
+account_prefix = 'secret'
+key_name = 'secret'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 2000000
+gas_price = { price = 0.0005, denom = 'uscrt' }
+gas_adjustment = 1
+clock_drift ='1000s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Relayed by Notional and ConsensusOne!'
+[chains.packet_filter]                                                                                    
 policy = 'allow'
 list = []
