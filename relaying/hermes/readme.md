@@ -46,5 +46,5 @@ hermes tx raw packet-recv cosmoshub-4 osmosis-1 transfer channel-0
 ```
 
 ### Tips
-When congestion accidentally happens, separating the stuck channels from the running hermes will prevent it from harming other networks' relaying. 
-We suggest commenting it out from the config file and running it on go-relayer/hermes or setting the 'hermes clear packets' commands in a loop.
+When congestion accidentally happens, separating the stuck channels from the running hermes will prevent it from harming other networks' relaying. We suggest commenting it out from the config file and running it on go-relayer/hermes or setting the 'hermes clear packets' commands in a loop.
+p/s: Delay/Performance impact when having stuck channels in config, Hermes v0.14.1
