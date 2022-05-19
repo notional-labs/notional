@@ -1,5 +1,5 @@
 syntax = "proto3";
-package BitCannaGlobal.bcna.bcna;
+package bitcannaglobal.bcna.bcna;
 
 import "gogoproto/gogo.proto";
 import "bcna/params.proto";

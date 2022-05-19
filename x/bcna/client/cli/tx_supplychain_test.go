@@ -19,7 +19,7 @@ func TestCreateSupplychain(t *testing.T) {
 	val := net.Validators[0]
 	ctx := val.ClientCtx
 
-	fields := []string{"xyz", "xyz", "xyz"}
+	fields := []string{"xyz", "xyz", "xyz", "xyz"}
 	for _, tc := range []struct {
 		desc string
 		args []string
@@ -60,7 +60,7 @@ func TestUpdateSupplychain(t *testing.T) {
 	val := net.Validators[0]
 	ctx := val.ClientCtx
 
-	fields := []string{"xyz", "xyz", "xyz"}
+	fields := []string{"xyz", "xyz", "xyz", "xyz"}
 	common := []string{
 		fmt.Sprintf("--%s=%s", flags.FlagFrom, val.Address.String()),
 		fmt.Sprintf("--%s=true", flags.FlagSkipConfirmation),
@@ -116,7 +116,7 @@ func TestDeleteSupplychain(t *testing.T) {
 	val := net.Validators[0]
 	ctx := val.ClientCtx
 
-	fields := []string{"xyz", "xyz", "xyz"}
+	fields := []string{"xyz", "xyz", "xyz", "xyz"}
 	common := []string{
 		fmt.Sprintf("--%s=%s", flags.FlagFrom, val.Address.String()),
 		fmt.Sprintf("--%s=true", flags.FlagSkipConfirmation),

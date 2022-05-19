@@ -13,12 +13,13 @@ const (
 
 var _ sdk.Msg = &MsgCreateSupplychain{}
 
-func NewMsgCreateSupplychain(creator string, product string, info string, supplyinfo string) *MsgCreateSupplychain {
+func NewMsgCreateSupplychain(creator string, product string, info string, supplyinfo string, supplyextra string) *MsgCreateSupplychain {
 	return &MsgCreateSupplychain{
-		Creator:    creator,
-		Product:    product,
-		Info:       info,
-		Supplyinfo: supplyinfo,
+		Creator:     creator,
+		Product:     product,
+		Info:        info,
+		Supplyinfo:  supplyinfo,
+		Supplyextra: supplyextra,
 	}
 }
 
@@ -53,13 +54,14 @@ func (msg *MsgCreateSupplychain) ValidateBasic() error {
 
 var _ sdk.Msg = &MsgUpdateSupplychain{}
 
-func NewMsgUpdateSupplychain(creator string, id uint64, product string, info string, supplyinfo string) *MsgUpdateSupplychain {
+func NewMsgUpdateSupplychain(creator string, id uint64, product string, info string, supplyinfo string, supplyextra string) *MsgUpdateSupplychain {
 	return &MsgUpdateSupplychain{
-		Id:         id,
-		Creator:    creator,
-		Product:    product,
-		Info:       info,
-		Supplyinfo: supplyinfo,
+		Id:          id,
+		Creator:     creator,
+		Product:     product,
+		Info:        info,
+		Supplyinfo:  supplyinfo,
+		Supplyextra: supplyextra,
 	}
 }
 

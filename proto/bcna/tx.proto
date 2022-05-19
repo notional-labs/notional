@@ -1,5 +1,5 @@
 syntax = "proto3";
-package BitCannaGlobal.bcna.bcna;
+package bitcannaglobal.bcna.bcna;
 
 import "bcna/bitcannaid.proto";
 import "bcna/supplychain.proto";
@@ -49,6 +49,7 @@ message MsgCreateSupplychain {
   string product = 2;
   string info = 3;
   string supplyinfo = 4;
+  string supplyextra = 5;
 }
 
 message MsgCreateSupplychainResponse {
@@ -61,6 +62,7 @@ message MsgUpdateSupplychain {
   string product = 3;
   string info = 4;
   string supplyinfo = 5;
+  string supplyextra = 6;
 }
 
 message MsgUpdateSupplychainResponse {}
