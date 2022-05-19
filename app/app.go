@@ -398,6 +398,9 @@ func New(
 	)
 	bcnaModule := bcnamodule.NewAppModule(appCodec, app.BcnaKeeper, app.AccountKeeper, app.BankKeeper)
 
+	//Call Buddheads upgrade func
+	app.RegisterUpgradeHandlers()
+
 	// this line is used by starport scaffolding # stargate/app/keeperDefinition
 
 	// Create static IBC router, add transfer route, then set and seal it
@@ -588,9 +591,6 @@ func New(
 	app.ScopedTransferKeeper = scopedTransferKeeper
 	app.ScopedMonitoringKeeper = scopedMonitoringKeeper
 	// this line is used by starport scaffolding # stargate/app/beforeInitReturn
-
-	//Call Buddheads upgrade func
-	app.RegisterUpgradeHandlers()
 
 	return app
 }
