@@ -710,7 +710,7 @@ func (app *App) RegisterUpgradeHandlers() {
 			"transfer":     1,
 			"upgrade":      1,
 			"vesting":      1,
-			"bcna":         2,
+			"bcna":         1,
 		}
 		delete(fromVM, authz.ModuleName)
 		return app.mm.RunMigrations(ctx, app.configurator, fromVM)
