@@ -44,3 +44,7 @@ hermes keys restore impacthub-3 -m "12 or 24 magic words"
 hermes query packet commitments osmosis-1 transfer channel-0
 hermes tx raw packet-recv cosmoshub-4 osmosis-1 transfer channel-0
 ```
+
+### Tips
+When congestion accidentally happens, separating the stuck channels from the running hermes will prevent it from harming other networks' relaying. We suggest commenting them out from the config file and setting up a go-relayer/another hermes instance or running the 'hermes clear packets' commands in a loop.
+p/s: Delay/Performance impact when having stuck channels in config, Hermes v0.14.1

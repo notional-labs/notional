@@ -1,5 +1,11 @@
 # Notional Incident Reports
 
+
+# May 2022
+
+We've created a summary of events on https://terra.money.
+
+
 ## November 2021
 
 From Nov 18-21, we had sporadic outages across our validator network due to the disassembly of a RAID setup which was very poorly designed by Jacob. 

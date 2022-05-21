@@ -343,8 +343,8 @@ account_prefix = 'evmos'
 key_name = 'evmos'
 store_prefix = 'ibc'
 max_tx_size = 180000
-max_gas = 2000000
-gas_price = { price = 0, denom = 'aevmos' }
+max_gas = 20000000
+gas_price = { price = 0.025, denom = 'aevmos' }
 gas_adjustment = 0.1
 clock_drift = '1500s'
 trusting_period = '8days'
