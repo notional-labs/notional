@@ -1,0 +1,624 @@
+[global]
+log_level = 'debug'
+
+[mode]
+
+[mode.clients]
+enabled = false
+refresh = true
+misbehaviour = false
+
+[mode.connections]
+enabled = false
+
+[mode.channels]
+enabled = false
+
+[mode.packets]
+enabled = true
+clear_interval = 50
+clear_on_start = true
+tx_confirmation = false
+
+[rest]
+enabled = false
+host = '127.0.0.1'
+port = 3000
+
+[telemetry]
+enabled = false
+host = '127.0.0.1'
+port = 3001
+
+
+[[chains]]
+id = 'sifchain-1'
+rpc_addr = 'http://0.0.0.0/sifchain/'
+grpc_addr = 'http://0.0.0.0:9010'
+websocket_addr = 'ws://0.0.0.0/sifchain/websocket'
+rpc_timeout = '30s'
+account_prefix = 'sif'
+key_name = 'sif'
+store_prefix = 'ibc'
+max_gas = 1000000000000000
+gas_price = { price = 20000, denom = 'rowan' }
+gas_adjustment = 0.1
+clock_drift ='15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Relayed by Notional!'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-55'], ['transfer', 'channel-59'], ['transfer', 'channel-0'],['transfer', 'channel-37'],['transfer', 'channel-8'],['transfer', 'channel-54'],
+['transfer', 'channel-2'], ['transfer', 'channel-1'], ['transfer', 'channel-40'], ['transfer', 'channel-17'], ['transfer', 'channel-19'], ['transfer', 'channel-59'], ['transfer', 'channel-14'],# ['transfer', 'channel-25'],
+['transfer', 'channel-10'], ['transfer', 'channel-38'], ['transfer', 'channel-60'], ['transfer', 'channel-64'], ['transfer', 'channel-62'], ['transfer', 'channel-35'], ['transfer', 'channel-65'], ['transfer', 'channel-63'], ['transfer', 'channel-44'], ['transfer', 'channel-67'], ['transfer', 'channel-11'], ['transfer', 'channel-15'], ['transfer', 'channel-33']
+]
+
+[[chains]]
+id = 'evmos_9001-2'
+rpc_addr = 'http://0.0.0.0/evmos/'
+grpc_addr = 'http://0.0.0.0:9032'
+websocket_addr = 'ws://0.0.0.0/evmos/websocket'
+rpc_timeout = '30s'
+address_type = { derivation = 'ethermint', proto_type = { pk_type = '/ethermint.crypto.v1.ethsecp256k1.PubKey' } }
+account_prefix = 'evmos'
+key_name = 'evmos'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 20000000
+gas_price = { price = 0.025, denom = 'aevmos' }
+gas_adjustment = 0.1
+clock_drift = '1500s'
+trusting_period = '13days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Relayed by Notional!'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-7']
+]
+
+[[chains]]
+id = 'likecoin-mainnet-2'
+rpc_addr = 'http://0.0.0.0/likecoin/'
+grpc_addr = 'http://0.0.0.0:9011'
+websocket_addr = 'ws://0.0.0.0/likecoin/websocket'
+rpc_timeout = '30s'
+account_prefix = 'like'
+key_name = 'like'
+store_prefix = 'ibc'
+#max_tx_size = 180000
+max_gas = 2000000
+gas_price = { price = 200, denom = 'nanolike' }
+gas_adjustment = 0.1
+clock_drift = '1500s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Relayed by Notional!'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-12']
+]
+
+[[chains]]
+id = 'osmosis-1'
+rpc_addr = 'http://0.0.0.0/osmosis/'
+websocket_addr = 'ws://0.0.0.0/osmosis/websocket'	
+grpc_addr = 'http://0.0.0.0:9001'
+rpc_timeout = '30s'
+account_prefix = 'osmo'
+key_name = 'osmosis'
+store_prefix = 'ibc'
+max_gas = 15000000                                                                                          
+max_msg_num = 10
+gas_price = { price = 0.0001, denom = 'uosmo' }
+gas_adjustment = 1
+clock_drift = '15s'
+trusting_period = '9days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-47']
+]
+
+[[chains]]
+id = 'crypto-org-chain-mainnet-1'
+rpc_addr = 'http://0.0.0.0/cryptoorgchain/'
+websocket_addr = 'ws://0.0.0.0/cryptoorgchain/websocket'
+grpc_addr = 'http://0.0.0.0:9034'
+rpc_timeout ='30s'
+account_prefix = 'cro'
+key_name = 'cryptoorgchain'
+store_prefix = 'ibc'
+max_gas = 15000000
+max_tx_size = 400000
+max_msg_num = 10
+gas_price = { price = 0.0001, denom = 'basecro' }
+gas_adjustment = 1
+clock_drift = '15s'
+trusting_period = '9days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-33']
+]
+
+[[chains]]
+id = 'iov-mainnet-ibc'  
+rpc_addr = 'http://0.0.0.0/starname/'
+grpc_addr = 'http://0.0.0.0:9002'
+websocket_addr = 'ws://0.0.0.0/starname/websocket'
+rpc_timeout = '30s'
+account_prefix = 'star'
+key_name = 'starname'
+store_prefix = 'ibc'       
+max_gas = 2500000
+max_tx_size = 180000
+gas_price = { price = 0.001, denom = 'uiov' }
+gas_adjustment = 1
+clock_drift ='15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-18']
+]
+
+[[chains]]
+id = 'regen-1'
+rpc_addr= 'http://0.0.0.0/regen/'
+grpc_addr = 'http://0.0.0.0:9003'
+websocket_addr = 'ws://0.0.0.0/regen/websocket'
+rpc_timeout = '15s'   
+account_prefix = 'regen'
+key_name = 'regen'
+store_prefix = 'ibc' 
+max_tx_size = 180000
+max_gas = 200000
+gas_price = { price = 0.0025, denom = 'uregen' }                                                                                                                                      
+gas_adjustment = 1                                                                                                                                                                    
+clock_drift ='15s'                                                                                                                                                                    
+trusting_period = '14days'                                                                                                                                                            
+trust_threshold = { numerator = '1', denominator = '3' }                                                                                                                              
+memo_prefix = 'Delegate Notional: build interchain expressway'                                                                                                                        
+[chains.packet_filter]                                                                                                                                                                
+policy = 'allow'                                                                                                                                                                      
+list = [
+['transfer', 'channel-28']
+]
+
+[[chains]]
+id = 'akashnet-2'
+rpc_addr = 'http://0.0.0.0/akash/'
+websocket_addr = 'ws://0.0.0.0/akash/websocket'
+grpc_addr = 'http://0.0.0.0:9004'
+rpc_timeout = '15s'
+account_prefix = 'akash'
+key_name = 'akash'
+store_prefix = 'ibc'
+max_gas = 2000000
+max_msg_num = 30
+gas_price = { price = 0.001, denom = 'uakt' }
+gas_adjustment = 0.1
+clock_drift = '15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-24']
+]
+
+[[chains]]
+id = 'cosmoshub-4'
+rpc_addr = 'http://0.0.0.0/cosmoshub/'
+grpc_addr = 'http://0.0.0.0:9005'
+websocket_addr = 'ws://0.0.0.0/cosmoshub/websocket'
+rpc_timeout = '30s'
+account_prefix = 'cosmos'
+key_name = 'cosmos'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 2000000
+gas_price = { price = 0.00005, denom = 'uatom' }
+gas_adjustment = 0.1
+clock_drift = '15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-192']
+]
+
+[[chains]] 
+id = 'sentinelhub-2'
+rpc_addr = 'http://0.0.0.0/sentinel/'
+grpc_addr = 'http://0.0.0.0:9006'
+websocket_addr = 'ws://0.0.0.0/akash/websocket'
+account_prefix = 'sent'
+rpc_timeout = '30s'
+key_name = 'sentinel'
+store_prefix = 'ibc'
+max_gas = 2000000
+max_msg_num = 30
+gas_price = { price = 0.125, denom = 'udvpn' }  
+gas_adjustment = 0.1
+clock_drift = '15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-36']
+]
+
+[[chains]]
+id = 'emoney-3'
+rpc_addr = 'http://0.0.0.0/emoney/'
+grpc_addr = 'http://0.0.0.0:9007'
+websocket_addr = 'ws://0.0.0.0/emoney/websocket'
+rpc_timeout = '30s'
+account_prefix = 'emoney'
+key_name = 'emoney'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 3000000
+max_msg_num = 30
+gas_price = { price = 0, denom = 'ungm' }
+gas_adjustment = 1
+clock_drift ='70s'
+trusting_period = '10days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-14']
+]
+
+[[chains]]
+id = 'impacthub-3'
+rpc_addr = 'http://0.0.0.0/ixo/'
+grpc_addr = 'http://0.0.0.0:9008'
+websocket_addr = 'ws://0.0.0.0/ixo/websocket'
+rpc_timeout = '30s'
+account_prefix = 'ixo'
+key_name = 'ixo'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 3000000
+max_msg_num = 30
+gas_price = { price = 0, denom = 'ixo' }
+gas_adjustment = 1
+clock_drift ='70s'
+trusting_period = '10days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-11	']
+]
+
+[[chains]]
+id = 'juno-1'
+rpc_addr = 'http://0.0.0.0/juno/'
+grpc_addr = 'http://0.0.0.0:9009'
+websocket_addr = 'ws://0.0.0.0/juno/websocket'
+rpc_timeout = '30s'
+account_prefix = 'juno'
+key_name = 'juno'
+store_prefix = 'ibc'
+max_tx_size = 1800000
+max_gas = 3000000
+gas_price = { price = 0.001, denom = 'ujuno' }
+gas_adjustment = 0.1
+clock_drift = '15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'   
+list = [
+['transfer', 'channel-5']
+]
+
+
+
+
+
+[[chains]]
+id = 'kichain-2'    
+rpc_addr = 'http://0.0.0.0/kichain/'
+grpc_addr = 'http://0.0.0.0:9012'
+websocket_addr = 'ws://0.0.0.0/kichain/websocket'
+rpc_timeout = '30s'
+account_prefix = 'ki'
+key_name = 'ki'
+store_prefix = 'ibc'
+max_gas = 2000000
+max_tx_size = 180000
+max_msg_num = 20
+gas_price = { price = 0.026, denom = 'uxki' }
+gas_adjustment = 0.1
+clock_drift ='15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-17']
+]
+
+
+[[chains]]                                                                                                                                                                            
+id='stargaze-1'                                                                                                                                                                     
+rpc_addr='http://0.0.0.0/stargaze/'                                                                                                                                          
+grpc_addr = 'http://0.0.0.0:9015'
+websocket_addr = 'ws://0.0.0.0/stargaze/websocket'
+rpc_timeout = '10s'
+account_prefix = 'stars'
+key_name = 'stars'
+store_prefix = 'ibc'
+max_gas = 2000000   
+gas_price = { price = 0.025, denom = 'ustars' }
+gas_adjustment = 0.1
+clock_drift = '300s' 
+trusting_period = '10days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-41']
+]
+
+
+[[chains]]
+id = 'chihuahua-1' 
+rpc_addr = 'http://0.0.0.0/chihuahua/'
+grpc_addr = 'http://0.0.0.0:9017'
+websocket_addr = 'ws://0.0.0.0/chihuahua/websocket'
+rpc_timeout = '15s'
+account_prefix = 'chihuahua'
+key_name = 'chihuahua'
+store_prefix = 'ibc'
+max_tx_size = 450000      
+max_gas = 1000000
+max_msg_num = 30
+gas_price = { price = 0.1, denom = 'uhuahua' }
+gas_adjustment = 1
+clock_drift ='15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow' 
+list = [
+['transfer', 'channel-20']
+]
+
+[[chains]]
+id = 'kava-9'
+rpc_addr = 'http://0.0.0.0/kava/'
+grpc_addr = 'http://0.0.0.0:9018'
+websocket_addr = 'ws://0.0.0.0/kava/websocket'
+rpc_timeout = '30s'
+account_prefix = 'kava'
+key_name = 'kava'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 2000000
+gas_price = { price = 0, denom = 'ukava' }
+gas_adjustment = 0.1
+clock_drift = '15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-3']
+]
+
+
+[[chains]]
+id = 'bitcanna-1'
+rpc_addr = 'http://0.0.0.0/bitcanna/'                    
+grpc_addr = 'http://0.0.0.0:9019'
+websocket_addr = 'ws://0.0.0.0/bitcanna/websocket'
+rpc_timeout = '15s'
+account_prefix = 'bcna'
+key_name = 'bcna'
+store_prefix = 'ibc'
+max_gas = 2000000  
+gas_price = { price = 0.001, denom = 'ubcna' }
+gas_adjustment = 1    
+clock_drift ='15s'  
+trusting_period = '7days' 
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'  
+list = [
+#['transfer', 'channel-2']
+]
+
+[[chains]]
+id = 'omniflixhub-1'
+rpc_addr = 'http://0.0.0.0/omniflixhub/'
+grpc_addr = 'http://0.0.0.0:9021'
+websocket_addr = 'ws://0.0.0.0/omniflixhub/websocket'
+rpc_timeout = '15s'
+account_prefix = 'omniflix'
+key_name = 'omniflix'
+max_tx_size = 180000
+store_prefix = 'ibc'
+max_gas = 2000000
+gas_price = { price = 0.005, denom = 'uflix' }
+gas_adjustment = 0.1
+clock_drift = '15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-6']
+]
+
+[[chains]]
+id = 'columbus-5'
+rpc_addr = 'http://0.0.0.0/terra/'
+grpc_addr = 'http://0.0.0.0:9022'
+websocket_addr = 'ws://0.0.0.0/terra/websocket'
+rpc_timeout = '30s'
+account_prefix = 'terra'
+key_name = 'terra'
+max_tx_size = 650000
+store_prefix = 'ibc'
+max_gas = 700000  
+gas_price = { price = 25, denom = 'ukrw' }
+gas_adjustment = 0.1
+clock_drift ='5s'
+trusting_period = '14days'
+memo_prefix = 'Delegate Notional: build interchain expressway'
+trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-53']
+]
+
+
+[[chains]]
+id = 'gravity-bridge-3'
+rpc_addr = 'http://0.0.0.0/gravitybridge/'
+grpc_addr = 'http://0.0.0.0:9026'
+websocket_addr = 'ws://0.0.0.0/gravitybridge/websocket'
+rpc_timeout = '10s'
+account_prefix = 'gravity'
+key_name = 'gravity'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 1600000
+max_gas = 5000000
+gas_price = { price = 0.0261, denom = 'ugraviton' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '14days'
+memo_prefix = 'Delegate Notional: build interchain expressway'
+trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-66']
+]
+
+[[chains]]
+id = 'comdex-1'
+rpc_addr= 'http://0.0.0.0/comdex/'
+grpc_addr = 'http://0.0.0.0:9027'
+websocket_addr = 'ws://0.0.0.0/comdex/websocket'
+rpc_timeout = '15s'
+account_prefix = 'comdex'
+key_name = 'comdex'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 200000
+gas_price = { price = 0.0025, denom = 'ucmdx' }
+gas_adjustment = 1
+clock_drift ='1000s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-27']
+]
+
+[[chains]]
+id = 'bitsong-2b'
+rpc_addr= 'http://0.0.0.0/bitsong/'
+grpc_addr = 'http://0.0.0.0:9029'	
+websocket_addr = 'ws://0.0.0.0/bitsong/websocket'
+rpc_timeout = '15s'
+account_prefix = 'bitsong'
+key_name = 'bitsong'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 200000
+gas_price = { price = 0.0025, denom = 'ubtsg' }
+gas_adjustment = 1
+clock_drift ='1000s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-7']
+]
+
+[[chains]]
+id = 'cerberus-chain-1'
+rpc_addr= 'http://0.0.0.0/cerberus/'
+grpc_addr = 'http://0.0.0.0:9028'
+websocket_addr = 'ws://0.0.0.0/cerberus/websocket'
+rpc_timeout = '15s'
+account_prefix = 'cerberus'
+key_name = 'cerberus'
+store_prefix = 'ibc'
+max_tx_size = 180000
+max_gas = 200000
+gas_price = { price = 0.0025, denom = 'ucrbrus' }
+gas_adjustment = 1
+clock_drift ='1000s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = 'Delegate Notional: build interchain expressway'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+['transfer', 'channel-4']
+]
+
+#[[chains]]
+#id = 'secret-4'
+#rpc_addr= ''
+#grpc_addr = ''
+#websocket_addr = ''
+#rpc_timeout = '45s'
+#account_prefix = 'secret'
+#key_name = 'secret'
+#store_prefix = 'ibc'
+#max_tx_size = 180000
+#max_gas = 2000000
+#gas_price = { price = 0.0005, denom = 'uscrt' }
+#gas_adjustment = 1
+#clock_drift ='1000s'
+#trusting_period = '14days'
+#trust_threshold = { numerator = '1', denominator = '3' }
+#memo_prefix = 'Relayed by Notional and ConsensusOne!'
+#[chains.packet_filter]                                                                                    
+#policy = 'allow'
+#list = [
+#['transfer', 'channel-15']
+#]

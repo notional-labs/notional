@@ -111,7 +111,52 @@ cheqdosmo:
       
 ```
 
-
+*Rly v2.0.0 config format:
+```yaml
+    api-listen-addr: :5183
+    timeout: 20s
+    light-cache-size: 20
+chains:
+    - type: cosmos
+      value:
+        key: osmosis
+        chain-id: osmosis-1
+        rpc-addr: RPC
+        account-prefix: osmo
+        keyring-backend: test
+        gas-adjustment: 1.2
+        gas-prices: 0.001uosmo
+        debug: false
+        timeout: 20s
+        output-format: json
+        sign-mode: direct
+    - type: cosmos
+      value:
+        key: terra
+        chain-id: columbus-5
+        rpc-addr: RPC
+        account-prefix: terra
+        keyring-backend: test
+        gas-adjustment: 1.2
+        gas-prices: 150ukrw
+        debug: false
+        timeout: 20s
+        output-format: json
+        sign-mode: direct
+paths:
+    osmoterra:
+        src:
+            chain-id: osmosis-1
+            client-id: 07-tendermint-1549
+            connection-id: connection-1215
+        dst:
+            chain-id: columbus-5
+            client-id: 07-tendermint-12
+            connection-id: connection-11
+        src-channel-filter:
+            rule: ""
+            channel-list: []
+```
 
 
 ## Setup
