@@ -132,7 +132,7 @@ list = [
 
 
 [[chains]]
-id = 'kava-9'
+id = 'kava_2222-10'
 rpc_addr = 'http://127.0.0.1:2201'
 grpc_addr = 'http://127.0.0.1:2202'
 websocket_addr = 'ws://127.0.0.1:2201/websocket'

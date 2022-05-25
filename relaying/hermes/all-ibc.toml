@@ -412,7 +412,7 @@ policy = 'allow'
 list = []
 
 [[chains]]
-id = 'kava-9'
+id = 'kava_2222-10'
 rpc_addr = 'http:///kava/'
 grpc_addr = 'http://:9018'
 websocket_addr = 'ws:///kava/websocket'
