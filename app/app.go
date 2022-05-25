@@ -688,31 +688,8 @@ func (app *App) RegisterTendermintService(clientCtx client.Context) {
 }
 
 func (app *App) RegisterUpgradeHandlers() {
-	planName := "buddheads"
-	app.UpgradeKeeper.SetUpgradeHandler(planName, func(ctx sdk.Context, plan upgradetypes.Plan, _ module.VersionMap) (module.VersionMap, error) {
-		// delete new modules from the map, for _new_ modules as to not skip InitGenesis
-		fromVM := map[string]uint64{
-			"auth":         2,
-			"authz":        1,
-			"bank":         2,
-			"capability":   1,
-			"crisis":       1,
-			"distribution": 2,
-			"evidence":     1,
-			"feegrant":     1,
-			"genutil":      1,
-			"gov":          2,
-			"ibc":          2,
-			"mint":         1,
-			"params":       1,
-			"slashing":     2,
-			"staking":      2,
-			"transfer":     1,
-			"upgrade":      1,
-			"vesting":      1,
-			"bcna":         1,
-		}
-		delete(fromVM, authz.ModuleName)
+	planName := "buddheads1"
+	app.UpgradeKeeper.SetUpgradeHandler(planName, func(ctx sdk.Context, plan upgradetypes.Plan, fromVM module.VersionMap) (module.VersionMap, error) {
 		return app.mm.RunMigrations(ctx, app.configurator, fromVM)
 	})
 
@@ -723,7 +700,7 @@ func (app *App) RegisterUpgradeHandlers() {
 
 	if upgradeInfo.Name == planName && !app.UpgradeKeeper.IsSkipHeight(upgradeInfo.Height) {
 		storeUpgrades := storetypes.StoreUpgrades{
-			Added: []string{authz.ModuleName},
+			Added: []string{authzkeeper.StoreKey},
 		}
 
 		// Configure store loader that checks if version == upgradeHeight and applies store upgrades
