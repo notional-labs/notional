@@ -24,11 +24,11 @@ echo "TRUST HASH: $TRUST_HASH"
 
 
 # export state sync vars
-export BCNAD_STATESYNC_ENABLE=true
-export BCNAD_P2P_MAX_NUM_OUTBOUND_PEERS=200
-export BCNAD_STATESYNC_RPC_SERVERS="https://q-silver.theamsolutions.info:443,https://q-silver.theamsolutions.info:443"
-export BCNAD_STATESYNC_TRUST_HEIGHT=$BLOCK_HEIGHT
-export BCNAD_STATESYNC_TRUST_HASH=$TRUST_HASH
-export BCNAD_P2P_SEEDS="1908031d18336ed61728ccb12d4a8cb54342eee1@161.97.82.203:26256"
+export QUICKSILVERD_STATESYNC_ENABLE=true
+export QUICKSILVERD_P2P_MAX_NUM_OUTBOUND_PEERS=200
+export QUICKSILVERD_STATESYNC_RPC_SERVERS="https://q-silver.theamsolutions.info:443,https://q-silver.theamsolutions.info:443"
+export QUICKSILVERD_STATESYNC_TRUST_HEIGHT=$BLOCK_HEIGHT
+export QUICKSILVERD_STATESYNC_TRUST_HASH=$TRUST_HASH
+export QUICKSILVERD_P2P_SEEDS="1908031d18336ed61728ccb12d4a8cb54342eee1@161.97.82.203:26256"
 
 quicksilverd start --x-crisis-skip-assert-invariants --p2p.laddr tcp://0.0.0.0:2390 --rpc.laddr tcp://127.0.0.1:2391 --grpc.address 127.0.0.1:2392 --grpc-web.address 127.0.0.1:2393
