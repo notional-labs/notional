@@ -31,13 +31,13 @@ jobs:
         key: npm-${{ hashFiles('package-lock.json') }}
         restore-keys: npm-
 
-    - name: Build the web
-      env:
-        NODE_OPTIONS: --openssl-legacy-provider
-      run: |
-        cd vue
-        npm ci --ignore-scripts
-        npm run build
+#     - name: Build the web
+#       env:
+#         NODE_OPTIONS: --openssl-legacy-provider
+#       run: |
+#         cd vue
+#         npm ci --ignore-scripts
+#         npm run build
     
     - name: Transfer /dist folder to server
       uses: garygrossgarten/github-action-scp@release
