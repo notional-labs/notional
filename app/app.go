@@ -699,6 +699,27 @@ func (app *App) RegisterTendermintService(clientCtx client.Context) {
 func (app *App) RegisterUpgradeHandlers() {
 	planName := "strangeBuddheads"
 	app.UpgradeKeeper.SetUpgradeHandler(planName, func(ctx sdk.Context, plan upgradetypes.Plan, fromVM module.VersionMap) (module.VersionMap, error) {
+		// strangeBuddheads upgrade. IBC-go v.3.1.0
+		// list of traces that must replace the old traces in store
+		var newTraces []ibctransfertypes.DenomTrace
+		app.TransferKeeper.IterateDenomTraces(ctx,
+			func(dt ibctransfertypes.DenomTrace) bool {
+				// check if the new way of splitting FullDenom
+				// into Trace and BaseDenom passes validation and
+				// is the same as the current DenomTrace.
+				// If it isn't then store the new DenomTrace in the list of new traces.
+				newTrace := ibctransfertypes.ParseDenomTrace(dt.GetFullDenomPath())
+				if err := newTrace.Validate(); err == nil && !equalTraces(newTrace, dt) {
+					newTraces = append(newTraces, newTrace)
+				}
+
+				return false
+			})
+
+		// replace the outdated traces with the new trace information
+		for _, nt := range newTraces {
+			app.TransferKeeper.SetDenomTrace(ctx, nt)
+		}
 		return app.mm.RunMigrations(ctx, app.configurator, fromVM)
 	})
 
@@ -715,6 +736,11 @@ func (app *App) RegisterUpgradeHandlers() {
 		// Configure store loader that checks if version == upgradeHeight and applies store upgrades
 		app.SetStoreLoader(upgradetypes.UpgradeStoreLoader(upgradeInfo.Height, &storeUpgrades))
 	}
+}
+
+// strangeBuddheads upgrade. IBC-go v.3.1.0 aux
+func equalTraces(dtA, dtB ibctransfertypes.DenomTrace) bool {
+	return dtA.BaseDenom == dtB.BaseDenom && dtA.Path == dtB.Path
 }
 
 // GetMaccPerms returns a copy of the module account permissions
