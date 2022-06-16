@@ -90,7 +90,7 @@ Each chain has 10 ports it can use.  WIP.
  Cerberus        | 2360-2369  | cerberus-chain-1
  AssetMantle     | 2370-2379  | mantle-1
  fetchai         | 2380-2389  | fetchhub-4
- Quicksilver     | 2390-2399  | quicktest-3
+ Quicksilver     | 2390-2399  | rhapsody-5
  Nomic           | 2400-2409  | stakenet-2
  Umee            | 2410-2419  | umee-1
  Sei             | 2420-2429  | sei-testnet-2
