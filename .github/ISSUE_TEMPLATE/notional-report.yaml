@@ -25,13 +25,16 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: Brief summary of what people is doing
+      label: Brief summary of what you are doing
       value: |
         # What I am doing 1
         * Link to issues, pr?
         * Any problems doing this?
+        * How many hour doing this?
+        
         # What I am doing 2
         * Link to issues, pr?
         * Any problems doing this?
+        * How many hour doing this?
     validations:
       required: true
