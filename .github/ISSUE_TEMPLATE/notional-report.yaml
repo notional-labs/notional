@@ -1,0 +1,37 @@
+name: 📝 Notional Weekly Report
+description: a self written report on what an employee is doing
+assignees: 
+  - nghuyenthevinh2000
+title: "Weekly Self-report"
+labels: ["📝 Self report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form helps:
+          1. People telling what they are doing.
+          2. Resolving matters of someone due to insufficient help or resource.
+  - type: input
+    attributes:
+      label: Who is writing this?
+      placeholder: "@nghuyenthevinh2000"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Valid start of this week
+      placeholder: "dd/mm/yyyy"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Brief summary of what people is doing
+      value: |
+        # What I am doing 1
+        * Link to issues, pr?
+        * Any problems doing this?
+        # What I am doing 2
+        * Link to issues, pr?
+        * Any problems doing this?
+    validations:
+      required: true
