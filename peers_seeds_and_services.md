@@ -27,7 +27,7 @@ be87c9abf1c54e1cc2f37e68d21fcd61679abb4c@65.21.196.90:46656
 
 ## BitCanna
 7c00beb4956bc40cd33ced6e2c2ffe07d4fa32e7@95.216.242.82:36656
-21484408a7bcf0134689ddf52a7d9c8299cb65b5@65.108.103.215:36656
+21484408a7bcf0134689ddf52a7d9c8299cb65b5@176.9.139.74:36656
 
 ## Paranormal Brothers
 df99de6cec9152c517990317b340b8b9a307493c@193.34.144.156:26656
@@ -108,7 +108,7 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
       },
       {
         "id": "21484408a7bcf0134689ddf52a7d9c8299cb65b5",
-        "address": "65.108.103.215:36656",
+        "address": "176.9.139.74:36656",
         "provider": "BitCanna"
       },
       {
