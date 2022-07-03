@@ -28,6 +28,7 @@ Notional is an **active set** validator on:
 25) [Provenance](https://www.mintscan.io/provenance/validators/pbvaloper10ap9fj9uq50cardmlzdj367kqg5x3ghjdp2v6p)
 26) [Vidulum](https://ping.pub/vidulum/staking/vdlvaloper16pu0t4yauhduaxvu3k29w539da5d2mfxqjdmjj)
 27) [Bitsong](https://www.mintscan.io/bitsong/validators/bitsongvaloper1je872m97uce2ttztkh8pdx6zezw5kr03dj3lff)
+28) [Fetch.AI](https://www.mintscan.io/fetchai/validators/fetchvaloper1s9myentgxavnpw7648an2v6zvvpza0axa6dd0x)
 
 ## The role of a validator
 
