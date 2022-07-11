@@ -58,6 +58,8 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
   * https://polkachu.com/state_sync/bitcanna
 ## 3Tekos StateSync Server
   * https://bcna-rpc.3tekos.fr:443
+## Panthea EU StateSync Server
+  * https://bitcannarpc.panthea.eu:443
 
 # Info, doc and other services from BitCanna validators & partners (feel free to make a PR)
 ### BitCanna Docs
@@ -169,6 +171,10 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
       {
         "address": "https://rpc-bitcanna.itastakers.com/",
         "provider": "itastakers"
+      },
+      {
+        "address": "https://bitcannarpc.panthea.eu",
+        "provider": "Panthea EU"
       }
     ],
     "grpc": [
@@ -193,6 +199,10 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
       {
         "address": "http://bitcanna.stakelab.fr/",
         "provider": "stakelab"
+      },
+      {
+        "address": "https://bitcannaapi.panthea.eu",
+        "provider": "Panthea EU"
       }
     ]
   }
