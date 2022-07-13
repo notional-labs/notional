@@ -39,8 +39,7 @@ ec283da64f69f8c0dee4671021edc419bbeb4034@157.90.179.34:56656
 282fe52546750ca86e92e3f567cbdb2897694b5b@207.244.225.205:26656
 
 ## NodeJumper ⭐️| nodejumper.io
-45589e6147e36dda9e429668484d7614fb25b142@rpc1.nodejumper.io:27656
-add5f91ecb28b785e8c6b51b0a4b17974196a035@rpc2.nodejumper.io:27656
+45589e6147e36dda9e429668484d7614fb25b142@bitcanna.nodejumper.io:27656
 
 ## 3Tekos
 ec12bf44fd3c64db457f45f7d0111735c559a37d@185.218.126.71:26657
@@ -72,7 +71,7 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
 ### Polkachu: snapshot service info
 * https://polkachu.com/tendermint_snapshots/bitcanna
 
-### NodeJumper ⭐️| nodejumper.io: snapshot and state sync services, isntallation scripts (manual/automation), price statics and more
+### NodeJumper ⭐️| nodejumper.io: snapshot and state sync services, installation scripts (manual/automation), cheat sheet and more
 * https://nodejumper.io/bitcanna
 
 ### DappLocker: Stats service
