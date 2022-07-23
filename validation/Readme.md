@@ -1,5 +1,13 @@
 # Notional Validation
 
+## Index
+1. [What chains does Notional validate?](#what-chains-does-notional-validate)
+1. [The role of a validator](#the-role-of-a-validator)
+1. [Our validator policy](#our-validator-policy)
+1. [Where we want to validate](#where-we-want-to-validate)
+1. [How we validate](#how-we-validate)
+1. [Validators and relayers partnerships](#validators-and-relayers-partnerships)
+
 ## What chains does Notional validate?
 Notional is an **active set** validator on:
 1) [Osmosis](https://www.mintscan.io/osmosis/validators/osmovaloper1083svrca4t350mphfv9x45wq9asrs60c6rv0j5)
@@ -39,7 +47,10 @@ We are in it for the long-haul.
 
 We manage our organization by git issues, and if your community needs help, they can make an issue here.  
 
-
+## Our validator policy
+1. We do not validate chains whose development teams do not prioritize user well-being
+1. We will test binary release before public upgrade on chain that we validate.
+    * As a validator on many chains, we have directly experienced chain upgrade failure when core team overlooks a bug. It is always good to have a second independent inspection from an experienced validator like Notional.
 
 ## Where we want to validate
 Notional is validating, but not in the active set:
@@ -62,14 +73,7 @@ We aren't most validators.  We're operating under the assumption that **notional
 * 4G network backup
 * Love, passion, play, and fun:  we want to get to know you, your software, and your users and build something better than exists today.
 
-
-### Things we politely decline
-* We do not validate chains whose development teams do not prioritize user well-being
-
-
-
-
-## Partnerships with other validators / relayers
+## Validators and relayers partnerships
 * https://github.com/chandrastation
 * NullMames
 
