@@ -49,8 +49,10 @@ We manage our organization by git issues, and if your community needs help, they
 
 ## Our validator policy
 1. We do not validate chains whose development teams do not prioritize user well-being
-1. We will test binary release before public upgrade on chain that we validate.
+1. We prioritize ethics and the well-being of users above all other matters.  When there is a conflict of interest, we will discuss that with the community in an open fashion at: https://twitter.com/notionaldao.  We discuss things on twitter, because it is a commons.
+1. We audit and test releases before public upgrade on chain that we validate.
     * As a validator on many chains, we have directly experienced chain upgrade failure when core team overlooks a bug. It is always good to have a second independent inspection from an experienced validator like Notional.
+1. While we strive for transparency, in security critical situations where disclosures could harm user well being, we're silent as a mouse. 
 
 ## Where we want to validate
 Notional is validating, but not in the active set:
@@ -73,14 +75,14 @@ We aren't most validators.  We're operating under the assumption that **notional
 * 4G network backup
 * Love, passion, play, and fun:  we want to get to know you, your software, and your users and build something better than exists today.
 
-## Validators and relayers partnerships
+## Validators and relayers partnerships <- this became the GMA.
 * https://github.com/chandrastation
 * NullMames
 
 Our technical partners agree to:
 * Mutual Aid Re: Uptime (eg: phone calls to one another)
 * Full commitment to open source, repeatable infrastructure (we only partner with validators who document their infrastructure)
-* Join a Signal chat, since it's not discord
+* Join a Twitter DM Chat, since it isn't discord. 
 * Share information about chain launches
 
 
