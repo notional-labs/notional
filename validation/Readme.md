@@ -58,6 +58,9 @@ We manage our organization by git issues, and if your community needs help, they
 Notional is validating, but not in the active set:
 * [Umee](https://www.mintscan.io/umee/validators/umeevaloper1dmahqt84r9je3sqvljzjrttjj78cmrf39k5zhs)
 
+## Testnet validator
+* [Axelar](https://testnet.axelarscan.io/validator/axelarvaloper19m6f7gzvjpzj5mm72wcuayr6ds60sjtnkx2j0k)
+
 Notional wishes to validate:
 * Every IBC-enabled blockchain
 
