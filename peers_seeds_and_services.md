@@ -68,7 +68,7 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
 * https://stakely.io/faucet/bitcanna-bcna
 
 ### Paranormal Brothers: snapshot service info 
-* https://bitcana.paranorm.pro/
+* https://bс.paranorm.pro/
 
 ### Polkachu: snapshot service info
 * https://polkachu.com/tendermint_snapshots/bitcanna
@@ -156,7 +156,7 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
         "provider": "bitcanna"
       },
       {
-        "address": "http://bitcana.paranorm.pro:26657/",
+        "address": "http://bcna.paranorm.pro:433/",
         "provider": "ParanormalBrothers"
       },
       {
