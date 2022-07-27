@@ -38,6 +38,7 @@ Notional is an **active set** validator on:
 27) [Bitsong](https://www.mintscan.io/bitsong/validators/bitsongvaloper1je872m97uce2ttztkh8pdx6zezw5kr03dj3lff)
 28) [Fetch.AI](https://www.mintscan.io/fetchai/validators/fetchvaloper1s9myentgxavnpw7648an2v6zvvpza0axa6dd0x)
 29) [Gravity-Bridge](https://www.mintscan.io/gravity-bridge/validators/gravityvaloper10f6jwwrkyhf40v8lx9cdtypqyl796m5vemg00n)
+30) [Umee](https://www.mintscan.io/umee/validators/umeevaloper1dmahqt84r9je3sqvljzjrttjj78cmrf39k5zhs)
 
 ## The role of a validator
 
@@ -56,7 +57,6 @@ We manage our organization by git issues, and if your community needs help, they
 
 ## Where we want to validate
 Notional is validating, but not in the active set:
-* [Umee](https://www.mintscan.io/umee/validators/umeevaloper1dmahqt84r9je3sqvljzjrttjj78cmrf39k5zhs)
 
 ## Testnet validator
 * [Axelar](https://testnet.axelarscan.io/validator/axelarvaloper19m6f7gzvjpzj5mm72wcuayr6ds60sjtnkx2j0k)
