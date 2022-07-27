@@ -93,7 +93,8 @@ Each chain has 10 ports it can use.  WIP.
  Quicksilver     | 2390-2399  | rhapsody-5
  Nomic           | 2400-2409  | stakenet-2
  Umee            | 2410-2419  | umee-1
- Sei             | 2420-2429  | sei-testnet-2
+ Sei             | 2420-2429  | atlantic-1
+ Stride          | 2430-2439  | stride-testnet-2
 
    Service         | Port  
 -------------------|------ 
@@ -150,3 +151,4 @@ Quicksilver  | dd3460ec11f78b4a7c4336f22a356fe00805ab64@seed.quicktest-1.quicksi
 Nomic        | 238120dfe716082754048057c1fdc3d6f09609b5@161.35.51.124:26656,a67d7a4d90f84d5c67bfc196aac68441ba9484a6@167.99.119.196:26659
 Umee         | 08554ecf7c4c33cc809bceefc044c9bd23b933bd@34.146.11.20:26656,da42a6b213dd0e0dcd3b5d6feb662d7bf7a8cee6@34.93.115.217:26656,22d50ffd5abb3a2bef8186816d1aa914092c5ecf@35.189.2.114:26656,f1dc58164af33f2db6c5a5bd6b2646399b18bbb4@35.187.48.177:26656,6b785fc3a088de3a5e8d222a980936f2187b8c56@34.65.213.164:26656,1d85a200deaefa6ceb20328a0fd83787ce329aa6@34.152.15.182:26656,b3f810438aa53685bba63705f3c29ec122e1e40c@34.127.76.180:26656,831e037739cb6047f9b2d28e38c4cd7e7a550d04@35.199.126.245:26656
 Sei          | 5b5ec09067a5fcaccf75f19b45ab29ce07e0167c@18.118.159.154:26656
+Stride       | c0b278cbfb15674e1949e7e5ae51627cb2a2d0a9@seedv2.poolparty.stridenet.co:26656
