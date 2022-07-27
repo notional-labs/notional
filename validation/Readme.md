@@ -11,34 +11,34 @@
 ## What chains does Notional validate?
 Notional is an **active set** validator on:
 1) [Osmosis](https://www.mintscan.io/osmosis/validators/osmovaloper1083svrca4t350mphfv9x45wq9asrs60c6rv0j5)
-3) [Cosmoshub](https://www.mintscan.io/cosmos/validators/cosmosvaloper1083svrca4t350mphfv9x45wq9asrs60cdmrflj)
-4) [Juno](https://www.mintscan.io/juno/validators/junovaloper1083svrca4t350mphfv9x45wq9asrs60cpqzg0y)
-5) [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1083svrca4t350mphfv9x45wq9asrs60cyssqu6)
-6) [Omniflix](https://www.skynetexplorers.com/omniflix/staking/omniflixvaloper15wshq6lmxmcn9vxky2mxf8zhstpn9ywmfc5ke5)
-7) [Secret-Network](https://www.mintscan.io/secret/validators/secret18rchk5exp2vzcwrwuret5sjwpxhf4sq2m9hgq2)
-8) [Starname](https://www.mintscan.io/starname/validators/starvaloper1pdqlmncych8uzsfdnsptv7s0wpazc0rgv7zc6h)
-9) [Regen](https://www.mintscan.io/regen/validators/regenvaloper1083svrca4t350mphfv9x45wq9asrs60ct2p9a5)
-10) [Akash](https://www.mintscan.io/akash/validators/akashvaloper1083svrca4t350mphfv9x45wq9asrs60c0k5a63)
-11) [Sentinel](https://www.mintscan.io/sentinel/validators/sentvaloper1083svrca4t350mphfv9x45wq9asrs60cv37gc8)
-12) [E-Money](https://www.mintscan.io/emoney/validators/emoneyvaloper16dc379m0qj64g4pr4nkl7ewak52qy2srpe6lxp)
-13) [Ixo](https://blockscan.ixo.world/validator/ixovaloper1083svrca4t350mphfv9x45wq9asrs60camel0h)
-14) [Likecoin](https://likecoin.bigdipper.live/validators/cosmosvaloper16dc379m0qj64g4pr4nkl7ewak52qy2srvwj2rz)
-15) [Ki](https://blockchain.ki/validator/kivaloper1lmkzaxztjpesh0mf7qy76l5npqwc7fk3l2k57g)
-16) [Cyber](https://cyb.ai/network/bostrom/hero/bostromvaloper1g65rmjkeuy5rywx04s4fvwfylmlz98vq4gzln5)
-17) [Cheqd](https://explorer.cheqd.io/validators/cheqdvaloper1gyjqlfkrggd0uyd748fw9y5kq9xzmjqqh8848x)
-18) [Stargaze](https://www.mintscan.io/stargaze/validators/starsvaloper1v8yp5x5kfex4wep2pfuuyw68cn2lst3ksl0gss)
-19) [Band](https://www.mintscan.io/band/validators/bandvaloper19huytqr8srz9wcdhvas5cvxddg8dtqcv6tce0s)
-20) [Chihuahua](https://www.mintscan.io/chihuahua/validators/chihuahuavaloper1h6vcu4r2hx70x5f0l3du3ey2g98u9ut2tafnnv)
-21) [Kava](https://www.mintscan.io/kava/validators/kavavaloper13jyqfhak8mu4c7pydjm3eu4qla7g06a9u6xf8g)
-22) [BitCanna](https://www.mintscan.io/bitcanna/validators/bcnavaloper1dl7w3myyfmnarh0t5uxmy7qe6szagz3kyhzq07)
-23) [Konstellation](https://www.mintscan.io/konstellation/validators/darcvaloper1fndgrsqmmq68ppl42wjkxh32nwpuj7vqtgep38)
-24) [Evmos](https://www.mintscan.io/evmos/validators/evmosvaloper1rv94jqhlhx6makfwl6qs390e4shg32m6w6dxzy)
-25) [Provenance](https://www.mintscan.io/provenance/validators/pbvaloper10ap9fj9uq50cardmlzdj367kqg5x3ghjdp2v6p)
-26) [Vidulum](https://ping.pub/vidulum/staking/vdlvaloper16pu0t4yauhduaxvu3k29w539da5d2mfxqjdmjj)
-27) [Bitsong](https://www.mintscan.io/bitsong/validators/bitsongvaloper1je872m97uce2ttztkh8pdx6zezw5kr03dj3lff)
-28) [Fetch.AI](https://www.mintscan.io/fetchai/validators/fetchvaloper1s9myentgxavnpw7648an2v6zvvpza0axa6dd0x)
-29) [Gravity-Bridge](https://www.mintscan.io/gravity-bridge/validators/gravityvaloper10f6jwwrkyhf40v8lx9cdtypqyl796m5vemg00n)
-30) [Umee](https://www.mintscan.io/umee/validators/umeevaloper1dmahqt84r9je3sqvljzjrttjj78cmrf39k5zhs)
+2) [Cosmoshub](https://www.mintscan.io/cosmos/validators/cosmosvaloper1083svrca4t350mphfv9x45wq9asrs60cdmrflj)
+3) [Juno](https://www.mintscan.io/juno/validators/junovaloper1083svrca4t350mphfv9x45wq9asrs60cpqzg0y)
+4) [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1083svrca4t350mphfv9x45wq9asrs60cyssqu6)
+5) [Omniflix](https://www.skynetexplorers.com/omniflix/staking/omniflixvaloper15wshq6lmxmcn9vxky2mxf8zhstpn9ywmfc5ke5)
+6) [Secret-Network](https://www.mintscan.io/secret/validators/secret18rchk5exp2vzcwrwuret5sjwpxhf4sq2m9hgq2)
+7) [Starname](https://www.mintscan.io/starname/validators/starvaloper1pdqlmncych8uzsfdnsptv7s0wpazc0rgv7zc6h)
+8) [Regen](https://www.mintscan.io/regen/validators/regenvaloper1083svrca4t350mphfv9x45wq9asrs60ct2p9a5)
+9) [Akash](https://www.mintscan.io/akash/validators/akashvaloper1083svrca4t350mphfv9x45wq9asrs60c0k5a63)
+10) [Sentinel](https://www.mintscan.io/sentinel/validators/sentvaloper1083svrca4t350mphfv9x45wq9asrs60cv37gc8)
+11) [E-Money](https://www.mintscan.io/emoney/validators/emoneyvaloper16dc379m0qj64g4pr4nkl7ewak52qy2srpe6lxp)
+12) [Ixo](https://blockscan.ixo.world/validator/ixovaloper1083svrca4t350mphfv9x45wq9asrs60camel0h)
+13) [Likecoin](https://likecoin.bigdipper.live/validators/cosmosvaloper16dc379m0qj64g4pr4nkl7ewak52qy2srvwj2rz)
+14) [Ki](https://blockchain.ki/validator/kivaloper1lmkzaxztjpesh0mf7qy76l5npqwc7fk3l2k57g)
+15) [Cyber](https://cyb.ai/network/bostrom/hero/bostromvaloper1g65rmjkeuy5rywx04s4fvwfylmlz98vq4gzln5)
+16) [Cheqd](https://explorer.cheqd.io/validators/cheqdvaloper1gyjqlfkrggd0uyd748fw9y5kq9xzmjqqh8848x)
+17) [Stargaze](https://www.mintscan.io/stargaze/validators/starsvaloper1v8yp5x5kfex4wep2pfuuyw68cn2lst3ksl0gss)
+18) [Band](https://www.mintscan.io/band/validators/bandvaloper19huytqr8srz9wcdhvas5cvxddg8dtqcv6tce0s)
+19) [Chihuahua](https://www.mintscan.io/chihuahua/validators/chihuahuavaloper1h6vcu4r2hx70x5f0l3du3ey2g98u9ut2tafnnv)
+20) [Kava](https://www.mintscan.io/kava/validators/kavavaloper13jyqfhak8mu4c7pydjm3eu4qla7g06a9u6xf8g)
+21) [BitCanna](https://www.mintscan.io/bitcanna/validators/bcnavaloper1dl7w3myyfmnarh0t5uxmy7qe6szagz3kyhzq07)
+22) [Konstellation](https://www.mintscan.io/konstellation/validators/darcvaloper1fndgrsqmmq68ppl42wjkxh32nwpuj7vqtgep38)
+23) [Evmos](https://www.mintscan.io/evmos/validators/evmosvaloper1rv94jqhlhx6makfwl6qs390e4shg32m6w6dxzy)
+24) [Provenance](https://www.mintscan.io/provenance/validators/pbvaloper10ap9fj9uq50cardmlzdj367kqg5x3ghjdp2v6p)
+25) [Vidulum](https://ping.pub/vidulum/staking/vdlvaloper16pu0t4yauhduaxvu3k29w539da5d2mfxqjdmjj)
+26) [Bitsong](https://www.mintscan.io/bitsong/validators/bitsongvaloper1je872m97uce2ttztkh8pdx6zezw5kr03dj3lff)
+27) [Fetch.AI](https://www.mintscan.io/fetchai/validators/fetchvaloper1s9myentgxavnpw7648an2v6zvvpza0axa6dd0x)
+28) [Gravity-Bridge](https://www.mintscan.io/gravity-bridge/validators/gravityvaloper10f6jwwrkyhf40v8lx9cdtypqyl796m5vemg00n)
+29) [Umee](https://www.mintscan.io/umee/validators/umeevaloper1dmahqt84r9je3sqvljzjrttjj78cmrf39k5zhs)
 
 ## The role of a validator
 
@@ -58,8 +58,11 @@ We manage our organization by git issues, and if your community needs help, they
 ## Where we want to validate
 Notional is validating, but not in the active set:
 
-## Testnet validator
-* [Axelar](https://testnet.axelarscan.io/validator/axelarvaloper19m6f7gzvjpzj5mm72wcuayr6ds60sjtnkx2j0k)
+## Testnet validators
+1) [Axelar](https://testnet.axelarscan.io/validator/axelarvaloper19m6f7gzvjpzj5mm72wcuayr6ds60sjtnkx2j0k)
+2) [Stride](https://stride.explorers.guru/validator/stridevaloper1kvwpcr45lh7wn53wp9ac42ypr3t8zjqy6ks9au)
+3) [Sei](https://sei.explorers.guru/validator/seivaloper1d4lyuujr4urd7fkdlytccrd0cljqycycjp9xz8)
+
 
 Notional wishes to validate:
 * Every IBC-enabled blockchain
