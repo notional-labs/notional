@@ -2,7 +2,7 @@
 
 BitCanna provides a decentralized payment network, supply chain and trust network for the legal cannabis industry by utilizing the BCNA coin.
 
-Last version (v.1.3.1 Ruderalis) of our development uses Cosmos SDK v.0.45.1 & Tendermint v.0.34.15
+Last version (v1.4.3 strangeBuddheads) of our development uses Cosmos SDK v0.45.5 & Tendermint v0.34.20 & IBC-go v3.1.0
 
 These docs at Github are chain related. For more information about our coin, partners and roadmap visit:
 * Our website: https://www.bitcanna.io

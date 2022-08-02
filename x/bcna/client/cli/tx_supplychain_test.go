@@ -19,7 +19,7 @@ func TestCreateSupplychain(t *testing.T) {
 	val := net.Validators[0]
 	ctx := val.ClientCtx
 
-	fields := []string{"xyz", "xyz", "xyz"}
+	fields := []string{"xyz", "xyz", "xyz", "xyz"}
 	for _, tc := range []struct {
 		desc string
 		args []string
@@ -36,7 +36,6 @@ func TestCreateSupplychain(t *testing.T) {
 			},
 		},
 	} {
-		tc := tc
 		t.Run(tc.desc, func(t *testing.T) {
 			args := []string{}
 			args = append(args, fields...)
@@ -60,7 +59,7 @@ func TestUpdateSupplychain(t *testing.T) {
 	val := net.Validators[0]
 	ctx := val.ClientCtx
 
-	fields := []string{"xyz", "xyz", "xyz"}
+	fields := []string{"xyz", "xyz", "xyz", "xyz"}
 	common := []string{
 		fmt.Sprintf("--%s=%s", flags.FlagFrom, val.Address.String()),
 		fmt.Sprintf("--%s=true", flags.FlagSkipConfirmation),
@@ -92,7 +91,6 @@ func TestUpdateSupplychain(t *testing.T) {
 			code: sdkerrors.ErrKeyNotFound.ABCICode(),
 		},
 	} {
-		tc := tc
 		t.Run(tc.desc, func(t *testing.T) {
 			args := []string{tc.id}
 			args = append(args, fields...)
@@ -116,7 +114,7 @@ func TestDeleteSupplychain(t *testing.T) {
 	val := net.Validators[0]
 	ctx := val.ClientCtx
 
-	fields := []string{"xyz", "xyz", "xyz"}
+	fields := []string{"xyz", "xyz", "xyz", "xyz"}
 	common := []string{
 		fmt.Sprintf("--%s=%s", flags.FlagFrom, val.Address.String()),
 		fmt.Sprintf("--%s=true", flags.FlagSkipConfirmation),
@@ -148,7 +146,6 @@ func TestDeleteSupplychain(t *testing.T) {
 			code: sdkerrors.ErrKeyNotFound.ABCICode(),
 		},
 	} {
-		tc := tc
 		t.Run(tc.desc, func(t *testing.T) {
 			out, err := clitestutil.ExecTestCLICmd(ctx, cli.CmdDeleteSupplychain(), append([]string{tc.id}, tc.args...))
 			if tc.err != nil {

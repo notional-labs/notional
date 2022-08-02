@@ -30,6 +30,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth/vesting"
 	vestingtypes "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
 	"github.com/cosmos/cosmos-sdk/x/authz"
+	authzkeeper "github.com/cosmos/cosmos-sdk/x/authz/keeper"
+	authzmodule "github.com/cosmos/cosmos-sdk/x/authz/module"
 	"github.com/cosmos/cosmos-sdk/x/bank"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
@@ -73,16 +75,16 @@ import (
 	upgradeclient "github.com/cosmos/cosmos-sdk/x/upgrade/client"
 	upgradekeeper "github.com/cosmos/cosmos-sdk/x/upgrade/keeper"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
-	"github.com/cosmos/ibc-go/v2/modules/apps/transfer"
-	ibctransferkeeper "github.com/cosmos/ibc-go/v2/modules/apps/transfer/keeper"
-	ibctransfertypes "github.com/cosmos/ibc-go/v2/modules/apps/transfer/types"
-	ibc "github.com/cosmos/ibc-go/v2/modules/core"
-	ibcclient "github.com/cosmos/ibc-go/v2/modules/core/02-client"
-	ibcclientclient "github.com/cosmos/ibc-go/v2/modules/core/02-client/client"
-	ibcclienttypes "github.com/cosmos/ibc-go/v2/modules/core/02-client/types"
-	ibcporttypes "github.com/cosmos/ibc-go/v2/modules/core/05-port/types"
-	ibchost "github.com/cosmos/ibc-go/v2/modules/core/24-host"
-	ibckeeper "github.com/cosmos/ibc-go/v2/modules/core/keeper"
+	"github.com/cosmos/ibc-go/v3/modules/apps/transfer"
+	ibctransferkeeper "github.com/cosmos/ibc-go/v3/modules/apps/transfer/keeper"
+	ibctransfertypes "github.com/cosmos/ibc-go/v3/modules/apps/transfer/types"
+	ibc "github.com/cosmos/ibc-go/v3/modules/core"
+	ibcclient "github.com/cosmos/ibc-go/v3/modules/core/02-client"
+	ibcclientclient "github.com/cosmos/ibc-go/v3/modules/core/02-client/client"
+	ibcclienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
+	ibcporttypes "github.com/cosmos/ibc-go/v3/modules/core/05-port/types"
+	ibchost "github.com/cosmos/ibc-go/v3/modules/core/24-host"
+	ibckeeper "github.com/cosmos/ibc-go/v3/modules/core/keeper"
 	"github.com/spf13/cast"
 	abci "github.com/tendermint/tendermint/abci/types"
 	tmjson "github.com/tendermint/tendermint/libs/json"
@@ -90,8 +92,8 @@ import (
 	tmos "github.com/tendermint/tendermint/libs/os"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/starport/starport/pkg/cosmoscmd"
-	"github.com/tendermint/starport/starport/pkg/openapiconsole"
+	"github.com/ignite/cli/ignite/pkg/cosmoscmd"
+	"github.com/ignite/cli/ignite/pkg/openapiconsole"
 
 	"github.com/BitCannaGlobal/bcna/docs"
 
@@ -134,6 +136,7 @@ var (
 	// and genesis verification.
 	ModuleBasics = module.NewBasicManager(
 		auth.AppModuleBasic{},
+		authzmodule.AppModuleBasic{},
 		genutil.AppModuleBasic{},
 		bank.AppModuleBasic{},
 		capability.AppModuleBasic{},
@@ -201,6 +204,7 @@ type App struct {
 
 	// keepers
 	AccountKeeper    authkeeper.AccountKeeper
+	AuthzKeeper      authzkeeper.Keeper
 	BankKeeper       bankkeeper.Keeper
 	CapabilityKeeper *capabilitykeeper.Keeper
 	StakingKeeper    stakingkeeper.Keeper
@@ -229,7 +233,7 @@ type App struct {
 	// sm is the simulation manager
 	sm *module.SimulationManager
 
-	// the configurator - Ruderalis
+	// the configurator - strangeBuddheads upgrade
 	configurator module.Configurator
 }
 
@@ -256,11 +260,10 @@ func New(
 	bApp.SetInterfaceRegistry(interfaceRegistry)
 
 	keys := sdk.NewKVStoreKeys(
-		authtypes.StoreKey, banktypes.StoreKey, stakingtypes.StoreKey,
+		authtypes.StoreKey, authz.ModuleName, banktypes.StoreKey, stakingtypes.StoreKey,
 		minttypes.StoreKey, distrtypes.StoreKey, slashingtypes.StoreKey,
 		govtypes.StoreKey, paramstypes.StoreKey, ibchost.StoreKey, upgradetypes.StoreKey, feegrant.StoreKey,
-		evidencetypes.StoreKey, ibctransfertypes.StoreKey, capabilitytypes.StoreKey,
-		bcnamoduletypes.StoreKey,
+		evidencetypes.StoreKey, ibctransfertypes.StoreKey, capabilitytypes.StoreKey, bcnamoduletypes.StoreKey,
 		// this line is used by starport scaffolding # stargate/app/storeKey
 	)
 	tkeys := sdk.NewTransientStoreKeys(paramstypes.TStoreKey)
@@ -294,6 +297,11 @@ func New(
 	app.AccountKeeper = authkeeper.NewAccountKeeper(
 		appCodec, keys[authtypes.StoreKey], app.GetSubspace(authtypes.ModuleName), authtypes.ProtoBaseAccount, maccPerms,
 	)
+
+	app.AuthzKeeper = authzkeeper.NewKeeper(
+		keys[authz.ModuleName], appCodec, app.MsgServiceRouter(),
+	)
+
 	app.BankKeeper = bankkeeper.NewBaseKeeper(
 		appCodec, keys[banktypes.StoreKey], app.AccountKeeper, app.GetSubspace(banktypes.ModuleName), app.ModuleAccountAddrs(),
 	)
@@ -318,9 +326,6 @@ func New(
 	app.FeeGrantKeeper = feegrantkeeper.NewKeeper(appCodec, keys[feegrant.StoreKey], app.AccountKeeper)
 	app.UpgradeKeeper = upgradekeeper.NewKeeper(skipUpgradeHeights, keys[upgradetypes.StoreKey], appCodec, homePath, app.BaseApp)
 
-	//Update Ruderalis
-	app.RegisterUpgradeHandlers()
-
 	// register the staking hooks
 	// NOTE: stakingKeeper above is passed by reference, so that it will contain these hooks
 	app.StakingKeeper = *stakingKeeper.SetHooks(
@@ -344,11 +349,20 @@ func New(
 
 	// Create Transfer Keepers
 	app.TransferKeeper = ibctransferkeeper.NewKeeper(
-		appCodec, keys[ibctransfertypes.StoreKey], app.GetSubspace(ibctransfertypes.ModuleName),
-		app.IBCKeeper.ChannelKeeper, &app.IBCKeeper.PortKeeper,
-		app.AccountKeeper, app.BankKeeper, scopedTransferKeeper,
+		appCodec,
+		keys[ibctransfertypes.StoreKey],
+		app.GetSubspace(ibctransfertypes.ModuleName),
+		app.IBCKeeper.ChannelKeeper,
+		app.IBCKeeper.ChannelKeeper,
+		&app.IBCKeeper.PortKeeper,
+		app.AccountKeeper,
+		app.BankKeeper,
+		scopedTransferKeeper,
 	)
-	transferModule := transfer.NewAppModule(app.TransferKeeper)
+	var (
+		transferModule    = transfer.NewAppModule(app.TransferKeeper)
+		transferIBCModule = transfer.NewIBCModule(app.TransferKeeper)
+	)
 
 	// Create evidence Keeper for to register the IBC light client misbehaviour evidence route
 	evidenceKeeper := evidencekeeper.NewKeeper(
@@ -370,11 +384,14 @@ func New(
 	)
 	bcnaModule := bcnamodule.NewAppModule(appCodec, app.BcnaKeeper, app.AccountKeeper, app.BankKeeper)
 
+	//Call StrangeBuddheads upgrade func
+	app.RegisterUpgradeHandlers()
+
 	// this line is used by starport scaffolding # stargate/app/keeperDefinition
 
 	// Create static IBC router, add transfer route, then set and seal it
 	ibcRouter := ibcporttypes.NewRouter()
-	ibcRouter.AddRoute(ibctransfertypes.ModuleName, transferModule)
+	ibcRouter.AddRoute(ibctransfertypes.ModuleName, transferIBCModule)
 	// this line is used by starport scaffolding # ibc/app/router
 	app.IBCKeeper.SetRouter(ibcRouter)
 
@@ -393,6 +410,7 @@ func New(
 			encodingConfig.TxConfig,
 		),
 		auth.NewAppModule(appCodec, app.AccountKeeper, nil),
+		authzmodule.NewAppModule(appCodec, app.AuthzKeeper, app.AccountKeeper, app.BankKeeper, app.interfaceRegistry),
 		vesting.NewAppModule(app.AccountKeeper, app.BankKeeper),
 		bank.NewAppModule(appCodec, app.BankKeeper, app.AccountKeeper),
 		capability.NewAppModule(appCodec, *app.CapabilityKeeper),
@@ -418,46 +436,48 @@ func New(
 	// NOTE: staking module is required if HistoricalEntries param > 0
 	app.mm.SetOrderBeginBlockers(
 		upgradetypes.ModuleName,
-		bcnamoduletypes.ModuleName,
-		ibctransfertypes.ModuleName,
-		vestingtypes.ModuleName,
-		banktypes.ModuleName,
-		crisistypes.ModuleName,
-		genutiltypes.ModuleName,
-		govtypes.ModuleName,
-		feegrant.ModuleName,
-		paramstypes.ModuleName,
 		capabilitytypes.ModuleName,
 		minttypes.ModuleName,
 		distrtypes.ModuleName,
 		slashingtypes.ModuleName,
 		evidencetypes.ModuleName,
 		stakingtypes.ModuleName,
+		vestingtypes.ModuleName,
 		ibchost.ModuleName,
+		ibctransfertypes.ModuleName,
 		authtypes.ModuleName,
+		authz.ModuleName,
+		banktypes.ModuleName,
+		govtypes.ModuleName,
+		crisistypes.ModuleName,
+		genutiltypes.ModuleName,
+		feegrant.ModuleName,
+		paramstypes.ModuleName,
+		bcnamoduletypes.ModuleName,
+		// this line is used by starport scaffolding # stargate/app/beginBlockers
 	)
 
 	app.mm.SetOrderEndBlockers(
 		crisistypes.ModuleName,
-		genutiltypes.ModuleName,
-		banktypes.ModuleName,
+		govtypes.ModuleName,
+		stakingtypes.ModuleName,
 		capabilitytypes.ModuleName,
+		authtypes.ModuleName,
+		authz.ModuleName,
+		banktypes.ModuleName,
+		distrtypes.ModuleName,
+		slashingtypes.ModuleName,
 		vestingtypes.ModuleName,
-		ibctransfertypes.ModuleName,
-		bcnamoduletypes.ModuleName,
+		minttypes.ModuleName,
+		genutiltypes.ModuleName,
+		evidencetypes.ModuleName,
+		feegrant.ModuleName,
+		paramstypes.ModuleName,
 		upgradetypes.ModuleName,
 		ibchost.ModuleName,
-		distrtypes.ModuleName,
-		evidencetypes.ModuleName,
-		paramstypes.ModuleName,
-		minttypes.ModuleName,
-		slashingtypes.ModuleName,
-		govtypes.ModuleName,
-		feegrant.ModuleName,
-		stakingtypes.ModuleName,
-		upgradetypes.ModuleName,
-		vestingtypes.ModuleName,
-		authtypes.ModuleName,
+		ibctransfertypes.ModuleName,
+		bcnamoduletypes.ModuleName,
+		// this line is used by starport scaffolding # stargate/app/endBlockers
 	)
 
 	// NOTE: The genutils module must occur after staking so that pools are
@@ -468,9 +488,11 @@ func New(
 	app.mm.SetOrderInitGenesis(
 		capabilitytypes.ModuleName,
 		authtypes.ModuleName,
+		authz.ModuleName,
 		banktypes.ModuleName,
 		distrtypes.ModuleName,
 		stakingtypes.ModuleName,
+		vestingtypes.ModuleName,
 		slashingtypes.ModuleName,
 		govtypes.ModuleName,
 		minttypes.ModuleName,
@@ -478,26 +500,25 @@ func New(
 		ibchost.ModuleName,
 		genutiltypes.ModuleName,
 		evidencetypes.ModuleName,
-		ibctransfertypes.ModuleName,
-		bcnamoduletypes.ModuleName,
-		feegrant.ModuleName,
 		paramstypes.ModuleName,
 		upgradetypes.ModuleName,
-		vestingtypes.ModuleName,
+		ibctransfertypes.ModuleName,
+		feegrant.ModuleName,
+		bcnamoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/initGenesis
 	)
 
 	app.mm.RegisterInvariants(&app.CrisisKeeper)
 	app.mm.RegisterRoutes(app.Router(), app.QueryRouter(), encodingConfig.Amino)
-	//app.mm.RegisterServices(module.NewConfigurator(app.appCodec, app.MsgServiceRouter(), app.GRPCQueryRouter()))
-	// Ruderalis
-
+	// app.mm.RegisterServices(module.NewConfigurator(app.appCodec, app.MsgServiceRouter(), app.GRPCQueryRouter()))
+	// strangeBuddheads upgrade
 	app.configurator = module.NewConfigurator(app.appCodec, app.MsgServiceRouter(), app.GRPCQueryRouter())
 	app.mm.RegisterServices(app.configurator)
 
 	// create the simulation manager and define the order of the modules for deterministic simulations
 	app.sm = module.NewSimulationManager(
 		auth.NewAppModule(appCodec, app.AccountKeeper, authsims.RandomGenesisAccounts),
+		authzmodule.NewAppModule(appCodec, app.AuthzKeeper, app.AccountKeeper, app.BankKeeper, app.interfaceRegistry),
 		bank.NewAppModule(appCodec, app.BankKeeper, app.AccountKeeper),
 		capability.NewAppModule(appCodec, *app.CapabilityKeeper),
 		feegrantmodule.NewAppModule(appCodec, app.AccountKeeper, app.BankKeeper, app.FeeGrantKeeper, app.interfaceRegistry),
@@ -676,8 +697,29 @@ func (app *App) RegisterTendermintService(clientCtx client.Context) {
 }
 
 func (app *App) RegisterUpgradeHandlers() {
-	planName := "ruderalis"
+	planName := "strangeBuddheads"
 	app.UpgradeKeeper.SetUpgradeHandler(planName, func(ctx sdk.Context, plan upgradetypes.Plan, fromVM module.VersionMap) (module.VersionMap, error) {
+		// strangeBuddheads upgrade. IBC-go v.3.1.0
+		// list of traces that must replace the old traces in store
+		var newTraces []ibctransfertypes.DenomTrace
+		app.TransferKeeper.IterateDenomTraces(ctx,
+			func(dt ibctransfertypes.DenomTrace) bool {
+				// check if the new way of splitting FullDenom
+				// into Trace and BaseDenom passes validation and
+				// is the same as the current DenomTrace.
+				// If it isn't then store the new DenomTrace in the list of new traces.
+				newTrace := ibctransfertypes.ParseDenomTrace(dt.GetFullDenomPath())
+				if err := newTrace.Validate(); err == nil && !equalTraces(newTrace, dt) {
+					newTraces = append(newTraces, newTrace)
+				}
+
+				return false
+			})
+
+		// replace the outdated traces with the new trace information
+		for _, nt := range newTraces {
+			app.TransferKeeper.SetDenomTrace(ctx, nt)
+		}
 		return app.mm.RunMigrations(ctx, app.configurator, fromVM)
 	})
 
@@ -688,12 +730,17 @@ func (app *App) RegisterUpgradeHandlers() {
 
 	if upgradeInfo.Name == planName && !app.UpgradeKeeper.IsSkipHeight(upgradeInfo.Height) {
 		storeUpgrades := storetypes.StoreUpgrades{
-			Added: []string{authz.ModuleName},
+			Added: []string{authzkeeper.StoreKey},
 		}
 
 		// Configure store loader that checks if version == upgradeHeight and applies store upgrades
 		app.SetStoreLoader(upgradetypes.UpgradeStoreLoader(upgradeInfo.Height, &storeUpgrades))
 	}
+}
+
+// strangeBuddheads upgrade. IBC-go v.3.1.0 aux
+func equalTraces(dtA, dtB ibctransfertypes.DenomTrace) bool {
+	return dtA.BaseDenom == dtB.BaseDenom && dtA.Path == dtB.Path
 }
 
 // GetMaccPerms returns a copy of the module account permissions
