@@ -2,7 +2,7 @@
 
 BitCanna provides a decentralized payment network, supply chain and trust network for the legal cannabis industry by utilizing the BCNA coin.
 
-Last version (v1.4.3 strangeBuddheads) of our development uses Cosmos SDK v0.45.5 & Tendermint v0.34.20 & IBC-go v3.1.0
+Last version (v1.4.0 strangeBuddheads) of our development uses Cosmos SDK v0.45.5 & Tendermint v0.34.20 & IBC-go v3.1.0
 
 These docs at Github are chain related. For more information about our coin, partners and roadmap visit:
 * Our website: https://www.bitcanna.io
@@ -147,6 +147,8 @@ You can copy&paste the entire text above in a text file.
 
 # Links to important info
 
+## How to upgrade to v.1.4.0 (`strangeBuddheads` codename)
+* [How to perform an upgrade from v.1.3.1 to v.1.4.0](https://github.com/BitCannaGlobal/bcna/blob/main/archived_guides/cosmovisor_config.md)
 ## Explorers:
 * [BitCanna based on Forbole](https://explorer.bitcanna.io)
 * [MintScan based on Cosmostation](https://www.mintscan.io/bitcanna)
@@ -172,6 +174,6 @@ You can copy&paste the entire text above in a text file.
 * [Current DevNet](https://github.com/BitCannaGlobal/testnet-bcna-cosmos/tree/main/instructions/bitcanna-dev-4)
 * [Old Instructions guide](https://github.com/BitCannaGlobal/bcna/blob/main/archived_guides/instructions.md)
 * [How to perform a manual upgrade](https://github.com/BitCannaGlobal/bcna/blob/main/archived_guides/manual_update.md)
-* [How to perform an upgrade with Cosmovisor](https://github.com/BitCannaGlobal/bcna/blob/main/archived_guides/cosmovisor_config.md)
+* [How to perform an upgrade with Cosmovisor (v.1.1)](https://github.com/BitCannaGlobal/bcna/blob/main/archived_guides/cosmovisor_config.md)
 
 ###### tags: `doc` `github`
