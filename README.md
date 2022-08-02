@@ -2,7 +2,7 @@
 
 BitCanna provides a decentralized payment network, supply chain and trust network for the legal cannabis industry by utilizing the BCNA coin.
 
-Last version (v1.4.0 strangeBuddheads) of our development uses Cosmos SDK v0.45.5 & Tendermint v0.34.20 & IBC-go v3.1.0
+Last version (v1.4.0 strangeBuddheads) of our development uses Cosmos SDK v0.45.6 & Tendermint v0.34.20 & IBC-go v3.1.0
 
 These docs at Github are chain related. For more information about our coin, partners and roadmap visit:
 * Our website: https://www.bitcanna.io
@@ -15,6 +15,10 @@ Here are the minimal hardware configs required for running a validator/sentry no
 * 4vCPUs (8vCPUs is recommended)
 * 200GB - 300GB SSD Disk space per year (NVMe disks are recommended)
 * 400 Mbit/s bandwidth
+
+## Software Requirements
+* Linux server (Ubuntu 20/22 server recommended)
+* go version go1.18.5
 
 > Please avoid cheap VPS providers as a main validator (we suggest using it as a cheap backup). We advise to use a shared dedicated server or a high-end NVMe VPS.
 
