@@ -152,7 +152,7 @@ You can copy&paste the entire text above in a text file.
 # Links to important info
 
 ## How to upgrade to v.1.4.0 (`strangeBuddheads` codename)
-* [How to perform an upgrade from v.1.3.1 to v.1.4.0](https://github.com/BitCannaGlobal/bcna/blob/main/archived_guides/cosmovisor_config.md)
+* [How to perform an upgrade from v.1.3.1 to v.1.4.0](https://github.com/BitCannaGlobal/bcna/blob/main/last_upgrade.md)
 ## Explorers:
 * [BitCanna based on Forbole](https://explorer.bitcanna.io)
 * [MintScan based on Cosmostation](https://www.mintscan.io/bitcanna)
