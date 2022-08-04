@@ -1,0 +1,21 @@
+[Unit]
+Description=Injective Full Node
+
+[Service]
+Environment=INJECTIVED_P2P_LADDR=tcp://0.0.0.0:2440
+Environment=INJECTIVED_NODE=tcp://127.0.0.1:2441
+Environment=INJECTIVED_GRPC_ADDRESS=127.0.0.1:2442
+Environment=INJECTIVED_GRPC_WEB_ADDRESS=127.0.0.1:2443
+Environment=INJECTIVED_API_ADDRESS=tcp://127.0.0.1:2444
+Environment=INJECTIVED_P2P_SEEDS=2ee7586d8e5a4a2020dafddf68efdfdaa3606cc3@145.40.67.249:26656,7bb20f8e9fa73e34d0d21862528d5fba839eeb56@145.40.73.39:26656,de25916e19083d44d67e0c336199b215523f1578:145.40.68.223:26656,1a2ccd9c436eae54d6c767ad566c58dce78f8be2@145.40.68.125:26656
+Environment=INJECTIVED_P2P_MAX_NUM_INBOUND_PEERS=500
+Environment=INJECTIVED_P2P_MAX_NUM_OUTBOUND_PEERS=100
+Environment=INJECTIVED_HOME=~/osmosis
+LimitNOFILE=500000
+Restart=always
+User=root
+RestartSec=30
+ExecStart=/root/go/bin/injectived start --pruning custom --pruning-keep-recent 362880 --pruning-interval 100
+
+[Install]
+WantedBy=multi-user.target
