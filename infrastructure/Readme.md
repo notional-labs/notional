@@ -95,6 +95,7 @@ Each chain has 10 ports it can use.  WIP.
  Umee            | 2410-2419  | umee-1
  Sei             | 2420-2429  | atlantic-1
  Stride          | 2430-2439  | stride-testnet-2
+ Injective       | 2440-2449  | injective-1
 
    Service         | Port  
 -------------------|------ 
@@ -152,3 +153,4 @@ Nomic        | 238120dfe716082754048057c1fdc3d6f09609b5@161.35.51.124:26656,a67d
 Umee         | 08554ecf7c4c33cc809bceefc044c9bd23b933bd@34.146.11.20:26656,da42a6b213dd0e0dcd3b5d6feb662d7bf7a8cee6@34.93.115.217:26656,22d50ffd5abb3a2bef8186816d1aa914092c5ecf@35.189.2.114:26656,f1dc58164af33f2db6c5a5bd6b2646399b18bbb4@35.187.48.177:26656,6b785fc3a088de3a5e8d222a980936f2187b8c56@34.65.213.164:26656,1d85a200deaefa6ceb20328a0fd83787ce329aa6@34.152.15.182:26656,b3f810438aa53685bba63705f3c29ec122e1e40c@34.127.76.180:26656,831e037739cb6047f9b2d28e38c4cd7e7a550d04@35.199.126.245:26656
 Sei          | 5b5ec09067a5fcaccf75f19b45ab29ce07e0167c@18.118.159.154:26656
 Stride       | c0b278cbfb15674e1949e7e5ae51627cb2a2d0a9@seedv2.poolparty.stridenet.co:26656
+Injective    | 2ee7586d8e5a4a2020dafddf68efdfdaa3606cc3@mainnet-sentry-us-0.injective.dev:26656,30e81e1b785eaf82d2260e932251c02c95787740@mainnet-sentry-us-1.injective.dev:26656,de25916e19083d44d67e0c336199b215523f1578@mainnet-sentry-eu-0.injective.dev:26656,1a2ccd9c436eae54d6c767ad566c58dce78f8be2@mainnet-sentry-eu-1.injective.dev:26656,8c39e67ea72458c5192c4653837e7c172a031a62@mainnet-sentry-eu-2.injective.dev:26656,9842eedb736a7a9bbdca4b1be2a5cdb14224a12a@mainnet-sentry-eu-3.injective.dev:26656,7bb20f8e9fa73e34d0d21862528d5fba839eeb56@mainnet-sentry-asia-0.injective.dev:26656,2ab91484b1504090b088465dc650d44311362bfa@mainnet-sentry-asia-1.injective.dev:26656
