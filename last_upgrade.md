@@ -21,7 +21,8 @@ Upgrade schedule:
 * Proposal: today, 8th of August, 2022 11:00 CEST
 * Voting period: today, 8th August, 2022 11:00 CEST - 11th of August, 11:00 CEST
 * Upgrade height: **block 4490420 (~16:05 CEST 11th of August 2022)**
- 
+
+https://www.mintscan.io/bitcanna/proposals/4
 https://explorer.bitcanna.io/proposals/4
 
 ## Attended (manually) upgrade.
