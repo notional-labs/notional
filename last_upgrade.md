@@ -191,7 +191,7 @@ Cosmovisor v1.2 introduces several changes and improvements.
 
 If you want to know if Cosmovisor handles the right binary file exec:
 * `sudo service cosmovisor status`
-* `cosmovisor versin`
+* `cosmovisor version`
 
 And check the path of the binary file.    
 
