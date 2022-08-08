@@ -16,8 +16,12 @@ Also we have fixed the `bcna` module & we have added a new extra field for "Supp
 We will upgrade to `strangeBuddheads` version by governance by forking the current chain. 
 
 
-## Governance proposal: halt-height `XXXXXXXX`
-
+## Governance proposal: **halt-height `4490420`**
+Upgrade schedule:
+* Proposal: today, 8th of August, 2022 11:00 CEST
+* Voting period: today, 8th August, 2022 11:00 CEST - 11th of August, 11:00 CEST
+* Upgrade height: **block 4490420 (~16:05 CEST 11th of August 2022)**
+ 
 https://explorer.bitcanna.io/proposals/4
 
 ## Attended (manually) upgrade.
