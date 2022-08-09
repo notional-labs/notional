@@ -34,9 +34,9 @@ This section of the guide shows how to perform a **manual** update of the binari
 ```
 sudo service bcnad stop
 ```
-2. Download the binary (2.1) or compile it from the source (2.2).
+2. Compile the binary from the source (2.1) or download it (2.2).
 
-    2.1. If you want to build the binary from the source, detailed instructions can be found in this [DOC](https://github.com/BitCannaGlobal/bcna/blob/main/1.install-compile.md) of our GitHub:
+    2.1. If you want to BUILD the binary from the source, detailed instructions can be found in this [DOC](https://github.com/BitCannaGlobal/bcna/blob/main/1.install-compile.md) of our GitHub:
     ```
     git clone https://github.com/BitCannaGlobal/bcna.git
     cd bcna && git checkout  v1.4.1
@@ -48,7 +48,7 @@ sudo service bcnad stop
     ```
    *You can jump to step 3.*
     
-    2.2 If you want to downoad the compiled binary:
+    2.2 If you want to DOWNLOAD the compiled binary:
     ```
     cd ~
     rm bcna_linux_amd64.tar.gz #delete old file if exist
@@ -98,9 +98,9 @@ It run as service and replaces the `bcnad` service. A complete guide to config C
 mkdir -p ${HOME}/.bcna/cosmovisor/upgrades/strangeBuddheads/bin
 ```
 
-2. Download the binary (2.1) or compile it from the source (2.2).
+2. Compile the binary from the source (2.1) or download it (2.2).
 
-    2.1. If you want to build the binary from the source, detailed instructions can be found in this [DOC](https://github.com/BitCannaGlobal/bcna/blob/main/1.install-compile.md) of our GitHub:
+    2.1. If you want to BUILD the binary from the source, detailed instructions can be found in this [DOC](https://github.com/BitCannaGlobal/bcna/blob/main/1.install-compile.md) of our GitHub:
     ```
     git clone https://github.com/BitCannaGlobal/bcna.git
     cd bcna && git checkout  v1.4.1
@@ -112,7 +112,7 @@ mkdir -p ${HOME}/.bcna/cosmovisor/upgrades/strangeBuddheads/bin
     ```
    *You can jump to step 3.*
     
-    2.2. If you want to dowload the compiled binary (instead of compiling by yourself):
+    2.2. If you want to DOWNLOAD the compiled binary (instead of compiling by yourself):
     ```
     cd ~
     rm bcna_linux_amd64.tar.gz #delete old file if exist
@@ -139,7 +139,7 @@ mkdir -p ${HOME}/.bcna/cosmovisor/upgrades/strangeBuddheads/bin
 3. If you want to be sure that the proper binary is in the proper folder:
 ```
 ${HOME}/.bcna/cosmovisor/upgrades/strangeBuddheads/bin/bcnad version
-    --> should reply: 1.4.1
+    # --> should reply: 1.4.1
 ```
 
 
