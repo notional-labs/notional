@@ -115,7 +115,7 @@ mkdir -p ${HOME}/.bcna/cosmovisor/upgrades/strangeBuddheads/bin
     2.2. If you want to dowload the compiled binary (instead of compiling by yourself):
     ```
     cd ~
-    bcna_linux_amd64.tar.gz #delete old file if exist
+    rm bcna_linux_amd64.tar.gz #delete old file if exist
     wget -nc https://github.com/BitCannaGlobal/bcna/releases/download/v1.4.1/bcna_linux_amd64.tar.gz
     ```
     2.2.1 Check the sha256sum for the downloaded file. 
