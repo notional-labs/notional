@@ -44,7 +44,7 @@ sudo service bcnad stop
     ```
     This will produce a `bcnad` file in the `build` folder. Move to the current binary path:
     ```
-    sudo mv build/bcnad $(which bcnad)   #copy&paste don't replace anything
+    mv build/bcnad $(which bcnad)   #copy&paste don't replace anything
     ```
    *You can jump to step 3.*
     
@@ -108,7 +108,7 @@ mkdir -p ${HOME}/.bcna/cosmovisor/upgrades/strangeBuddheads/bin
     ```
     This will produce a `bcnad` file in the `build` folder. Move to the NEW binary path:
     ```
-    sudo mv build/bcnad ${HOME}/.bcna/cosmovisor/upgrades/strangeBuddheads/bin   #copy&paste don't replace anything
+    mv ./bcnad ${HOME}/.bcna/cosmovisor/upgrades/strangeBuddheads/bin   #copy&paste don't replace anything
     ```
    *You can jump to step 3.*
     
