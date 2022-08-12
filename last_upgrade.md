@@ -146,6 +146,13 @@ ${HOME}/.bcna/cosmovisor/upgrades/strangeBuddheads/bin/bcnad version
 ## EXTRA OPTIONAL STEP 1: <br>Install Cosmovisor v1.2
 If you want to update Cosmovisor from v1.1 to v1.2 follow the next instructions, for a new installation and setup of BCNA params check this [doc](https://github.com/BitCannaGlobal/bcna/blob/main/2.3.cosmovisor.md).
 
+> CAUTION! Cosmovisor v1.2 has a bug and it doesn't get the uppercase in the binary folder path
+Temporal solution is: 
+```
+mkdir -p ${HOME}/.bcna/cosmovisor/upgrades/strangebuddheads/bin
+cp -R ${HOME}/.bcna/cosmovisor/upgrades/strangeBuddheads/ ${HOME}/.bcna/cosmovisor/upgrades/strangebuddheads/
+```
+
 ```
 wget https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.2.0/cosmovisor-v1.2.0-linux-amd64.tar.gz
 tar zxvf cosmovisor-v1.2.0-linux-amd64.tar.gz 
