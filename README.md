@@ -2,7 +2,7 @@
 
 BitCanna provides a decentralized payment network, supply chain and trust network for the legal cannabis industry by utilizing the BCNA coin.
 
-> Current version is v1.3.1 - Ruderalis - [NEXT 11th Aug we will upgrade to v.1.4.1 - strangeBuddheads](https://github.com/BitCannaGlobal/bcna/blob/main/last_upgrade.md)
+> Current version is v1.4.1 - strangeBuddheads (https://github.com/BitCannaGlobal/bcna/blob/main/last_upgrade.md)
 
 > Last version (v1.4.1 strangeBuddheads) of our development uses Cosmos SDK v0.45.7 & Tendermint v0.34.20 & IBC-go v3.1.1
 
