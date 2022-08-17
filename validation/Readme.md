@@ -40,6 +40,7 @@ Notional is an **active set** validator on:
 28) [Gravity-Bridge](https://www.mintscan.io/gravity-bridge/validators/gravityvaloper10f6jwwrkyhf40v8lx9cdtypqyl796m5vemg00n)
 29) [Umee](https://www.mintscan.io/umee/validators/umeevaloper1dmahqt84r9je3sqvljzjrttjj78cmrf39k5zhs)
 30) [Injective](https://www.mintscan.io/injective/validators/injvaloper16eg6wf2k6v0lzwu2vsrhxhe0tcycgr7jm98nyz)
+31) [Passage3D](https://www.mintscan.io/passage/validators/pasgvaloper14npnd73z5qjwz4az2dpw6vcdvkj29qg0cgar4j)
 
 ## The role of a validator
 
