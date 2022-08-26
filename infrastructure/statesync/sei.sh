@@ -1,3 +1,22 @@
+#!/bin/bash
+set -uxe
+
+# set environment variables
+export GOPATH=~/go
+export PATH=$PATH:~/go/bin
+
+# MAKE HOME FOLDER AND GET GENESIS
+seid init test 
+wget -O ~/.sei/config/genesis.json https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-incentivized-testnet/genesis.json
+
+INTERVAL=1000
+
+# GET TRUST HASH AND TRUST HEIGHT
+
+LATEST_HEIGHT=$(curl -s https://rpc-sei-test.ecostake.com:443/block | jq -r .result.block.header.height);
+BLOCK_HEIGHT=$(($LATEST_HEIGHT-$INTERVAL)) 
+TRUST_HASH=$(curl -s "https://rpc-sei-test.ecostake.com:443/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
 # GET TRUST HASH AND TRUST HEIGHT
 
 LATEST_HEIGHT=$(curl -s https://rpc-sei-test.ecostake.com:443/block | jq -r .result.block.header.height);
