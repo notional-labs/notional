@@ -3,7 +3,7 @@ name: sos
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  sos:
+  arm64:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,11 +18,8 @@ jobs:
       - name: Set up QEMU
         run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes --credential yes
 
-      - name: Set up Docker Buildx
-        id: buildx
-        uses: docker/setup-buildx-action@v2
-        with:
-          version: latest
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
 
       - name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
@@ -38,3 +35,24 @@ jobs:
         with:
           name: sos
           path: images/sos.img.xz
+  amd64:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Available platforms
+        run: echo ${{ steps.buildx.outputs.platforms }}
+
+      - name: Build
+        run: bash build.sh
+
+      - name: Compress
+        run: xz -T $(nproc) images/sos.img
+
+      - name: Upload image
+        uses: actions/upload-artifact@v2
+        with:
+          name: sos
+          path: images/sos.img.xz
+
