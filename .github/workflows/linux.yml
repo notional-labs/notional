@@ -20,7 +20,9 @@ jobs:
         run: echo ${{ steps.buildx.outputs.platforms }}
 
       - name: Build
-        run: bash build.sh
+        run: |
+          cd linux
+          bash build-amd64.sh
 
       - name: Compress
         run: xz -T $(nproc) images/sos.img
