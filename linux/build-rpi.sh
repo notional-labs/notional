@@ -83,8 +83,8 @@ fallocate -l 4G "images/sos-lite.img"
 export LOOP=$(sudo losetup --find --show images/sos-lite.img)
 
 # partition the loop-mounted disk
-sudo parted --script $LOOP mklabel msdos
-sudo parted --script $LOOP mkpart primary fat32 0% 200M
+sudo parted --script $LOOP mklabel gpt
+sudo parted --script $LOOP mkpart primary ext3 0% 200M
 sudo parted --script $LOOP mkpart primary ext4 200M 100%
 
 # format the newly partitioned loop-mounted disk
