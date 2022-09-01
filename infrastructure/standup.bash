@@ -27,12 +27,7 @@ pacman -Syyu aria2 atop autoconf automake base binutils bison bmon btrfs-progs b
 # IPFS cluster tooling
 # pigz -r --fast data  #pigz parallel compression
 # IPFS only needs to use the server profile at hetzner.
-ipfs init -p badgerds,server
-git clone https://github.com/ipfs/ipfs-cluster.git
-cd ipfs-cluster
-go install ./...
 sysctl -w net.core.rmem_max=2500000
-pm2 start "ipfs daemon"
 
 
 
