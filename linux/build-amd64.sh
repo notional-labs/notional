@@ -25,8 +25,8 @@ set -o xtrace
 docker buildx build --tag sos-lite --file Dockerfile --platform linux/amd64 --progress plain --load ..
 
 # TAG AND PUSH
-docker tag sos-lite ghcr.io/notional-labs/sos
-docker push ghcr.io/notional-labs/sos
+# docker tag sos-lite ghcr.io/notional-labs/sos
+# docker push ghcr.io/notional-labs/sos
 
 # PREPARE TOOLBOX
 # docker buildx build --rm --tag toolbox --file toolbox/Dockerfile --load  --progress plain toolbox
