@@ -17,9 +17,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up QEMU
-        run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes --credential yes
-
-      - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
 
       - name: Available platforms
@@ -63,4 +60,3 @@ jobs:
         with:
           name: sos
           path: images/sos.img.xz
-
