@@ -15,6 +15,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/ignite-hq/cli/ignite/pkg/cosmoscmd"
+	"github.com/jaekwon/testify/require"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 	tmdb "github.com/tendermint/tm-db"
 
@@ -38,7 +39,8 @@ func New(t *testing.T, configs ...network.Config) *network.Network {
 	} else {
 		cfg = configs[0]
 	}
-	net, _ := network.New(t, cfg)
+	net, err := network.New(t, t.TempDir(), cfg)
+	require.NoError(t, err)
 	t.Cleanup(net.Cleanup)
 	return net
 }

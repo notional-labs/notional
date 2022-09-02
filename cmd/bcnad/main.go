@@ -18,7 +18,7 @@ func main() {
 		app.New,
 		// this line is used by starport scaffolding # root/arguments
 	)
-	if err := svrcmd.Execute(rootCmd, app.DefaultNodeHome); err != nil {
+	if err := svrcmd.Execute(rootCmd, "BCNAD", app.DefaultNodeHome); err != nil {
 		os.Exit(1)
 	}
 }
