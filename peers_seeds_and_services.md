@@ -175,6 +175,10 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
         "address": "https://bitcannarpc.panthea.eu",
         "provider": "Panthea EU"
       }
+      {
+        "address": "https://rpc.bitcanna.sgtstake.com/",
+        "provider": "SGTstake"
+      }
     ],
     "grpc": [
       {
@@ -202,6 +206,10 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
       {
         "address": "https://bitcannaapi.panthea.eu",
         "provider": "Panthea EU"
+      }
+      {
+        "address": "https://api.bitcanna.sgtstake.com/",
+        "provider": "SGTstake"
       }
     ]
   }
