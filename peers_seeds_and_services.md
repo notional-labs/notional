@@ -67,7 +67,7 @@ d6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656
 ### Stakely Faucet
 * https://stakely.io/faucet/bitcanna-bcna
 
-### Paranormal Brothers: snapshot service info 
+### Paranormal Brothers: current snapshot, RPC, seed, peer service, validators monitoring and alerting tool. 
 * https://bc.paranorm.pro/
 
 ### Polkachu: snapshot service info
