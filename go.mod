@@ -9,6 +9,7 @@ require (
 	github.com/golang/protobuf v1.5.2
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/ignite/cli v0.23.1-0.20220902151340-d0fd60f1d4ad
+	github.com/iqlusioninc/liquidity-staking-module v1.0.0
 	github.com/jaekwon/testify v1.6.1
 	github.com/spf13/cast v1.5.0
 	github.com/spf13/cobra v1.5.0
