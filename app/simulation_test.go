@@ -37,6 +37,7 @@ type SimApp interface {
 	InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci.ResponseInitChain
 }
 
+//nolint:deadcode,unused,varcheck // This is used for tests, I think.
 var defaultConsensusParams = &abci.ConsensusParams{
 	Block: &abci.BlockParams{
 		MaxBytes: 200000,

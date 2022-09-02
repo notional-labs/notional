@@ -12,7 +12,7 @@ import (
 func (k msgServer) CreateSupplychain(goCtx context.Context, msg *types.MsgCreateSupplychain) (*types.MsgCreateSupplychainResponse, error) {
 	ctx := sdk.UnwrapSDKContext(goCtx)
 
-	var supplychain = types.Supplychain{
+	supplychain := types.Supplychain{
 		Creator:     msg.Creator,
 		Product:     msg.Product,
 		Info:        msg.Info,
@@ -33,7 +33,7 @@ func (k msgServer) CreateSupplychain(goCtx context.Context, msg *types.MsgCreate
 func (k msgServer) UpdateSupplychain(goCtx context.Context, msg *types.MsgUpdateSupplychain) (*types.MsgUpdateSupplychainResponse, error) {
 	ctx := sdk.UnwrapSDKContext(goCtx)
 
-	var supplychain = types.Supplychain{
+	supplychain := types.Supplychain{
 		Creator:     msg.Creator,
 		Id:          msg.Id,
 		Product:     msg.Product,

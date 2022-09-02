@@ -32,7 +32,6 @@ func (k Keeper) SupplychainAll(c context.Context, req *types.QueryAllSupplychain
 		supplychains = append(supplychains, supplychain)
 		return nil
 	})
-
 	if err != nil {
 		return nil, status.Error(codes.Internal, err.Error())
 	}

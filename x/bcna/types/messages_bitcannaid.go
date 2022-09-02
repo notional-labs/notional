@@ -98,6 +98,7 @@ func NewMsgDeleteBitcannaid(creator string, id uint64) *MsgDeleteBitcannaid {
 		Creator: creator,
 	}
 }
+
 func (msg *MsgDeleteBitcannaid) Route() string {
 	return RouterKey
 }
