@@ -1,4 +1,5 @@
 {
     "go.inferGopath": false,
-    "go.lintTool": "golangci-lint"
+    "go.lintTool": "golangci-lint",
+    "go.lintOnSave": "workspace"
 }
