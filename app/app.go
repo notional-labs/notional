@@ -91,8 +91,8 @@ import (
 	tmos "github.com/tendermint/tendermint/libs/os"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/ignite/cli/ignite/pkg/cosmoscmd"
-	"github.com/ignite/cli/ignite/pkg/openapiconsole"
+	"github.com/ignite-hq/cli/ignite/pkg/cosmoscmd"
+	"github.com/ignite-hq/cli/ignite/pkg/openapiconsole"
 
 	"github.com/BitCannaGlobal/bcna/docs"
 
@@ -383,7 +383,7 @@ func New(
 	)
 	bcnaModule := bcnamodule.NewAppModule(appCodec, app.BcnaKeeper, app.AccountKeeper, app.BankKeeper)
 
-	//Call StrangeBuddheads upgrade func
+	// Call StrangeBuddheads upgrade func
 	app.RegisterUpgradeHandlers()
 
 	// this line is used by starport scaffolding # stargate/app/keeperDefinition
@@ -398,7 +398,7 @@ func New(
 
 	// NOTE: we may consider parsing `appOpts` inside module constructors. For the moment
 	// we prefer to be more strict in what arguments the modules expect.
-	var skipGenesisInvariants = cast.ToBool(appOpts.Get(crisis.FlagSkipGenesisInvariants))
+	skipGenesisInvariants := cast.ToBool(appOpts.Get(crisis.FlagSkipGenesisInvariants))
 
 	// NOTE: Any module instantiated in the module manager that is later modified
 	// must be passed by reference here.
