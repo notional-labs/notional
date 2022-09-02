@@ -12,7 +12,7 @@ import (
 func (k msgServer) CreateBitcannaid(goCtx context.Context, msg *types.MsgCreateBitcannaid) (*types.MsgCreateBitcannaidResponse, error) {
 	ctx := sdk.UnwrapSDKContext(goCtx)
 
-	var bitcannaid = types.Bitcannaid{
+	bitcannaid := types.Bitcannaid{
 		Creator: msg.Creator,
 		Bcnaid:  msg.Bcnaid,
 		Address: msg.Address,
@@ -31,7 +31,7 @@ func (k msgServer) CreateBitcannaid(goCtx context.Context, msg *types.MsgCreateB
 func (k msgServer) UpdateBitcannaid(goCtx context.Context, msg *types.MsgUpdateBitcannaid) (*types.MsgUpdateBitcannaidResponse, error) {
 	ctx := sdk.UnwrapSDKContext(goCtx)
 
-	var bitcannaid = types.Bitcannaid{
+	bitcannaid := types.Bitcannaid{
 		Creator: msg.Creator,
 		Id:      msg.Id,
 		Bcnaid:  msg.Bcnaid,

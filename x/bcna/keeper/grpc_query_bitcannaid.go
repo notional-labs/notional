@@ -32,7 +32,6 @@ func (k Keeper) BitcannaidAll(c context.Context, req *types.QueryAllBitcannaidRe
 		bitcannaids = append(bitcannaids, bitcannaid)
 		return nil
 	})
-
 	if err != nil {
 		return nil, status.Error(codes.Internal, err.Error())
 	}
