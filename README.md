@@ -1,5 +1,6 @@
 # BitCanna Blockchain
 
+
 BitCanna provides a decentralized payment network, supply chain and trust network for the legal cannabis industry by utilizing the BCNA coin.
 
 > Current version is v1.4.1 - strangeBuddheads (https://github.com/BitCannaGlobal/bcna/blob/main/last_upgrade.md)
