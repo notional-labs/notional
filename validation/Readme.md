@@ -42,6 +42,7 @@ Notional is an **active set** validator on:
 30) [Injective](https://www.mintscan.io/injective/validators/injvaloper16eg6wf2k6v0lzwu2vsrhxhe0tcycgr7jm98nyz)
 31) [Passage3D](https://www.mintscan.io/passage/validators/pasgvaloper14npnd73z5qjwz4az2dpw6vcdvkj29qg0cgar4j)
 32) [Stride](https://www.mintscan.io/stride/validators/stridevaloper1kvwpcr45lh7wn53wp9ac42ypr3t8zjqy6ks9au)
+33) [QuickSilver](https://quicksilver.explorers.guru/validator/quickvaloper1rszydypce7tmwkderpss58xwtqjg0j0vjm8rmv)
 
 ## The role of a validator
 
