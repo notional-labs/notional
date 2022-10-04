@@ -36,7 +36,6 @@ bash infrastructure/standup.bash
 * Minh Vu Le Nhat - Server Technician
 * Du Nguyen - Infrastructure Engineer
 * Hieu Vu - Blockchain Engineer
-* Chinh Nguyen - Blockchain Engineer
 * Huy Nguyen - UI/UX Designer
 
 ## Thanks
