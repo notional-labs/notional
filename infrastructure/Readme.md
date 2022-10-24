@@ -98,6 +98,7 @@ Each chain has 10 ports it can use.  WIP.
  Injective       | 2440-2449  | injective-1
  Passage3D       | 2450-2459  | passage-1
  Hypersign       | 2460-2469  | jagrat
+ Jackal          | 2470-2479  | canine-1
 
    Service         | Port  
 -------------------|------ 
