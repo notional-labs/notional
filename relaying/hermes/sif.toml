@@ -42,7 +42,7 @@ key_name = 'sif'
 store_prefix = 'ibc'
 max_gas = 1000000000000000
 gas_price = { price = 20000, denom = 'rowan' }
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift ='15s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -80,7 +80,7 @@ store_prefix = 'ibc'
 max_tx_size = 180000
 max_gas = 20000000
 gas_price = { price = 0.025, denom = 'aevmos' }
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift = '1500s'
 trusting_period = '13days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -103,7 +103,7 @@ store_prefix = 'ibc'
 #max_tx_size = 180000
 max_gas = 2000000
 gas_price = { price = 200, denom = 'nanolike' }
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift = '1500s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -126,7 +126,7 @@ store_prefix = 'ibc'
 max_gas = 15000000                                                                                          
 max_msg_num = 10
 gas_price = { price = 0.0001, denom = 'uosmo' }
-gas_adjustment = 1
+gas_multiplier = 2
 clock_drift = '15s'
 trusting_period = '9days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -150,7 +150,7 @@ max_gas = 15000000
 max_tx_size = 400000
 max_msg_num = 10
 gas_price = { price = 0.0001, denom = 'basecro' }
-gas_adjustment = 1
+gas_multiplier = 2
 clock_drift = '15s'
 trusting_period = '9days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -173,7 +173,7 @@ store_prefix = 'ibc'
 max_gas = 2500000
 max_tx_size = 180000
 gas_price = { price = 0.001, denom = 'uiov' }
-gas_adjustment = 1
+gas_multiplier = 2
 clock_drift ='15s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -196,7 +196,7 @@ store_prefix = 'ibc'
 max_tx_size = 180000
 max_gas = 200000
 gas_price = { price = 0.0025, denom = 'uregen' }                                                                                                                                      
-gas_adjustment = 1                                                                                                                                                                    
+gas_multiplier = 2                                                                                                                                                                    
 clock_drift ='15s'                                                                                                                                                                    
 trusting_period = '14days'                                                                                                                                                            
 trust_threshold = { numerator = '1', denominator = '3' }                                                                                                                              
@@ -219,7 +219,7 @@ store_prefix = 'ibc'
 max_gas = 2000000
 max_msg_num = 30
 gas_price = { price = 0.001, denom = 'uakt' }
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift = '15s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -242,7 +242,7 @@ store_prefix = 'ibc'
 max_tx_size = 180000
 max_gas = 2000000
 gas_price = { price = 0.00005, denom = 'uatom' }
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift = '15s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -265,7 +265,7 @@ store_prefix = 'ibc'
 max_gas = 2000000
 max_msg_num = 30
 gas_price = { price = 0.125, denom = 'udvpn' }  
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift = '15s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -289,7 +289,7 @@ max_tx_size = 180000
 max_gas = 3000000
 max_msg_num = 30
 gas_price = { price = 0, denom = 'ungm' }
-gas_adjustment = 1
+gas_multiplier = 2
 clock_drift ='70s'
 trusting_period = '10days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -313,7 +313,7 @@ max_tx_size = 180000
 max_gas = 3000000
 max_msg_num = 30
 gas_price = { price = 0, denom = 'ixo' }
-gas_adjustment = 1
+gas_multiplier = 2
 clock_drift ='70s'
 trusting_period = '10days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -336,7 +336,7 @@ store_prefix = 'ibc'
 max_tx_size = 1800000
 max_gas = 3000000
 gas_price = { price = 0.001, denom = 'ujuno' }
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift = '15s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -364,7 +364,7 @@ max_gas = 2000000
 max_tx_size = 180000
 max_msg_num = 20
 gas_price = { price = 0.026, denom = 'uxki' }
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift ='15s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -387,7 +387,7 @@ key_name = 'stars'
 store_prefix = 'ibc'
 max_gas = 2000000   
 gas_price = { price = 0.025, denom = 'ustars' }
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift = '300s' 
 trusting_period = '10days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -412,7 +412,7 @@ max_tx_size = 450000
 max_gas = 1000000
 max_msg_num = 30
 gas_price = { price = 0.1, denom = 'uhuahua' }
-gas_adjustment = 1
+gas_multiplier = 2
 clock_drift ='15s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -435,7 +435,7 @@ store_prefix = 'ibc'
 max_tx_size = 180000
 max_gas = 2000000
 gas_price = { price = 0, denom = 'ukava' }
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift = '15s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -458,7 +458,7 @@ key_name = 'bcna'
 store_prefix = 'ibc'
 max_gas = 2000000  
 gas_price = { price = 0.001, denom = 'ubcna' }
-gas_adjustment = 1    
+gas_multiplier = 2    
 clock_drift ='15s'  
 trusting_period = '7days' 
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -481,7 +481,7 @@ max_tx_size = 180000
 store_prefix = 'ibc'
 max_gas = 2000000
 gas_price = { price = 0.005, denom = 'uflix' }
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift = '15s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -504,7 +504,7 @@ max_tx_size = 650000
 store_prefix = 'ibc'
 max_gas = 700000  
 gas_price = { price = 25, denom = 'ukrw' }
-gas_adjustment = 0.1
+gas_multiplier = 2
 clock_drift ='5s'
 trusting_period = '14days'
 memo_prefix = 'Delegate Notional: build interchain expressway'
@@ -529,7 +529,7 @@ store_prefix = 'ibc'
 default_gas = 1600000
 max_gas = 5000000
 gas_price = { price = 0.0261, denom = 'ugraviton' }
-gas_adjustment = 0.2
+gas_multiplier = 2
 max_msg_num = 30
 max_tx_size = 1800000
 clock_drift = '15s'
@@ -555,7 +555,7 @@ store_prefix = 'ibc'
 max_tx_size = 180000
 max_gas = 200000
 gas_price = { price = 0.0025, denom = 'ucmdx' }
-gas_adjustment = 1
+gas_multiplier = 2
 clock_drift ='1000s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -578,7 +578,7 @@ store_prefix = 'ibc'
 max_tx_size = 180000
 max_gas = 200000
 gas_price = { price = 0.0025, denom = 'ubtsg' }
-gas_adjustment = 1
+gas_multiplier = 2
 clock_drift ='1000s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -601,7 +601,7 @@ store_prefix = 'ibc'
 max_tx_size = 180000
 max_gas = 200000
 gas_price = { price = 0.0025, denom = 'ucrbrus' }
-gas_adjustment = 1
+gas_multiplier = 2
 clock_drift ='1000s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
@@ -624,7 +624,7 @@ list = [
 #max_tx_size = 180000
 #max_gas = 2000000
 #gas_price = { price = 0.0005, denom = 'uscrt' }
-#gas_adjustment = 1
+#gas_multiplier = 2
 #clock_drift ='1000s'
 #trusting_period = '14days'
 #trust_threshold = { numerator = '1', denominator = '3' }
