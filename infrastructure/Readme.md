@@ -98,7 +98,7 @@ Each chain has 10 ports it can use.  WIP.
  Injective       | 2440-2449  | injective-1
  Passage3D       | 2450-2459  | passage-1
  Hypersign       | 2460-2469  | jagrat
- Jackal          | 2470-2479  | canine-1
+ Jackal          | 2470-2479  | jackal-1
 
    Service         | Port  
 -------------------|------ 
@@ -156,3 +156,4 @@ Stride       | c0b278cbfb15674e1949e7e5ae51627cb2a2d0a9@seedv2.poolparty.striden
 Injective    | 2ee7586d8e5a4a2020dafddf68efdfdaa3606cc3@mainnet-sentry-us-0.injective.dev:26656,30e81e1b785eaf82d2260e932251c02c95787740@mainnet-sentry-us-1.injective.dev:26656,de25916e19083d44d67e0c336199b215523f1578@mainnet-sentry-eu-0.injective.dev:26656,1a2ccd9c436eae54d6c767ad566c58dce78f8be2@mainnet-sentry-eu-1.injective.dev:26656,8c39e67ea72458c5192c4653837e7c172a031a62@mainnet-sentry-eu-2.injective.dev:26656,9842eedb736a7a9bbdca4b1be2a5cdb14224a12a@mainnet-sentry-eu-3.injective.dev:26656,7bb20f8e9fa73e34d0d21862528d5fba839eeb56@mainnet-sentry-asia-0.injective.dev:26656,2ab91484b1504090b088465dc650d44311362bfa@mainnet-sentry-asia-1.injective.dev:26656
 Passage3D    | 69975e7afdf731a165e40449fcffc75167a084fc@104.131.169.70:26656,d35d652b6cb3bf7d6cb8d4bd7c036ea03e7be2ab@116.203.182.185:26656,ffacd3202ded6945fed12fa4fd715b1874985b8c@3.98.38.91:26656,8e0b0d4f80d0d2853f853fbd6a76390113f07d72@65.108.127.249:26656,0111da7144fd2e8ce0dfe17906ef6fd760325aca@142.132.213.231:26656,55f34a3a6a48de316f778aebab7406298169ce02@10.40.40.40:26656,a8f1ec69d4dc60481b4250966053836af6f3d39f@167.86.99.7:26656,c51fb04ff004829736e6d3cb2c704a6c111470ea@38.242.216.139:26656,813f91ac5338de44e28aa7946039986dbec286ff@198.244.228.17:36056,9e6f10f401dadcb28a8164574147056b8e3ab748@65.109.34.42:26656,f76ccaa550d283ef1adb55c6aca5d94eab6a1806@146.59.81.204:24456
 Hypersign    | 1dae68f061204fe2c10e9476239c0333258889e7@65.109.31.114:2460
+Jackal       | ec38fb158ffb0272c4b7c951fc790a8f9849e280@198.244.212.27:26656
