@@ -21,7 +21,7 @@ Notional is an **active set** validator on:
 9) [Akash](https://www.mintscan.io/akash/validators/akashvaloper1083svrca4t350mphfv9x45wq9asrs60c0k5a63)
 10) [Sentinel](https://www.mintscan.io/sentinel/validators/sentvaloper1083svrca4t350mphfv9x45wq9asrs60cv37gc8)
 11) [E-Money](https://www.mintscan.io/emoney/validators/emoneyvaloper16dc379m0qj64g4pr4nkl7ewak52qy2srpe6lxp)
-12) [Ixo](https://blockscan.ixo.world/validator/ixovaloper1083svrca4t350mphfv9x45wq9asrs60camel0h)
+12) [Ixo](https://www.mintscan.io/ixo/validators/ixovaloper1083svrca4t350mphfv9x45wq9asrs60camel0h)
 13) [Likecoin](https://likecoin.bigdipper.live/validators/cosmosvaloper16dc379m0qj64g4pr4nkl7ewak52qy2srvwj2rz)
 14) [Ki](https://blockchain.ki/validator/kivaloper1lmkzaxztjpesh0mf7qy76l5npqwc7fk3l2k57g)
 15) [Cyber](https://cyb.ai/network/bostrom/hero/bostromvaloper1g65rmjkeuy5rywx04s4fvwfylmlz98vq4gzln5)
