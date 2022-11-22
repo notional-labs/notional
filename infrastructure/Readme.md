@@ -100,6 +100,7 @@ Each chain has 10 ports it can use.  WIP.
  Hypersign       | 2460-2469  | jagrat
  Jackal          | 2470-2479  | jackal-1
  Neutron         | 2480-2489  | quark-1
+ Quasar          | 2490-2499  | qsr-questnet-03
 
    Service         | Port  
 -------------------|------ 
