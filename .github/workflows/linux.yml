@@ -31,7 +31,7 @@ jobs:
     strategy:
       matrix:
         ##### EDIT ME #####      
-        EDITION: [root]
+        EDITION: [xfce]
         BRANCH: [unstable]
         SCOPE: [minimal]
         ###################
