@@ -1,6 +1,8 @@
 # Notional
 
-[img](./catlogo.png)
+<p align="center">
+  <img src="./catlogo.png" />
+</p>
 
 Notional provides services in blockchain technology, including:
 
