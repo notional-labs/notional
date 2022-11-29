@@ -23,7 +23,7 @@ jobs:
     needs: [cleanup]
     strategy:
       matrix:
-        EDITION: [minimal]
+        EDITION: [root]
         BRANCH: [unstable]
         SCOPE: [minimal]
     steps:
