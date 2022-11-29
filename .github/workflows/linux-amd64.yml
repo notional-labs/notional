@@ -3,12 +3,14 @@ on:
   workflow_dispatch:
   # remove if you don't want to build on a schedule
   # schedule:
- # - cron:  '30 6 1 * *'
+  # - cron:  '30 6 1 * *'
   # remove if you don't want to build when commits are pushed to you main/master branch
   push:
     branches:
       - master
-      - main
+      
+env:
+  iso-profiles-git: https://github.com/notional-labs/iso-profiles.git
 
 jobs:
   prepare-release:
@@ -30,11 +32,9 @@ jobs:
     needs: prepare-release    
     strategy:
       matrix:
-        ##### EDIT ME #####      
-        EDITION: [xfce]
+        EDITION: [notional]
         BRANCH: [unstable]
         SCOPE: [minimal]
-        ###################
     steps:
       # cancel already running instances of the same action on the currently working on branch
       - uses: styfle/cancel-workflow-action@0.11.0
