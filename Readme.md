@@ -1,4 +1,7 @@
 # Notional
+
+[img](./catlogo.png)
+
 Notional provides services in blockchain technology, including:
 
 * [Validation](./validation)
