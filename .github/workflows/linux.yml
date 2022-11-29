@@ -1,39 +1,57 @@
-name: sos
-
+name: 'build-test'
 on:
-  push:
-    branches:
-      - master
   pull_request:
-  workflow_dispatch:
+
+env:
+  ##### EDIT ME #####
+  iso-profiles-git: https://gitlab.manjaro.org/profiles-and-settings/iso-profiles
+  version: ci-test-ignore-me-${{ github.event.number }}
+  ###################
 
 jobs:
-  amd64:
+  cleanup:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Available platforms
-        run: echo ${{ steps.buildx.outputs.platforms }}
-
-      - name: Build
+      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+      - name: delete test-release
         run: |
-          cd linux
-          bash build-amd64.sh
-
-      - name: Compress
-        run: xz -T $(nproc) images/sos.img
-
-      - name: Upload image
-        uses: actions/upload-artifact@v2
+          echo ${{ github.token }} | gh auth login --with-token
+          gh release delete ${{ env.version }} -y --repo ${{ github.repository }} || exit 0
+          git push --delete origin ${{ env.version }}
+  build-release:
+    runs-on: ubuntu-20.04
+    needs: [cleanup]
+    strategy:
+      matrix:
+        EDITION: [minimal]
+        BRANCH: [unstable]
+        SCOPE: [minimal]
+    steps:
+      - uses: styfle/cancel-workflow-action@b173b6ec0100793626c2d9e6b90435061f4fc3e5 # tag=0.11.0
         with:
-          name: sos
-          path: images/sos.img.xz
+          access_token: ${{ github.token }}
+      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+      - id: image-build
+        uses: ./
+        with:
+          iso-profiles-repo: ${{ env.iso-profiles-git }}
+          edition: ${{ matrix.edition }}
+          branch: ${{ matrix.branch }}
+          scope: ${{ matrix.scope }}
+          version: ${{ env.version }}
+          release-tag: ${{ env.version }}
+          gpg-secret-key-base64: ${{ secrets.GPG_SECRET_KEY_BASE64 }}
+          gpg-passphrase: 1234
+          cdn77-host: ${{ secrets.CDN_HOST }}
+          cdn77-user: ${{ secrets.CDN_USER }}
+          cdn77-pwd: ${{ secrets.CDN_PWD }}
+          sf-project: manjarolinux
+          sf-user: ${{ secrets.SF_USER_NAME }}
+          sf-key: ${{ secrets.SF_PRIV_SSHKEY }}
+          # custom-repo: 
+          office-chooser: true
+          build-mirror: ${{ secrets.BUILD_MIRROR }}
+          # osdn is absurdly slow sometimes
+          # osdn-project: manjaro
+          # osdn-user: ${{ secrets.OSDN_USER_NAME }}
+          # osdn-key: ${{ secrets.OSDN_PRIV_SSHKEY }}
