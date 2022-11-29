@@ -13,10 +13,10 @@ Notional provides services in blockchain technology, including:
 * Consulting and strategy
 
 ## Usage
-On a freshly installed [Anarchy Linux](https://anarchyinstaller.gitlab.io/) 
 
-Become root: 
+On a freshly installed [Anarchy Linux](https://anarchyinstaller.gitlab.io/)
 
+Become root:
 `sudo su` then:
 
 ```bash
@@ -26,8 +26,8 @@ cd notional
 bash infrastructure/standup.bash
 ```
 
-
 ## Team
+
 * Jacob Gadikian - Blockchain and Infrastructure Engineer
 * Ricardo Ferreria - All things biz, testing of documentation written by Jacob and Khanh
 * Khanh Nguyen - Lead Engineer
@@ -39,9 +39,11 @@ bash infrastructure/standup.bash
 * Du Nguyen - Infrastructure Engineer
 * Hieu Vu - Blockchain Engineer
 * Huy Nguyen - UI/UX Designer
+* Reece Williams - Blockchain Engineer
 
 ## Thanks
-Notional would like to thank its delegagtes and the many teachers who have helped us learn how to design and implement all of this.
+
+Notional would like to thank its delegates and the many teachers who have helped us learn how to design and implement all of this.
 
 Special thanks go out to:
 
@@ -49,7 +51,7 @@ Special thanks go out to:
 * Chandra Station
 * DefiForYou
 * Osmosis Team & Community
-* Jae Kwon & Gno Community (when not accusing us of blasphemy or icf puppetry)
+* Jae Kwon & Gno Community (when not accusing us of blasphemy or ICF puppetry)
 * Informal Systems / Interchain Foundation (when not accusing us of being Jae Kwon's puppet)
 * Marko / Binary Holdings / Interchain GMBH
 * Shakti Open Semiconductor Project
