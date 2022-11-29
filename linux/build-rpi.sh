@@ -33,17 +33,17 @@ docker push ghcr.io/notional-labs/sos
 
 # EXTRACT IMAGE
 # Make a temporary directory
-rm -rf .tmp | true
+rm -rf .tmp
 mkdir .tmp
 
 # remove anything in the way of extraction
-docker run --rm --tty --volume $(pwd)/./.tmp:/root/./.tmp --workdir /root/./.tmp/.. faddat/toolbox rm -rf ./.tmp/result-rootfs
+docker run --rm --tty --volume "$(pwd)"/./.tmp:/root/./.tmp --workdir /root/./.tmp/.. faddat/toolbox rm -rf ./.tmp/result-rootfs
 
 # save the image to result-rootfs.tar
 docker save --output ./.tmp/result-rootfs.tar sos-lite
 
 # Extract the image using docker-extract
-docker run --rm --tty --volume $(pwd)/./.tmp:/root/./.tmp --workdir /root/./.tmp/.. faddat/toolbox /tools/docker-extract --root ./.tmp/result-rootfs  ./.tmp/result-rootfs.tar
+docker run --rm --tty --volume "$(pwd)"/./.tmp:/root/./.tmp --workdir /root/./.tmp/.. faddat/toolbox /tools/docker-extract --root ./.tmp/result-rootfs  ./.tmp/result-rootfs.tar
 
 # Delete tarball to save space
 rm ./.tmp/result-rootfs.tar
@@ -80,16 +80,17 @@ mkdir -p images
 fallocate -l 4G "images/sos-lite.img"
 
 # loop-mount the image file so it becomes a disk
-export LOOP=$(sudo losetup --find --show images/sos-lite.img)
+LOOP=$(sudo losetup --find --show images/sos-lite.img)
+export LOOP
 
 # partition the loop-mounted disk
-sudo parted --script $LOOP mklabel gpt
-sudo parted --script $LOOP mkpart primary ext3 0% 200M
-sudo parted --script $LOOP mkpart primary ext4 200M 100%
+sudo parted --script "$LOOP" mklabel msdos
+sudo parted --script "$LOOP" mkpart primary fat32 0% 200M
+sudo parted --script "$LOOP" mkpart primary ext4 200M 100%
 
 # format the newly partitioned loop-mounted disk
-sudo mkfs.vfat -F32 $(echo $LOOP)p1
-sudo mkfs.ext4 -F $(echo $LOOP)p2
+sudo mkfs.vfat -F32 "$LOOP"p1
+sudo mkfs.ext4 -F "$LOOP"p2
 
 # Use the toolbox to copy the rootfs into the filesystem we formatted above.
 # * mount the disk's /boot and / partitions
@@ -98,8 +99,8 @@ sudo mkfs.ext4 -F $(echo $LOOP)p2
 # soon will not use toolbox
 
 sudo mkdir -p mnt/boot mnt/rootfs
-sudo mount $(echo $LOOP)p1 mnt/boot
-sudo mount $(echo $LOOP)p2 mnt/rootfs
+sudo mount "$LOOP"p1 mnt/boot
+sudo mount "$LOOP"p2 mnt/rootfs
 sudo rsync -a ./.tmp/result-rootfs/boot/* mnt/boot
 sudo rsync -a ./.tmp/result-rootfs/* mnt/rootfs --exclude boot
 # Tell pi where its memory card is:  This is needed only with the mainline linux kernel provied by linux-aarch64
@@ -110,7 +111,7 @@ sudo umount mnt/boot mnt/rootfs
 
 
 # Drop the loop mount
-sudo losetup -d $LOOP
+sudo losetup -d "$LOOP"
 
 # Delete .tmp and mnt
 sudo rm -rf ./.tmp

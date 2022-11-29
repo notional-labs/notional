@@ -76,8 +76,8 @@ sudo parted --script "$LOOP" mkpart primary fat32 0% 200M
 sudo parted --script "$LOOP" mkpart primary ext4 200M 100%
 
 # format the newly partitioned loop-mounted disk
-sudo mkfs.vfat -F32 $(echo $LOOP)p1
-sudo mkfs.ext4 -F $(echo $LOOP)p2
+sudo mkfs.vfat -F32 "$LOOP"p1
+sudo mkfs.ext4 -F "$LOOP"p2
 
 # Use the toolbox to copy the rootfs into the filesystem we formatted above.
 # * mount the disk's /boot and / partitions
