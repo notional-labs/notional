@@ -1,57 +1,58 @@
-name: 'build-test'
+name: iso_build
 on:
-  pull_request:
-
-env:
-  ##### EDIT ME #####
-  iso-profiles-git: https://gitlab.manjaro.org/profiles-and-settings/iso-profiles
-  version: ci-test-ignore-me-${{ github.event.number }}
-  ###################
+  workflow_dispatch:
+  # remove if you don't want to build on a schedule
+  schedule:
+    - cron:  '30 6 1 * *'
+  # remove if you don't want to build when commits are pushed to you main/master branch
+  push:
+    branches:
+      - master
+      - main
 
 jobs:
-  cleanup:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
-      - name: delete test-release
-        run: |
-          echo ${{ github.token }} | gh auth login --with-token
-          gh release delete ${{ env.version }} -y --repo ${{ github.repository }} || exit 0
-          git push --delete origin ${{ env.version }}
-  build-release:
+  prepare-release:
     runs-on: ubuntu-20.04
-    needs: [cleanup]
+    steps:
+      # cancel already running instances of the same action on the currently working on branch
+      - uses: styfle/cancel-workflow-action@0.9.0
+        with:
+          access_token: ${{ github.token }}
+      - id: time
+        uses: nanzm/get-time-action@v1.1
+        with:
+          format: 'YYYYMMDDHHmm'
+    outputs:
+      # generate a common tag to be used in all elements of the matrix strategy
+      release_tag: ${{ steps.time.outputs.time }}      
+  release:
+    runs-on: ubuntu-20.04
+    needs: prepare-release    
     strategy:
       matrix:
+        ##### EDIT ME #####      
         EDITION: [root]
         BRANCH: [unstable]
         SCOPE: [minimal]
+        ###################
     steps:
-      - uses: styfle/cancel-workflow-action@b173b6ec0100793626c2d9e6b90435061f4fc3e5 # tag=0.11.0
+      # cancel already running instances of the same action on the currently working on branch
+      - uses: styfle/cancel-workflow-action@0.9.0
         with:
           access_token: ${{ github.token }}
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
       - id: image-build
         uses: manjaro/manjaro-iso-action@main
         with:
-          iso-profiles-repo: ${{ env.iso-profiles-git }}
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
           scope: ${{ matrix.scope }}
-          version: ${{ env.version }}
-          release-tag: ${{ env.version }}
-          gpg-secret-key-base64: ${{ secrets.GPG_SECRET_KEY_BASE64 }}
-          gpg-passphrase: 1234
-          cdn77-host: ${{ secrets.CDN_HOST }}
-          cdn77-user: ${{ secrets.CDN_USER }}
-          cdn77-pwd: ${{ secrets.CDN_PWD }}
-          sf-project: manjarolinux
-          sf-user: ${{ secrets.SF_USER_NAME }}
-          sf-key: ${{ secrets.SF_PRIV_SSHKEY }}
-          # custom-repo: 
-          office-chooser: true
-          build-mirror: ${{ secrets.BUILD_MIRROR }}
-          # osdn is absurdly slow sometimes
-          # osdn-project: manjaro
-          # osdn-user: ${{ secrets.OSDN_USER_NAME }}
-          # osdn-key: ${{ secrets.OSDN_PRIV_SSHKEY }}
+          # providing a release-tag allows for github releases
+          release-tag: ${{ needs.prepare-release.outputs.release_tag }}
+      # delete the github release in case of cancellation or failure
+      # refer to .github/workflows/cleanup-test-release.yml for rollback strategies concerning the other distribution channels
+      - name: rollback github release
+        if: ${{ failure() || cancelled() }}
+        run: |
+          echo ${{ github.token }} | gh auth login --with-token
+          gh release delete ${{ needs.prepare-release.outputs.release_tag }} -y --repo ${{ github.repository }}
+          git push --delete origin ${{ needs.prepare-release.outputs.release_tag }}
