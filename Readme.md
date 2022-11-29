@@ -4,9 +4,6 @@ Notional provides services in blockchain technology, including:
 * [Validation](./validation)
 * [Relaying](./relaying)
 * [Software Development](./development)
-   * [Dig](https://github.com/notional-labs/dig)
-   * [Anone](https://github.com/notional-labs/an1)
-   * [CraftEconomy](https://github.com/notional-labs/craft) 
 * [Snapshots providing](https://snapshot.notional.ventures/)
 * Consulting and strategy
 
