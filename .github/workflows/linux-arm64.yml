@@ -1,8 +1,15 @@
 name: image_build_all-dev
 on:
   workflow_dispatch:
-#  schedule:
-#    - cron:  '30 2 * * 1'
+  # remove if you don't want to build on a schedule
+  # schedule:
+ # - cron:  '30 6 1 * *'
+  # remove if you don't want to build when commits are pushed to you main/master branch
+  push:
+    branches:
+      - master
+      - main
+
 
 jobs:
   prepare_release:
