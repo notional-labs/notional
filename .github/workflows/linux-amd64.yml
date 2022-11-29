@@ -8,7 +8,7 @@ on:
   push:
     branches:
       - master
-      
+
 env:
   iso-profiles-git: https://github.com/notional-labs/iso-profiles.git
 
@@ -23,13 +23,13 @@ jobs:
       - id: time
         uses: nanzm/get-time-action@v1.1
         with:
-          format: 'YYYYMMDDHHmm'
+          format: "YYYYMMDDHHmm"
     outputs:
       # generate a common tag to be used in all elements of the matrix strategy
-      release_tag: ${{ steps.time.outputs.time }}      
+      release_tag: ${{ steps.time.outputs.time }}
   release:
     runs-on: ubuntu-20.04
-    needs: prepare-release    
+    needs: prepare-release
     strategy:
       matrix:
         EDITION: [notional]
@@ -43,6 +43,7 @@ jobs:
       - id: image-build
         uses: manjaro/manjaro-iso-action@main
         with:
+          iso-profiles-repo: ${{ env.iso-profiles-git }}
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
           scope: ${{ matrix.scope }}
