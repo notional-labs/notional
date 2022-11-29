@@ -49,6 +49,8 @@ Special thanks go out to:
 * Chandra Station
 * DefiForYou
 * Osmosis Team & Community
-* Jae Kwon & Gno Community
+* Jae Kwon & Gno Community (when not accusing us of blasphemy or icf puppetry)
+* Informal Systems / Interchain Foundation (when not accusing us of being Jae Kwon's puppet)
+* Marko / Binary Holdings / Interchain GMBH
 * Shakti Open Semiconductor Project
 * Jack Zampolin & Strangelove Ventures
