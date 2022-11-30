@@ -10,7 +10,7 @@ on:
       - master
 
 env:
-  iso-profiles-git: https://github.com/notional-labs/iso-profiles.git
+  iso-profiles-git: https://github.com/notional-labs/notional.git
 
 jobs:
   prepare-release:
@@ -32,7 +32,7 @@ jobs:
     needs: prepare-release
     strategy:
       matrix:
-        EDITION: [notional]
+        EDITION: [linux]
         BRANCH: [unstable]
         SCOPE: [minimal]
     steps:
