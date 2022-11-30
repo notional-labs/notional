@@ -32,7 +32,7 @@ jobs:
     needs: prepare-release
     strategy:
       matrix:
-        EDITION: [linux]
+        EDITION: [notional]
         BRANCH: [unstable]
         SCOPE: [minimal]
     steps:
