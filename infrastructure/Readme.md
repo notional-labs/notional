@@ -101,6 +101,7 @@ Each chain has 10 ports it can use.  WIP.
  Jackal          | 2470-2479  | jackal-1
  Neutron         | 2480-2489  | quark-1
  Quasar          | 2490-2499  | qsr-questnet-03
+ Mars            | 2500-2509  | mars-1
 
    Service         | Port  
 -------------------|------ 
@@ -160,3 +161,4 @@ Passage3D    | 69975e7afdf731a165e40449fcffc75167a084fc@104.131.169.70:26656,d35
 Hypersign    | 1dae68f061204fe2c10e9476239c0333258889e7@65.109.31.114:2460
 Jackal       | ec38fb158ffb0272c4b7c951fc790a8f9849e280@198.244.212.27:26656
 Neutron      | 5bdc67a5d5219aeda3c743e04fdcd72dcb150ba3@65.109.31.114:2480
+Mars         | 63f6703a58ee4d9235e78d961408869af25a8f83@65.109.31.114:2500
