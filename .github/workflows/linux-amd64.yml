@@ -10,7 +10,7 @@ on:
       - master
 
 env:
-  iso-profiles-git: https://github.com/notional-labs/notional.git
+  iso-profiles-git: https://github.com/notional-labs/iso-profiles.git
 
 jobs:
   prepare-release:
