@@ -39,22 +39,7 @@ jobs:
     needs: prepare_release
     strategy:
       matrix:
-        DEVICE:
-          [
-            opi3,
-            pine-h64,
-            pine64,
-            pbpro,
-            opi4-lts,
-            opi3-lts,
-            pinephone,
-            pinetab,
-            vim3,
-            vim3l,
-            rock64,
-            pinebook,
-            pbpro,
-          ]
+        DEVICE: [opi3,pine-h64,pine64,pbpro,opi4-lts,opi3-lts,pinebook,pinephone,pinetab,vim3,vim3l,rock64]
         EDITION: [minimal] # later, we will use "notional for both.  This will do for now though."
         BRANCH: [unstable]
     steps:
