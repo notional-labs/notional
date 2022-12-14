@@ -46,7 +46,7 @@ Notional is an **active set** validator on:
 
 ## The role of a validator
 
-We think that validators should be actively involved in supporting the communities that they serve.  As we scaled, it became increasingly obvious to Jacob that he could not personally manage every piece of adequately serving all 20 IBCGang blockchain communities, so we're moving to a model where larger vote weight %age validators have an individual rep to the community, and smaller vote weight chains have shared representatives. 
+We think that validators should be actively involved in supporting the communities that they serve.  As we scaled, it became increasingly obvious to Jacob that he could not personally manage every piece of adequately serving all IBCGang blockchain communities, so we're moving to a model where larger vote weight %age validators have an individual rep to the community, and smaller vote weight chains have shared representatives. 
 
 We are in it for the long-haul.
 
