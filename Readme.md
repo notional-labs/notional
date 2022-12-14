@@ -11,6 +11,7 @@ Notional provides services in blockchain technology, including:
 * [Software Development](./development)
 * [Snapshots providing](https://snapshot.notional.ventures/)
 * Consulting and strategy
+* Auditing
 
 ## Usage
 
@@ -29,18 +30,38 @@ bash infrastructure/standup.bash
 ## Team
 
 * Jacob Gadikian - Blockchain and Infrastructure Engineer
-* Ricardo Ferreria - All things biz, testing of documentation written by Jacob and Khanh
+* Ricardo Ferreria - Sales & Documentation Testing 
 * Khanh Nguyen - Lead Engineer
 * Long Mai Gia - Lead Infrastructure
-* Vinh Nguyen - Project Manager and Blockchain Engineer
+* Vinh Nguyen - Sales and Blockchain Engineer 
+* Vuong Nguyen - Blockchain Engineer
+* Tuan Anh Pham - Lead Infrastructure 
 * Vuong Nguyen - Blockchain Engineer
 * Son Trinh - Blockchain Engineer
 * Minh Vu Le Nhat - Server Technician
 * Du Nguyen - Infrastructure Engineer
 * Hieu Vu - Blockchain Engineer
 * Huy Nguyen - UI/UX Designer
-* Reece Williams - Blockchain Engineer
 * Ruslan Akhtariev - Blockchain Engineer
+* William Gray - Marketing Lead
+* Jeffrey Vliegen - Lead Operations
+* Duc Trung Nguyen - DevOps Engineer
+* Kien Trung Trinh - Rust Engineer
+* Dong Duy Duong - Engineer
+* Nhan Thanh Nguyen - Lead Engineer
+* Minh Pham Anh - Engineer 
+* Dang Hai Vu - CosmWasm Engineer
+* Hoang Viet Do - Engineer 
+* Sam Baron - Governance Lead 
+* Diep Anh Hoang - Back Office Lead
+* Alex Sutaru - Compliance Consultant 
+* Dat Van Dao - Office Manager
+* William Chaplin - Operations 
+* Adam Chaplin - Advisor 
+* Thuy Bui - Back Office 
+* Brenn Hill - Advisor & Consultant 
+* Shayne Rarma - Advisor & Consultant 
+* Ludo Drijbooms - Advisor & Consultant 
 
 ## Thanks
 
