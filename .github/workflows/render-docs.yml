@@ -54,7 +54,7 @@ jobs:
         # packages only needed for some examples (example boxes-with-pandoc-latex-environment-and-tcolorbox)
         tlmgr install tcolorbox pgf etoolbox environ trimspaces
     - name: Build pdf files
-      run: cd examples && bash build-examples.sh && cd ..
+      run: cd incidents && bash buildmd.bash && cd ..
     - name: Archive production artifacts
       uses: actions/upload-artifact@v2
       with:
