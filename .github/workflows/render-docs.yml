@@ -1,4 +1,4 @@
-name: Build Example PDF files
+name: Build PDF docs
 
 on: [push, pull_request]
 
@@ -64,7 +64,7 @@ jobs:
         
         
     - name: Build pdf files
-      run: cd examples && bash build-examples.sh && cd ..
+      run: cd incidents && bash buildmd.bash && cd ..
       
       
     - name: Archive production artifacts
@@ -72,8 +72,7 @@ jobs:
       with:
         name: build-files
         path: |
-          examples/*/document.pdf
-          examples/*/preview.png
+          incidents/*.pdf
           
           
     - name: Commit files
