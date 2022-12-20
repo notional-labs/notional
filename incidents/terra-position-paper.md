@@ -1,5 +1,5 @@
 ---
-title: "Notional Labs Position Paper on "LUNC"
+title: "Notional Labs Position Paper on LUNC"
 author: [Jacob Gadikian]
 date: "2022-12-20"
 keywords: [LUNC, Dawn, Terra, Pebble]
