@@ -64,7 +64,8 @@ jobs:
           examples/*/preview.png
     - name: Commit files
       run: |
-        git switch -c gh-pages
+        git fetch --all
+        git switch gh-pages
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add *.pdf
