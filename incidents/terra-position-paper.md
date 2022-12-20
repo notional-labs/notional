@@ -8,11 +8,7 @@ keywords: [LUNC, Dawn, Terra, Pebble]
 ---
 
 
-December 20, 2022
 
-Jacob Gadikian
-
-Funded by Delegations to Notional Validators in Cosmos
 
 ## History
 
@@ -22,7 +18,7 @@ https://github.com/notional-labs/notional/raw/master/incidents/WTF%20HAPPENED%20
 
 Just before writing that paper, I hosted a twitter space titled "euthanize terra".  I argued that it was a Zombie chain, and its continued existence is dangerous.  
 
-...but apparently I was wrong, though not entirely.  That's good, too, because euthanasia sis a very grim perspective indeed.  
+...but apparently I was wrong, though not entirely.  That's good, too, because euthanasia is a very grim perspective indeed.  
 
 ## Present state and concise recommendations
 
