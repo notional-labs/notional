@@ -1,7 +1,19 @@
-# Notional Incident Reports
+# Notional Reports
+
+## December 20, 2022
+
+We've grown enormously since this humble folder started, and we're now going to begin to use typesetting automation to make these documents more living.  We are most likely to use this toolkit:
+
+* https://github.com/Wandmalfarbe/pandoc-latex-template
+
+But also want to give a shoutout to:
+
+* https://github.com/mrzool/letter-boilerplate
+
+For their highly descriptive guide to writing letters using pandoc/markdown.  
 
 
-# May 2022
+## May 2022
 
 We've created a summary of events on https://terra.money.
 
