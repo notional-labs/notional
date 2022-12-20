@@ -1,7 +1,9 @@
 # Notional Labs Position Paper on "LUNC"
 
 December 20, 2022
+
 Jacob Gadikian
+
 Funded by Delegations to Notional Validators in Cosmos
 
 ## History
