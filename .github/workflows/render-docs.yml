@@ -56,7 +56,7 @@ jobs:
     - name: Build pdf files
       run: cd incidents && bash buildmd.bash && cd ..
     - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: build-files
         path: |
