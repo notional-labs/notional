@@ -53,23 +53,22 @@ jobs:
         tlmgr install awesomebox fontawesome5
         # packages only needed for some examples (example boxes-with-pandoc-latex-environment-and-tcolorbox)
         tlmgr install tcolorbox pgf etoolbox environ trimspaces
+
     - name: Build pdf files
       run: cd incidents && bash buildmd.bash && cd ..
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: build-files
-        path: |
-          examples/*/document.pdf
-          examples/*/preview.png
+
     - name: Commit files
       run: |
         git fetch --all
+        git add incidents/*.pdf
+        git commit -m "add generated PDF files" -a
         git checkout gh-pages
+        git checkout master -- incidents/*.pdf
+        git add incidents/*.pdf
+        git commit -m "add generated PDF files" -a
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add *.pdf
-        git commit -m "add generated PDF files" -a
+
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
