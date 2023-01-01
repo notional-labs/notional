@@ -102,6 +102,7 @@ Each chain has 10 ports it can use.  WIP.
  Neutron         | 2480-2489  | quark-1
  Quasar          | 2490-2499  | qsr-questnet-03
  Mars            | 2500-2509  | mars-1
+ GenesisL1       | 2510-2519  | genesis_29-2
 
    Service         | Port  
 -------------------|------ 
