@@ -1,0 +1,19 @@
+[Unit]
+Description=Validator
+
+[Service]
+Environment=CHAIND_P2P_LADDR=tcp://0.0.0.0:10000
+Environment=CHAIND_RPC_LADDR=tcp://127.0.0.1:10001
+Environment=CHAIND_GRPC_ENABLE=false
+Environment=CHAIND_GRPC_WEB_ENABLE=false
+Environment=CHAIND_P2P_MAX_NUM_INBOUND_PEERS=200
+Environment=CHAIND_P2P_MAX_NUM_OUTBOUND_PEERS=50
+Environment=CHAIND_TX_INDEX_INDEXER=null
+Environment=CHAIND_STATE_SYNC_SNAPSHOT_INTERVAL=0
+User=root
+Restart=on-failure
+LimitNOFILE=200000
+ExecStart=/root/go/bin/chaind start
+
+[Install]
+WantedBy=multi-user.target
