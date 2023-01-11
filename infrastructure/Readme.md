@@ -103,6 +103,7 @@ Each chain has 10 ports it can use.  WIP.
  Quasar          | 2490-2499  | qsr-questnet-03
  Mars            | 2500-2509  | mars-1
  GenesisL1       | 2510-2519  | genesis_29-2
+ Namada          | 2520-2529  | namada testnet
 
    Service         | Port  
 -------------------|------ 
