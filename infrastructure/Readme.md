@@ -104,6 +104,7 @@ Each chain has 10 ports it can use.  WIP.
  Mars            | 2500-2509  | mars-1
  GenesisL1       | 2510-2519  | genesis_29-2
  Namada          | 2520-2529  | namada testnet
+ Terra2          | 2530-2539  | phoenix-1
 
    Service         | Port  
 -------------------|------ 
@@ -164,3 +165,4 @@ Hypersign    | 1dae68f061204fe2c10e9476239c0333258889e7@65.109.31.114:2460
 Jackal       | ec38fb158ffb0272c4b7c951fc790a8f9849e280@198.244.212.27:26656
 Neutron      | 5bdc67a5d5219aeda3c743e04fdcd72dcb150ba3@65.109.31.114:2480
 Mars         | 63f6703a58ee4d9235e78d961408869af25a8f83@65.109.31.114:2500
+Terra2       | ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11756,406bcf90a7b29df6ae475a1f94abe04ebde805af@phoenix.seed.stakebin.io:16656
