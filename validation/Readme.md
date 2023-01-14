@@ -66,6 +66,7 @@ Notional is validating, but not in the active set:
 1) [Axelar](https://testnet.axelarscan.io/validator/axelarvaloper19m6f7gzvjpzj5mm72wcuayr6ds60sjtnkx2j0k)
 2) [Stride](https://stride.explorers.guru/validator/stridevaloper1kvwpcr45lh7wn53wp9ac42ypr3t8zjqy6ks9au)
 3) [Sei](https://sei.explorers.guru/validator/seivaloper1d4lyuujr4urd7fkdlytccrd0cljqycycjp9xz8)
+4) [Mars](https://testnet-explorer.marsprotocol.io/validators/marsvaloper1v8fkm5qj6lzguwvavj2ms62ekeday824w6c8cs)
 
 
 Notional wishes to validate:
