@@ -33,17 +33,15 @@ bash infrastructure/standup.bash
 * Ricardo Ferreria - Sales & Documentation Testing 
 * Khanh Nguyen - Lead Engineer
 * Long Mai Gia - Lead Infrastructure
-* Vinh Nguyen - Sales and Blockchain Engineer 
 * Vuong Nguyen - Blockchain Engineer
 * Tuan Anh Pham - Lead Infrastructure 
 * Vuong Nguyen - Blockchain Engineer
 * Son Trinh - Blockchain Engineer
-* Minh Vu Le Nhat - Server Technician
+* Minh Vu Le Nhat - Infrastructure Engineer
 * Du Nguyen - Infrastructure Engineer
 * Hieu Vu - Blockchain Engineer
 * Huy Nguyen - UI/UX Designer
 * Ruslan Akhtariev - Blockchain Engineer
-* William Gray - Marketing Lead
 * Jeffrey Vliegen - Lead Operations
 * Duc Trung Nguyen - DevOps Engineer
 * Kien Trung Trinh - Rust Engineer
@@ -69,7 +67,6 @@ Notional would like to thank its delegates and the many teachers who have helped
 
 Special thanks go out to:
 
-* PCBViet
 * Chandra Station
 * DefiForYou
 * Osmosis Team & Community
