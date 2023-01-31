@@ -105,6 +105,7 @@ Each chain has 10 ports it can use.  WIP.
  GenesisL1       | 2510-2519  | genesis_29-2
  Namada          | 2520-2529  | namada testnet
  Terra2          | 2530-2539  | phoenix-1
+ Canto           | 2540-2549  | canto_7700-1
 
    Service         | Port  
 -------------------|------ 
