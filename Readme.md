@@ -33,7 +33,6 @@ bash infrastructure/standup.bash
 * Ricardo Ferreria - Sales & Documentation Testing 
 * Khanh Nguyen - Lead Engineer
 * Long Mai Gia - Lead Infrastructure
-* Vinh Nguyen - Sales and Blockchain Engineer 
 * Vuong Nguyen - Blockchain Engineer
 * Tuan Anh Pham - Lead Infrastructure 
 * Vuong Nguyen - Blockchain Engineer
@@ -43,10 +42,8 @@ bash infrastructure/standup.bash
 * Hieu Vu - Blockchain Engineer
 * Huy Nguyen - UI/UX Designer
 * Ruslan Akhtariev - Blockchain Engineer
-* William Gray - Marketing Lead
 * Jeffrey Vliegen - Lead Operations
 * Duc Trung Nguyen - DevOps Engineer
-* Kien Trung Trinh - Rust Engineer
 * Dong Duy Duong - Engineer
 * Nhan Thanh Nguyen - Lead Engineer
 * Minh Pham Anh - Engineer 
