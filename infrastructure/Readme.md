@@ -107,6 +107,7 @@ Each chain has 10 ports it can use.  WIP.
  Terra2          | 2530-2539  | phoenix-1
  Canto           | 2540-2549  | canto_7700-1
  Migaloo         | 2550-2559  | narwhal-1
+ Kyve            | 2560-2569  | kaon-1
 
    Service         | Port  
 -------------------|------ 
