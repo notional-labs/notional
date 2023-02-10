@@ -108,7 +108,8 @@ Each chain has 10 ports it can use.  WIP.
  Canto           | 2540-2549  | canto_7700-1
  Migaloo         | 2550-2559  | narwhal-1
  Kyve            | 2560-2569  | kaon-1
- Babylon         | 2570-2571  | bbn-test1
+ Babylon         | 2570-2579  | bbn-test1
+ Dymension       | 2580-2589  | 35-C
 
    Service         | Port  
 -------------------|------ 
