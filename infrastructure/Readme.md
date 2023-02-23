@@ -110,6 +110,7 @@ Each chain has 10 ports it can use.  WIP.
  Kyve            | 2560-2569  | kaon-1
  Babylon         | 2570-2579  | bbn-test1
  Dymension       | 2580-2589  | 35-C
+ Noble           | 2590-2599  | grand-1
 
    Service         | Port  
 -------------------|------ 
