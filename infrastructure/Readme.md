@@ -111,7 +111,7 @@ Each chain has 10 ports it can use.  WIP.
  Babylon         | 2570-2579  | bbn-test1
  Dymension       | 2580-2589  | 35-C
  Noble           | 2590-2599  | grand-1
- Celestia        | 2600-2609  | blockspacerace-1
+ Celestia        | 2600-2609  | blockspacerace-0
 
    Service         | Port  
 -------------------|------ 
