@@ -114,6 +114,7 @@ Each chain has 10 ports it can use.  WIP.
  Celestia        | 2600-2609  | blockspacerace-0
  Agoric          | 2610-2619  | 
  Sommelier       | 2620-2629  |
+ Composable      | 2630-2639  |
 
    Service         | Port  
 -------------------|------ 
