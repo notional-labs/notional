@@ -115,6 +115,7 @@ Each chain has 10 ports it can use.  WIP.
  Agoric          | 2610-2619  | 
  Sommelier       | 2620-2629  |
  Composable      | 2630-2639  |
+ Nolus           | 2640-2649  |
 
    Service         | Port  
 -------------------|------ 
