@@ -116,6 +116,8 @@ Each chain has 10 ports it can use.  WIP.
  Sommelier       | 2620-2629  |
  Composable      | 2630-2639  |
  Nolus           | 2640-2649  |
+ Gitopia         | 2650-2659  |
+ UnUnify         | 2660-2669  |
 
    Service         | Port  
 -------------------|------ 
