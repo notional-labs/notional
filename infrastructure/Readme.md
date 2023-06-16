@@ -118,6 +118,7 @@ Each chain has 10 ports it can use.  WIP.
  Nolus           | 2640-2649  |
  Gitopia         | 2650-2659  |
  UnUnify         | 2660-2669  |
+ PersistenceCore | 2670-2679  |
 
    Service         | Port  
 -------------------|------ 
