@@ -119,6 +119,7 @@ Each chain has 10 ports it can use.  WIP.
  Gitopia         | 2650-2659  |
  UnUnify         | 2660-2669  |
  PersistenceCore | 2670-2679  |
+ Coreum          | 2680-2689  |
 
    Service         | Port  
 -------------------|------ 
