@@ -54,10 +54,8 @@ bash infrastructure/standup.bash
 * Alex Sutaru - Compliance Consultant 
 * Dat Van Dao - Office Manager
 * William Chaplin - Operations 
-* Adam Chaplin - Advisor 
 * Thuy Bui - Back Office 
 * Brenn Hill - Advisor & Consultant 
-* Shayne Rarma - Advisor & Consultant 
 * Ludo Drijbooms - Advisor & Consultant 
 
 ## Thanks
