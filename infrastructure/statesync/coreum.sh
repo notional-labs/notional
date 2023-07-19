@@ -32,4 +32,4 @@ export CORED_STATESYNC_RPC_SERVERS="https://full-node-californium.mainnet-1.core
 export CORED_STATESYNC_TRUST_HEIGHT=$BLOCK_HEIGHT
 export CORED_STATESYNC_TRUST_HASH=$TRUST_HASH
 
-cored start --x-crisis-skip-assert-invariants --p2p.laddr tcp://0.0.0.0:2420 --rpc.laddr tcp://127.0.0.1:2421 --grpc.address 127.0.0.1:2422 --grpc-web.address 127.0.0.1:2423 --p2p.persistent_peers 24434238f20ec017ae429bbbd85a36ccf68640a4@15.237.41.232:26656,b212d5740b2e11e54f56b072dc13b6134650cfb5@169.155.44.100:26656,efa2043a4b1ba75f095f54d3ca6c5c9e02d94f51@34.72.188.14:26656
+cored start --x-crisis-skip-assert-invariants --p2p.laddr tcp://0.0.0.0:2680 --rpc.laddr tcp://127.0.0.1:2681 --grpc.address 127.0.0.1:2682 --grpc-web.address 127.0.0.1:2683 --p2p.persistent_peers 24434238f20ec017ae429bbbd85a36ccf68640a4@15.237.41.232:26656,b212d5740b2e11e54f56b072dc13b6134650cfb5@169.155.44.100:26656,efa2043a4b1ba75f095f54d3ca6c5c9e02d94f51@34.72.188.14:26656
