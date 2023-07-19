@@ -12,9 +12,9 @@ INTERVAL=1000
 
 # GET TRUST HASH AND TRUST HEIGHT
 
-LATEST_HEIGHT=$(curl -s http://statesync-sei.rhinostake.com:11957/block | jq -r .result.block.header.height);
+LATEST_HEIGHT=$(curl -s http://statesync-sei.rhinostake.com:11957/block | jq -r .block.header.height);
 BLOCK_HEIGHT=$(($LATEST_HEIGHT-$INTERVAL)) 
-TRUST_HASH=$(curl -s "http://statesync-sei.rhinostake.com:11957/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+TRUST_HASH=$(curl -s "http://statesync-sei.rhinostake.com:11957/block?height=$BLOCK_HEIGHT" | jq -r .block_id.hash)
 
 # TELL USER WHAT WE ARE DOING
 echo "TRUST HEIGHT: $BLOCK_HEIGHT"
