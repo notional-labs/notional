@@ -120,6 +120,7 @@ Each chain has 10 ports it can use.  WIP.
  UnUnify         | 2660-2669  |
  PersistenceCore | 2670-2679  |
  Coreum          | 2680-2689  |
+ dydx            | 2690-2699  |
 
    Service         | Port  
 -------------------|------ 
