@@ -1,5 +1,13 @@
 # Notional
 
+## Mission
+
+Notional is working to deliver value to our shareholders by accelerating the global shift to fair, transparent, and accountable networked systems in the areas of:
+
+* Governance
+* Finance
+* Personal Sovereignty
+
 <p align="center">
   <img src="./catlogo.png" />
 </p>
@@ -9,9 +17,12 @@ Notional provides services in blockchain technology, including:
 * [Validation](./validation)
 * [Relaying](./relaying)
 * [Software Development](./development)
-* [Snapshots providing](https://snapshot.notional.ventures/)
-* Consulting and strategy
+* Infrastructure Engineering
+* [Snapshots](https://snapshot.notional.ventures/)
+* Consulting and strategy for blockchain projects of all types
 * Auditing
+
+Notional also actively invests in projects, typically alongside technical involvement in some capacity.
 
 ## Usage
 
