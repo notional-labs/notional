@@ -71,36 +71,56 @@ cd notional
 bash infrastructure/standup.bash
 ```
 
-## Team
+## Our Team
 
-* Jacob Gadikian - Blockchain and Infrastructure Engineer
-* Ricardo Ferreria - Sales & Documentation Testing 
-* Khanh Nguyen - Lead Engineer
-* Long Mai Gia - Lead Infrastructure
-* Vuong Nguyen - Blockchain Engineer
-* Tuan Anh Pham - Lead Infrastructure 
+### Management
+
+* Jacob Gadikian - CEO / Lead Engineer
+* Geoffroy Vliegen - COO / Operations Lead
+
+### Engineering
+
+* Khanh Nguyen - Chief Security Officer
+* Gia Long Mai - Lead Infrastructure
+* Vuong Nguyen - Lead Blockchain Engineer
+* Joe Bowman - Blockchain Engineer
+* Nhan Thanh Nguyen - Lead Engineer
+* Anh Tuan Pham - Lead Infrastructure
 * Vuong Nguyen - Blockchain Engineer
 * Son Trinh - Blockchain Engineer
-* Minh Vu Le Nhat - Server Technician
+* Minh Vu Le Nhat - Infrastructure Engineer
 * Du Nguyen - Infrastructure Engineer
 * Hieu Vu - Blockchain Engineer
-* Huy Nguyen - UI/UX Designer
-* Ruslan Akhtariev - Blockchain Engineer
-* Jeffrey Vliegen - Lead Operations
-* Duc Trung Nguyen - DevOps Engineer
-* Dong Duy Duong - Engineer
-* Nhan Thanh Nguyen - Lead Engineer
-* Minh Pham Anh - Engineer 
+* Trung Duc Nguyen - DevOps Engineer
+* Dong Duy Duong - Blockchain Engineer
+* Anh Minh Pham - Blockchain Engineer
 * Dang Hai Vu - CosmWasm Engineer
-* Hoang Viet Do - Engineer 
-* Sam Baron - Governance Lead 
+* Hoang Viet Do - Engineer
+* Ba Nguyen Ho - Blockchain Engineer
+* Quang Vinh Nguyen - Infrastructure Engineer
+* Tien Dung Nguyen - Engineer
+* Van Trung Nguyen - Smart Contract Engineer
+
+### Media / Marketing / Governance
+
+* Sam Baron - Governance Lead
+* Ricardo Ferreria - Business Development Manager / Governance / Payroll
+* Robin Tunley - Marketing / Documentation
+* Vish Modali - Business Development / Sales
+* William Chaplin - Media / Marketing
+* Huy Nguyen - UI/UX and Graphics Designer
+* Nikilesh Jagan - Media / Marketing
+* Valentin Medniyy - Media / Marketing
+* Abraham Effiong - Community Management
+
+### Back Office Support
+
 * Diep Anh Hoang - Back Office Lead
-* Alex Sutaru - Compliance Consultant 
+* Alex Sutaru - Compliance Consultant
 * Dat Van Dao - Office Manager
-* William Chaplin - Operations 
-* Thuy Bui - Back Office 
-* Brenn Hill - Advisor & Consultant 
-* Ludo Drijbooms - Advisor & Consultant 
+* Thuy Bui - Back Office
+* Ludo Drijbooms - Advisor & Consultant
+
 
 ## Thanks
 
