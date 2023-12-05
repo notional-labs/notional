@@ -1,5 +1,9 @@
 # Notional Reports
 
+## December 5, 2023
+
+This folder has grown into a collection of detailed reports on various incidents that have occured in Cosmos while being extremely rigorous.  We believe that some aspects of cosmos lack rigor, and this folder is our way of trying to address that. 
+
 ## December 20, 2022
 
 We've grown enormously since this humble folder started, and we're now going to begin to use typesetting automation to make these documents more living.  We are most likely to use this toolkit:
