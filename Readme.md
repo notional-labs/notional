@@ -75,32 +75,21 @@ bash infrastructure/standup.bash
 
 * Jacob Gadikian - Blockchain and Infrastructure Engineer
 * Ricardo Ferreria - Sales & Documentation Testing 
-* Khanh Nguyen - Lead Engineer
-* Long Mai Gia - Lead Infrastructure
-* Vuong Nguyen - Blockchain Engineer
 * Tuan Anh Pham - Lead Infrastructure 
-* Vuong Nguyen - Blockchain Engineer
-* Son Trinh - Blockchain Engineer
-* Minh Vu Le Nhat - Server Technician
-* Du Nguyen - Infrastructure Engineer
-* Hieu Vu - Blockchain Engineer
-* Huy Nguyen - UI/UX Designer
 * Ruslan Akhtariev - Blockchain Engineer
-* Jeffrey Vliegen - Lead Operations
-* Duc Trung Nguyen - DevOps Engineer
-* Dong Duy Duong - Engineer
-* Nhan Thanh Nguyen - Lead Engineer
-* Minh Pham Anh - Engineer 
-* Dang Hai Vu - CosmWasm Engineer
-* Hoang Viet Do - Engineer 
+* Jeffrey Vliegen - COO
 * Sam Baron - Governance Lead 
 * Diep Anh Hoang - Back Office Lead
 * Alex Sutaru - Compliance Consultant 
 * Dat Van Dao - Office Manager
-* William Chaplin - Operations 
 * Thuy Bui - Back Office 
 * Brenn Hill - Advisor & Consultant 
-* Ludo Drijbooms - Advisor & Consultant 
+* Ludo Drijbooms - Advisor & Consultant
+
+## Advisory Board
+
+* Grace Yu
+* RoboMcGobo
 
 ## Thanks
 
@@ -109,11 +98,12 @@ Notional would like to thank its delegates and the many teachers who have helped
 Special thanks go out to:
 
 * PCBViet
+* CryptoCrew
 * Chandra Station
 * DefiForYou
 * Osmosis Team & Community
-* Jae Kwon & Gno Community (when not accusing us of blasphemy or ICF puppetry)
+* Jae Kwon & Gno Community (when not accusing us of blasphemy or ICF puppetry or making EDNY lawsuits against our Friends and falsely citing Jacob or.... worse stuff)
 * Informal Systems / Interchain Foundation (when not accusing us of being Jae Kwon's puppet)
 * Marko / Binary Holdings / Interchain GMBH
 * Shakti Open Semiconductor Project
-* Jack Zampolin & Strangelove Ventures
+* Composable Finance team and community
