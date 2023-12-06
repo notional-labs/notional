@@ -76,11 +76,9 @@ bash infrastructure/standup.bash
 * Jacob Gadikian - Blockchain and Infrastructure Engineer
 * Ricardo Ferreria - Sales & Documentation Testing 
 * Tuan Anh Pham - Lead Infrastructure 
-* Ruslan Akhtariev - Blockchain Engineer
 * Jeffrey Vliegen - COO
 * Sam Baron - Governance Lead 
 * Diep Anh Hoang - Back Office Lead
-* Alex Sutaru - Compliance Consultant 
 * Dat Van Dao - Office Manager
 * Thuy Bui - Back Office 
 * Brenn Hill - Advisor & Consultant 
