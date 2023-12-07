@@ -83,6 +83,8 @@ bash infrastructure/standup.bash
 * Thuy Bui - Back Office 
 * Brenn Hill - Advisor & Consultant 
 * Ludo Drijbooms - Advisor & Consultant
+* Grace Yu - External Consultant
+* RoboMcGobo - Advisor
 
 
 ## Thanks
