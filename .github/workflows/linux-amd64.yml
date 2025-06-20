@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       # cancel already running instances of the same action on the currently working on branch
-      - uses: styfle/cancel-workflow-action@0.12.0
+      - uses: styfle/cancel-workflow-action@0.12.1
         with:
           access_token: ${{ github.token }}
       - id: time
@@ -37,7 +37,7 @@ jobs:
         SCOPE: [minimal]
     steps:
       # cancel already running instances of the same action on the currently working on branch
-      - uses: styfle/cancel-workflow-action@0.12.0
+      - uses: styfle/cancel-workflow-action@0.12.1
         with:
           access_token: ${{ github.token }}
       - id: image-build
