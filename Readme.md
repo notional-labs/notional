@@ -84,7 +84,7 @@ bash infrastructure/standup.bash
 * Brenn Hill - Advisor & Consultant 
 * Ludo Drijbooms - Advisor & Consultant
 * Grace Yu - External Consultant
-
+* Max Power - Advisor
 
 
 ## Thanks
