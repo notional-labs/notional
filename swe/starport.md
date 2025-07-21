@@ -1,6 +1,6 @@
 # Starport
 
-We built our software engineering practice on starport and are very grateful.   Lately, dx has taken a turn for the much worse and it is all spm.  Here's what I do to ship chains that I beleive in using starport:
+We built our software engineering practice on starport and are very grateful.   Lately, dx has taken a turn for the much worse and it is all spm.  Here's what I do to ship chains that I believe in using starport:
 
 Let's use chiuaua as an example.  Arf!
 
@@ -339,6 +339,6 @@ git push
 
 ## Conclusion
 
-In order to improve developer experience and ensure that debugging is possible down the line, Starport, the premier scaffolding tool in cosmos, should more carefully keep verisons up to date and unless spm gets 0-day updates, likely remove spm from the scaffold so that chains built with starport are easier to manage. 
+In order to improve developer experience and ensure that debugging is possible down the line, Starport, the premier scaffolding tool in cosmos, should more carefully keep versions up to date and unless spm gets 0-day updates, likely remove spm from the scaffold so that chains built with starport are easier to manage. 
 
 

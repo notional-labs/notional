@@ -87,7 +87,7 @@ In any event, it is a very good idea to make sure that you're using NVMe drives,
 * 128gb RAM
 * PCIe Gen4x4 lanes storage (No RAID!)
   * [Teamgroup a440](https://www.guru3d.com/articles-pages/teamgroup-a440-pro-ps5-4tb-pcie-4-m-2-nvme-review,2.html)
-  * Samsung 980 Pro <- recommended for reliablity and availability.  we use these on-site.
+  * Samsung 980 Pro <- recommended for reliability and availability.  we use these on-site.
   * WD SN850 Black <- Very fast
   * Optane P5800x <- fastest and most expensive
   * Seagate Firecuda 530 <- Supposedly fastest but untested.  Comes in a 4gb model.

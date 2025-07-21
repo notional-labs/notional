@@ -79,7 +79,7 @@ At the same time I have watched osmosis flourish.
 
 The osmosis validator set is capable of code reviews, it is highly participatory, and participation is rewarded with delegations not only by the foundation, but also and maybe even more importantly, with recognition. The team routinely tweets out hey maybe you should delegate to these excellent validators, because they.... (Various confirmable actions)
 
-The osmosis validator set is treated as a part of the team. There's no way to look at the situation with the ICF and say that that is the case for the Cosmos hub.
+The osmosis validator set is treated as a part of the team. There's no way to look at the situation with the ICF and say that is the case for the Cosmos hub.
 
 You guys are going to need to put together a full revolution in how you deal with the hubs community. Because right now what you've got is a very clear situation where unfortunately the team, mainly composed of individuals working for IG and informal, thinks that the validator set is somehow separate from the code base. But we aren't, unless of course you really and truly think validators should not be doing code reviews and you know, checking stuff, to make sure that it is valid.
 
@@ -141,7 +141,7 @@ My saying that should not cause a small horde of people who are ultimately paid 
 
 ## Advice
 
-Look I'm a person who has failed a lot. I have failed at various and sundry things and succeeded in a couple of things which is fairly normal for entrepreneurs.  Bucky ICF is not going well for you. I see in your commentary online, the exact things that are causing the ICF to have problems. Like why is the ICF having difficulty? Well, you have created a bit of a buck passing culture. The people who are fighting against that buck passing culture inside of IG, I don't feel that they're getting the necessary support and I feel that that is ultimately what caused the recent difficulties surrounding the choice of SDK used by CW.
+Look I'm a person who has failed a lot. I have failed at various and sundry things and succeeded in a couple of things which is fairly normal for entrepreneurs.  Bucky ICF is not going well for you. I see in your commentary online, the exact things that are causing the ICF to have problems. Like why is the ICF having difficulty? Well, you have created a bit of a buck passing culture. The people who are fighting against that buck passing culture inside of IG, I don't feel that they're getting the necessary support and I feel that is ultimately what caused the recent difficulties surrounding the choice of SDK used by CW.
 
 CW in my opinion, should rightly be merged into the main line SDK. Doesn't really matter to me whether that's the osmosis SDK or the cosmos SDK but commercial interests are without a doubt going to pull me to whichever SDK is most closely bound to CW itself because it's just that compelling and it does deserve support. My nightmare scenario is where I look around and I watch myself and colleagues invest time and energy and money only to be stopped by the negative political environment that you have created inside the ICF.
 
